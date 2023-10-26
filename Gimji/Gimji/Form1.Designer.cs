@@ -37,24 +37,24 @@
             searchTextBox = new TextBox();
             logoTop = new PictureBox();
             panel1 = new Panel();
+            pictureBox_logout = new PictureBox();
             pictureBox_setting = new PictureBox();
             pictureBox_order = new PictureBox();
             pictureBox_payment = new PictureBox();
             pictureBox_menu = new PictureBox();
             pictureBox_home = new PictureBox();
-            pictureBox_logout = new PictureBox();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             searchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_search).BeginInit();
             ((System.ComponentModel.ISupportInitialize)logoTop).BeginInit();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_logout).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_setting).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_order).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_payment).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_menu).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_home).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_logout).BeginInit();
             SuspendLayout();
             // 
             // topPanel
@@ -114,7 +114,6 @@
             // pictureBox_search
             // 
             pictureBox_search.Cursor = Cursors.No;
-            pictureBox_search.Image = Properties.Resources.search;
             pictureBox_search.Location = new Point(227, 8);
             pictureBox_search.Name = "pictureBox_search";
             pictureBox_search.Size = new Size(40, 42);
@@ -156,9 +155,17 @@
             panel1.Size = new Size(120, 1400);
             panel1.TabIndex = 1;
             // 
+            // pictureBox_logout
+            // 
+            pictureBox_logout.Location = new Point(25, 722);
+            pictureBox_logout.Name = "pictureBox_logout";
+            pictureBox_logout.Size = new Size(70, 70);
+            pictureBox_logout.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox_logout.TabIndex = 5;
+            pictureBox_logout.TabStop = false;
+            // 
             // pictureBox_setting
             // 
-            pictureBox_setting.Image = Properties.Resources.setting;
             pictureBox_setting.Location = new Point(25, 603);
             pictureBox_setting.Name = "pictureBox_setting";
             pictureBox_setting.Size = new Size(70, 70);
@@ -168,7 +175,6 @@
             // 
             // pictureBox_order
             // 
-            pictureBox_order.Image = Properties.Resources.order;
             pictureBox_order.Location = new Point(25, 471);
             pictureBox_order.Name = "pictureBox_order";
             pictureBox_order.Size = new Size(70, 70);
@@ -178,7 +184,6 @@
             // 
             // pictureBox_payment
             // 
-            pictureBox_payment.Image = Properties.Resources.payment;
             pictureBox_payment.Location = new Point(25, 325);
             pictureBox_payment.Name = "pictureBox_payment";
             pictureBox_payment.Size = new Size(70, 70);
@@ -188,7 +193,6 @@
             // 
             // pictureBox_menu
             // 
-            pictureBox_menu.Image = Properties.Resources.menu;
             pictureBox_menu.Location = new Point(25, 185);
             pictureBox_menu.Name = "pictureBox_menu";
             pictureBox_menu.Size = new Size(70, 70);
@@ -206,16 +210,6 @@
             pictureBox_home.TabIndex = 0;
             pictureBox_home.TabStop = false;
             // 
-            // pictureBox_logout
-            // 
-            pictureBox_logout.Image = Properties.Resources.logout;
-            pictureBox_logout.Location = new Point(25, 722);
-            pictureBox_logout.Name = "pictureBox_logout";
-            pictureBox_logout.Size = new Size(70, 70);
-            pictureBox_logout.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox_logout.TabIndex = 5;
-            pictureBox_logout.TabStop = false;
-            // 
             // mainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -232,12 +226,12 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox_search).EndInit();
             ((System.ComponentModel.ISupportInitialize)logoTop).EndInit();
             panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox_logout).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_setting).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_order).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_payment).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_menu).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox_home).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_logout).EndInit();
             ResumeLayout(false);
         }
 
