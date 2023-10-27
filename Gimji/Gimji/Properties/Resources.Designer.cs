@@ -69,5 +69,61 @@ namespace Gimji.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap home
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("home", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap logout
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("logout", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap menu
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("menu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap order
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("order", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap payment
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("payment", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap search
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap setting
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("setting", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

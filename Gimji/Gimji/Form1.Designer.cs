@@ -113,7 +113,7 @@
             // 
             // pictureBox_search
             // 
-            pictureBox_search.Cursor = Cursors.No;
+            pictureBox_search.Image = Properties.Resources.search;
             pictureBox_search.Location = new Point(227, 8);
             pictureBox_search.Name = "pictureBox_search";
             pictureBox_search.Size = new Size(40, 42);
@@ -157,6 +157,7 @@
             // 
             // pictureBox_logout
             // 
+            pictureBox_logout.Image = Properties.Resources.logout;
             pictureBox_logout.Location = new Point(25, 722);
             pictureBox_logout.Name = "pictureBox_logout";
             pictureBox_logout.Size = new Size(70, 70);
@@ -166,6 +167,7 @@
             // 
             // pictureBox_setting
             // 
+            pictureBox_setting.Image = Properties.Resources.setting;
             pictureBox_setting.Location = new Point(25, 603);
             pictureBox_setting.Name = "pictureBox_setting";
             pictureBox_setting.Size = new Size(70, 70);
@@ -175,6 +177,7 @@
             // 
             // pictureBox_order
             // 
+            pictureBox_order.Image = Properties.Resources.order;
             pictureBox_order.Location = new Point(25, 471);
             pictureBox_order.Name = "pictureBox_order";
             pictureBox_order.Size = new Size(70, 70);
@@ -184,6 +187,7 @@
             // 
             // pictureBox_payment
             // 
+            pictureBox_payment.Image = Properties.Resources.payment;
             pictureBox_payment.Location = new Point(25, 325);
             pictureBox_payment.Name = "pictureBox_payment";
             pictureBox_payment.Size = new Size(70, 70);
@@ -193,6 +197,7 @@
             // 
             // pictureBox_menu
             // 
+            pictureBox_menu.Image = Properties.Resources.menu;
             pictureBox_menu.Location = new Point(25, 185);
             pictureBox_menu.Name = "pictureBox_menu";
             pictureBox_menu.Size = new Size(70, 70);
@@ -218,7 +223,7 @@
             Controls.Add(panel1);
             Controls.Add(topPanel);
             Name = "mainForm";
-            Text = "h";
+            Text = "Gimji";
             topPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             searchBox.ResumeLayout(false);
