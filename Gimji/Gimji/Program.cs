@@ -1,3 +1,7 @@
+﻿using Gimji.DAO;
+using Gimji.DTO;
+using Microsoft.Data.SqlClient;
+
 namespace Gimji
 {
     internal static class Program
