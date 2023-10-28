@@ -1,6 +1,10 @@
-﻿using System.Drawing.Drawing2D;
+﻿using System.DirectoryServices.ActiveDirectory;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 using Gimji.DAO;
 using Gimji.DTO;
+using Gimji.GUI.Menu;
+
 namespace Gimji
 {
     public partial class mainForm : Form
@@ -28,6 +32,16 @@ namespace Gimji
         private void button1_MouseHover(object sender, EventArgs e)
         {
             btn_Home.BackColor = Color.White;
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
         }
     }
 }

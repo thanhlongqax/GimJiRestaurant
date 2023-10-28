@@ -21,12 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="GUI\Menu\MainUser.cs">
-      <SubType>Form</SubType>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="Resources\home.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
