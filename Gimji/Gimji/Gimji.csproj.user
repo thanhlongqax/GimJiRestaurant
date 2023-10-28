@@ -10,5 +10,8 @@
     <Compile Update="GUI\Menu\uc_MonAn.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\Login_SignUp\Login_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

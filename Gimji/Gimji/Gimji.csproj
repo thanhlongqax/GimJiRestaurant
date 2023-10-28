@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="BLL\" />
-    <Folder Include="GUI\Login_SignUp\" />
     <Folder Include="GUI\Admin\" />
     <Folder Include="GUI\Setting\" />
     <Folder Include="GUI\Order\" />
