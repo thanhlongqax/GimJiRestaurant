@@ -103,3 +103,4 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\order.png
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\payment.png
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\search.png
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\setting.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.mainUser.resources

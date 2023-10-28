@@ -25,7 +25,7 @@ namespace Gimji.DAO
             String userID = "";
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
-            String sSQL = "select * from Khach_Hang where ten_khach = '" + name + "'";
+            String sSQL = "select * from Khach_Hang where ten_khach_hang = '" + name + "'";
             SqlCommand cmd = new SqlCommand(sSQL, conn);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();

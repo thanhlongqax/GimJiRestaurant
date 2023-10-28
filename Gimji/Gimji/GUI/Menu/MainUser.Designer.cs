@@ -1,6 +1,6 @@
 ﻿namespace Gimji
 {
-    partial class mainForm
+    partial class mainUser
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             topPanel = new Panel();
             pictureBox1 = new PictureBox();
             button2 = new Button();
@@ -44,7 +43,6 @@
             pictureBox_payment = new PictureBox();
             pictureBox_menu = new PictureBox();
             pictureBox_home = new PictureBox();
-            btn_Home = new Button();
             topPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             searchBox.SuspendLayout();
@@ -146,12 +144,12 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(btn_Home);
             panel1.Controls.Add(pictureBox_logout);
             panel1.Controls.Add(pictureBox_setting);
             panel1.Controls.Add(pictureBox_order);
             panel1.Controls.Add(pictureBox_payment);
             panel1.Controls.Add(pictureBox_menu);
+            panel1.Controls.Add(pictureBox_home);
             panel1.Location = new Point(0, 100);
             panel1.Name = "panel1";
             panel1.Size = new Size(120, 1400);
@@ -207,28 +205,16 @@
             pictureBox_menu.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox_menu.TabIndex = 1;
             pictureBox_menu.TabStop = false;
-            pictureBox_menu.MouseHover += pictureBox_menu_MouseHover;
             // 
             // pictureBox_home
             // 
             pictureBox_home.Image = Properties.Resources.home;
-            pictureBox_home.Location = new Point(418, 312);
+            pictureBox_home.Location = new Point(25, 46);
             pictureBox_home.Name = "pictureBox_home";
             pictureBox_home.Size = new Size(70, 70);
             pictureBox_home.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox_home.TabIndex = 0;
             pictureBox_home.TabStop = false;
-            // 
-            // btn_Home
-            // 
-            btn_Home.BackgroundImage = (Image)resources.GetObject("btn_Home.BackgroundImage");
-            btn_Home.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_Home.Location = new Point(20, 50);
-            btn_Home.Name = "btn_Home";
-            btn_Home.Size = new Size(83, 84);
-            btn_Home.TabIndex = 2;
-            btn_Home.UseVisualStyleBackColor = true;
-            btn_Home.MouseHover += button1_MouseHover;
             // 
             // mainForm
             // 
@@ -237,7 +223,6 @@
             ClientSize = new Size(1482, 933);
             Controls.Add(panel1);
             Controls.Add(topPanel);
-            Controls.Add(pictureBox_home);
             Name = "mainForm";
             Text = "Gimji";
             topPanel.ResumeLayout(false);
@@ -273,6 +258,5 @@
         private PictureBox pictureBox_order;
         private PictureBox pictureBox_payment;
         private PictureBox pictureBox_logout;
-        private Button btn_Home;
     }
 }

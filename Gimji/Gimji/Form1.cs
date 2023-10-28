@@ -16,6 +16,18 @@ namespace Gimji
             DatabaseAccess dal = new DatabaseAccess();
 
             MessageBox.Show(dal.getIdByUsername_DAL("thanhlong"));
+
+
+        }
+
+        private void pictureBox_menu_MouseHover(object sender, EventArgs e)
+        {
+            //pictureBox_menu.BackgroundImage = Color.FromArgb(209, 10, 45);
+        }
+
+        private void button1_MouseHover(object sender, EventArgs e)
+        {
+            btn_Home.BackColor = Color.White;
         }
     }
 }
