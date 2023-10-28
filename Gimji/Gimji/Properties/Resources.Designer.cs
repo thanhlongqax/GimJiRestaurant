@@ -125,5 +125,13 @@ namespace Gimji.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap masterchef
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("masterchef", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
