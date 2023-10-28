@@ -2008,11 +2008,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\admin\\Downloads\\CNPM12\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+      "projectUniqueName": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
       "projectName": "Gimji",
-      "projectPath": "C:\\Users\\admin\\Downloads\\CNPM12\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+      "projectPath": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\admin\\Downloads\\CNPM12\\CNPM_N12\\Gimji\\Gimji\\obj\\",
+      "outputPath": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2068,5 +2068,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

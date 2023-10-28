@@ -164,6 +164,7 @@
             pictureBox_logout.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox_logout.TabIndex = 5;
             pictureBox_logout.TabStop = false;
+            pictureBox_logout.MouseHover += pictureBox_logout_Click;
             // 
             // pictureBox_setting
             // 

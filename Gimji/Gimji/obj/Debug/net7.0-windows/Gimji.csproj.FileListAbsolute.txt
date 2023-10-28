@@ -95,3 +95,11 @@ C:\Users\admin\Downloads\CNPM12\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gi
 C:\Users\admin\Downloads\CNPM12\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.genruntimeconfig.cache
 C:\Users\admin\Downloads\CNPM12\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\ref\Gimji.dll
 >>>>>>> e7018c2c59efde409ef22da1be9cbe733549d189
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\home.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\logo.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\logout.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\menu.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\order.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\payment.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\search.png
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\Resources\setting.png
