@@ -36,12 +36,16 @@ namespace Gimji
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-
+            fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            panel_Order.Controls.Add(new uc_Order());
         }
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
-            fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            //panel_Order.Controls.Add(new uc_Order());
+
+
         }
     }
 }

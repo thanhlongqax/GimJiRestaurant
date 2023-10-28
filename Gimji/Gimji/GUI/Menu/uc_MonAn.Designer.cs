@@ -30,71 +30,74 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_MonAn));
             txt_tenMonAn = new Label();
-            txt_MonAn = new Label();
-            pictureBox2 = new PictureBox();
-            button3 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            txt_giaTien = new Label();
+            pictureBox_hinhMonAn = new PictureBox();
+            btn_Cart = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhMonAn).BeginInit();
             SuspendLayout();
             // 
             // txt_tenMonAn
             // 
             txt_tenMonAn.AutoSize = true;
-            txt_tenMonAn.Location = new Point(47, 156);
+            txt_tenMonAn.Location = new Point(54, 208);
             txt_tenMonAn.Name = "txt_tenMonAn";
-            txt_tenMonAn.Size = new Size(85, 15);
+            txt_tenMonAn.Size = new Size(107, 20);
             txt_tenMonAn.TabIndex = 6;
             txt_tenMonAn.Text = "Tobokki chả cá";
             // 
-            // txt_MonAn
+            // txt_giaTien
             // 
-            txt_MonAn.AutoSize = true;
-            txt_MonAn.Location = new Point(64, 177);
-            txt_MonAn.Name = "txt_MonAn";
-            txt_MonAn.Size = new Size(37, 15);
-            txt_MonAn.TabIndex = 5;
-            txt_MonAn.Text = "$5000";
+            txt_giaTien.AutoSize = true;
+            txt_giaTien.Location = new Point(73, 236);
+            txt_giaTien.Name = "txt_giaTien";
+            txt_giaTien.Size = new Size(49, 20);
+            txt_giaTien.TabIndex = 5;
+            txt_giaTien.Text = "$5000";
             // 
-            // pictureBox2
+            // pictureBox_hinhMonAn
             // 
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
-            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(19, 12);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(155, 138);
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
+            pictureBox_hinhMonAn.BackColor = Color.Transparent;
+            pictureBox_hinhMonAn.BackgroundImage = (Image)resources.GetObject("pictureBox_hinhMonAn.BackgroundImage");
+            pictureBox_hinhMonAn.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_hinhMonAn.Location = new Point(22, 16);
+            pictureBox_hinhMonAn.Margin = new Padding(3, 4, 3, 4);
+            pictureBox_hinhMonAn.Name = "pictureBox_hinhMonAn";
+            pictureBox_hinhMonAn.Size = new Size(177, 184);
+            pictureBox_hinhMonAn.TabIndex = 4;
+            pictureBox_hinhMonAn.TabStop = false;
             // 
-            // button3
+            // btn_Cart
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(138, 156);
-            button3.Name = "button3";
-            button3.Size = new Size(38, 36);
-            button3.TabIndex = 3;
-            button3.UseVisualStyleBackColor = true;
+            btn_Cart.BackgroundImage = (Image)resources.GetObject("btn_Cart.BackgroundImage");
+            btn_Cart.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Cart.Location = new Point(167, 208);
+            btn_Cart.Margin = new Padding(3, 4, 3, 4);
+            btn_Cart.Name = "btn_Cart";
+            btn_Cart.Size = new Size(43, 48);
+            btn_Cart.TabIndex = 3;
+            btn_Cart.UseVisualStyleBackColor = true;
             // 
             // uc_MonAn
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(txt_MonAn);
+            Controls.Add(txt_giaTien);
             Controls.Add(txt_tenMonAn);
-            Controls.Add(pictureBox2);
-            Controls.Add(button3);
+            Controls.Add(pictureBox_hinhMonAn);
+            Controls.Add(btn_Cart);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "uc_MonAn";
-            Size = new Size(202, 209);
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            Size = new Size(231, 279);
+            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhMonAn).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private Label txt_tenMonAn;
-        private Label txt_MonAn;
-        private PictureBox pictureBox2;
-        private Button button3;
+        private Label txt_giaTien;
+        private PictureBox pictureBox_hinhMonAn;
+        private Button btn_Cart;
     }
 }
