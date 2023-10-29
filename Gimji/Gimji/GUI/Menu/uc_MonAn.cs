@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Gimji.GUI.Menu
 {
-    public partial class uc_MonAn : UserControl
+    public partial class uc_MonAn  : UserControl
     {
         private static uc_MonAn _instance;
         public static uc_MonAn Instance

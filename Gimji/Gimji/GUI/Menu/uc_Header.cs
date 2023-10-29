@@ -10,17 +10,21 @@ using System.Windows.Forms;
 
 namespace Gimji.GUI.Menu
 {
-    public partial class uc_Order : UserControl
+    public partial class uc_Header : UserControl
     {
-        public uc_Order()
+        public uc_Header()
         {
             InitializeComponent();
         }
-
-        private void uc_Order_Load(object sender, EventArgs e)
+        private static uc_Header _instance;
+        public static uc_Header  Instance
         {
-            fl_Panel_Cart.Controls.Clear();
-            fl_Panel_Cart.Controls.Add(new uc_MonAnCart());
+            get
+            {
+                if (_instance == null)
+                    _instance = new uc_Header();
+                return _instance;
+            }
         }
     }
 }

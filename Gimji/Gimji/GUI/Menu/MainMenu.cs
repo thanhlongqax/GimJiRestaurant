@@ -36,15 +36,29 @@ namespace Gimji
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-            fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
-            panel_Order.Controls.Add(new uc_Order());
+
         }
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
             //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
             //panel_Order.Controls.Add(new uc_Order());
+            uc_Menu a = new uc_Menu();
+            panel_Menu.Controls.Clear();
+            panel_Menu.Controls.Add(a);
 
+            UserControl uc = new uc_Header();
+            uc.Location = new Point(129, 80);
+
+            //mainForm.Controls.Add(uc);
+
+            uc.Show(); // Hoặc uc.Visible = true;
+
+
+        }
+
+        private void btn_Logout_Click(object sender, EventArgs e)
+        {
 
         }
     }
