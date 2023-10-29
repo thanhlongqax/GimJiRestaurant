@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Data.SqlClient;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -12,6 +11,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing;
 using System.Net;
 using Microsoft.Data.SqlClient;
+using System.Collections;
 
 namespace Gimji.DAO
 {
@@ -20,7 +20,7 @@ namespace Gimji.DAO
         private String strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
 
         //Code lay id tu ten truyen vao 
-        public String getIdByUsername_DAL(String name)
+        public String getIdByUsername_DAO(String name)
         {
             String userID = "";
             SqlConnection conn = new SqlConnection(strConn);
@@ -41,8 +41,108 @@ namespace Gimji.DAO
 
         //______________________________________
 
+        //Code lay ra id tu truyen id vao 
+
+        public DataTable getUserById_DA_DAO(String id)
+        {
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            String sSQL = @"
+                SELECT * FROM Khach_hang
+                UNION ALL
+                SELECT * FROM Nhan_vien
+                where id_tai_khoan = @id;
+            ";
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.AddWithValue("@id", id);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            return dt;
+        }
+
+        //____________________________________________________________________________
+
+        //Thêm 1 user _____________________________________________________________________________________________
+        public void addUser_DA_DAO(User user, String cn)
+        {
+            MessageBox.Show("add user :" + user.fullName);
+            SqlConnection conn = new SqlConnection(strConn);
+            String sSQL = "exec @proc @fullName,@emailAddress,@contactAddress,@userName,@userPassword ,@DateOfBirth , @phoneNumber";
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.AddWithValue("@fullName", user.fullName);
+            cmd.Parameters.AddWithValue("@emailAddress", user.Email);
+            cmd.Parameters.AddWithValue("@contactAddress", user.contactAddress);
+            cmd.Parameters.AddWithValue("@phoneNumber", user.phoneNumber);
+            cmd.Parameters.AddWithValue("@userName", user.userName);
+            cmd.Parameters.AddWithValue("@userPassword", user.userPassword);
+            conn.Open();
+            if (cn[0] == 'M')
+            {
+                cmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
+                try
+                {
+                    cmd.ExecuteNonQuery();
+                    String sSQL2 = "insert into UserAddress values(@userID,(Select UserAddress.storeID from UserAddress where UserAddress.userID=@managerID))";
+                    SqlCommand cmd2 = new SqlCommand(sSQL2, conn);
+                    cmd2.Parameters.AddWithValue("@userID", getIdByUsername_DA_DAL(user.userName));
+                    cmd2.Parameters.AddWithValue("@managerID", cn);
+                    cmd2.ExecuteNonQuery();
+                    MessageBox.Show("Thêm thành công");
+                }
+                catch
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
+                }
+            }
+            else
+            {
+                String sSQL2 = "Insert into UserAddress values(@userID,@storeID)";
+                SqlCommand cmd2 = new SqlCommand(sSQL2, conn);
+                cmd2.Parameters.AddWithValue("@storeID", cn);
+                try
+                {
+                    if (user.userRole.Equals("user"))
+                    {
+                        cmd.Parameters.AddWithValue("@proc", "InsertUserLoginData");
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Successfuly");
+                    }
+                    else if (user.userRole.Equals("admin"))
+                    {
+                        cmd.Parameters.AddWithValue("@proc", "InsertAdminLoginData");
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Successfuly");
+                    }
+                    else if (user.userRole.Equals("staff"))
+                    {
+                        cmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
+                        cmd.ExecuteNonQuery();
+                        cmd2.Parameters.AddWithValue("@userID", getIdByUsername_DA_DAL(user.userName));
+                        cmd2.ExecuteNonQuery();
+                        MessageBox.Show("Successfuly");
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@proc", "InsertManagerLoginData");
+                        cmd.ExecuteNonQuery();
+                        cmd2.Parameters.AddWithValue("@userID", getIdByUsername_DA_DAL(user.userName));
+                        cmd2.ExecuteNonQuery();
+                        MessageBox.Show("Successfuly");
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Tài khoản đã tồn tại");
+                }
+            }
+            conn.Close();
+        }
+        //________________________________________________________________________________________________________________
+
         //code dang ki tu use
-        public string signUp_DA_DAL(User newUser)
+        public string signUp_DAO(User newUser)
         {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
@@ -72,35 +172,51 @@ namespace Gimji.DAO
                 return "Tài khoản đã được đăng ký trước đây";
             }
         }
-
-        public string checkLoginData_DA_DAL(User tk)
+        public Dictionary<int, string> checkLoginData_Database(User tk)
         {
-            string userName = null;
+            string matKhau = null;
+            Dictionary<int, string> idtaiKhoan_userName = new Dictionary<int, string>();
             SqlConnection conn = new SqlConnection(strConn);
+            Boolean Check_tk = false;
             conn.Open();
-            String sSQL = "select * from LoginData where userName = @userName and userPassword = @userPassword";
+
+            string sSQL = @"
+                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Admin
+                UNION ALL
+                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Khach_hang
+                UNION ALL
+                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Nhan_vien;
+            ";
+
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@userName", tk.userName);
-            cmd.Parameters.AddWithValue("@userPassword", tk.userPassword);
-            cmd.Connection = conn;
             SqlDataReader reader = cmd.ExecuteReader();
+
             if (reader.HasRows)
             {
                 while (reader.Read())
                 {
-                    userName = reader.GetString(5);
+                    matKhau = reader.GetString(2);
+                    String ten_dang_nhap = reader.GetString(1);
+                    int id_tai_khoan = reader.GetInt32(0);
+                    if (tk.userName == ten_dang_nhap && tk.userPassword == matKhau)
+                    {
+                        Check_tk = true;
+                        idtaiKhoan_userName.Add(id_tai_khoan, ten_dang_nhap);
+                    }
                 }
-                reader.Close();
-                conn.Close();
-            }
-            else
+                    // Kiểm tra thông tin đăng nhập
+             }
+                    
+            reader.Close();
+            conn.Close();
+
+            if (Check_tk == false)
             {
-                reader.Close();
-                conn.Close();
-                return "Thông tin đăng nhập không chính xác!";
+                return new Dictionary<int, string>();
             }
-            return userName;
+            return idtaiKhoan_userName;
         }
+
         /*public DataTable populateHistoryDetail_DA_DAL(string orderUserID)
         {
             SqlConnection conn = new SqlConnection(strConn);
@@ -174,36 +290,6 @@ namespace Gimji.DAO
                 return "Thông tin đăng nhập không chính xác!";
             }
             return userName;
-        }
-        public string signUp_DA_DAL(User newUser)
-        {
-            SqlConnection conn = new SqlConnection(strConn);
-            conn.Open();
-            String sSQL = "select * from LoginData where userName = @userName";
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@userName", newUser.userName);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count == 0)
-            {
-                String anotherStringSQL = "exec InsertUserLoginData @fullName, @emailAddress, @contactAddress, @phoneNumber, @userName, @userPassword";
-                SqlCommand anotherCmd = new SqlCommand(anotherStringSQL, conn);
-                anotherCmd.Parameters.AddWithValue("@fullName", newUser.fullName);
-                anotherCmd.Parameters.AddWithValue("@emailAddress", newUser.emailAddress);
-                anotherCmd.Parameters.AddWithValue("@contactAddress", newUser.contactAddress);
-                anotherCmd.Parameters.AddWithValue("@phoneNumber", newUser.phoneNumber);
-                anotherCmd.Parameters.AddWithValue("@userName", newUser.userName);
-                anotherCmd.Parameters.AddWithValue("@userPassword", newUser.userPassword);
-                anotherCmd.ExecuteNonQuery();
-                conn.Close();
-                return "Đăng ký tài khoản thành công";
-            }
-            else
-            {
-                conn.Close();
-                return "Tài khoản đã được đăng ký trước đây";
-            }
         }
         public DataTable populateMenuData_DA_DAL(string type)
         {
@@ -489,19 +575,7 @@ namespace Gimji.DAO
             }
             conn.Close();
         }
-        public DataTable getUserById_DA_DAL(String id)
-        {
-            SqlConnection conn = new SqlConnection(strConn);
-            conn.Open();
-            String sSQL = "select * from LoginData where userID =@id";
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@id", id);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            return dt;
-        }
+
 
         public DataTable getAllUserOfStore_DA_DAL(String key)
         {

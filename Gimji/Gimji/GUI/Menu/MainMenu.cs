@@ -17,9 +17,9 @@ namespace Gimji
         private void pictureBox_logout_Click(object sender, EventArgs e)
         {
 
-            DatabaseAccess dal = new DatabaseAccess();
+            //DatabaseAccess dal = new DatabaseAccess();
 
-            MessageBox.Show(dal.getIdByUsername_DAL("thanhlong"));
+            //MessageBox.Show(dal.getIdByUsername_DAL("thanhlong"));
 
 
         }

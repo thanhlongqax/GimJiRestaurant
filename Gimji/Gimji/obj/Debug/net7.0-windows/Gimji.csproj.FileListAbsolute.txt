@@ -167,3 +167,12 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.Login_Form.reso
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Menu.uc_Header.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Menu.uc_Menu.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Menu.uc_MonAnCart.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Login_SignUp.uc_Login.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Login_SignUp.uc_Register.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.Main_Form_LoginRegister.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\System.Data.SqlClient.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\runtimes\win-arm64\native\sni.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\runtimes\win-x64\native\sni.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\runtimes\win-x86\native\sni.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net7.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
