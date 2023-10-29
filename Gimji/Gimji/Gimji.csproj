@@ -12,7 +12,6 @@
     <Folder Include="GUI\Admin\" />
     <Folder Include="GUI\Setting\" />
     <Folder Include="GUI\Order\" />
-    <Folder Include="GUI\PayMent\" />
     <Folder Include="GUI\Staff\" />
     <Folder Include="GUI\SignUp\" />
   </ItemGroup>

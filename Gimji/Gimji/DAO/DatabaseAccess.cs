@@ -65,7 +65,7 @@ namespace Gimji.DAO
         //____________________________________________________________________________
 
         //Thêm 1 user _____________________________________________________________________________________________
-        public void addUser_DA_DAO(User user, String cn)
+        /*public void addUser_DA_DAO(User user, String cn)
         {
             MessageBox.Show("add user :" + user.fullName);
             SqlConnection conn = new SqlConnection(strConn);
@@ -138,7 +138,7 @@ namespace Gimji.DAO
                 }
             }
             conn.Close();
-        }
+    }*/
         //________________________________________________________________________________________________________________
 
         //code dang ki tu use
@@ -204,9 +204,9 @@ namespace Gimji.DAO
                         idtaiKhoan_userName.Add(id_tai_khoan, ten_dang_nhap);
                     }
                 }
-                    // Kiểm tra thông tin đăng nhập
-             }
-                    
+                // Kiểm tra thông tin đăng nhập
+            }
+
             reader.Close();
             conn.Close();
 
@@ -228,8 +228,8 @@ namespace Gimji.DAO
             da.Fill(dt);
             conn.Close();
             return dt;
-        }*/
-        /*public DataTable populateStoreAddress_DA_DAL()
+        }
+        public DataTable populateStoreAddress_DA_DAL()
         {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
