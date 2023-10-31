@@ -37,17 +37,19 @@ namespace Gimji.GUI.Home
             button2 = new Button();
             panel1 = new Panel();
             panel2 = new Panel();
-            panel3 = new Panel();
+            flow_pal_listtable = new FlowLayoutPanel();
             label2 = new Label();
-            panel4 = new Panel();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             panel5 = new Panel();
             panel6 = new Panel();
+            flow_pal_table = new FlowLayoutPanel();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -96,12 +98,13 @@ namespace Gimji.GUI.Home
             // 
             panel1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.Control;
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(36, 27);
+            panel1.Location = new Point(35, 15);
             panel1.Name = "panel1";
-            panel1.Size = new Size(881, 77);
+            panel1.Size = new Size(897, 77);
             panel1.TabIndex = 3;
             // 
             // panel2
@@ -109,19 +112,20 @@ namespace Gimji.GUI.Home
             panel2.BackColor = Color.Transparent;
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(flow_pal_listtable);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(965, 30);
+            panel2.Location = new Point(949, 6);
             panel2.Name = "panel2";
-            panel2.Size = new Size(413, 724);
+            panel2.Size = new Size(415, 800);
             panel2.TabIndex = 4;
             // 
-            // panel3
+            // flow_pal_listtable
             // 
-            panel3.Location = new Point(23, 76);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(373, 626);
-            panel3.TabIndex = 4;
+            flow_pal_listtable.AutoScroll = true;
+            flow_pal_listtable.Location = new Point(3, 89);
+            flow_pal_listtable.Name = "flow_pal_listtable";
+            flow_pal_listtable.Size = new Size(407, 695);
+            flow_pal_listtable.TabIndex = 4;
             // 
             // label2
             // 
@@ -134,19 +138,12 @@ namespace Gimji.GUI.Home
             label2.TabIndex = 3;
             label2.Text = "TABLE LIST";
             // 
-            // panel4
-            // 
-            panel4.Location = new Point(50, 134);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(868, 420);
-            panel4.TabIndex = 5;
-            // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ActiveCaptionText;
-            pictureBox2.Location = new Point(53, 581);
+            pictureBox2.Location = new Point(39, 631);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(864, 1);
+            pictureBox2.Size = new Size(880, 1);
             pictureBox2.TabIndex = 7;
             pictureBox2.TabStop = false;
             // 
@@ -161,17 +158,34 @@ namespace Gimji.GUI.Home
             // 
             // panel5
             // 
-            panel5.Location = new Point(50, 689);
+            panel5.Location = new Point(39, 725);
             panel5.Name = "panel5";
             panel5.Size = new Size(870, 65);
             panel5.TabIndex = 9;
             // 
             // panel6
             // 
-            panel6.Location = new Point(52, 608);
+            panel6.Location = new Point(39, 638);
             panel6.Name = "panel6";
-            panel6.Size = new Size(865, 52);
+            panel6.Size = new Size(879, 59);
             panel6.TabIndex = 10;
+            // 
+            // flow_pal_table
+            // 
+            flow_pal_table.BackColor = Color.Transparent;
+            flow_pal_table.Location = new Point(39, 134);
+            flow_pal_table.Name = "flow_pal_table";
+            flow_pal_table.Size = new Size(880, 472);
+            flow_pal_table.TabIndex = 12;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ActiveCaptionText;
+            pictureBox1.Location = new Point(3, 71);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(880, 1);
+            pictureBox1.TabIndex = 13;
+            pictureBox1.TabStop = false;
             // 
             // uc_Home
             // 
@@ -179,21 +193,22 @@ namespace Gimji.GUI.Home
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(pictureBox2);
+            Controls.Add(flow_pal_table);
             Controls.Add(panel6);
             Controls.Add(panel5);
             Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(panel4);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Name = "uc_Home";
-            Size = new Size(1398, 778);
+            Size = new Size(1367, 827);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -205,11 +220,12 @@ namespace Gimji.GUI.Home
         private Panel panel1;
         private Panel panel2;
         private Label label2;
-        private Panel panel3;
-        private Panel panel4;
         private PictureBox pictureBox2;
         private PictureBox pictureBox3;
         private Panel panel5;
         private Panel panel6;
+        private FlowLayoutPanel flow_pal_listtable;
+        private FlowLayoutPanel flow_pal_table;
+        private PictureBox pictureBox1;
     }
 }

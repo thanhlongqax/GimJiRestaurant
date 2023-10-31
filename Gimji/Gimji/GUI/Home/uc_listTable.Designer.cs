@@ -29,115 +29,123 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_listTable));
-            pictureBox1 = new PictureBox();
-            radioButton1 = new RadioButton();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pic_status = new PictureBox();
+            lb_time = new Label();
+            lb_numGuest = new Label();
+            lb_name = new Label();
+            btn_table = new Button();
+            btn_edit = new Button();
+            btn_remove = new Button();
+            pal_pic = new PictureBox();
+            lb_status = new Label();
+            ((System.ComponentModel.ISupportInitialize)pic_status).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pal_pic).BeginInit();
             SuspendLayout();
             // 
-            // pictureBox1
+            // pic_status
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(9, 9);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(68, 68);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            pic_status.BackColor = Color.Transparent;
+            pic_status.BackgroundImage = (Image)resources.GetObject("pic_status.BackgroundImage");
+            pic_status.BackgroundImageLayout = ImageLayout.Stretch;
+            pic_status.Location = new Point(276, 16);
+            pic_status.Name = "pic_status";
+            pic_status.Size = new Size(20, 20);
+            pic_status.TabIndex = 20;
+            pic_status.TabStop = false;
             // 
-            // radioButton1
+            // lb_time
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.BackColor = Color.Transparent;
-            radioButton1.FlatAppearance.BorderSize = 0;
-            radioButton1.FlatStyle = FlatStyle.Flat;
-            radioButton1.Font = new Font("Segoe UI Semibold", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            radioButton1.Location = new Point(275, 14);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(89, 23);
-            radioButton1.TabIndex = 5;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Occupied";
-            radioButton1.UseVisualStyleBackColor = false;
+            lb_time.AutoSize = true;
+            lb_time.FlatStyle = FlatStyle.Flat;
+            lb_time.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_time.Location = new Point(110, 55);
+            lb_time.Name = "lb_time";
+            lb_time.Size = new Size(43, 19);
+            lb_time.TabIndex = 19;
+            lb_time.Text = "Time";
             // 
-            // button1
+            // lb_numGuest
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(297, 54);
-            button1.Name = "button1";
-            button1.Size = new Size(20, 20);
-            button1.TabIndex = 6;
-            button1.UseVisualStyleBackColor = false;
+            lb_numGuest.AutoSize = true;
+            lb_numGuest.FlatStyle = FlatStyle.Flat;
+            lb_numGuest.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_numGuest.Location = new Point(110, 36);
+            lb_numGuest.Name = "lb_numGuest";
+            lb_numGuest.Size = new Size(127, 19);
+            lb_numGuest.TabIndex = 18;
+            lb_numGuest.Text = "Number of guest";
             // 
-            // button2
+            // lb_name
             // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(324, 54);
-            button2.Name = "button2";
-            button2.Size = new Size(20, 20);
-            button2.TabIndex = 7;
-            button2.UseVisualStyleBackColor = false;
+            lb_name.AutoSize = true;
+            lb_name.FlatStyle = FlatStyle.Flat;
+            lb_name.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_name.Location = new Point(109, 9);
+            lb_name.Name = "lb_name";
+            lb_name.Size = new Size(69, 28);
+            lb_name.TabIndex = 17;
+            lb_name.Text = "Name";
             // 
-            // button3
+            // btn_table
             // 
-            button3.BackColor = Color.DarkGray;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ActiveCaptionText;
-            button3.Location = new Point(18, 20);
-            button3.Name = "button3";
-            button3.Size = new Size(53, 47);
-            button3.TabIndex = 8;
-            button3.Text = "T1";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            btn_table.BackColor = Color.DarkGray;
+            btn_table.FlatAppearance.BorderSize = 0;
+            btn_table.FlatStyle = FlatStyle.Flat;
+            btn_table.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_table.ForeColor = SystemColors.ActiveCaptionText;
+            btn_table.Location = new Point(32, 19);
+            btn_table.Name = "btn_table";
+            btn_table.Size = new Size(53, 47);
+            btn_table.TabIndex = 16;
+            btn_table.Text = "T1";
+            btn_table.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // btn_edit
             // 
-            label1.AutoSize = true;
-            label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(95, 10);
-            label1.Name = "label1";
-            label1.Size = new Size(69, 28);
-            label1.TabIndex = 9;
-            label1.Text = "Name";
+            btn_edit.BackColor = Color.Transparent;
+            btn_edit.BackgroundImage = (Image)resources.GetObject("btn_edit.BackgroundImage");
+            btn_edit.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_edit.FlatAppearance.BorderSize = 0;
+            btn_edit.FlatStyle = FlatStyle.Flat;
+            btn_edit.Location = new Point(338, 53);
+            btn_edit.Name = "btn_edit";
+            btn_edit.Size = new Size(20, 20);
+            btn_edit.TabIndex = 15;
+            btn_edit.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // btn_remove
             // 
-            label2.AutoSize = true;
-            label2.FlatStyle = FlatStyle.Flat;
-            label2.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(96, 37);
-            label2.Name = "label2";
-            label2.Size = new Size(127, 19);
-            label2.TabIndex = 10;
-            label2.Text = "Number of guest";
+            btn_remove.BackColor = Color.Transparent;
+            btn_remove.BackgroundImage = (Image)resources.GetObject("btn_remove.BackgroundImage");
+            btn_remove.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_remove.FlatAppearance.BorderSize = 0;
+            btn_remove.FlatStyle = FlatStyle.Flat;
+            btn_remove.Location = new Point(311, 53);
+            btn_remove.Name = "btn_remove";
+            btn_remove.Size = new Size(20, 20);
+            btn_remove.TabIndex = 14;
+            btn_remove.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // pal_pic
             // 
-            label3.AutoSize = true;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI Black", 8F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(96, 56);
-            label3.Name = "label3";
-            label3.Size = new Size(43, 19);
-            label3.TabIndex = 11;
-            label3.Text = "Time";
+            pal_pic.BackgroundImage = (Image)resources.GetObject("pal_pic.BackgroundImage");
+            pal_pic.BackgroundImageLayout = ImageLayout.Stretch;
+            pal_pic.Location = new Point(23, 8);
+            pal_pic.Name = "pal_pic";
+            pal_pic.Size = new Size(68, 68);
+            pal_pic.TabIndex = 13;
+            pal_pic.TabStop = false;
+            // 
+            // lb_status
+            // 
+            lb_status.AutoSize = true;
+            lb_status.BackColor = Color.Transparent;
+            lb_status.Font = new Font("Segoe UI Semibold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_status.Location = new Point(298, 13);
+            lb_status.Name = "lb_status";
+            lb_status.Size = new Size(82, 23);
+            lb_status.TabIndex = 21;
+            lb_status.Text = "Occupied";
             // 
             // uc_listTable
             // 
@@ -146,31 +154,34 @@
             BackColor = Color.Transparent;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             BackgroundImageLayout = ImageLayout.Stretch;
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
-            Controls.Add(radioButton1);
-            Controls.Add(pictureBox1);
+            Controls.Add(lb_status);
+            Controls.Add(pic_status);
+            Controls.Add(lb_time);
+            Controls.Add(lb_numGuest);
+            Controls.Add(lb_name);
+            Controls.Add(btn_table);
+            Controls.Add(btn_edit);
+            Controls.Add(btn_remove);
+            Controls.Add(pal_pic);
             DoubleBuffered = true;
             Name = "uc_listTable";
             Size = new Size(380, 85);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_status).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pal_pic).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private PictureBox pictureBox1;
-        private RadioButton radioButton1;
-        private Button button1;
-        private Button button2;
-        private Button button3;
-        private Label label1;
-        private Label label2;
-        private Label label3;
+        private PictureBox pic_status;
+        private Label lb_time;
+        private Label lb_numGuest;
+        private Label lb_name;
+        private Button btn_table;
+        private Button btn_edit;
+        private Button btn_remove;
+        private PictureBox pal_pic;
+        private Label lb_status;
     }
 }
