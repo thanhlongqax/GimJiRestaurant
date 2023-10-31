@@ -44,7 +44,7 @@ namespace Gimji.DAO
             return getAllUserOfStore_DA_DAL(key);
         }*/
         //Thêm 1 user _____________________________________________________________________________________________
-        public void addUser_DA_DAO(Customer user, String cn)
+        /*public void addUser_DA_DAO(Customer user, String cn)
         {
             MessageBox.Show("add user :" + user.fullName);
             SqlConnection conn = new SqlConnection(strConn);
@@ -117,7 +117,7 @@ namespace Gimji.DAO
                 }
             }
             conn.Close();
-        }
+        }*/
         //________________________________________________________________________________________________________________
     }
 }

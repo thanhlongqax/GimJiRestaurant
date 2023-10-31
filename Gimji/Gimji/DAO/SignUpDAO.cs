@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Gimji.DTO;
 
 namespace Gimji.DAO
 {
@@ -19,7 +20,7 @@ namespace Gimji.DAO
                 conn.Open();
                 String sSQL = "select * from Khach_hang where ten_dang_nhap = @userName";
                 SqlCommand cmd = new SqlCommand(sSQL, conn);
-                cmd.Parameters.AddWithValue("@userName", newUser.CustomerName);
+                cmd.Parameters.AddWithValue("@userName", newUser.userName);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -27,8 +28,8 @@ namespace Gimji.DAO
                 {
                     String anotherStringSQL = "exec InsertCusTomerLoginData @userName, @userPassword";
                     SqlCommand anotherCmd = new SqlCommand(anotherStringSQL, conn);
-                    anotherCmd.Parameters.AddWithValue("@userName", newUser.CustomerName);
-                    anotherCmd.Parameters.AddWithValue("@userPassword", newUser.CustomerPassword);
+                    anotherCmd.Parameters.AddWithValue("@userName", newUser.userName);
+                    anotherCmd.Parameters.AddWithValue("@userPassword", newUser.userPassword);
                     anotherCmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("Đăng Ký Thành Công ", "Thông báo", MessageBoxButtons.OK);
@@ -47,6 +48,10 @@ namespace Gimji.DAO
                 
             }
             
+        }
+        public string signUp_Login_DAO(Customer newUser)
+        {
+            return signUp_DAO(newUser);
         }
     }
 }

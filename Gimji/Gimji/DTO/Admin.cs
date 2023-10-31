@@ -8,13 +8,15 @@ namespace Gimji.DTO
 {
     internal class Admin
     {
-        public int AdminId { get; set; }
-        public string AdminName { get; set; }
-        public string AdminPassword { get; set; }
+        public int Id { get; set; }
+        public string userName { get; set; }
+        public string userPassword { get; set; }
         public string fullName { get; set; }
-        public string Gender { get; set; }
-        public string phoneNumber { get; set; }
+        public string DateOfBirth { get; set; }
+
         public string Email { get; set; }
+        public string phoneNumber { get; set; }
+
 
     }
 }

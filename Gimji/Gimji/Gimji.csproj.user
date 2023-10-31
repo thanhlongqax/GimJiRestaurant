@@ -22,9 +22,6 @@
     <Compile Update="GUI\Login_SignUp\uc_Register.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\mainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
