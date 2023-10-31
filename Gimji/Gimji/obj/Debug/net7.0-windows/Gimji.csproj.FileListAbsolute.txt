@@ -322,3 +322,8 @@ E:\CNPM_N12 - Copy - Copy\Gimji\Gimji\obj\Debug\net7.0-windows\refint\Gimji.dll
 E:\CNPM_N12 - Copy - Copy\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.pdb
 E:\CNPM_N12 - Copy - Copy\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.genruntimeconfig.cache
 E:\CNPM_N12 - Copy - Copy\Gimji\Gimji\obj\Debug\net7.0-windows\ref\Gimji.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Home.uc_Home.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Home.uc_inforTable.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Home.uc_listTable.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Home.uc_status.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net7.0-windows\Gimji.GUI.Home.uc_table.resources

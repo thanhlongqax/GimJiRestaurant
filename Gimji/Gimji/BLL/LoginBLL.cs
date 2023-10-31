@@ -29,7 +29,7 @@ namespace Gimji.BLL
                 return false;
             }
         }
-        public string checkLoginData_Login_BLL(User tk)
+        public string checkLoginData_Login_BLL(Customer tk)
         {
             if (tk.userName == "" || tk.userName == "Username")
             {

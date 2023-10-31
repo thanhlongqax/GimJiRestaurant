@@ -78,7 +78,7 @@
             // 
             // panel5
             // 
-            panel5.BackgroundImage = (Image)resources.GetObject("panel5.BackgroundImage");
+            panel5.BackgroundImage = (Image)resources.GetObject("Avatar");
             panel5.BackgroundImageLayout = ImageLayout.Stretch;
             panel5.Controls.Add(pictureBox1);
             panel5.Location = new Point(1380, 16);
@@ -89,7 +89,7 @@
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
+            pictureBox1.BackgroundImage = Properties.Resources.masterchef;
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Cursor = Cursors.No;
             pictureBox1.Location = new Point(4, 3);
@@ -131,7 +131,7 @@
             // panel3
             // 
             panel3.BackColor = Color.Transparent;
-            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
+            panel3.BackgroundImage = (Image)resources.GetObject("Rectangle_2");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
             panel3.Controls.Add(searchTextBox);
             panel3.Controls.Add(pictureBox_search);
@@ -153,7 +153,7 @@
             // 
             // pictureBox_search
             // 
-            pictureBox_search.BackgroundImage = (Image)resources.GetObject("pictureBox_search.BackgroundImage");
+            pictureBox_search.BackgroundImage = (Image)resources.GetObject("search1");
             pictureBox_search.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox_search.Location = new Point(322, 20);
             pictureBox_search.Name = "pictureBox_search";
@@ -166,7 +166,7 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
+            panel2.BackgroundImage = (Image)resources.GetObject("Rectangle_27");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
             panel2.Controls.Add(button1);
             panel2.Location = new Point(11, -1);
@@ -177,7 +177,7 @@
             // button1
             // 
             button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
+            button1.BackgroundImage = (Image)resources.GetObject("logo1");
             button1.BackgroundImageLayout = ImageLayout.Stretch;
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
@@ -190,11 +190,11 @@
             // button2
             // 
             button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
+            button2.BackgroundImage = (Image)resources.GetObject("Rectangle_21");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Image = (Image)resources.GetObject("add_1");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(1188, 18);
             button2.Name = "button2";

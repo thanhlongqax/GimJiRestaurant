@@ -17,7 +17,7 @@ namespace Gimji.DAO
 {
     internal class DatabaseAccess
     {
-        private String strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+        public String strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
 
         //Code lay id tu ten truyen vao 
         public String getIdByUsername_DAO(String name)
@@ -141,81 +141,6 @@ namespace Gimji.DAO
     }*/
         //________________________________________________________________________________________________________________
 
-        //code dang ki tu use
-        public string signUp_DAO(User newUser)
-        {
-            SqlConnection conn = new SqlConnection(strConn);
-            conn.Open();
-            String sSQL = "select * from LoginData where userName = @userName";
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@userName", newUser.userName);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            if (dt.Rows.Count == 0)
-            {
-                String anotherStringSQL = "exec InsertUserLoginData @fullName, @emailAddress, @contactAddress, @phoneNumber, @userName, @userPassword";
-                SqlCommand anotherCmd = new SqlCommand(anotherStringSQL, conn);
-                anotherCmd.Parameters.AddWithValue("@fullName", newUser.fullName);
-                anotherCmd.Parameters.AddWithValue("@emailAddress", newUser.Email);
-                anotherCmd.Parameters.AddWithValue("@contactAddress", newUser.contactAddress);
-                anotherCmd.Parameters.AddWithValue("@phoneNumber", newUser.phoneNumber);
-                anotherCmd.Parameters.AddWithValue("@userName", newUser.userName);
-                anotherCmd.Parameters.AddWithValue("@userPassword", newUser.userPassword);
-                anotherCmd.ExecuteNonQuery();
-                conn.Close();
-                return "Đăng ký tài khoản thành công";
-            }
-            else
-            {
-                conn.Close();
-                return "Tài khoản đã được đăng ký trước đây";
-            }
-        }
-        public Dictionary<int, string> checkLoginData_Database(User tk)
-        {
-            string matKhau = null;
-            Dictionary<int, string> idtaiKhoan_userName = new Dictionary<int, string>();
-            SqlConnection conn = new SqlConnection(strConn);
-            Boolean Check_tk = false;
-            conn.Open();
-
-            string sSQL = @"
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Admin
-                UNION ALL
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Khach_hang
-                UNION ALL
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Nhan_vien;
-            ";
-
-            SqlCommand cmd = new SqlCommand(sSQL, conn);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    matKhau = reader.GetString(2);
-                    String ten_dang_nhap = reader.GetString(1);
-                    int id_tai_khoan = reader.GetInt32(0);
-                    if (tk.userName == ten_dang_nhap && tk.userPassword == matKhau)
-                    {
-                        Check_tk = true;
-                        idtaiKhoan_userName.Add(id_tai_khoan, ten_dang_nhap);
-                    }
-                }
-                // Kiểm tra thông tin đăng nhập
-            }
-
-            reader.Close();
-            conn.Close();
-
-            if (Check_tk == false)
-            {
-                return new Dictionary<int, string>();
-            }
-            return idtaiKhoan_userName;
-        }
 
         /*public DataTable populateHistoryDetail_DA_DAL(string orderUserID)
         {
