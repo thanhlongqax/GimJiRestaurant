@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "zoREW/q+bUFmf1NryII9Whabq3eSh9yvkqUBBn1Lx43ZpPgmftZLaQ2QM2aFbZR2X7NNVDKKB6XqFogbDahExw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\admin\\Downloads\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+  "projectFilePath": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\admin\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\admin\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
