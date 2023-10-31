@@ -22,7 +22,7 @@ namespace Gimji.GUI.Login_SignUp
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            User tk = new User();
+            Customer tk = new Customer();
             //AdminUserBLL ehe = new AdminUserBLL();
             tk.userName = txt_username.Text;
             tk.userPassword = txt_password.Text;
