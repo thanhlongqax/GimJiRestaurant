@@ -12,20 +12,20 @@ namespace Gimji.DAO
 {
     internal class LoginDAO :DatabaseAccess
     {
-        public Dictionary<int, string> checkLoginData_Database(Customer tk)
+        public Dictionary<string, string> checkLoginData_Database(Customer tk)
         {
-            string matKhau = null;
-            Dictionary<int, string> idtaiKhoan_userName = new Dictionary<int, string>();
+
+            Dictionary<string, string> idtaiKhoan_userName = new Dictionary<string, string>();
             SqlConnection conn = new SqlConnection(strConn);
             Boolean Check_tk = false;
             conn.Open();
 
             string sSQL = @"
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Admin
+                SELECT id_admin, ten_dang_nhap, mat_khau FROM Admin
                 UNION ALL
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Khach_hang
+                SELECT id_khach_hang, ten_dang_nhap, mat_khau FROM Khach_hang
                 UNION ALL
-                SELECT id_tai_khoan, ten_dang_nhap, mat_khau FROM Nhan_vien;
+                SELECT id_nhan_vien, ten_dang_nhap, mat_khau FROM Nhan_vien;
             ";
 
             SqlCommand cmd = new SqlCommand(sSQL, conn);
@@ -35,9 +35,11 @@ namespace Gimji.DAO
             {
                 while (reader.Read())
                 {
-                    matKhau = reader.GetString(2);
+
+
+                    string id_tai_khoan = reader.GetString(0);
                     String ten_dang_nhap = reader.GetString(1);
-                    int id_tai_khoan = reader.GetInt32(0);
+                    string matKhau = reader.GetString(2);
                     if (tk.userName == ten_dang_nhap && tk.userPassword == matKhau)
                     {
                         Check_tk = true;
@@ -52,14 +54,14 @@ namespace Gimji.DAO
 
             if (Check_tk == false)
             {
-                return new Dictionary<int, string>();
+                return new Dictionary<string, string>();
             }
             return idtaiKhoan_userName;
         }
 
         public  string LoginDAO_checkLoginData(Customer tk)
         {
-            Dictionary<int, string> result = checkLoginData_Database(tk);
+            Dictionary<string, string> result = checkLoginData_Database(tk);
             String userName = null;
             if (result.Count == 0)
             {
@@ -67,7 +69,7 @@ namespace Gimji.DAO
                 return null; // Trả về giá trị null hoặc giá trị phù hợp tùy vào logic của bạn.
             }
             // Xử lý các trường hợp khác ở đây.
-            foreach (KeyValuePair<int, string> item in result)
+            foreach (KeyValuePair<string, string> item in result)
             {
                   userName = item.Value;
             }

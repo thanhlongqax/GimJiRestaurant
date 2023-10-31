@@ -32,7 +32,7 @@ namespace Gimji.DAO
                     anotherCmd.Parameters.AddWithValue("@userPassword", newUser.userPassword);
                     anotherCmd.ExecuteNonQuery();
                     conn.Close();
-                    MessageBox.Show("Đăng Ký Thành Công ", "Thông báo", MessageBoxButtons.OK);
+                    MessageBox.Show("    Đăng Ký Thành Công\nCHào Mừng Bạn Đến Gimji", "Thông báo", MessageBoxButtons.OK);
                     return "Đăng ký tài khoản thành công";
                 }
                 else
@@ -48,10 +48,6 @@ namespace Gimji.DAO
                 
             }
             
-        }
-        public string signUp_Login_DAO(Customer newUser)
-        {
-            return signUp_DAO(newUser);
         }
     }
 }

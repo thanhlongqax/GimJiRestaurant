@@ -13,7 +13,7 @@ namespace Gimji.DTO
         public int DeliveryId { get; set; }
         public string foodID { get; set; }
         public int quanity { get; set; }
-        public String DeliveryName { get; set; }
+        public string DeliveryName { get; set; }
 
     }
 }

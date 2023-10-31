@@ -41,23 +41,20 @@
             txt_tenMonAn.AutoSize = true;
             txt_tenMonAn.Location = new Point(54, 208);
             txt_tenMonAn.Name = "txt_tenMonAn";
-            txt_tenMonAn.Size = new Size(107, 20);
+            txt_tenMonAn.Size = new Size(0, 20);
             txt_tenMonAn.TabIndex = 6;
-            txt_tenMonAn.Text = "Tobokki chả cá";
             // 
             // txt_giaTien
             // 
             txt_giaTien.AutoSize = true;
             txt_giaTien.Location = new Point(73, 236);
             txt_giaTien.Name = "txt_giaTien";
-            txt_giaTien.Size = new Size(49, 20);
+            txt_giaTien.Size = new Size(0, 20);
             txt_giaTien.TabIndex = 5;
-            txt_giaTien.Text = "$5000";
             // 
             // pictureBox_hinhMonAn
             // 
             pictureBox_hinhMonAn.BackColor = Color.Transparent;
-            pictureBox_hinhMonAn.BackgroundImage = (Image)resources.GetObject("pictureBox_hinhMonAn.BackgroundImage");
             pictureBox_hinhMonAn.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox_hinhMonAn.Location = new Point(22, 16);
             pictureBox_hinhMonAn.Margin = new Padding(3, 4, 3, 4);

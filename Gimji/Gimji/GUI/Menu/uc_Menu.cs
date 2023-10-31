@@ -19,9 +19,37 @@ namespace Gimji.GUI.Menu
 
         private void uc_Menu_Load(object sender, EventArgs e)
         {
-            panel_Header.Controls.Add(new uc_Header());
-            panel_Order.Controls.Add(new uc_Order());
-            fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            //panel_Order.Controls.Add(new uc_Order());
+            //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+        }
+
+        private void btn_Tokbokki_Click(object sender, EventArgs e)
+        {
+            uc_MonAn Tokbokki = new uc_MonAn();
+            Tokbokki.setMonAn("asdf", "asdfsd", @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai");
+            Tokbokki.Controls.Clear();
+            fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
+
+        }
+
+        private void btn_KimBak_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Com_Tron_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Thit_Nuong_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Salad_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

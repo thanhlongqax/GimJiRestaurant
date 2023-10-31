@@ -10,21 +10,27 @@ using System.Windows.Forms;
 
 namespace Gimji.GUI.Menu
 {
-    public partial class uc_MonAn  : UserControl
+    public partial class uc_MonAn : UserControl
     {
-        private static uc_MonAn _instance;
-        public static uc_MonAn Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new uc_MonAn();
-                return _instance;
-            }
-        }
         public uc_MonAn()
         {
             InitializeComponent();
+        }
+        public void setMonAn(String tenMonAn, String giaTien, String hinhAnh)
+        {
+            txt_tenMonAn.Text = tenMonAn;
+            txt_giaTien.Text = giaTien;
+            txt_giaTien.BackColor = System.Drawing.Color.Black;
+            if (System.IO.File.Exists(hinhAnh))
+            {
+                pictureBox_hinhMonAn.BackgroundImage = Image.FromFile(hinhAnh);
+            }
+            else
+            {
+                // Xử lý trường hợp tệp hình ảnh không tồn tại
+                // Ví dụ: Hiển thị một hình ảnh mặc định hoặc thông báo lỗi.
+                pictureBox_hinhMonAn.Image = null; // Gán hình ảnh mặc định hoặc null
+            }
         }
     }
 }
