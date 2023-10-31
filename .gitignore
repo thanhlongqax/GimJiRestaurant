@@ -1,2 +1,9 @@
-/.git
-/.vs
+# Bỏ qua tất cả các tệp và thư mục có tên node_modules
+.git/
+.vs/
+
+# Bỏ qua tất cả các tệp .log
+*.log
+
+# Theo dõi tệp .log trong thư mục logs
+
