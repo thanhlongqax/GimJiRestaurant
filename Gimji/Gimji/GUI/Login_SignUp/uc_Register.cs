@@ -14,6 +14,7 @@ namespace Gimji.GUI.Login_SignUp
 {
     public partial class uc_Register : UserControl
     {
+        public event EventHandler RegistrationSuccess;
         public uc_Register()
         {
             InitializeComponent();
@@ -21,10 +22,6 @@ namespace Gimji.GUI.Login_SignUp
 
         private void button_register_register_Click(object sender, EventArgs e)
         {
-            Customer customer = new Customer();
-            SignUp_BLL signUp_BLL = new SignUp_BLL();   
-
-
             if (string.IsNullOrWhiteSpace(textBox_username_register.Text))
             {
                 MessageBox.Show("Vui lòng nhập tên tài khoản", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -47,8 +44,17 @@ namespace Gimji.GUI.Login_SignUp
             }
             else
             {
+                Customer customer = new Customer();
+                SignUp_BLL signUp_BLL = new SignUp_BLL();
+                customer.userName = textBox_username_register.Text;
+                customer.userPassword = textBox_createpass.Text;
                 signUp_BLL.signUp_BLL(customer);
+                OnRegistrationSuccess();
             }
+        }
+        private void OnRegistrationSuccess()
+        {
+            RegistrationSuccess?.Invoke(this, EventArgs.Empty);
         }
     }
 }
