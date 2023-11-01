@@ -31,16 +31,6 @@ namespace Gimji.BLL
         }
         public string checkLoginData_Login_BLL(Customer tk)
         {
-            if (tk.userName == "" || tk.userName == "Username")
-            {
-                MessageBox.Show("Vui lòng nhập tên tài khoản" , "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
-            else if (tk.userPassword == "" || tk.userPassword == "Password")
-            {
-                MessageBox.Show("Vui lòng nhập mật khẩu","Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return null;
-            }
             return loginDao.LoginDAO_checkLoginData(tk);
         }
         /*
