@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             topPanel = new Panel();
-            panel5 = new Panel();
+            pal_avatar = new Panel();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
             pictureBox2 = new PictureBox();
@@ -38,8 +38,8 @@
             panel3 = new Panel();
             searchTextBox = new TextBox();
             pictureBox_search = new PictureBox();
-            panel2 = new Panel();
-            button1 = new Button();
+            pal_logo = new Panel();
+            btn_logo = new Button();
             button2 = new Button();
             panel1 = new Panel();
             btn_Logout = new Button();
@@ -51,13 +51,13 @@
             panel_Menu = new Panel();
             pictureBox3 = new PictureBox();
             topPanel.SuspendLayout();
-            panel5.SuspendLayout();
+            pal_avatar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_search).BeginInit();
-            panel2.SuspendLayout();
+            pal_logo.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
@@ -66,25 +66,25 @@
             // 
             topPanel.BackColor = Color.FromArgb(209, 10, 45);
             topPanel.BorderStyle = BorderStyle.FixedSingle;
-            topPanel.Controls.Add(panel5);
+            topPanel.Controls.Add(pal_avatar);
             topPanel.Controls.Add(panel4);
             topPanel.Controls.Add(panel3);
-            topPanel.Controls.Add(panel2);
+            topPanel.Controls.Add(pal_logo);
             topPanel.Controls.Add(button2);
             topPanel.Location = new Point(0, 1);
             topPanel.Name = "topPanel";
             topPanel.Size = new Size(1500, 97);
             topPanel.TabIndex = 0;
             // 
-            // panel5
+            // pal_avatar
             // 
-            panel5.BackgroundImage = (Image)resources.GetObject("Avatar");
-            panel5.BackgroundImageLayout = ImageLayout.Stretch;
-            panel5.Controls.Add(pictureBox1);
-            panel5.Location = new Point(1380, 16);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(79, 63);
-            panel5.TabIndex = 10;
+            pal_avatar.BackgroundImage = (Image)resources.GetObject("pal_avatar.BackgroundImage");
+            pal_avatar.BackgroundImageLayout = ImageLayout.Stretch;
+            pal_avatar.Controls.Add(pictureBox1);
+            pal_avatar.Location = new Point(1380, 16);
+            pal_avatar.Name = "pal_avatar";
+            pal_avatar.Size = new Size(79, 63);
+            pal_avatar.TabIndex = 10;
             // 
             // pictureBox1
             // 
@@ -131,7 +131,7 @@
             // panel3
             // 
             panel3.BackColor = Color.Transparent;
-            panel3.BackgroundImage = (Image)resources.GetObject("Rectangle_2");
+            panel3.BackgroundImage = (Image)resources.GetObject("panel3.BackgroundImage");
             panel3.BackgroundImageLayout = ImageLayout.Stretch;
             panel3.Controls.Add(searchTextBox);
             panel3.Controls.Add(pictureBox_search);
@@ -153,7 +153,7 @@
             // 
             // pictureBox_search
             // 
-            pictureBox_search.BackgroundImage = (Image)resources.GetObject("search1");
+            pictureBox_search.BackgroundImage = (Image)resources.GetObject("pictureBox_search.BackgroundImage");
             pictureBox_search.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox_search.Location = new Point(322, 20);
             pictureBox_search.Name = "pictureBox_search";
@@ -163,38 +163,37 @@
             pictureBox_search.TabStop = false;
             pictureBox_search.Click += pictureBox_search_Click;
             // 
-            // panel2
+            // pal_logo
             // 
-            panel2.BackColor = Color.Transparent;
-            panel2.BackgroundImage = (Image)resources.GetObject("Rectangle_27");
-            panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(button1);
-            panel2.Location = new Point(11, -1);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(148, 87);
-            panel2.TabIndex = 3;
+            pal_logo.BackColor = Color.Transparent;
+            pal_logo.BackgroundImage = (Image)resources.GetObject("pal_logo.BackgroundImage");
+            pal_logo.BackgroundImageLayout = ImageLayout.Stretch;
+            pal_logo.Controls.Add(btn_logo);
+            pal_logo.Location = new Point(11, -1);
+            pal_logo.Name = "pal_logo";
+            pal_logo.Size = new Size(148, 87);
+            pal_logo.TabIndex = 3;
             // 
-            // button1
+            // btn_logo
             // 
-            button1.BackColor = Color.Transparent;
-            button1.BackgroundImage = (Image)resources.GetObject("logo1");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(8, 17);
-            button1.Name = "button1";
-            button1.Size = new Size(130, 67);
-            button1.TabIndex = 6;
-            button1.UseVisualStyleBackColor = false;
+            btn_logo.BackColor = Color.Transparent;
+            btn_logo.BackgroundImage = (Image)resources.GetObject("btn_logo.BackgroundImage");
+            btn_logo.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_logo.FlatAppearance.BorderSize = 0;
+            btn_logo.FlatStyle = FlatStyle.Flat;
+            btn_logo.Location = new Point(8, 17);
+            btn_logo.Name = "btn_logo";
+            btn_logo.Size = new Size(130, 67);
+            btn_logo.TabIndex = 6;
+            btn_logo.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
             button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("Rectangle_21");
+            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
             button2.BackgroundImageLayout = ImageLayout.Stretch;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = (Image)resources.GetObject("add_1");
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(1188, 18);
             button2.Name = "button2";
@@ -334,7 +333,7 @@
             Text = "Gimji";
             Load += mainForm_Load_1;
             topPanel.ResumeLayout(false);
-            panel5.ResumeLayout(false);
+            pal_avatar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
@@ -342,7 +341,7 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox_search).EndInit();
-            panel2.ResumeLayout(false);
+            pal_logo.ResumeLayout(false);
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
@@ -367,13 +366,13 @@
         private Label txt_MonAn;
         private Label txt_tenMonAn;
         private Panel panel_Menu;
-        private Panel panel2;
-        private Button button1;
+        private Panel pal_logo;
+        private Button btn_logo;
         private Panel panel3;
         private Label date_time;
         private Panel panel4;
         private PictureBox pictureBox2;
-        private Panel panel5;
+        private Panel pal_avatar;
         private PictureBox pictureBox3;
     }
 }

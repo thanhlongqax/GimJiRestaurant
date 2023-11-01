@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gimji.GUI.Home
+namespace Gimji.GUI.Management.StaffManagement
 {
-    public partial class uc_table : UserControl
+    public partial class uc_staffManagement : UserControl
     {
-        public uc_table()
+        public uc_staffManagement()
         {
             InitializeComponent();
-        }
-
-        private void btn_table_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

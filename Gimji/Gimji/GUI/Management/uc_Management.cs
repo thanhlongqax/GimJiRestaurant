@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Gimji.GUI.Home
+namespace Gimji.GUI.Management
 {
-    public partial class uc_table : UserControl
+    public partial class uc_Management : UserControl
     {
-        public uc_table()
+        public uc_Management()
         {
             InitializeComponent();
         }
 
-        private void btn_table_Click(object sender, EventArgs e)
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

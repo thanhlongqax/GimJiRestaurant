@@ -29,35 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_table));
-            button3 = new Button();
+            btn_table = new Button();
             SuspendLayout();
             // 
-            // button3
+            // btn_table
             // 
-            button3.BackgroundImage = (Image)resources.GetObject("button3.BackgroundImage");
-            button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button3.Location = new Point(0, 1);
-            button3.Name = "button3";
-            button3.Size = new Size(160, 160);
-            button3.TabIndex = 1;
-            button3.Text = "ID";
-            button3.UseVisualStyleBackColor = true;
+            btn_table.BackgroundImage = (Image)resources.GetObject("btn_table.BackgroundImage");
+            btn_table.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_table.FlatAppearance.BorderSize = 0;
+            btn_table.FlatStyle = FlatStyle.Flat;
+            btn_table.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_table.Location = new Point(32, 42);
+            btn_table.Name = "btn_table";
+            btn_table.Size = new Size(200, 200);
+            btn_table.TabIndex = 1;
+            btn_table.Text = "ID";
+            btn_table.UseVisualStyleBackColor = true;
+            btn_table.Click += btn_table_Click;
             // 
             // uc_table
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(button3);
+            BackColor = Color.Transparent;
+            Controls.Add(btn_table);
             Name = "uc_table";
-            Size = new Size(160, 160);
+            Size = new Size(280, 280);
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button button3;
+        private Button btn_table;
     }
 }

@@ -16,13 +16,13 @@ namespace Gimji.GUI.Home
         {
             InitializeComponent();
             uc_inforTable inforTable = new uc_inforTable();
-            uc_listTable listTable = new uc_listTable();
             uc_status status = new uc_status();
-            uc_table table = new uc_table();
+            populateStatusTable();
+            pal_status.Controls.Add(status);
+            pal_inforTable.Controls.Add(inforTable);
+            pal_status.Controls.Add(status);
             populateTable();
-            //panel4.Controls.Add(table);
-            //panel5.Controls.Add(inforTable);
-            panel6.Controls.Add(status);
+
 
 
         }
@@ -41,6 +41,22 @@ namespace Gimji.GUI.Home
                 }
                 else
                     flow_pal_listtable.Controls.Add(listTables[i]);
+            }
+        }
+        public void populateStatusTable()
+        {
+            uc_table[] Table = new uc_table[10];
+            for (int i = 0; i < Table.Length; i++)
+            {
+                Table[i] = new uc_table();
+
+
+                if (flow_pal_table.Controls.Count < 0)
+                {
+                    flow_pal_table.Controls.Clear();
+                }
+                else
+                    flow_pal_table.Controls.Add(Table[i]);
             }
         }
 
