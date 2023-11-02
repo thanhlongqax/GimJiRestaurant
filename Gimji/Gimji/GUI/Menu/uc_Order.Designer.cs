@@ -62,9 +62,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font(".VnArialH", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(12, 26);
+            label1.Location = new Point(14, 35);
             label1.Name = "label1";
-            label1.Size = new Size(82, 25);
+            label1.Size = new Size(100, 32);
             label1.TabIndex = 0;
             label1.Text = "ORDER";
             // 
@@ -72,9 +72,9 @@
             // 
             txt_id.AutoSize = true;
             txt_id.Font = new Font(".VnArialH", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_id.Location = new Point(131, 26);
+            txt_id.Location = new Point(150, 35);
             txt_id.Name = "txt_id";
-            txt_id.Size = new Size(0, 25);
+            txt_id.Size = new Size(0, 32);
             txt_id.TabIndex = 1;
             // 
             // btn_DineIn
@@ -82,9 +82,10 @@
             btn_DineIn.BackColor = Color.FromArgb(190, 30, 45);
             btn_DineIn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_DineIn.ForeColor = Color.White;
-            btn_DineIn.Location = new Point(12, 71);
+            btn_DineIn.Location = new Point(14, 95);
+            btn_DineIn.Margin = new Padding(3, 4, 3, 4);
             btn_DineIn.Name = "btn_DineIn";
-            btn_DineIn.Size = new Size(86, 36);
+            btn_DineIn.Size = new Size(98, 48);
             btn_DineIn.TabIndex = 2;
             btn_DineIn.Text = "Dine In";
             btn_DineIn.UseVisualStyleBackColor = false;
@@ -94,9 +95,10 @@
             btn_Togo.BackColor = Color.White;
             btn_Togo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_Togo.ForeColor = Color.FromArgb(190, 30, 45);
-            btn_Togo.Location = new Point(142, 71);
+            btn_Togo.Location = new Point(162, 95);
+            btn_Togo.Margin = new Padding(3, 4, 3, 4);
             btn_Togo.Name = "btn_Togo";
-            btn_Togo.Size = new Size(86, 36);
+            btn_Togo.Size = new Size(98, 48);
             btn_Togo.TabIndex = 3;
             btn_Togo.Text = "To Go";
             btn_Togo.UseVisualStyleBackColor = false;
@@ -105,19 +107,22 @@
             // 
             btn_Delivery.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
             btn_Delivery.ForeColor = Color.FromArgb(190, 30, 45);
-            btn_Delivery.Location = new Point(265, 71);
+            btn_Delivery.Location = new Point(303, 95);
+            btn_Delivery.Margin = new Padding(3, 4, 3, 4);
             btn_Delivery.Name = "btn_Delivery";
-            btn_Delivery.Size = new Size(86, 36);
+            btn_Delivery.Size = new Size(98, 48);
             btn_Delivery.TabIndex = 4;
             btn_Delivery.Text = "Delivery";
             btn_Delivery.UseVisualStyleBackColor = true;
             // 
             // fl_Panel_Cart
             // 
+            fl_Panel_Cart.AutoScroll = true;
             fl_Panel_Cart.BorderStyle = BorderStyle.Fixed3D;
-            fl_Panel_Cart.Location = new Point(12, 113);
+            fl_Panel_Cart.Location = new Point(0, 151);
+            fl_Panel_Cart.Margin = new Padding(3, 4, 3, 4);
             fl_Panel_Cart.Name = "fl_Panel_Cart";
-            fl_Panel_Cart.Size = new Size(331, 220);
+            fl_Panel_Cart.Size = new Size(431, 292);
             fl_Panel_Cart.TabIndex = 6;
             // 
             // btn_Trash
@@ -125,9 +130,10 @@
             btn_Trash.BackgroundImage = (Image)resources.GetObject("btn_Trash.BackgroundImage");
             btn_Trash.BackgroundImageLayout = ImageLayout.Stretch;
             btn_Trash.ForeColor = SystemColors.Control;
-            btn_Trash.Location = new Point(271, -1);
+            btn_Trash.Location = new Point(336, -3);
+            btn_Trash.Margin = new Padding(3, 4, 3, 4);
             btn_Trash.Name = "btn_Trash";
-            btn_Trash.Size = new Size(55, 42);
+            btn_Trash.Size = new Size(82, 56);
             btn_Trash.TabIndex = 9;
             btn_Trash.UseVisualStyleBackColor = true;
             // 
@@ -137,9 +143,10 @@
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(txt_vouccher);
             panel1.Controls.Add(btn_Trash);
-            panel1.Location = new Point(12, 339);
+            panel1.Location = new Point(14, 452);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(331, 42);
+            panel1.Size = new Size(420, 55);
             panel1.TabIndex = 10;
             // 
             // pictureBox1
@@ -147,8 +154,9 @@
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(-1, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(43, 41);
+            pictureBox1.Size = new Size(49, 55);
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
             // 
@@ -158,9 +166,10 @@
             txt_vouccher.BackColor = SystemColors.Control;
             txt_vouccher.BorderStyle = BorderStyle.None;
             txt_vouccher.Location = new Point(-1, -1);
+            txt_vouccher.Margin = new Padding(3, 4, 3, 4);
             txt_vouccher.Multiline = true;
             txt_vouccher.Name = "txt_vouccher";
-            txt_vouccher.Size = new Size(266, 41);
+            txt_vouccher.Size = new Size(340, 55);
             txt_vouccher.TabIndex = 11;
             txt_vouccher.Tag = "";
             txt_vouccher.TextAlign = HorizontalAlignment.Center;
@@ -171,38 +180,42 @@
             panel_Cart_footer.BorderStyle = BorderStyle.Fixed3D;
             panel_Cart_footer.Controls.Add(panel3);
             panel_Cart_footer.Controls.Add(panel2);
-            panel_Cart_footer.Location = new Point(12, 387);
+            panel_Cart_footer.Location = new Point(0, 516);
+            panel_Cart_footer.Margin = new Padding(3, 4, 3, 4);
             panel_Cart_footer.Name = "panel_Cart_footer";
-            panel_Cart_footer.Size = new Size(331, 227);
+            panel_Cart_footer.Size = new Size(431, 301);
             panel_Cart_footer.TabIndex = 11;
             // 
             // panel3
             // 
+            panel3.BackColor = Color.Transparent;
+            panel3.BorderStyle = BorderStyle.Fixed3D;
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(btn_SenOrder);
             panel3.Controls.Add(btn_CancelOrder);
-            panel3.Location = new Point(3, 109);
+            panel3.Location = new Point(-13, 139);
+            panel3.Margin = new Padding(3, 4, 3, 4);
             panel3.Name = "panel3";
-            panel3.Size = new Size(322, 111);
+            panel3.Size = new Size(445, 162);
             panel3.TabIndex = 5;
             // 
             // label6
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.Location = new Point(16, 11);
+            label6.Location = new Point(18, 15);
             label6.Name = "label6";
-            label6.Size = new Size(58, 19);
+            label6.Size = new Size(71, 22);
             label6.TabIndex = 1;
             label6.Text = "TOTAL";
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(212, 11);
+            label7.Location = new Point(242, 15);
             label7.Name = "label7";
-            label7.Size = new Size(38, 15);
+            label7.Size = new Size(50, 20);
             label7.TabIndex = 2;
             label7.Text = "label7";
             // 
@@ -210,9 +223,10 @@
             // 
             btn_SenOrder.BackgroundImage = (Image)resources.GetObject("btn_SenOrder.BackgroundImage");
             btn_SenOrder.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_SenOrder.Location = new Point(180, 51);
+            btn_SenOrder.Location = new Point(206, 68);
+            btn_SenOrder.Margin = new Padding(3, 4, 3, 4);
             btn_SenOrder.Name = "btn_SenOrder";
-            btn_SenOrder.Size = new Size(98, 46);
+            btn_SenOrder.Size = new Size(112, 61);
             btn_SenOrder.TabIndex = 4;
             btn_SenOrder.UseVisualStyleBackColor = true;
             // 
@@ -220,49 +234,52 @@
             // 
             btn_CancelOrder.BackgroundImage = (Image)resources.GetObject("btn_CancelOrder.BackgroundImage");
             btn_CancelOrder.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_CancelOrder.Location = new Point(16, 52);
+            btn_CancelOrder.Location = new Point(18, 69);
+            btn_CancelOrder.Margin = new Padding(3, 4, 3, 4);
             btn_CancelOrder.Name = "btn_CancelOrder";
-            btn_CancelOrder.Size = new Size(98, 45);
+            btn_CancelOrder.Size = new Size(112, 60);
             btn_CancelOrder.TabIndex = 3;
             btn_CancelOrder.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
-            panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.BackColor = Color.Transparent;
+            panel2.BorderStyle = BorderStyle.Fixed3D;
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label5);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(label2);
-            panel2.Location = new Point(-2, -3);
+            panel2.Location = new Point(-2, -1);
+            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(331, 106);
+            panel2.Size = new Size(434, 141);
             panel2.TabIndex = 0;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(110, 57);
+            label8.Location = new Point(126, 76);
             label8.Name = "label8";
-            label8.Size = new Size(29, 15);
+            label8.Size = new Size(37, 20);
             label8.TabIndex = 4;
             label8.Text = "10%";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(211, 61);
+            label5.Location = new Point(241, 81);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(50, 20);
             label5.TabIndex = 3;
             label5.Text = "label5";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(211, 17);
+            label4.Location = new Point(241, 23);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(50, 20);
             label4.TabIndex = 2;
             label4.Text = "label4";
             // 
@@ -270,9 +287,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(15, 57);
+            label3.Location = new Point(17, 76);
             label3.Name = "label3";
-            label3.Size = new Size(89, 19);
+            label3.Size = new Size(107, 22);
             label3.TabIndex = 1;
             label3.Text = "DISCOUNT";
             // 
@@ -280,16 +297,17 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(14, 14);
+            label2.Location = new Point(16, 19);
             label2.Name = "label2";
-            label2.Size = new Size(105, 19);
+            label2.Size = new Size(130, 22);
             label2.TabIndex = 0;
             label2.Text = "SUBTOTATAL";
             // 
             // uc_Order
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.Transparent;
             Controls.Add(panel_Cart_footer);
             Controls.Add(panel1);
             Controls.Add(fl_Panel_Cart);
@@ -298,8 +316,9 @@
             Controls.Add(btn_DineIn);
             Controls.Add(txt_id);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "uc_Order";
-            Size = new Size(354, 617);
+            Size = new Size(434, 821);
             Load += uc_Order_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

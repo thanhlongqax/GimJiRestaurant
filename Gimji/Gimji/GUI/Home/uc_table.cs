@@ -16,5 +16,10 @@ namespace Gimji.GUI.Home
         {
             InitializeComponent();
         }
+
+        private void btn_table_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -43,8 +43,9 @@
             pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
             pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox1.Location = new Point(3, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(132, 97);
+            pictureBox1.Size = new Size(151, 129);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
@@ -52,9 +53,10 @@
             // 
             btn_add.BackgroundImage = (Image)resources.GetObject("btn_add.BackgroundImage");
             btn_add.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_add.Location = new Point(151, 65);
+            btn_add.Location = new Point(173, 87);
+            btn_add.Margin = new Padding(3, 4, 3, 4);
             btn_add.Name = "btn_add";
-            btn_add.Size = new Size(30, 23);
+            btn_add.Size = new Size(34, 31);
             btn_add.TabIndex = 1;
             btn_add.UseVisualStyleBackColor = true;
             // 
@@ -62,50 +64,53 @@
             // 
             btn_minus.BackgroundImage = (Image)resources.GetObject("btn_minus.BackgroundImage");
             btn_minus.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_minus.Location = new Point(218, 65);
+            btn_minus.Location = new Point(249, 87);
+            btn_minus.Margin = new Padding(3, 4, 3, 4);
             btn_minus.Name = "btn_minus";
-            btn_minus.Size = new Size(34, 23);
+            btn_minus.Size = new Size(39, 31);
             btn_minus.TabIndex = 2;
             btn_minus.UseVisualStyleBackColor = true;
             // 
             // txt_giaTien
             // 
             txt_giaTien.AutoSize = true;
-            txt_giaTien.Location = new Point(151, 38);
+            txt_giaTien.Location = new Point(173, 51);
             txt_giaTien.Name = "txt_giaTien";
-            txt_giaTien.Size = new Size(37, 15);
+            txt_giaTien.Size = new Size(49, 20);
             txt_giaTien.TabIndex = 7;
             txt_giaTien.Text = "$5000";
             // 
             // txt_tenMonAn
             // 
             txt_tenMonAn.AutoSize = true;
-            txt_tenMonAn.Location = new Point(151, 13);
+            txt_tenMonAn.Location = new Point(173, 17);
             txt_tenMonAn.Name = "txt_tenMonAn";
-            txt_tenMonAn.Size = new Size(85, 15);
+            txt_tenMonAn.Size = new Size(107, 20);
             txt_tenMonAn.TabIndex = 8;
             txt_tenMonAn.Text = "Tobokki chả cá";
             // 
             // txt_quanitity
             // 
             txt_quanitity.AutoSize = true;
-            txt_quanitity.Location = new Point(192, 69);
+            txt_quanitity.Location = new Point(219, 92);
             txt_quanitity.Name = "txt_quanitity";
-            txt_quanitity.Size = new Size(0, 15);
+            txt_quanitity.Size = new Size(0, 20);
             txt_quanitity.TabIndex = 9;
             // 
             // uc_MonAnCart
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             Controls.Add(txt_quanitity);
             Controls.Add(txt_giaTien);
             Controls.Add(txt_tenMonAn);
             Controls.Add(btn_minus);
             Controls.Add(btn_add);
             Controls.Add(pictureBox1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "uc_MonAnCart";
-            Size = new Size(317, 100);
+            Size = new Size(362, 133);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

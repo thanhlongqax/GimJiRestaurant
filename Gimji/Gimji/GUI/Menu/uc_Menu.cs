@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimji.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,8 @@ namespace Gimji.GUI.Menu
 {
     public partial class uc_Menu : UserControl
     {
+        uc_MonAn Tokbokki = new uc_MonAn();
+        uc_Order uc_Order = new uc_Order();
         public uc_Menu()
         {
             InitializeComponent();
@@ -21,13 +24,24 @@ namespace Gimji.GUI.Menu
         {
             //panel_Order.Controls.Add(new uc_Order());
             //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
+            pal_Order.Controls.Add(uc_Order);
+            fl_Panel_Thuc_Don.Controls.Clear();
+            //Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
+            //, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
+
+            fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
+
         }
 
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
-            uc_MonAn Tokbokki = new uc_MonAn();
-            Tokbokki.setMonAn("asdf", "asdfsd", @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai");
-            Tokbokki.Controls.Clear();
+
+
+            fl_Panel_Thuc_Don.Controls.Clear();
+            Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
+            //, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
+
             fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
 
         }

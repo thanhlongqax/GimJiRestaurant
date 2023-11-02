@@ -12,7 +12,8 @@ namespace Gimji.DTO
         public string DishName { get; set; }
         public float DishPrice { get; set;}
         public string DishPicture { get; set;}
-        public string DishNote { get; set; }
+        public string Dish_Availible { get; set; }
+        public int Catergory_Id { get; set; }
 
     }
 }

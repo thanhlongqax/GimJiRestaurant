@@ -24,8 +24,6 @@ namespace Gimji
 
         private void btn_Menu_Click(object sender, EventArgs e)
         {
-            //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
-            //panel_Order.Controls.Add(new uc_Order());
             uc_Menu uc_Menu = new uc_Menu();
             panel_Menu.Controls.Clear();
             panel_Menu.Controls.Add(uc_Menu);

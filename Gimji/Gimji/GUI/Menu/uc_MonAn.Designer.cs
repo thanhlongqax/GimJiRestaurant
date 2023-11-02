@@ -29,72 +29,91 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_MonAn));
-            txt_tenMonAn = new Label();
-            txt_giaTien = new Label();
-            pictureBox_hinhMonAn = new PictureBox();
             btn_Cart = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhMonAn).BeginInit();
+            txt_TenMonAn = new Label();
+            txt_GiaTien = new Label();
+            pictureBox_hinhAnh = new PictureBox();
+            panel1 = new Panel();
+            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhAnh).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // txt_tenMonAn
-            // 
-            txt_tenMonAn.AutoSize = true;
-            txt_tenMonAn.Location = new Point(54, 208);
-            txt_tenMonAn.Name = "txt_tenMonAn";
-            txt_tenMonAn.Size = new Size(0, 20);
-            txt_tenMonAn.TabIndex = 6;
-            // 
-            // txt_giaTien
-            // 
-            txt_giaTien.AutoSize = true;
-            txt_giaTien.Location = new Point(73, 236);
-            txt_giaTien.Name = "txt_giaTien";
-            txt_giaTien.Size = new Size(0, 20);
-            txt_giaTien.TabIndex = 5;
-            // 
-            // pictureBox_hinhMonAn
-            // 
-            pictureBox_hinhMonAn.BackColor = Color.Transparent;
-            pictureBox_hinhMonAn.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox_hinhMonAn.Location = new Point(22, 16);
-            pictureBox_hinhMonAn.Margin = new Padding(3, 4, 3, 4);
-            pictureBox_hinhMonAn.Name = "pictureBox_hinhMonAn";
-            pictureBox_hinhMonAn.Size = new Size(177, 184);
-            pictureBox_hinhMonAn.TabIndex = 4;
-            pictureBox_hinhMonAn.TabStop = false;
             // 
             // btn_Cart
             // 
+            btn_Cart.BackColor = Color.Transparent;
             btn_Cart.BackgroundImage = (Image)resources.GetObject("btn_Cart.BackgroundImage");
             btn_Cart.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_Cart.Location = new Point(167, 208);
-            btn_Cart.Margin = new Padding(3, 4, 3, 4);
+            btn_Cart.Location = new Point(186, 233);
             btn_Cart.Name = "btn_Cart";
-            btn_Cart.Size = new Size(43, 48);
-            btn_Cart.TabIndex = 3;
-            btn_Cart.UseVisualStyleBackColor = true;
+            btn_Cart.Size = new Size(45, 46);
+            btn_Cart.TabIndex = 5;
+            btn_Cart.UseVisualStyleBackColor = false;
+            btn_Cart.Click += btn_Cart_Click;
+            // 
+            // txt_TenMonAn
+            // 
+            txt_TenMonAn.AutoSize = true;
+            txt_TenMonAn.BackColor = Color.Transparent;
+            txt_TenMonAn.Location = new Point(19, 11);
+            txt_TenMonAn.Name = "txt_TenMonAn";
+            txt_TenMonAn.Size = new Size(50, 20);
+            txt_TenMonAn.TabIndex = 6;
+            txt_TenMonAn.Text = "label1";
+            // 
+            // txt_GiaTien
+            // 
+            txt_GiaTien.AutoSize = true;
+            txt_GiaTien.BackColor = Color.Transparent;
+            txt_GiaTien.Location = new Point(19, 52);
+            txt_GiaTien.Name = "txt_GiaTien";
+            txt_GiaTien.RightToLeft = RightToLeft.No;
+            txt_GiaTien.Size = new Size(50, 20);
+            txt_GiaTien.TabIndex = 7;
+            txt_GiaTien.Text = "label2";
+            // 
+            // pictureBox_hinhAnh
+            // 
+            pictureBox_hinhAnh.BackColor = Color.Transparent;
+            pictureBox_hinhAnh.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox_hinhAnh.Location = new Point(23, 29);
+            pictureBox_hinhAnh.Name = "pictureBox_hinhAnh";
+            pictureBox_hinhAnh.Size = new Size(191, 154);
+            pictureBox_hinhAnh.TabIndex = 8;
+            pictureBox_hinhAnh.TabStop = false;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(txt_GiaTien);
+            panel1.Controls.Add(txt_TenMonAn);
+            panel1.Location = new Point(23, 194);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(150, 85);
+            panel1.TabIndex = 10;
             // 
             // uc_MonAn
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            Controls.Add(txt_giaTien);
-            Controls.Add(txt_tenMonAn);
-            Controls.Add(pictureBox_hinhMonAn);
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(panel1);
+            Controls.Add(pictureBox_hinhAnh);
             Controls.Add(btn_Cart);
             Margin = new Padding(3, 4, 3, 4);
             Name = "uc_MonAn";
-            Size = new Size(231, 279);
-            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhMonAn).EndInit();
+            Size = new Size(229, 277);
+            ((System.ComponentModel.ISupportInitialize)pictureBox_hinhAnh).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-        private Label txt_tenMonAn;
-        private Label txt_giaTien;
-        private PictureBox pictureBox_hinhMonAn;
+
         private Button btn_Cart;
+        private Label txt_TenMonAn;
+        private Label txt_GiaTien;
+        private PictureBox pictureBox_hinhAnh;
+        private Panel panel1;
     }
 }
