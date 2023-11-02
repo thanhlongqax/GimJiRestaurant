@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup />
   <ItemGroup>
     <Compile Update="GUI\Home\uc_Home.cs">
       <SubType>UserControl</SubType>
@@ -17,9 +16,6 @@
     <Compile Update="GUI\Home\uc_table.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Login_SignUp\Main_Form_LoginRegister.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="GUI\Login_SignUp\uc_Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -29,22 +25,19 @@
     <Compile Update="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="GUI\Management\StaffManagement\uc_detailInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Management\StaffManagement\uc_staff.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
+<<<<<<< HEAD
     <Compile Update="GUI\Management\StaffManagement\uc_staffManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Management\uc_Management.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Menu\uc_Menu.cs">
+    <Compile Update="GUI\Menu\uc_Header.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Menu\uc_MonAn.cs">
+=======
+>>>>>>> 0ee29c8532235e2ff4024ec8216b74f2803b3b9f
+    <Compile Update="GUI\Menu\uc_Menu.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Menu\uc_MonAnCart.cs">
@@ -52,6 +45,12 @@
     </Compile>
     <Compile Update="GUI\Menu\uc_Order.cs">
       <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Menu\uc_MonAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Login_SignUp\Main_Form_LoginRegister.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\PayMent\uc_MonAn_Paymentcs.cs">
       <SubType>UserControl</SubType>
