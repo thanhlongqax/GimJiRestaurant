@@ -16,5 +16,18 @@ namespace Gimji.GUI.Management.StaffManagement
         {
             InitializeComponent();
         }
+
+        private void uc_staffManagement_Load(object sender, EventArgs e)
+        {
+            uc_staff uc_Staff = new uc_staff();
+            uc_detailInfo uc_DetailInfo = new uc_detailInfo();
+            flow_pal_listStaff.Controls.Add(uc_Staff);
+            guna_panel_detailInfor.Controls.Add(uc_DetailInfo);
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,11 +26,11 @@ namespace Gimji.GUI.Menu
             //fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
             //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
             pal_Order.Controls.Add(uc_Order);
-            fl_Panel_Thuc_Don.Controls.Clear();
+            //fl_Panel_Thuc_Don.Controls.Clear();
             //Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
             //, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
 
-            fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
+            //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
 
         }
 

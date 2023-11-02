@@ -66,3 +66,8 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.genruntimeconfi
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\ref\Gimji.dll
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_staffManagement.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.uc_Management.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_detailInfo.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_staff.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Guna.UI2.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\System.Management.dll
+E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Management.dll
