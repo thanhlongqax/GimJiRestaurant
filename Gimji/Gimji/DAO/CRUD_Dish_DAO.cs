@@ -12,9 +12,9 @@ namespace Gimji.DAO
     internal class CRUD_Dish_DAO : DatabaseAccess
     {
 
-        public Dish Dish_Data()
+        public List<Dish> GetAllDish()
         {
-
+            List<Dish> dishes = new List<Dish>();
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
 
@@ -28,21 +28,19 @@ namespace Gimji.DAO
             // Kiểm tra xem có dữ liệu trong DataTable không
             if (dt.Rows.Count > 0)
             {
-                DataRow row = dt.Rows[0];
-                Dish dish = new Dish();
+                foreach (DataRow row in dt.Rows)
                 {
-                    dish.DishName = row["ten_mon_an"].ToString();
-
-                    dish.DishPrice = Convert.ToSingle(row["don_gia"]);
-
-                    dish.DishPicture = row["hinh_anh"].ToString();
-
-                    dish.Dish_Availible = row["tinh_trang"].ToString();
-
-                    dish.Catergory_Id = Convert.ToInt32(row["id_danh_muc"]);
-                };
-
-                return dish;
+                    Dish dish = new Dish
+                    {
+                        DishName = row["ten_mon_an"].ToString(),
+                        DishPrice = Convert.ToSingle(row["don_gia"]),
+                        DishPicture = row["hinh_anh"].ToString(),
+                        Dish_Availible = row["tinh_trang"].ToString(),
+                        Catergory_Id = Convert.ToInt32(row["id_danh_muc"])
+                    };
+                    dishes.Add(dish);
+                }
+                return dishes;
             }
             else
             {

@@ -43,7 +43,7 @@
             btn_Cart.BackColor = Color.Transparent;
             btn_Cart.BackgroundImage = (Image)resources.GetObject("btn_Cart.BackgroundImage");
             btn_Cart.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_Cart.Location = new Point(186, 233);
+            btn_Cart.Location = new Point(185, 232);
             btn_Cart.Name = "btn_Cart";
             btn_Cart.Size = new Size(45, 46);
             btn_Cart.TabIndex = 5;

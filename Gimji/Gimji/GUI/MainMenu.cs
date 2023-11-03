@@ -23,6 +23,12 @@ namespace Gimji
 
         }
 
+        private void btn_Menu_Click(object sender, EventArgs e)
+        {
+            uc_Menu uc_Menu = new uc_Menu();
+            panel_Menu.Controls.Clear();
+            panel_Menu.Controls.Add(uc_Menu);
+        }
 
         private void guna_btn_Payment_Click(object sender, EventArgs e)
         {
