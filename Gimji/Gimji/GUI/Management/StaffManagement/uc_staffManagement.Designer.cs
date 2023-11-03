@@ -30,8 +30,11 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_staffManagement));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Name = new Label();
             guna_panel_detailInfor = new Guna.UI2.WinForms.Guna2Panel();
@@ -44,6 +47,9 @@
             label1 = new Label();
             lb_STT = new Label();
             pictureBox1 = new PictureBox();
+            guna_btn_create = new Guna.UI2.WinForms.Guna2CircleButton();
+            guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            flow_pal_listStaff.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -66,15 +72,16 @@
             guna_panel_detailInfor.Margin = new Padding(3, 4, 3, 4);
             guna_panel_detailInfor.Name = "guna_panel_detailInfor";
             guna_panel_detailInfor.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna_panel_detailInfor.Size = new Size(405, 670);
+            guna_panel_detailInfor.Size = new Size(405, 687);
             guna_panel_detailInfor.TabIndex = 1;
             // 
             // flow_pal_listStaff
             // 
+            flow_pal_listStaff.Controls.Add(guna2Button1);
             flow_pal_listStaff.Location = new Point(25, 117);
             flow_pal_listStaff.Margin = new Padding(3, 4, 3, 4);
             flow_pal_listStaff.Name = "flow_pal_listStaff";
-            flow_pal_listStaff.Size = new Size(558, 576);
+            flow_pal_listStaff.Size = new Size(558, 528);
             flow_pal_listStaff.TabIndex = 2;
             // 
             // guna_txt_search
@@ -83,7 +90,7 @@
             guna_txt_search.BackgroundImageLayout = ImageLayout.None;
             guna_txt_search.BorderColor = Color.Black;
             guna_txt_search.BorderRadius = 5;
-            guna_txt_search.CustomizableEdges = customizableEdges3;
+            guna_txt_search.CustomizableEdges = customizableEdges5;
             guna_txt_search.DefaultText = "";
             guna_txt_search.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             guna_txt_search.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -102,7 +109,7 @@
             guna_txt_search.PlaceholderForeColor = Color.White;
             guna_txt_search.PlaceholderText = "Search";
             guna_txt_search.SelectedText = "";
-            guna_txt_search.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna_txt_search.ShadowDecoration.CustomizableEdges = customizableEdges6;
             guna_txt_search.Size = new Size(194, 43);
             guna_txt_search.TabIndex = 3;
             // 
@@ -185,11 +192,47 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
+            // guna_btn_create
+            // 
+            guna_btn_create.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_create.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_create.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_create.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_create.FillColor = Color.Transparent;
+            guna_btn_create.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna_btn_create.ForeColor = Color.White;
+            guna_btn_create.HoverState.Image = (Image)resources.GetObject("resource.Image");
+            guna_btn_create.Image = (Image)resources.GetObject("guna_btn_create.Image");
+            guna_btn_create.ImageSize = new Size(50, 50);
+            guna_btn_create.Location = new Point(537, 652);
+            guna_btn_create.Name = "guna_btn_create";
+            guna_btn_create.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna_btn_create.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            guna_btn_create.Size = new Size(50, 50);
+            guna_btn_create.TabIndex = 5;
+            // 
+            // guna2Button1
+            // 
+            guna2Button1.CustomizableEdges = customizableEdges3;
+            guna2Button1.DisabledState.BorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna2Button1.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna2Button1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            guna2Button1.ForeColor = Color.White;
+            guna2Button1.Location = new Point(3, 3);
+            guna2Button1.Name = "guna2Button1";
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button1.Size = new Size(8, 8);
+            guna2Button1.TabIndex = 0;
+            guna2Button1.Text = "guna2Button1";
+            // 
             // uc_staffManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(136, 21, 57);
+            Controls.Add(guna_btn_create);
             Controls.Add(panel1);
             Controls.Add(flow_pal_listStaff);
             Controls.Add(guna_panel_detailInfor);
@@ -197,6 +240,7 @@
             Name = "uc_staffManagement";
             Size = new Size(1025, 724);
             Load += uc_staffManagement_Load;
+            flow_pal_listStaff.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -216,5 +260,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
+        private Guna.UI2.WinForms.Guna2CircleButton guna_btn_create;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
