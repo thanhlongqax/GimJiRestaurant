@@ -133,5 +133,29 @@ namespace Gimji.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap Frame_94
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Frame_94", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap Frame_931
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Frame_931", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap Frame_93
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("Frame_93", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

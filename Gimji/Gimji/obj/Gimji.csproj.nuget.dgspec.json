@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {}
+    "C:\\Users\\HI\\source\\repos\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {}
   },
   "projects": {
-    "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {
+    "C:\\Users\\HI\\source\\repos\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+        "projectUniqueName": "C:\\Users\\HI\\source\\repos\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
         "projectName": "Gimji",
-        "projectPath": "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
-        "packagesPath": "C:\\Users\\vandi\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM_N12\\Gimji\\Gimji\\obj\\",
+        "projectPath": "C:\\Users\\HI\\source\\repos\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+        "packagesPath": "C:\\Users\\HI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HI\\source\\repos\\CNPM_N12\\Gimji\\Gimji\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vandi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
