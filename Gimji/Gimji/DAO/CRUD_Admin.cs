@@ -11,7 +11,7 @@ namespace Gimji.DAO
 {
     internal class CRUD_Admin : DatabaseAccess
     {
-        public void UpdateAdmin_DAO(Staff newStaff)
+        public void UpdateAdmin_DAO(Admin newAdmin)
         {
 
 
@@ -19,20 +19,19 @@ namespace Gimji.DAO
             conn.Open();
             String sSQL = "select * from Nhan_vien where ten_dang_nhap = @userName";
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@userName", newStaff.userName);
+            cmd.Parameters.AddWithValue("@userName", newAdmin.userName);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             if (dt.Rows.Count == 0)
             {
-                MessageBox.Show("add Staff :" + newStaff.fullName);
+                MessageBox.Show("add Staff :" + newAdmin.fullName);
                 String anotherSQL = "exec @proc @fullName,@emailAddress,@contactAddress,@userName,@userPassword ,@DateOfBirth , @phoneNumber";
                 SqlCommand anotherCmd = new SqlCommand(anotherSQL, conn);
-                anotherCmd.Parameters.AddWithValue("@fullName", newStaff.fullName);
-                anotherCmd.Parameters.AddWithValue("@emailAddress", newStaff.Email);
-                anotherCmd.Parameters.AddWithValue("@contactAddress", newStaff.contactAddress);
-                anotherCmd.Parameters.AddWithValue("@phoneNumber", newStaff.phoneNumber);
-                anotherCmd.Parameters.AddWithValue("@userName", newStaff.userName);
-                anotherCmd.Parameters.AddWithValue("@userPassword", newStaff.userPassword);
+                anotherCmd.Parameters.AddWithValue("@fullName", newAdmin.fullName);
+                anotherCmd.Parameters.AddWithValue("@emailAddress", newAdmin.Email);
+                anotherCmd.Parameters.AddWithValue("@phoneNumber", newAdmin.phoneNumber);
+                anotherCmd.Parameters.AddWithValue("@userName", newAdmin.userName);
+                anotherCmd.Parameters.AddWithValue("@userPassword", newAdmin.userPassword);
                 cmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
                 anotherCmd.ExecuteNonQuery();
                 conn.Close();

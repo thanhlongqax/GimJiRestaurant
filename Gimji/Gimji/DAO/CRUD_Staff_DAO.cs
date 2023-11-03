@@ -8,11 +8,12 @@ using Gimji.DTO;
 using Microsoft.Data.SqlClient;
 namespace Gimji.DAO
 {
-    internal class CRUD_Staff : DatabaseAccess
+    internal class CRUD_Staff_DAO : DatabaseAccess
     {
         //Thêm lay tat ca nhan vien _____________________________________________________________________________________________
-        public DataTable getAllStaff_DAO()
+        public List<Staff> getAllStaff_DAO()
         {
+            List<Staff> staffList = new List<Staff>();
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
             String sSQL = "select * from Nhan_vien ;";
@@ -21,7 +22,27 @@ namespace Gimji.DAO
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
-            return dt;
+            foreach (DataRow row in dt.Rows)
+            {
+                Staff staff = new Staff
+                {
+                    Id = row["id_nhan_vien"].ToString(),
+                    userName = row["ten_dang_nhap"].ToString(),
+                    userPassword = row["mat_khau"].ToString(),
+                    fullName = row["ten_nhan_vien"].ToString(),
+                    DateOfBirth = row.Field<DateTime>("ngay_sinh").ToString("yyyy-MM-dd"),
+                    Gender = row["gioi_tinh"].ToString(),
+                    contactAddress = row["dia_chi"].ToString(),
+                    phoneNumber = row["so_dien_thoai"].ToString(),
+                    Email = row["email"].ToString(),
+                    dateStart = row.Field<DateTime?>("ngay_bat_dau")?.ToString("yyyy-MM-dd"),
+                    Salary = row.Field<double?>("muc_luong").HasValue ? row.Field<double>("muc_luong").ToString() : null ,
+                    position = row["viTri"].ToString()
+                };
+                staffList.Add(staff);
+            };
+
+            return staffList;
         }
         // _____________________________________________________________________________________________
 
