@@ -49,5 +49,37 @@ namespace Gimji.DAO
             }
 
         }
+        public void addDish_DAO(Dish newDish) {
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+
+            string sSQL = @"
+                SELECT ten_mon_an, don_gia, hinh_anh , tinh_trang , id_danh_muc,  FROM Mon_an
+            ";
+            SqlDataAdapter da = new SqlDataAdapter(sSQL, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            conn.Close();
+            if (dt.Rows.Count == 0)
+            {
+                string insertSql = @"
+                INSERT INTO Mon_an (ten_mon_an, don_gia, hinh_anh, tinh_trang, id_danh_muc)
+                VALUES (@TenMonAn, @DonGia, @HinhAnh, @TinhTrang, @IdDanhMuc)
+                ";
+                SqlCommand cmd = new SqlCommand(insertSql, conn);
+                cmd.Parameters.AddWithValue("@TenMonAn", newDish.DishName);
+                cmd.Parameters.AddWithValue("@DonGia", newDish.DishPrice);
+                cmd.Parameters.AddWithValue("@HinhAnh", newDish.DishPicture);
+                cmd.Parameters.AddWithValue("@TinhTrang", newDish.Dish_Availible);
+                cmd.Parameters.AddWithValue("@IdDanhMuc", newDish.Catergory_Id);
+                cmd.ExecuteNonQuery();
+
+                MessageBox.Show("   Thêm Thực Đơn Thành Công", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("   Thêm Thực Đơn không Thành Công", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
     }
 }
