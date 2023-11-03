@@ -104,6 +104,7 @@
             guna_btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna_btn_edit.Size = new Size(27, 27);
             guna_btn_edit.TabIndex = 4;
+            guna_btn_edit.Click += guna_btn_edit_Click;
             // 
             // lb_position
             // 
@@ -141,7 +142,6 @@
             lb_id.Size = new Size(62, 28);
             lb_id.TabIndex = 1;
             lb_id.Text = "#1001";
-            lb_id.Click += lb_id_Click;
             // 
             // lb_stt
             // 
