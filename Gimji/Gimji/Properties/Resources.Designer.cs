@@ -157,5 +157,21 @@ namespace Gimji.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        internal static System.Drawing.Bitmap icons
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("icons", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        internal static System.Drawing.Bitmap small_table_icon
+        {
+            get
+            {
+                object obj = ResourceManager.GetObject("small_table_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
