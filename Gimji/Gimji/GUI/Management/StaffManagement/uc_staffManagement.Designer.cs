@@ -72,7 +72,7 @@
             guna_panel_detailInfor.Margin = new Padding(3, 4, 3, 4);
             guna_panel_detailInfor.Name = "guna_panel_detailInfor";
             guna_panel_detailInfor.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna_panel_detailInfor.Size = new Size(405, 687);
+            guna_panel_detailInfor.Size = new Size(405, 690);
             guna_panel_detailInfor.TabIndex = 1;
             // 
             // flow_pal_listStaff
