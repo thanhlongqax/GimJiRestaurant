@@ -358,7 +358,6 @@
             label4.Size = new Size(67, 20);
             label4.TabIndex = 10;
             label4.Text = "Birthday";
-            label4.Click += label4_Click;
             // 
             // guna_txt_phoneNumber
             // 
@@ -384,7 +383,6 @@
             guna_txt_phoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges44;
             guna_txt_phoneNumber.Size = new Size(366, 50);
             guna_txt_phoneNumber.TabIndex = 9;
-            guna_txt_phoneNumber.TextChanged += guna_txt_phoneNumber_TextChanged;
             // 
             // label3
             // 

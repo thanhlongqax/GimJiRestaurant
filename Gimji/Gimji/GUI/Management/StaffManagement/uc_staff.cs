@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gimji.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,16 +9,20 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Gimji.BLL;
 
 namespace Gimji.GUI.Management.StaffManagement
 {
     public partial class uc_staff : UserControl
     {
+        CRUD_Staff_BLL CRUD_Staff_BLL = new CRUD_Staff_BLL();
+        public uc_detailInfo uc_DetailInfo = new uc_detailInfo();
+        public event EventHandler GunaButtonEditClick;
         public uc_staff()
         {
             InitializeComponent();
-        }
 
+        }
         private void guna_pal_staff_MouseEnter(object sender, EventArgs e)
         {
             guna_pal_staff.FillColor = Color.FromArgb(119, 24, 24);
@@ -28,14 +33,9 @@ namespace Gimji.GUI.Management.StaffManagement
             guna_pal_staff.FillColor = Color.Transparent;
         }
 
-        private void guna_btn_edit_Click(object sender, EventArgs e)
+        public void guna_btn_edit_Click(object sender, EventArgs e)
         {
-            uc_staffManagement uc_StaffManagement = new uc_staffManagement();
-            uc_detailInfo uc_DetailInfo = new uc_detailInfo();
-
-            //uc_StaffManagement.Controls.Add();
-            
-            
+            GunaButtonEditClick?.Invoke(this, EventArgs.Empty);
         }
 
         #region Properties

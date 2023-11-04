@@ -16,5 +16,9 @@ namespace Gimji.BLL
         public List<Staff>  getAllStaff() {
             return newDao.getAllStaff_DAO();
         }
+        public Staff getStaffbyId(String Staffid)
+        {
+            return newDao.getStaffById_DAO(Staffid);
+        }
     }
 }

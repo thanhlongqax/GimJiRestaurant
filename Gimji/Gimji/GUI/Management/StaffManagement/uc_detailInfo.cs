@@ -16,16 +16,6 @@ namespace Gimji.GUI.Management.StaffManagement
         {
             InitializeComponent();
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna_txt_phoneNumber_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         #region Properties
 
         public TextBox IdStaffTxt
@@ -33,7 +23,17 @@ namespace Gimji.GUI.Management.StaffManagement
             get { return txt_IdStaff; }
             set { txt_IdStaff = value; }
         }
+        public string Username
+        {
+            get { return guna_txt_username.Text; }
+            set { guna_txt_username.Text = value; }
+        }
 
+        public string Password
+        {
+            get { return guna_txt_password.Text; }
+            set { guna_txt_password.Text = value; }
+        }
         public TextBox NameTxt
         {
             get { return txt_Name; }
@@ -44,12 +44,6 @@ namespace Gimji.GUI.Management.StaffManagement
         {
             get { return guna_txt_email; }
             set { guna_txt_email = value; }
-        }
-
-        public PictureBox PictureBox
-        {
-            get { return pictureBox1; }
-            set { pictureBox1 = value; }
         }
 
         public Guna.UI2.WinForms.Guna2TextBox PhoneNumberTxt
