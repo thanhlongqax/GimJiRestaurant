@@ -29,65 +29,45 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_MonAnCart));
-            pictureBox1 = new PictureBox();
-            btn_add = new Button();
-            btn_minus = new Button();
-            txt_giaTien = new Label();
-            txt_tenMonAn = new Label();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            lb_price = new Label();
+            lb_tenMonAn = new Label();
             txt_quanitity = new Label();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            btn_minus = new Guna.UI2.WinForms.Guna2ImageButton();
+            btn_plus = new Guna.UI2.WinForms.Guna2ImageButton();
+            lb_count = new Label();
+            btn_remove = new Guna.UI2.WinForms.Guna2ImageButton();
+            pic_image = new Guna.UI2.WinForms.Guna2PictureBox();
+            pal_foodcart = new Guna.UI2.WinForms.Guna2Panel();
+            ((System.ComponentModel.ISupportInitialize)pic_image).BeginInit();
+            pal_foodcart.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox1
+            // lb_price
             // 
-            pictureBox1.BackgroundImage = (Image)resources.GetObject("pictureBox1.BackgroundImage");
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Location = new Point(3, 0);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(151, 129);
-            pictureBox1.TabIndex = 0;
-            pictureBox1.TabStop = false;
+            lb_price.AutoSize = true;
+            lb_price.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_price.Location = new Point(121, 31);
+            lb_price.Name = "lb_price";
+            lb_price.Size = new Size(55, 23);
+            lb_price.TabIndex = 7;
+            lb_price.Text = "$5000";
             // 
-            // btn_add
+            // lb_tenMonAn
             // 
-            btn_add.BackgroundImage = (Image)resources.GetObject("btn_add.BackgroundImage");
-            btn_add.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_add.Location = new Point(173, 87);
-            btn_add.Margin = new Padding(3, 4, 3, 4);
-            btn_add.Name = "btn_add";
-            btn_add.Size = new Size(34, 31);
-            btn_add.TabIndex = 1;
-            btn_add.UseVisualStyleBackColor = true;
-            // 
-            // btn_minus
-            // 
-            btn_minus.BackgroundImage = (Image)resources.GetObject("btn_minus.BackgroundImage");
-            btn_minus.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_minus.Location = new Point(249, 87);
-            btn_minus.Margin = new Padding(3, 4, 3, 4);
-            btn_minus.Name = "btn_minus";
-            btn_minus.Size = new Size(39, 31);
-            btn_minus.TabIndex = 2;
-            btn_minus.UseVisualStyleBackColor = true;
-            // 
-            // txt_giaTien
-            // 
-            txt_giaTien.AutoSize = true;
-            txt_giaTien.Location = new Point(173, 51);
-            txt_giaTien.Name = "txt_giaTien";
-            txt_giaTien.Size = new Size(49, 20);
-            txt_giaTien.TabIndex = 7;
-            txt_giaTien.Text = "$5000";
-            // 
-            // txt_tenMonAn
-            // 
-            txt_tenMonAn.AutoSize = true;
-            txt_tenMonAn.Location = new Point(173, 17);
-            txt_tenMonAn.Name = "txt_tenMonAn";
-            txt_tenMonAn.Size = new Size(107, 20);
-            txt_tenMonAn.TabIndex = 8;
-            txt_tenMonAn.Text = "Tobokki chả cá";
+            lb_tenMonAn.AutoSize = true;
+            lb_tenMonAn.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_tenMonAn.Location = new Point(120, 2);
+            lb_tenMonAn.Name = "lb_tenMonAn";
+            lb_tenMonAn.Size = new Size(143, 25);
+            lb_tenMonAn.TabIndex = 8;
+            lb_tenMonAn.Text = "Tobokki chả cá";
             // 
             // txt_quanitity
             // 
@@ -97,32 +77,123 @@
             txt_quanitity.Size = new Size(0, 20);
             txt_quanitity.TabIndex = 9;
             // 
+            // btn_minus
+            // 
+            btn_minus.CheckedState.ImageSize = new Size(64, 64);
+            btn_minus.HoverState.ImageSize = new Size(34, 24);
+            btn_minus.Image = (Image)resources.GetObject("btn_minus.Image");
+            btn_minus.ImageOffset = new Point(0, 0);
+            btn_minus.ImageRotate = 0F;
+            btn_minus.ImageSize = new Size(34, 24);
+            btn_minus.Location = new Point(125, 66);
+            btn_minus.Name = "btn_minus";
+            btn_minus.PressedState.ImageSize = new Size(35, 25);
+            btn_minus.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            btn_minus.Size = new Size(35, 25);
+            btn_minus.TabIndex = 10;
+            // 
+            // btn_plus
+            // 
+            btn_plus.CheckedState.ImageSize = new Size(64, 64);
+            btn_plus.HoverState.ImageSize = new Size(34, 24);
+            btn_plus.Image = (Image)resources.GetObject("btn_plus.Image");
+            btn_plus.ImageOffset = new Point(0, 0);
+            btn_plus.ImageRotate = 0F;
+            btn_plus.ImageSize = new Size(34, 24);
+            btn_plus.Location = new Point(199, 66);
+            btn_plus.Name = "btn_plus";
+            btn_plus.PressedState.ImageSize = new Size(35, 25);
+            btn_plus.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_plus.Size = new Size(35, 25);
+            btn_plus.TabIndex = 11;
+            // 
+            // lb_count
+            // 
+            lb_count.AutoSize = true;
+            lb_count.FlatStyle = FlatStyle.Flat;
+            lb_count.Font = new Font("Segoe UI Semibold", 10.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_count.Location = new Point(170, 66);
+            lb_count.Name = "lb_count";
+            lb_count.Size = new Size(19, 25);
+            lb_count.TabIndex = 12;
+            lb_count.Text = "1";
+            // 
+            // btn_remove
+            // 
+            btn_remove.CheckedState.ImageSize = new Size(64, 64);
+            btn_remove.HoverState.ImageSize = new Size(24, 24);
+            btn_remove.Image = (Image)resources.GetObject("btn_remove.Image");
+            btn_remove.ImageOffset = new Point(0, 0);
+            btn_remove.ImageRotate = 0F;
+            btn_remove.ImageSize = new Size(24, 24);
+            btn_remove.Location = new Point(342, 66);
+            btn_remove.Name = "btn_remove";
+            btn_remove.PressedState.ImageSize = new Size(25, 25);
+            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            btn_remove.Size = new Size(25, 25);
+            btn_remove.TabIndex = 13;
+            // 
+            // pic_image
+            // 
+            pic_image.BackColor = Color.Transparent;
+            pic_image.BorderRadius = 10;
+            pic_image.CustomizableEdges = customizableEdges4;
+            pic_image.FillColor = Color.Transparent;
+            pic_image.Image = (Image)resources.GetObject("pic_image.Image");
+            pic_image.ImageRotate = 0F;
+            pic_image.Location = new Point(0, 3);
+            pic_image.Name = "pic_image";
+            pic_image.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            pic_image.Size = new Size(104, 94);
+            pic_image.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_image.TabIndex = 14;
+            pic_image.TabStop = false;
+            // 
+            // pal_foodcart
+            // 
+            pal_foodcart.BackColor = Color.Transparent;
+            pal_foodcart.Controls.Add(pic_image);
+            pal_foodcart.Controls.Add(lb_tenMonAn);
+            pal_foodcart.Controls.Add(btn_remove);
+            pal_foodcart.Controls.Add(lb_price);
+            pal_foodcart.Controls.Add(lb_count);
+            pal_foodcart.Controls.Add(btn_minus);
+            pal_foodcart.Controls.Add(btn_plus);
+            pal_foodcart.CustomizableEdges = customizableEdges6;
+            pal_foodcart.Location = new Point(0, 0);
+            pal_foodcart.Name = "pal_foodcart";
+            pal_foodcart.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            pal_foodcart.Size = new Size(380, 100);
+            pal_foodcart.TabIndex = 15;
+            // 
             // uc_MonAnCart
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
+            BackColor = Color.Transparent;
+            Controls.Add(pal_foodcart);
             Controls.Add(txt_quanitity);
-            Controls.Add(txt_giaTien);
-            Controls.Add(txt_tenMonAn);
-            Controls.Add(btn_minus);
-            Controls.Add(btn_add);
-            Controls.Add(pictureBox1);
+            ForeColor = SystemColors.ControlText;
             Margin = new Padding(3, 4, 3, 4);
             Name = "uc_MonAnCart";
-            Size = new Size(362, 133);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Size = new Size(380, 129);
+            Load += uc_MonAnCart_Load;
+            ((System.ComponentModel.ISupportInitialize)pic_image).EndInit();
+            pal_foodcart.ResumeLayout(false);
+            pal_foodcart.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox pictureBox1;
-        private Button btn_add;
-        private Button btn_minus;
-        private Label txt_giaTien;
-        private Label txt_tenMonAn;
+        private Label lb_price;
+        private Label lb_tenMonAn;
         private Label txt_quanitity;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_minus;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_plus;
+        private Label lb_count;
+        private Guna.UI2.WinForms.Guna2ImageButton btn_remove;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_image;
+        private Guna.UI2.WinForms.Guna2Panel pal_foodcart;
     }
 }

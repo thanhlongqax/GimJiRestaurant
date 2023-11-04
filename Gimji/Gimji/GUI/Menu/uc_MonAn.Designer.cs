@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_MonAn));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna_pal_food = new Guna.UI2.WinForms.Guna2Panel();
             guna_btn_buy = new Guna.UI2.WinForms.Guna2CircleButton();
             lb_price = new Label();
@@ -49,11 +49,11 @@
             guna_pal_food.Controls.Add(lb_price);
             guna_pal_food.Controls.Add(lb_name);
             guna_pal_food.Controls.Add(guna_pic_image);
-            guna_pal_food.CustomizableEdges = customizableEdges7;
+            guna_pal_food.CustomizableEdges = customizableEdges3;
             guna_pal_food.FillColor = Color.White;
             guna_pal_food.Location = new Point(0, 22);
             guna_pal_food.Name = "guna_pal_food";
-            guna_pal_food.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna_pal_food.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna_pal_food.Size = new Size(270, 310);
             guna_pal_food.TabIndex = 0;
             // 
@@ -66,11 +66,12 @@
             guna_btn_buy.FillColor = Color.Transparent;
             guna_btn_buy.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna_btn_buy.ForeColor = Color.White;
+            guna_btn_buy.HoverState.BorderColor = Color.FromArgb(255, 128, 128);
             guna_btn_buy.Image = (Image)resources.GetObject("guna_btn_buy.Image");
-            guna_btn_buy.ImageSize = new Size(40, 40);
+            guna_btn_buy.ImageSize = new Size(39, 39);
             guna_btn_buy.Location = new Point(197, 218);
             guna_btn_buy.Name = "guna_btn_buy";
-            guna_btn_buy.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna_btn_buy.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna_btn_buy.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna_btn_buy.Size = new Size(40, 40);
             guna_btn_buy.TabIndex = 3;
@@ -103,7 +104,7 @@
             guna_pic_image.ImageRotate = 0F;
             guna_pic_image.Location = new Point(68, 50);
             guna_pic_image.Name = "guna_pic_image";
-            guna_pic_image.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna_pic_image.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna_pic_image.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna_pic_image.Size = new Size(130, 130);
             guna_pic_image.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -118,7 +119,7 @@
             Controls.Add(guna_pal_food);
             Margin = new Padding(3, 4, 3, 4);
             Name = "uc_MonAn";
-            Size = new Size(304, 361);
+            Size = new Size(294, 361);
             guna_pal_food.ResumeLayout(false);
             guna_pal_food.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)guna_pic_image).EndInit();

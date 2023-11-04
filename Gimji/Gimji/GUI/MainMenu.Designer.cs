@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,9 +48,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             topPanel = new Panel();
-            pal_avatar = new Panel();
-            pictureBox1 = new PictureBox();
+            pic_avatar = new Guna.UI2.WinForms.Guna2PictureBox();
+            btn_add = new Guna.UI2.WinForms.Guna2Button();
             panel4 = new Panel();
             pictureBox2 = new PictureBox();
             date_time = new Label();
@@ -58,8 +64,7 @@
             searchTextBox = new TextBox();
             pictureBox_search = new PictureBox();
             pal_logo = new Panel();
-            btn_logo = new Button();
-            button2 = new Button();
+            btn_logo = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
             guna_btn_exit = new Guna.UI2.WinForms.Guna2ImageRadioButton();
             guna_pal_Setting = new Guna.UI2.WinForms.Guna2Panel();
@@ -83,8 +88,7 @@
             panel_Menu = new Panel();
             pictureBox3 = new PictureBox();
             topPanel.SuspendLayout();
-            pal_avatar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pic_avatar).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel3.SuspendLayout();
@@ -104,38 +108,49 @@
             // 
             topPanel.BackColor = Color.FromArgb(209, 10, 45);
             topPanel.BorderStyle = BorderStyle.FixedSingle;
-            topPanel.Controls.Add(pal_avatar);
+            topPanel.Controls.Add(pic_avatar);
+            topPanel.Controls.Add(btn_add);
             topPanel.Controls.Add(panel4);
             topPanel.Controls.Add(panel3);
             topPanel.Controls.Add(pal_logo);
-            topPanel.Controls.Add(button2);
             topPanel.Location = new Point(0, 1);
             topPanel.Name = "topPanel";
             topPanel.Size = new Size(1500, 97);
             topPanel.TabIndex = 0;
             // 
-            // pal_avatar
+            // pic_avatar
             // 
-            pal_avatar.BackgroundImage = (Image)resources.GetObject("pal_avatar.BackgroundImage");
-            pal_avatar.BackgroundImageLayout = ImageLayout.Stretch;
-            pal_avatar.Controls.Add(pictureBox1);
-            pal_avatar.Location = new Point(1381, 16);
-            pal_avatar.Name = "pal_avatar";
-            pal_avatar.Size = new Size(79, 63);
-            pal_avatar.TabIndex = 10;
+            pic_avatar.BackColor = Color.Transparent;
+            pic_avatar.BorderRadius = 5;
+            pic_avatar.CustomizableEdges = customizableEdges1;
+            pic_avatar.Image = (Image)resources.GetObject("pic_avatar.Image");
+            pic_avatar.ImageRotate = 0F;
+            pic_avatar.Location = new Point(1387, 18);
+            pic_avatar.Name = "pic_avatar";
+            pic_avatar.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            pic_avatar.Size = new Size(72, 59);
+            pic_avatar.SizeMode = PictureBoxSizeMode.StretchImage;
+            pic_avatar.TabIndex = 12;
+            pic_avatar.TabStop = false;
             // 
-            // pictureBox1
+            // btn_add
             // 
-            pictureBox1.BackColor = Color.Transparent;
-            pictureBox1.BackgroundImage = Properties.Resources.masterchef;
-            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox1.Cursor = Cursors.No;
-            pictureBox1.Location = new Point(5, 3);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(71, 57);
-            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox1.TabIndex = 5;
-            pictureBox1.TabStop = false;
+            btn_add.BorderRadius = 8;
+            btn_add.CustomizableEdges = customizableEdges3;
+            btn_add.DisabledState.BorderColor = Color.DarkGray;
+            btn_add.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_add.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_add.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_add.FillColor = Color.FromArgb(236, 220, 199);
+            btn_add.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_add.ForeColor = Color.Black;
+            btn_add.Image = (Image)resources.GetObject("btn_add.Image");
+            btn_add.Location = new Point(1215, 20);
+            btn_add.Name = "btn_add";
+            btn_add.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_add.Size = new Size(144, 58);
+            btn_add.TabIndex = 11;
+            btn_add.Text = "ADD ORDER";
             // 
             // panel4
             // 
@@ -212,31 +227,24 @@
             // 
             // btn_logo
             // 
-            btn_logo.BackColor = Color.Transparent;
-            btn_logo.BackgroundImage = (Image)resources.GetObject("btn_logo.BackgroundImage");
-            btn_logo.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_logo.FlatAppearance.BorderSize = 0;
-            btn_logo.FlatStyle = FlatStyle.Flat;
-            btn_logo.Location = new Point(8, 17);
+            btn_logo.BorderRadius = 20;
+            btn_logo.CustomizableEdges = customizableEdges5;
+            btn_logo.DisabledState.BorderColor = Color.DarkGray;
+            btn_logo.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_logo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_logo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_logo.FillColor = Color.Transparent;
+            btn_logo.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_logo.ForeColor = Color.White;
+            btn_logo.HoverState.FillColor = Color.FromArgb(70, 40, 29);
+            btn_logo.Image = (Image)resources.GetObject("btn_logo.Image");
+            btn_logo.ImageSize = new Size(120, 60);
+            btn_logo.Location = new Point(0, -11);
             btn_logo.Name = "btn_logo";
-            btn_logo.Size = new Size(130, 67);
-            btn_logo.TabIndex = 6;
-            btn_logo.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Transparent;
-            button2.BackgroundImage = (Image)resources.GetObject("button2.BackgroundImage");
-            button2.BackgroundImageLayout = ImageLayout.Stretch;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(1189, 19);
-            button2.Name = "button2";
-            button2.Size = new Size(163, 63);
-            button2.TabIndex = 4;
-            button2.Text = "ADD ORDER";
-            button2.UseVisualStyleBackColor = false;
+            btn_logo.PressedColor = Color.Transparent;
+            btn_logo.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_logo.Size = new Size(149, 98);
+            btn_logo.TabIndex = 0;
             // 
             // panel1
             // 
@@ -265,7 +273,7 @@
             guna_btn_exit.Location = new Point(27, 764);
             guna_btn_exit.Name = "guna_btn_exit";
             guna_btn_exit.PressedState.ImageOffset = new Point(40, 36);
-            guna_btn_exit.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            guna_btn_exit.ShadowDecoration.CustomizableEdges = customizableEdges7;
             guna_btn_exit.Size = new Size(45, 37);
             guna_btn_exit.TabIndex = 7;
             // 
@@ -273,11 +281,11 @@
             // 
             guna_pal_Setting.Controls.Add(label5);
             guna_pal_Setting.Controls.Add(guna_btn_Setting);
-            guna_pal_Setting.CustomizableEdges = customizableEdges3;
+            guna_pal_Setting.CustomizableEdges = customizableEdges9;
             guna_pal_Setting.FillColor = Color.Transparent;
             guna_pal_Setting.Location = new Point(8, 561);
             guna_pal_Setting.Name = "guna_pal_Setting";
-            guna_pal_Setting.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna_pal_Setting.ShadowDecoration.CustomizableEdges = customizableEdges10;
             guna_pal_Setting.Size = new Size(86, 83);
             guna_pal_Setting.TabIndex = 6;
             // 
@@ -305,7 +313,7 @@
             guna_btn_Setting.Location = new Point(23, 9);
             guna_btn_Setting.Name = "guna_btn_Setting";
             guna_btn_Setting.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Setting.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna_btn_Setting.ShadowDecoration.CustomizableEdges = customizableEdges8;
             guna_btn_Setting.Size = new Size(40, 36);
             guna_btn_Setting.TabIndex = 0;
             // 
@@ -313,11 +321,11 @@
             // 
             guna_pal_Management.Controls.Add(label6);
             guna_pal_Management.Controls.Add(guna_btn_Management);
-            guna_pal_Management.CustomizableEdges = customizableEdges6;
+            guna_pal_Management.CustomizableEdges = customizableEdges12;
             guna_pal_Management.FillColor = Color.Transparent;
             guna_pal_Management.Location = new Point(7, 453);
             guna_pal_Management.Name = "guna_pal_Management";
-            guna_pal_Management.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            guna_pal_Management.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna_pal_Management.Size = new Size(87, 83);
             guna_pal_Management.TabIndex = 5;
             // 
@@ -345,7 +353,7 @@
             guna_btn_Management.Location = new Point(29, 9);
             guna_btn_Management.Name = "guna_btn_Management";
             guna_btn_Management.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Management.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            guna_btn_Management.ShadowDecoration.CustomizableEdges = customizableEdges11;
             guna_btn_Management.Size = new Size(40, 36);
             guna_btn_Management.TabIndex = 0;
             guna_btn_Management.Click += guna_btn_Management_Click;
@@ -354,11 +362,11 @@
             // 
             guna_pal_Order.Controls.Add(label3);
             guna_pal_Order.Controls.Add(guna_btn_Order);
-            guna_pal_Order.CustomizableEdges = customizableEdges9;
+            guna_pal_Order.CustomizableEdges = customizableEdges15;
             guna_pal_Order.FillColor = Color.Transparent;
             guna_pal_Order.Location = new Point(8, 341);
             guna_pal_Order.Name = "guna_pal_Order";
-            guna_pal_Order.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna_pal_Order.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna_pal_Order.Size = new Size(79, 83);
             guna_pal_Order.TabIndex = 4;
             // 
@@ -386,7 +394,7 @@
             guna_btn_Order.Location = new Point(21, 9);
             guna_btn_Order.Name = "guna_btn_Order";
             guna_btn_Order.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Order.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna_btn_Order.ShadowDecoration.CustomizableEdges = customizableEdges14;
             guna_btn_Order.Size = new Size(40, 36);
             guna_btn_Order.TabIndex = 0;
             guna_btn_Order.Click += guna_btn_Order_Click;
@@ -395,11 +403,11 @@
             // 
             guna_pal_Payment.Controls.Add(txt_payment);
             guna_pal_Payment.Controls.Add(guna_btn_Payment);
-            guna_pal_Payment.CustomizableEdges = customizableEdges12;
+            guna_pal_Payment.CustomizableEdges = customizableEdges18;
             guna_pal_Payment.FillColor = Color.Transparent;
             guna_pal_Payment.Location = new Point(7, 235);
             guna_pal_Payment.Name = "guna_pal_Payment";
-            guna_pal_Payment.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            guna_pal_Payment.ShadowDecoration.CustomizableEdges = customizableEdges19;
             guna_pal_Payment.Size = new Size(80, 83);
             guna_pal_Payment.TabIndex = 3;
             // 
@@ -427,7 +435,7 @@
             guna_btn_Payment.Location = new Point(22, 9);
             guna_btn_Payment.Name = "guna_btn_Payment";
             guna_btn_Payment.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Payment.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            guna_btn_Payment.ShadowDecoration.CustomizableEdges = customizableEdges17;
             guna_btn_Payment.Size = new Size(40, 36);
             guna_btn_Payment.TabIndex = 0;
             guna_btn_Payment.Click += guna_btn_Payment_Click;
@@ -436,11 +444,11 @@
             // 
             guna_pal_Menu.Controls.Add(label2);
             guna_pal_Menu.Controls.Add(guna_btn_Menu);
-            guna_pal_Menu.CustomizableEdges = customizableEdges15;
+            guna_pal_Menu.CustomizableEdges = customizableEdges21;
             guna_pal_Menu.FillColor = Color.Transparent;
             guna_pal_Menu.Location = new Point(7, 125);
             guna_pal_Menu.Name = "guna_pal_Menu";
-            guna_pal_Menu.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna_pal_Menu.ShadowDecoration.CustomizableEdges = customizableEdges22;
             guna_pal_Menu.Size = new Size(80, 83);
             guna_pal_Menu.TabIndex = 2;
             // 
@@ -468,7 +476,7 @@
             guna_btn_Menu.Location = new Point(23, 9);
             guna_btn_Menu.Name = "guna_btn_Menu";
             guna_btn_Menu.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Menu.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna_btn_Menu.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna_btn_Menu.Size = new Size(40, 36);
             guna_btn_Menu.TabIndex = 0;
             guna_btn_Menu.Click += guna_btn_Menu_Click_1;
@@ -477,11 +485,11 @@
             // 
             guna_pal_Home.Controls.Add(label1);
             guna_pal_Home.Controls.Add(guna_btn_Home);
-            guna_pal_Home.CustomizableEdges = customizableEdges18;
+            guna_pal_Home.CustomizableEdges = customizableEdges24;
             guna_pal_Home.FillColor = Color.Transparent;
             guna_pal_Home.Location = new Point(7, 19);
             guna_pal_Home.Name = "guna_pal_Home";
-            guna_pal_Home.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            guna_pal_Home.ShadowDecoration.CustomizableEdges = customizableEdges25;
             guna_pal_Home.Size = new Size(80, 83);
             guna_pal_Home.TabIndex = 1;
             // 
@@ -509,7 +517,7 @@
             guna_btn_Home.Location = new Point(21, 9);
             guna_btn_Home.Name = "guna_btn_Home";
             guna_btn_Home.PressedState.ImageSize = new Size(40, 36);
-            guna_btn_Home.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            guna_btn_Home.ShadowDecoration.CustomizableEdges = customizableEdges23;
             guna_btn_Home.Size = new Size(40, 36);
             guna_btn_Home.TabIndex = 0;
             guna_btn_Home.Click += guna_btn_Home_Click;
@@ -547,8 +555,7 @@
             Name = "mainForm";
             Text = "Gimji";
             topPanel.ResumeLayout(false);
-            pal_avatar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pic_avatar).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -576,8 +583,6 @@
         #endregion
 
         private Panel topPanel;
-        private Button button2;
-        private PictureBox pictureBox1;
         private PictureBox pictureBox_search;
         private TextBox searchTextBox;
         private Panel panel1;
@@ -591,7 +596,6 @@
         private Label date_time;
         private Panel panel4;
         private PictureBox pictureBox2;
-        private Panel pal_avatar;
         private PictureBox pictureBox3;
         private Guna.UI2.WinForms.Guna2Panel guna_pal_Home;
         private Guna.UI2.WinForms.Guna2ImageButton guna_btn_Home;
@@ -612,6 +616,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna_pal_Menu;
         private Label label2;
         private Guna.UI2.WinForms.Guna2ImageButton guna_btn_Menu;
-        private Button btn_logo;
+        private Guna.UI2.WinForms.Guna2Button btn_add;
+        private Guna.UI2.WinForms.Guna2PictureBox pic_avatar;
+        private Guna.UI2.WinForms.Guna2Button btn_logo;
     }
 }

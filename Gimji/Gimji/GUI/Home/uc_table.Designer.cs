@@ -28,24 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_table));
-            btn_table = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            btn_table = new Guna.UI2.WinForms.Guna2Button();
             SuspendLayout();
             // 
             // btn_table
             // 
-            btn_table.BackgroundImage = (Image)resources.GetObject("btn_table.BackgroundImage");
-            btn_table.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_table.FlatAppearance.BorderSize = 0;
-            btn_table.FlatStyle = FlatStyle.Flat;
+            btn_table.CustomizableEdges = customizableEdges1;
+            btn_table.DisabledState.BorderColor = Color.DarkGray;
+            btn_table.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_table.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_table.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_table.FillColor = Color.Transparent;
             btn_table.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_table.Location = new Point(32, 42);
+            btn_table.ForeColor = Color.FromArgb(128, 64, 0);
+            btn_table.HoverState.FillColor = Color.Transparent;
+            btn_table.HoverState.Image = (Image)resources.GetObject("resource.Image");
+            btn_table.Image = (Image)resources.GetObject("btn_table.Image");
+            btn_table.ImageSize = new Size(180, 180);
+            btn_table.Location = new Point(50, 53);
             btn_table.Name = "btn_table";
-            btn_table.Size = new Size(200, 200);
-            btn_table.TabIndex = 1;
+            btn_table.PressedColor = Color.Transparent;
+            btn_table.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_table.Size = new Size(180, 180);
+            btn_table.TabIndex = 0;
             btn_table.Text = "ID";
-            btn_table.UseVisualStyleBackColor = true;
-            btn_table.Click += btn_table_Click;
+            btn_table.TextAlign = HorizontalAlignment.Left;
+            btn_table.TextOffset = new Point(65, 0);
             // 
             // uc_table
             // 
@@ -60,6 +71,6 @@
 
         #endregion
 
-        private Button btn_table;
+        private Guna.UI2.WinForms.Guna2Button btn_table;
     }
 }

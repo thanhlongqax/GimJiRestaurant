@@ -47,8 +47,10 @@
             guna_btn_rice = new Guna.UI2.WinForms.Guna2TileButton();
             guna_btn_kimbab = new Guna.UI2.WinForms.Guna2TileButton();
             guna_btn_tokbo = new Guna.UI2.WinForms.Guna2TileButton();
+            pictureBox2 = new PictureBox();
             pal_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // fl_Panel_Thuc_Don
@@ -57,7 +59,7 @@
             fl_Panel_Thuc_Don.Location = new Point(35, 61);
             fl_Panel_Thuc_Don.Margin = new Padding(3, 4, 3, 4);
             fl_Panel_Thuc_Don.Name = "fl_Panel_Thuc_Don";
-            fl_Panel_Thuc_Don.Size = new Size(908, 765);
+            fl_Panel_Thuc_Don.Size = new Size(903, 765);
             fl_Panel_Thuc_Don.TabIndex = 6;
             // 
             // pal_Order
@@ -78,7 +80,7 @@
             pal_header.Controls.Add(guna_btn_tokbo);
             pal_header.Location = new Point(2, 1);
             pal_header.Name = "pal_header";
-            pal_header.Size = new Size(939, 53);
+            pal_header.Size = new Size(936, 53);
             pal_header.TabIndex = 8;
             pal_header.Paint += pal_header_Paint;
             // 
@@ -198,10 +200,20 @@
             guna_btn_tokbo.Text = "TOKBOKKI";
             guna_btn_tokbo.Click += guna_btn_tokbo_Click;
             // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.FromArgb(128, 64, 64);
+            pictureBox2.Location = new Point(941, 1);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(1, 820);
+            pictureBox2.TabIndex = 9;
+            pictureBox2.TabStop = false;
+            // 
             // uc_Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(pictureBox2);
             Controls.Add(pal_header);
             Controls.Add(fl_Panel_Thuc_Don);
             Controls.Add(pal_Order);
@@ -211,6 +223,7 @@
             Load += uc_Menu_Load;
             pal_header.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -224,5 +237,6 @@
         private Guna.UI2.WinForms.Guna2TileButton guna_btn_kimbab;
         private Guna.UI2.WinForms.Guna2TileButton guna_btn_salad;
         private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
