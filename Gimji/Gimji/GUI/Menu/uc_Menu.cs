@@ -34,18 +34,18 @@ namespace Gimji.GUI.Menu
 
         }
 
-        private void btn_Tokbokki_Click(object sender, EventArgs e)
+        private void guna_btn_tokbo_Click(object sender, EventArgs e)
         {
 
-            uc_MonAn a = new uc_MonAn();
-            a.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
-            //, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
-            fl_Panel_Thuc_Don.Controls.Clear();
-            Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
-            //, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
+            // uc_MonAn a = new uc_MonAn();
+            //a.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
+            ////, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
+            //fl_Panel_Thuc_Don.Controls.Clear();
+            //Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
+            ////, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
 
+            //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
             fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
-            fl_Panel_Thuc_Don.Controls.Add(a);
 
         }
 
@@ -68,5 +68,17 @@ namespace Gimji.GUI.Menu
         {
 
         }
+
+        private void pal_header_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna_btn_kimbab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -19,8 +19,13 @@ namespace Gimji.GUI.Menu
 
         private void uc_Order_Load(object sender, EventArgs e)
         {
-            fl_Panel_Cart.Controls.Clear();
-            fl_Panel_Cart.Controls.Add(new uc_MonAnCart());
+            //fl_pal_Cart.Controls.Clear();
+            //fl_pal_Cart.Controls.Add(new uc_MonAnCart());
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

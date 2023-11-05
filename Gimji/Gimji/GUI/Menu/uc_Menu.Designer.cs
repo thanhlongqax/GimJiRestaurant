@@ -28,129 +28,201 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel_Header = new Panel();
-            btn_Tokbokki = new Button();
-            btn_Salad = new Button();
-            btn_KimBak = new Button();
-            btn_Com_Tron = new Button();
-            btn_Thit_Nuong = new Button();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             fl_Panel_Thuc_Don = new FlowLayoutPanel();
             pal_Order = new Panel();
-            panel_Header.SuspendLayout();
+            pal_header = new Panel();
+            pictureBox1 = new PictureBox();
+            guna_btn_salad = new Guna.UI2.WinForms.Guna2TileButton();
+            guna_btn_meat = new Guna.UI2.WinForms.Guna2TileButton();
+            guna_btn_rice = new Guna.UI2.WinForms.Guna2TileButton();
+            guna_btn_kimbab = new Guna.UI2.WinForms.Guna2TileButton();
+            guna_btn_tokbo = new Guna.UI2.WinForms.Guna2TileButton();
+            pal_header.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // panel_Header
-            // 
-            panel_Header.BorderStyle = BorderStyle.Fixed3D;
-            panel_Header.Controls.Add(btn_Tokbokki);
-            panel_Header.Controls.Add(btn_Salad);
-            panel_Header.Controls.Add(btn_KimBak);
-            panel_Header.Controls.Add(btn_Com_Tron);
-            panel_Header.Controls.Add(btn_Thit_Nuong);
-            panel_Header.Location = new Point(3, 6);
-            panel_Header.Margin = new Padding(3, 4, 3, 4);
-            panel_Header.Name = "panel_Header";
-            panel_Header.Size = new Size(940, 81);
-            panel_Header.TabIndex = 8;
-            // 
-            // btn_Tokbokki
-            // 
-            btn_Tokbokki.Location = new Point(21, 14);
-            btn_Tokbokki.Margin = new Padding(3, 4, 3, 4);
-            btn_Tokbokki.Name = "btn_Tokbokki";
-            btn_Tokbokki.Size = new Size(115, 49);
-            btn_Tokbokki.TabIndex = 1;
-            btn_Tokbokki.Text = "TOKBOKKI";
-            btn_Tokbokki.UseVisualStyleBackColor = true;
-            btn_Tokbokki.Click += btn_Tokbokki_Click;
-            // 
-            // btn_Salad
-            // 
-            btn_Salad.Location = new Point(812, 14);
-            btn_Salad.Margin = new Padding(3, 4, 3, 4);
-            btn_Salad.Name = "btn_Salad";
-            btn_Salad.Size = new Size(111, 51);
-            btn_Salad.TabIndex = 5;
-            btn_Salad.Text = "SALAD";
-            btn_Salad.UseVisualStyleBackColor = true;
-            btn_Salad.Click += btn_Salad_Click;
-            // 
-            // btn_KimBak
-            // 
-            btn_KimBak.Location = new Point(204, 11);
-            btn_KimBak.Margin = new Padding(3, 4, 3, 4);
-            btn_KimBak.Name = "btn_KimBak";
-            btn_KimBak.Size = new Size(109, 52);
-            btn_KimBak.TabIndex = 2;
-            btn_KimBak.Text = "KIMBAK";
-            btn_KimBak.UseVisualStyleBackColor = true;
-            btn_KimBak.Click += btn_KimBak_Click;
-            // 
-            // btn_Com_Tron
-            // 
-            btn_Com_Tron.Location = new Point(412, 11);
-            btn_Com_Tron.Margin = new Padding(3, 4, 3, 4);
-            btn_Com_Tron.Name = "btn_Com_Tron";
-            btn_Com_Tron.Size = new Size(108, 51);
-            btn_Com_Tron.TabIndex = 4;
-            btn_Com_Tron.Text = "CƠM TRỘN";
-            btn_Com_Tron.UseVisualStyleBackColor = true;
-            btn_Com_Tron.Click += btn_Com_Tron_Click;
-            // 
-            // btn_Thit_Nuong
-            // 
-            btn_Thit_Nuong.Location = new Point(607, 10);
-            btn_Thit_Nuong.Margin = new Padding(3, 4, 3, 4);
-            btn_Thit_Nuong.Name = "btn_Thit_Nuong";
-            btn_Thit_Nuong.Size = new Size(127, 55);
-            btn_Thit_Nuong.TabIndex = 3;
-            btn_Thit_Nuong.Text = "THỊT NƯỚNG";
-            btn_Thit_Nuong.UseVisualStyleBackColor = true;
-            btn_Thit_Nuong.Click += btn_Thit_Nuong_Click;
             // 
             // fl_Panel_Thuc_Don
             // 
             fl_Panel_Thuc_Don.AutoScroll = true;
-            fl_Panel_Thuc_Don.BorderStyle = BorderStyle.Fixed3D;
-            fl_Panel_Thuc_Don.Location = new Point(3, 95);
+            fl_Panel_Thuc_Don.Location = new Point(35, 61);
             fl_Panel_Thuc_Don.Margin = new Padding(3, 4, 3, 4);
             fl_Panel_Thuc_Don.Name = "fl_Panel_Thuc_Don";
-            fl_Panel_Thuc_Don.Size = new Size(940, 731);
+            fl_Panel_Thuc_Don.Size = new Size(908, 765);
             fl_Panel_Thuc_Don.TabIndex = 6;
             // 
             // pal_Order
             // 
-            pal_Order.BorderStyle = BorderStyle.Fixed3D;
             pal_Order.Location = new Point(944, 4);
             pal_Order.Margin = new Padding(3, 4, 3, 4);
             pal_Order.Name = "pal_Order";
-            pal_Order.Size = new Size(434, 821);
+            pal_Order.Size = new Size(421, 821);
             pal_Order.TabIndex = 7;
+            // 
+            // pal_header
+            // 
+            pal_header.Controls.Add(pictureBox1);
+            pal_header.Controls.Add(guna_btn_salad);
+            pal_header.Controls.Add(guna_btn_meat);
+            pal_header.Controls.Add(guna_btn_rice);
+            pal_header.Controls.Add(guna_btn_kimbab);
+            pal_header.Controls.Add(guna_btn_tokbo);
+            pal_header.Location = new Point(2, 1);
+            pal_header.Name = "pal_header";
+            pal_header.Size = new Size(939, 53);
+            pal_header.TabIndex = 8;
+            pal_header.Paint += pal_header_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = SystemColors.ControlDarkDark;
+            pictureBox1.Location = new Point(33, 46);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(689, 2);
+            pictureBox1.TabIndex = 5;
+            pictureBox1.TabStop = false;
+            // 
+            // guna_btn_salad
+            // 
+            guna_btn_salad.BackColor = Color.Transparent;
+            guna_btn_salad.CustomizableEdges = customizableEdges1;
+            guna_btn_salad.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_salad.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_salad.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_salad.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_salad.FillColor = Color.Transparent;
+            guna_btn_salad.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            guna_btn_salad.ForeColor = Color.FromArgb(70, 40, 29);
+            guna_btn_salad.HoverState.FillColor = Color.Transparent;
+            guna_btn_salad.HoverState.ForeColor = Color.FromArgb(125, 75, 95);
+            guna_btn_salad.Location = new Point(587, 16);
+            guna_btn_salad.Name = "guna_btn_salad";
+            guna_btn_salad.PressedColor = Color.Transparent;
+            guna_btn_salad.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna_btn_salad.Size = new Size(100, 30);
+            guna_btn_salad.TabIndex = 4;
+            guna_btn_salad.Text = "SALAD";
+            // 
+            // guna_btn_meat
+            // 
+            guna_btn_meat.BackColor = Color.Transparent;
+            guna_btn_meat.CustomizableEdges = customizableEdges3;
+            guna_btn_meat.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_meat.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_meat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_meat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_meat.FillColor = Color.Transparent;
+            guna_btn_meat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            guna_btn_meat.ForeColor = Color.FromArgb(70, 40, 29);
+            guna_btn_meat.HoverState.FillColor = Color.Transparent;
+            guna_btn_meat.HoverState.ForeColor = Color.FromArgb(125, 75, 95);
+            guna_btn_meat.Location = new Point(438, 14);
+            guna_btn_meat.Name = "guna_btn_meat";
+            guna_btn_meat.PressedColor = Color.Transparent;
+            guna_btn_meat.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna_btn_meat.Size = new Size(125, 30);
+            guna_btn_meat.TabIndex = 3;
+            guna_btn_meat.Text = "Thịt nướng";
+            // 
+            // guna_btn_rice
+            // 
+            guna_btn_rice.BackColor = Color.Transparent;
+            guna_btn_rice.CustomizableEdges = customizableEdges5;
+            guna_btn_rice.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_rice.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_rice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_rice.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_rice.FillColor = Color.Transparent;
+            guna_btn_rice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            guna_btn_rice.ForeColor = Color.FromArgb(70, 40, 29);
+            guna_btn_rice.HoverState.FillColor = Color.Transparent;
+            guna_btn_rice.HoverState.ForeColor = Color.FromArgb(125, 75, 95);
+            guna_btn_rice.Location = new Point(295, 14);
+            guna_btn_rice.Name = "guna_btn_rice";
+            guna_btn_rice.PressedColor = Color.Transparent;
+            guna_btn_rice.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna_btn_rice.Size = new Size(100, 30);
+            guna_btn_rice.TabIndex = 2;
+            guna_btn_rice.Text = "Cơm Trộn";
+            // 
+            // guna_btn_kimbab
+            // 
+            guna_btn_kimbab.BackColor = Color.Transparent;
+            guna_btn_kimbab.CustomizableEdges = customizableEdges7;
+            guna_btn_kimbab.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_kimbab.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_kimbab.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_kimbab.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_kimbab.FillColor = Color.Transparent;
+            guna_btn_kimbab.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            guna_btn_kimbab.ForeColor = Color.FromArgb(70, 40, 29);
+            guna_btn_kimbab.HoverState.FillColor = Color.Transparent;
+            guna_btn_kimbab.HoverState.ForeColor = Color.FromArgb(125, 75, 95);
+            guna_btn_kimbab.Location = new Point(153, 15);
+            guna_btn_kimbab.Name = "guna_btn_kimbab";
+            guna_btn_kimbab.PressedColor = Color.Transparent;
+            guna_btn_kimbab.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            guna_btn_kimbab.Size = new Size(100, 30);
+            guna_btn_kimbab.TabIndex = 1;
+            guna_btn_kimbab.Text = "KIMBAB";
+            guna_btn_kimbab.Click += guna_btn_kimbab_Click;
+            // 
+            // guna_btn_tokbo
+            // 
+            guna_btn_tokbo.BackColor = Color.Transparent;
+            guna_btn_tokbo.CustomizableEdges = customizableEdges9;
+            guna_btn_tokbo.DisabledState.BorderColor = Color.DarkGray;
+            guna_btn_tokbo.DisabledState.CustomBorderColor = Color.DarkGray;
+            guna_btn_tokbo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            guna_btn_tokbo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            guna_btn_tokbo.FillColor = Color.Transparent;
+            guna_btn_tokbo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            guna_btn_tokbo.ForeColor = Color.FromArgb(70, 40, 29);
+            guna_btn_tokbo.HoverState.FillColor = Color.Transparent;
+            guna_btn_tokbo.HoverState.ForeColor = Color.FromArgb(125, 75, 95);
+            guna_btn_tokbo.Location = new Point(14, 15);
+            guna_btn_tokbo.Name = "guna_btn_tokbo";
+            guna_btn_tokbo.PressedColor = Color.Transparent;
+            guna_btn_tokbo.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            guna_btn_tokbo.Size = new Size(109, 30);
+            guna_btn_tokbo.TabIndex = 0;
+            guna_btn_tokbo.Text = "TOKBOKKI";
+            guna_btn_tokbo.Click += guna_btn_tokbo_Click;
             // 
             // uc_Menu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel_Header);
+            Controls.Add(pal_header);
             Controls.Add(fl_Panel_Thuc_Don);
             Controls.Add(pal_Order);
             Margin = new Padding(3, 4, 3, 4);
             Name = "uc_Menu";
-            Size = new Size(1378, 827);
+            Size = new Size(1368, 827);
             Load += uc_Menu_Load;
-            panel_Header.ResumeLayout(false);
+            pal_header.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private Panel panel_Header;
         private FlowLayoutPanel fl_Panel_Thuc_Don;
         private Panel pal_Order;
-        private Button btn_Salad;
-        private Button btn_Com_Tron;
-        private Button btn_Thit_Nuong;
-        private Button btn_KimBak;
-        private Button btn_Tokbokki;
+        private Panel pal_header;
+        private Guna.UI2.WinForms.Guna2TileButton guna_btn_tokbo;
+        private Guna.UI2.WinForms.Guna2TileButton guna_btn_meat;
+        private Guna.UI2.WinForms.Guna2TileButton guna_btn_rice;
+        private Guna.UI2.WinForms.Guna2TileButton guna_btn_kimbab;
+        private Guna.UI2.WinForms.Guna2TileButton guna_btn_salad;
+        private PictureBox pictureBox1;
     }
 }

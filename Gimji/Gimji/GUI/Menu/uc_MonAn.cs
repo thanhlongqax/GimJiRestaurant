@@ -18,23 +18,20 @@ namespace Gimji.GUI.Menu
         }
         public void setMonAn(String tenMonAn, String giaTien, String hinhAnh)
         {
-            txt_TenMonAn.Text = tenMonAn;
-            txt_GiaTien.Text = giaTien;
-            if (System.IO.File.Exists(hinhAnh))
-            {
-                pictureBox_hinhAnh.BackgroundImage = Image.FromFile(hinhAnh);
-            }
-            else
-            {
-                // Xử lý trường hợp tệp hình ảnh không tồn tại
-                // Ví dụ: Hiển thị một hình ảnh mặc định hoặc thông báo lỗi.
-                pictureBox_hinhAnh.Image = null; // Gán hình ảnh mặc định hoặc null
-            }
+            //    txt_TenMonAn.Text = tenMonAn;
+            //    txt_GiaTien.Text = giaTien;
+            //    if (System.IO.File.Exists(hinhAnh))
+            //    {
+            //        pictureBox_hinhAnh.BackgroundImage = Image.FromFile(hinhAnh);
+            //    }
+            //    else
+            //    {
+            //        // Xử lý trường hợp tệp hình ảnh không tồn tại
+            //        // Ví dụ: Hiển thị một hình ảnh mặc định hoặc thông báo lỗi.
+            //        pictureBox_hinhAnh.Image = null; // Gán hình ảnh mặc định hoặc null
+            //    }
         }
 
-        private void btn_Cart_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
