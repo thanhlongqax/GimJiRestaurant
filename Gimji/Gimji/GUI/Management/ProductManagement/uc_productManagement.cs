@@ -11,12 +11,15 @@ using Gimji.BLL;
 using Gimji.DTO;
 using Gimji.GUI.Management.CustomerManagement;
 using Gimji.GUI.Management.StaffManagement;
+using Gimji.Properties;
+using Guna.UI2.WinForms.Suite;
 
 namespace Gimji.GUI.Management.ProductManagement
 {
     public partial class uc_productManagement : UserControl
     {
         String url_HinhAnh = null;
+        int Id = 0;
         uc_product uc_Product = null;
         private uc_product selectedProduct; // Biến toàn cục để lưu trữ uc_Staff được chọn
         public uc_productManagement()
@@ -39,12 +42,15 @@ namespace Gimji.GUI.Management.ProductManagement
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-
+            pal_inforDish.Visible = true;
         }
         private void LoadData()
         {
+            pal_inforDish.Visible = false;
+            flow_pal_listProduct_Clear();
             List<Dish> listDish = new List<Dish>();
             CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
+            String DishID = null;
             listDish = newBLL.getAllDish();
             foreach (var Dish in listDish)
             {
@@ -61,14 +67,17 @@ namespace Gimji.GUI.Management.ProductManagement
                                                                                                                                            // Hoặc hiển thị thông báo lỗi
                     MessageBox.Show("Lỗi Đường Dẫn: " + ex.Message);
                 }
+                uc_Product.ID = Dish.DishId;
                 uc_Product.NameTxt = Dish.DishName;
                 uc_Product.PriceTxt = Dish.DishPrice;
+
                 // Đăng ký sự kiện BtnEditClick cho mỗi uc_staff
                 uc_Product.BtnEditClick += (s, eventArgs) =>
                 {
                     // Lưu trữ uc_product được chọn vào biến toàn cục
                     selectedProduct = (uc_product)s;
                     HandleBtnEditClick((uc_product)s, Dish);
+
                 };
                 uc_Product.BtnRemoveClick += (s, eventArgs) =>
                 {
@@ -80,26 +89,58 @@ namespace Gimji.GUI.Management.ProductManagement
                 flow_pal_listProduct.Controls.Add(uc_Product);
             }
         }
+        private void flow_pal_listProduct_Clear()
+        {
+            foreach (Control control in flow_pal_listProduct.Controls)
+            {
+                if (control is uc_product)
+                {
+                    // Loại bỏ tất cả các uc_Product
+                    flow_pal_listProduct.Controls.Remove(control);
+                }
+            }
+        }
         private void HandleBtnEditClick(uc_product uc_Product, Dish dish)
         {
+            pal_inforDish.Visible = true;
             selectedProduct = uc_Product;
-            
+            Id = uc_Product.ID;
+            txt_Name.Text = uc_Product.NameTxt;
+            txt_Price.Text = uc_Product.PriceTxt.ToString();
+
         }
         private void btn_delete_Click(object sender, EventArgs e)
         {
-            /*if (selectedProduct != null)
+            if (selectedProduct != null)
             {
                 // Lấy thông tin nhân viên từ selectedStaff
-                string staffId = selectedProduct;
-                // Thực hiện xóa nhân viên dựa trên staffId
-                if (!string.IsNullOrEmpty(staffId))
+                // Thực hiện xóa product dựa trên idProduct
+                int idProduct = selectedProduct.ID;
+
+                if (idProduct != 0)
                 {
-                    CRUD_Staff_BLL newBLL = new CRUD_Staff_BLL();
-                    newBLL.deletebyId(staffId);
+                    CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
+                    newBLL.DeleteDishById(idProduct);
                     // Sau khi xóa, bạn có thể làm gì đó, ví dụ: cập nhật giao diện
                     LoadData();
                 }
-            }*/
+            }
+        }
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
+            pal_inforDish.Visible = false;
+            txt_Name.Text = string.Empty;
+            txt_Price.Text = string.Empty;
+        }
+        private void btn_confirm_Click(object sender, EventArgs e)
+        {
+            Dish dish = new Dish();
+            CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
+            dish.DishId = Id;
+            dish.DishName = txt_Name.Text;
+            dish.DishPrice = Convert.ToDouble(txt_Price.Text);
+            dish.DishPicture = url_HinhAnh;
+            dish.Catergory_Id = ?
         }
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
@@ -125,5 +166,7 @@ namespace Gimji.GUI.Management.ProductManagement
         {
 
         }
+
+
     }
 }

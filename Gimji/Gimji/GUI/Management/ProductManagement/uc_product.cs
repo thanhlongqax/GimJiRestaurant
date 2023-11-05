@@ -13,6 +13,7 @@ namespace Gimji.GUI.Management.ProductManagement
 {
     public partial class uc_product : UserControl
     {
+        private int idProduct;
         public event EventHandler BtnEditClick;
         public event EventHandler BtnRemoveClick;
         public uc_product()
@@ -21,6 +22,10 @@ namespace Gimji.GUI.Management.ProductManagement
         }
 
         #region Properties
+        public int ID {
+            get { return idProduct; }
+            set { idProduct = value; }
+        }
         public Image PictureBox
         {
             get { return pic_image.Image; }

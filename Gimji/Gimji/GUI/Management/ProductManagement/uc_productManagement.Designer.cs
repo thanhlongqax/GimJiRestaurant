@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_productManagement));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_header = new Panel();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -78,7 +78,7 @@
             pal_inforDish = new Guna.UI2.WinForms.Guna2Panel();
             btn_upload = new Guna.UI2.WinForms.Guna2Button();
             btn_confirm = new Guna.UI2.WinForms.Guna2Button();
-            txt_price = new Guna.UI2.WinForms.Guna2TextBox();
+            txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
             btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
@@ -102,9 +102,8 @@
             pal_header.Controls.Add(btn_Kimbak);
             pal_header.Controls.Add(btn_Tokbokki);
             pal_header.Location = new Point(3, 0);
-            pal_header.Margin = new Padding(3, 2, 3, 2);
             pal_header.Name = "pal_header";
-            pal_header.Size = new Size(894, 81);
+            pal_header.Size = new Size(1022, 108);
             pal_header.TabIndex = 9;
             // 
             // label1
@@ -112,26 +111,25 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(31, 11);
+            label1.Location = new Point(35, 15);
             label1.Name = "label1";
-            label1.Size = new Size(207, 25);
+            label1.Size = new Size(263, 32);
             label1.TabIndex = 6;
             label1.Text = "Product Management";
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = SystemColors.ControlDarkDark;
-            pictureBox1.Location = new Point(0, 75);
-            pictureBox1.Margin = new Padding(3, 2, 3, 2);
+            pictureBox1.Location = new Point(0, 100);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(897, 1);
+            pictureBox1.Size = new Size(1025, 1);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
             // btn_Salad
             // 
             btn_Salad.BackColor = Color.Transparent;
-            btn_Salad.CustomizableEdges = customizableEdges1;
+            btn_Salad.CustomizableEdges = customizableEdges31;
             btn_Salad.DisabledState.BorderColor = Color.DarkGray;
             btn_Salad.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Salad.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -141,12 +139,11 @@
             btn_Salad.ForeColor = Color.White;
             btn_Salad.HoverState.FillColor = Color.Transparent;
             btn_Salad.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            btn_Salad.Location = new Point(528, 52);
-            btn_Salad.Margin = new Padding(3, 2, 3, 2);
+            btn_Salad.Location = new Point(603, 69);
             btn_Salad.Name = "btn_Salad";
             btn_Salad.PressedColor = Color.Transparent;
-            btn_Salad.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btn_Salad.Size = new Size(88, 22);
+            btn_Salad.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btn_Salad.Size = new Size(101, 29);
             btn_Salad.TabIndex = 4;
             btn_Salad.Text = "SALAD";
             btn_Salad.Click += btn_Salad_Click;
@@ -154,7 +151,7 @@
             // btn_Meat
             // 
             btn_Meat.BackColor = Color.Transparent;
-            btn_Meat.CustomizableEdges = customizableEdges3;
+            btn_Meat.CustomizableEdges = customizableEdges33;
             btn_Meat.DisabledState.BorderColor = Color.DarkGray;
             btn_Meat.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Meat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -164,12 +161,11 @@
             btn_Meat.ForeColor = Color.White;
             btn_Meat.HoverState.FillColor = Color.Transparent;
             btn_Meat.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            btn_Meat.Location = new Point(397, 50);
-            btn_Meat.Margin = new Padding(3, 2, 3, 2);
+            btn_Meat.Location = new Point(454, 67);
             btn_Meat.Name = "btn_Meat";
             btn_Meat.PressedColor = Color.Transparent;
-            btn_Meat.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_Meat.Size = new Size(109, 22);
+            btn_Meat.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btn_Meat.Size = new Size(125, 29);
             btn_Meat.TabIndex = 3;
             btn_Meat.Text = "Thịt nướng";
             btn_Meat.Click += btn_Meat_Click;
@@ -177,7 +173,7 @@
             // btn_Rice
             // 
             btn_Rice.BackColor = Color.Transparent;
-            btn_Rice.CustomizableEdges = customizableEdges5;
+            btn_Rice.CustomizableEdges = customizableEdges35;
             btn_Rice.DisabledState.BorderColor = Color.DarkGray;
             btn_Rice.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Rice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -187,12 +183,11 @@
             btn_Rice.ForeColor = Color.White;
             btn_Rice.HoverState.FillColor = Color.Transparent;
             btn_Rice.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            btn_Rice.Location = new Point(272, 50);
-            btn_Rice.Margin = new Padding(3, 2, 3, 2);
+            btn_Rice.Location = new Point(311, 67);
             btn_Rice.Name = "btn_Rice";
             btn_Rice.PressedColor = Color.Transparent;
-            btn_Rice.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn_Rice.Size = new Size(88, 22);
+            btn_Rice.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btn_Rice.Size = new Size(101, 29);
             btn_Rice.TabIndex = 2;
             btn_Rice.Text = "Cơm Trộn";
             btn_Rice.Click += btn_Rice_Click;
@@ -200,7 +195,7 @@
             // btn_Kimbak
             // 
             btn_Kimbak.BackColor = Color.Transparent;
-            btn_Kimbak.CustomizableEdges = customizableEdges7;
+            btn_Kimbak.CustomizableEdges = customizableEdges37;
             btn_Kimbak.DisabledState.BorderColor = Color.DarkGray;
             btn_Kimbak.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Kimbak.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -210,12 +205,11 @@
             btn_Kimbak.ForeColor = Color.White;
             btn_Kimbak.HoverState.FillColor = Color.Transparent;
             btn_Kimbak.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            btn_Kimbak.Location = new Point(148, 51);
-            btn_Kimbak.Margin = new Padding(3, 2, 3, 2);
+            btn_Kimbak.Location = new Point(169, 68);
             btn_Kimbak.Name = "btn_Kimbak";
             btn_Kimbak.PressedColor = Color.Transparent;
-            btn_Kimbak.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btn_Kimbak.Size = new Size(88, 22);
+            btn_Kimbak.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btn_Kimbak.Size = new Size(101, 29);
             btn_Kimbak.TabIndex = 1;
             btn_Kimbak.Text = "KIMBAB";
             btn_Kimbak.Click += btn_Kimbak_Click;
@@ -223,7 +217,7 @@
             // btn_Tokbokki
             // 
             btn_Tokbokki.BackColor = Color.Transparent;
-            btn_Tokbokki.CustomizableEdges = customizableEdges9;
+            btn_Tokbokki.CustomizableEdges = customizableEdges39;
             btn_Tokbokki.DisabledState.BorderColor = Color.DarkGray;
             btn_Tokbokki.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Tokbokki.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -233,12 +227,11 @@
             btn_Tokbokki.ForeColor = Color.White;
             btn_Tokbokki.HoverState.FillColor = Color.Transparent;
             btn_Tokbokki.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            btn_Tokbokki.Location = new Point(24, 51);
-            btn_Tokbokki.Margin = new Padding(3, 2, 3, 2);
+            btn_Tokbokki.Location = new Point(27, 68);
             btn_Tokbokki.Name = "btn_Tokbokki";
             btn_Tokbokki.PressedColor = Color.Transparent;
-            btn_Tokbokki.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btn_Tokbokki.Size = new Size(91, 22);
+            btn_Tokbokki.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            btn_Tokbokki.Size = new Size(104, 29);
             btn_Tokbokki.TabIndex = 0;
             btn_Tokbokki.Text = "TOKBOKKI";
             btn_Tokbokki.Click += btn_Tokbokki_Click;
@@ -248,10 +241,9 @@
             flow_pal_listProduct.AutoScroll = true;
             flow_pal_listProduct.Controls.Add(pal_newDish);
             flow_pal_listProduct.Controls.Add(pal_temp);
-            flow_pal_listProduct.Location = new Point(31, 84);
-            flow_pal_listProduct.Margin = new Padding(3, 2, 3, 2);
+            flow_pal_listProduct.Location = new Point(35, 112);
             flow_pal_listProduct.Name = "flow_pal_listProduct";
-            flow_pal_listProduct.Size = new Size(864, 320);
+            flow_pal_listProduct.Size = new Size(987, 427);
             flow_pal_listProduct.TabIndex = 10;
             // 
             // pal_newDish
@@ -261,17 +253,16 @@
             pal_newDish.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             pal_newDish.BorderThickness = 1;
             pal_newDish.Controls.Add(btn_add);
-            pal_newDish.CustomizableEdges = customizableEdges13;
-            pal_newDish.Location = new Point(3, 2);
-            pal_newDish.Margin = new Padding(3, 2, 3, 2);
+            pal_newDish.CustomizableEdges = customizableEdges43;
+            pal_newDish.Location = new Point(3, 3);
             pal_newDish.Name = "pal_newDish";
-            pal_newDish.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            pal_newDish.Size = new Size(179, 165);
+            pal_newDish.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            pal_newDish.Size = new Size(205, 220);
             pal_newDish.TabIndex = 0;
             // 
             // btn_add
             // 
-            btn_add.CustomizableEdges = customizableEdges11;
+            btn_add.CustomizableEdges = customizableEdges41;
             btn_add.DisabledState.BorderColor = Color.DarkGray;
             btn_add.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_add.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -285,12 +276,11 @@
             btn_add.ImageAlign = HorizontalAlignment.Left;
             btn_add.ImageOffset = new Point(20, -40);
             btn_add.ImageSize = new Size(50, 50);
-            btn_add.Location = new Point(43, 42);
-            btn_add.Margin = new Padding(3, 2, 3, 2);
+            btn_add.Location = new Point(49, 56);
             btn_add.Name = "btn_add";
             btn_add.PressedColor = Color.Transparent;
-            btn_add.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btn_add.Size = new Size(108, 100);
+            btn_add.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btn_add.Size = new Size(123, 133);
             btn_add.TabIndex = 0;
             btn_add.Text = "Add new dish";
             btn_add.TextOffset = new Point(-5, 0);
@@ -298,19 +288,17 @@
             // 
             // pal_temp
             // 
-            pal_temp.Location = new Point(188, 2);
-            pal_temp.Margin = new Padding(3, 2, 3, 2);
+            pal_temp.Location = new Point(214, 3);
             pal_temp.Name = "pal_temp";
-            pal_temp.Size = new Size(18, 165);
+            pal_temp.Size = new Size(21, 220);
             pal_temp.TabIndex = 1;
             // 
             // pictureBox2
             // 
             pictureBox2.BackColor = SystemColors.ControlDarkDark;
-            pictureBox2.Location = new Point(3, 417);
-            pictureBox2.Margin = new Padding(3, 2, 3, 2);
+            pictureBox2.Location = new Point(3, 556);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(897, 1);
+            pictureBox2.Size = new Size(1025, 1);
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
             // 
@@ -318,10 +306,9 @@
             // 
             pal_button.Controls.Add(guna_btn_save);
             pal_button.Controls.Add(guna_btn_cancel);
-            pal_button.Location = new Point(548, 488);
-            pal_button.Margin = new Padding(3, 2, 3, 2);
+            pal_button.Location = new Point(626, 651);
             pal_button.Name = "pal_button";
-            pal_button.Size = new Size(337, 43);
+            pal_button.Size = new Size(385, 57);
             pal_button.TabIndex = 22;
             // 
             // guna_btn_save
@@ -330,7 +317,7 @@
             guna_btn_save.BorderColor = Color.FromArgb(255, 128, 128);
             guna_btn_save.BorderRadius = 5;
             guna_btn_save.BorderThickness = 1;
-            guna_btn_save.CustomizableEdges = customizableEdges15;
+            guna_btn_save.CustomizableEdges = customizableEdges45;
             guna_btn_save.DisabledState.BorderColor = Color.DarkGray;
             guna_btn_save.DisabledState.CustomBorderColor = Color.DarkGray;
             guna_btn_save.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -339,11 +326,10 @@
             guna_btn_save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna_btn_save.ForeColor = Color.White;
             guna_btn_save.HoverState.FillColor = Color.Maroon;
-            guna_btn_save.Location = new Point(178, 4);
-            guna_btn_save.Margin = new Padding(3, 2, 3, 2);
+            guna_btn_save.Location = new Point(203, 5);
             guna_btn_save.Name = "guna_btn_save";
-            guna_btn_save.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna_btn_save.Size = new Size(149, 34);
+            guna_btn_save.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            guna_btn_save.Size = new Size(170, 45);
             guna_btn_save.TabIndex = 1;
             guna_btn_save.Text = "Save Changes";
             // 
@@ -352,7 +338,7 @@
             guna_btn_cancel.BorderColor = Color.FromArgb(255, 128, 128);
             guna_btn_cancel.BorderRadius = 5;
             guna_btn_cancel.BorderThickness = 1;
-            guna_btn_cancel.CustomizableEdges = customizableEdges17;
+            guna_btn_cancel.CustomizableEdges = customizableEdges47;
             guna_btn_cancel.DisabledState.BorderColor = Color.DarkGray;
             guna_btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
             guna_btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -361,11 +347,10 @@
             guna_btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             guna_btn_cancel.ForeColor = Color.FromArgb(255, 128, 0);
             guna_btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
-            guna_btn_cancel.Location = new Point(5, 5);
-            guna_btn_cancel.Margin = new Padding(3, 2, 3, 2);
+            guna_btn_cancel.Location = new Point(6, 7);
             guna_btn_cancel.Name = "guna_btn_cancel";
-            guna_btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna_btn_cancel.Size = new Size(149, 34);
+            guna_btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            guna_btn_cancel.Size = new Size(170, 45);
             guna_btn_cancel.TabIndex = 0;
             guna_btn_cancel.Text = "Discard Changes";
             // 
@@ -377,18 +362,17 @@
             pal_inforDish.BorderThickness = 2;
             pal_inforDish.Controls.Add(btn_upload);
             pal_inforDish.Controls.Add(btn_confirm);
-            pal_inforDish.Controls.Add(txt_price);
+            pal_inforDish.Controls.Add(txt_Price);
             pal_inforDish.Controls.Add(btn_cancel);
             pal_inforDish.Controls.Add(label2);
             pal_inforDish.Controls.Add(txt_Name);
             pal_inforDish.Controls.Add(label7);
-            pal_inforDish.CustomizableEdges = customizableEdges29;
+            pal_inforDish.CustomizableEdges = customizableEdges59;
             pal_inforDish.FillColor = Color.Transparent;
-            pal_inforDish.Location = new Point(33, 422);
-            pal_inforDish.Margin = new Padding(3, 2, 3, 2);
+            pal_inforDish.Location = new Point(38, 563);
             pal_inforDish.Name = "pal_inforDish";
-            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            pal_inforDish.Size = new Size(360, 116);
+            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            pal_inforDish.Size = new Size(411, 155);
             pal_inforDish.TabIndex = 23;
             // 
             // btn_upload
@@ -396,7 +380,7 @@
             btn_upload.BorderColor = Color.White;
             btn_upload.BorderRadius = 5;
             btn_upload.BorderThickness = 1;
-            btn_upload.CustomizableEdges = customizableEdges19;
+            btn_upload.CustomizableEdges = customizableEdges49;
             btn_upload.DisabledState.BorderColor = Color.DarkGray;
             btn_upload.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_upload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -405,12 +389,11 @@
             btn_upload.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_upload.ForeColor = Color.White;
             btn_upload.Image = (Image)resources.GetObject("btn_upload.Image");
-            btn_upload.Location = new Point(23, 75);
-            btn_upload.Margin = new Padding(3, 2, 3, 2);
+            btn_upload.Location = new Point(26, 100);
             btn_upload.Name = "btn_upload";
             btn_upload.PressedColor = Color.Transparent;
-            btn_upload.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btn_upload.Size = new Size(93, 34);
+            btn_upload.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            btn_upload.Size = new Size(106, 45);
             btn_upload.TabIndex = 28;
             btn_upload.Text = "Image";
             btn_upload.Click += btn_upload_Click;
@@ -421,7 +404,7 @@
             btn_confirm.BorderColor = Color.White;
             btn_confirm.BorderRadius = 5;
             btn_confirm.BorderThickness = 1;
-            btn_confirm.CustomizableEdges = customizableEdges21;
+            btn_confirm.CustomizableEdges = customizableEdges51;
             btn_confirm.DisabledState.BorderColor = Color.DarkGray;
             btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -430,46 +413,45 @@
             btn_confirm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_confirm.ForeColor = Color.White;
             btn_confirm.HoverState.FillColor = Color.Maroon;
-            btn_confirm.Location = new Point(234, 75);
-            btn_confirm.Margin = new Padding(3, 2, 3, 2);
+            btn_confirm.Location = new Point(267, 100);
             btn_confirm.Name = "btn_confirm";
-            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btn_confirm.Size = new Size(97, 34);
+            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            btn_confirm.Size = new Size(111, 45);
             btn_confirm.TabIndex = 1;
             btn_confirm.Text = "Confirm";
+            btn_confirm.Click += btn_confirm_Click;
             // 
-            // txt_price
+            // txt_Price
             // 
-            txt_price.BorderColor = Color.White;
-            txt_price.BorderRadius = 5;
-            txt_price.CustomizableEdges = customizableEdges23;
-            txt_price.DefaultText = "";
-            txt_price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.FillColor = Color.FromArgb(255, 180, 79);
-            txt_price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_price.ForeColor = Color.Black;
-            txt_price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Location = new Point(188, 21);
-            txt_price.Margin = new Padding(3, 2, 3, 2);
-            txt_price.Name = "txt_price";
-            txt_price.PasswordChar = '\0';
-            txt_price.PlaceholderForeColor = Color.Black;
-            txt_price.PlaceholderText = "";
-            txt_price.SelectedText = "";
-            txt_price.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txt_price.Size = new Size(144, 35);
-            txt_price.TabIndex = 27;
+            txt_Price.BorderColor = Color.White;
+            txt_Price.BorderRadius = 5;
+            txt_Price.CustomizableEdges = customizableEdges53;
+            txt_Price.DefaultText = "";
+            txt_Price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_Price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_Price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_Price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_Price.FillColor = Color.FromArgb(255, 180, 79);
+            txt_Price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Price.ForeColor = Color.Black;
+            txt_Price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Price.Location = new Point(215, 28);
+            txt_Price.Name = "txt_Price";
+            txt_Price.PasswordChar = '\0';
+            txt_Price.PlaceholderForeColor = Color.Black;
+            txt_Price.PlaceholderText = "";
+            txt_Price.SelectedText = "";
+            txt_Price.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            txt_Price.Size = new Size(165, 47);
+            txt_Price.TabIndex = 27;
             // 
             // btn_cancel
             // 
             btn_cancel.BorderColor = Color.White;
             btn_cancel.BorderRadius = 5;
             btn_cancel.BorderThickness = 1;
-            btn_cancel.CustomizableEdges = customizableEdges25;
+            btn_cancel.CustomizableEdges = customizableEdges55;
             btn_cancel.DisabledState.BorderColor = Color.DarkGray;
             btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -478,22 +460,22 @@
             btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_cancel.ForeColor = Color.White;
             btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
-            btn_cancel.Location = new Point(132, 75);
-            btn_cancel.Margin = new Padding(3, 2, 3, 2);
+            btn_cancel.Location = new Point(151, 100);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btn_cancel.Size = new Size(90, 34);
+            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            btn_cancel.Size = new Size(103, 45);
             btn_cancel.TabIndex = 0;
             btn_cancel.Text = "Cancel";
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.White;
-            label2.Location = new Point(185, 4);
+            label2.Location = new Point(211, 5);
             label2.Name = "label2";
-            label2.Size = new Size(35, 15);
+            label2.Size = new Size(43, 20);
             label2.TabIndex = 26;
             label2.Text = "Price";
             // 
@@ -501,7 +483,7 @@
             // 
             txt_Name.BorderColor = Color.White;
             txt_Name.BorderRadius = 5;
-            txt_Name.CustomizableEdges = customizableEdges27;
+            txt_Name.CustomizableEdges = customizableEdges57;
             txt_Name.DefaultText = "";
             txt_Name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_Name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -512,15 +494,14 @@
             txt_Name.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txt_Name.ForeColor = Color.Black;
             txt_Name.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_Name.Location = new Point(19, 21);
-            txt_Name.Margin = new Padding(3, 2, 3, 2);
+            txt_Name.Location = new Point(22, 28);
             txt_Name.Name = "txt_Name";
             txt_Name.PasswordChar = '\0';
             txt_Name.PlaceholderForeColor = Color.Black;
             txt_Name.PlaceholderText = "";
             txt_Name.SelectedText = "";
-            txt_Name.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txt_Name.Size = new Size(144, 35);
+            txt_Name.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            txt_Name.Size = new Size(165, 47);
             txt_Name.TabIndex = 25;
             // 
             // label7
@@ -528,15 +509,15 @@
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
-            label7.Location = new Point(16, 4);
+            label7.Location = new Point(18, 5);
             label7.Name = "label7";
-            label7.Size = new Size(70, 15);
+            label7.Size = new Size(90, 20);
             label7.TabIndex = 24;
             label7.Text = "Food Name";
             // 
             // uc_productManagement
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(136, 21, 57);
             Controls.Add(pal_inforDish);
@@ -544,9 +525,8 @@
             Controls.Add(pictureBox2);
             Controls.Add(flow_pal_listProduct);
             Controls.Add(pal_header);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "uc_productManagement";
-            Size = new Size(897, 543);
+            Size = new Size(1025, 724);
             Load += uc_productManagement_Load;
             pal_header.ResumeLayout(false);
             pal_header.PerformLayout();
@@ -581,7 +561,7 @@
         private Guna.UI2.WinForms.Guna2Panel pal_inforDish;
         private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txt_price;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Price;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btn_confirm;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;

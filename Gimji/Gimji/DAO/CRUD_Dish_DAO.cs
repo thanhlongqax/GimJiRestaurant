@@ -42,7 +42,10 @@ namespace Gimji.DAO
 
             return listDish;
         }
+
         // _______________________________________________________________________________________________________
+        
+        // Thêm 1 Món Ăn________________________________________________________________________
         public void addDish_DAO(Dish newDish) {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
@@ -75,5 +78,91 @@ namespace Gimji.DAO
                 MessageBox.Show("   Thêm Thực Đơn không Thành Công", "Thông báo", MessageBoxButtons.OK);
             }
         }
+        // _______________________________________________________________________________________________________
+        
+        // Chỉnh Sửa Các Món Ăn ra________________________________________________________________________
+        public void updateDish_DAO(Dish updatedDish)
+        {
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+
+            // Kiểm tra xem món ăn có tồn tại trong cơ sở dữ liệu hay không
+            string selectSql = @"SELECT id_mon_an FROM Mon_an WHERE id_mon_an = @DishId ";
+            SqlCommand selectCmd = new SqlCommand(selectSql, conn);
+            selectCmd.Parameters.AddWithValue("@DishId", updatedDish.DishId);
+            object result = selectCmd.ExecuteScalar();
+            if (result != null)
+            {
+                // Món ăn tồn tại, thực hiện truy vấn UPDATE
+                string updateSql = @"
+                    UPDATE Mon_an
+                    SET ten_mon_an = @TenMonAn,
+                    don_gia = @DonGia,
+                    hinh_anh = @HinhAnh,
+                    tinh_trang = @TinhTrang,
+                    id_danh_muc = @IdDanhMuc
+                    WHERE id_mon_an = @DishId
+                ";
+                SqlCommand updateCmd = new SqlCommand(updateSql, conn);
+                updateCmd.Parameters.AddWithValue("@DishId", updatedDish.DishId);
+                updateCmd.Parameters.AddWithValue("@TenMonAn", updatedDish.DishName);
+                updateCmd.Parameters.AddWithValue("@DonGia", updatedDish.DishPrice);
+                updateCmd.Parameters.AddWithValue("@HinhAnh", updatedDish.DishPicture);
+                updateCmd.Parameters.AddWithValue("@TinhTrang", updatedDish.Dish_Availible);
+                updateCmd.Parameters.AddWithValue("@IdDanhMuc", updatedDish.Catergory_Id);
+
+                updateCmd.ExecuteNonQuery();
+
+                MessageBox.Show("Cập nhật Thực Đơn Thành Công", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Món ăn không tồn tại, không thể cập nhật", "Thông báo", MessageBoxButtons.OK);
+            }
+
+            conn.Close();
+        }
+        // _______________________________________________________________________________________________________
+        // Xóa Món Ăn ra________________________________________________________________________
+        public void DeleteDishById_DAO(int dishId)
+        {
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+
+                // Kiểm tra xem món ăn tồn tại trong cơ sở dữ liệu dựa trên ID
+                string checkSql = "SELECT COUNT(*) FROM Mon_an WHERE id_mon_an = @DishId";
+                SqlCommand checkCmd = new SqlCommand(checkSql, conn);
+                checkCmd.Parameters.AddWithValue("@DishId", dishId);
+
+                int dishCount = (int)checkCmd.ExecuteScalar();
+
+                if (dishCount > 0)
+                {
+                    // Món ăn tồn tại, thực hiện xóa
+                    string deleteSql = "DELETE FROM Mon_an WHERE id_mon_an = @DishId";
+                    SqlCommand deleteCmd = new SqlCommand(deleteSql, conn);
+                    deleteCmd.Parameters.AddWithValue("@DishId", dishId);
+
+                    int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Xóa món ăn thành công", "Thông báo", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa món ăn không thành công", "Thông báo", MessageBoxButtons.OK);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy món ăn có ID " + dishId, "Thông báo", MessageBoxButtons.OK);
+                }
+            }
+        }
+        // _______________________________________________________________________________________________________
+
     }
+
 }
