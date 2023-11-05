@@ -37,9 +37,6 @@
     <Compile Update="GUI\Management\ProductManagement\uc_productManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Management\StaffManagement\uc_detailInfo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="GUI\Management\StaffManagement\uc_staff.cs">
       <SubType>UserControl</SubType>
     </Compile>

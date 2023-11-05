@@ -10,15 +10,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gimji.BLL;
+using Gimji.GUI;
 
 namespace Gimji.GUI.Management.StaffManagement
 {
     public partial class uc_staff : UserControl
     {
         CRUD_Staff_BLL CRUD_Staff_BLL = new CRUD_Staff_BLL();
-        public uc_detailInfo uc_DetailInfo = new uc_detailInfo();
-        public event EventHandler GunaButtonEditClick;
-        public event EventHandler GunaButtonDeleteClick;
+        public event EventHandler BtnEditClick;
+        public event EventHandler BtnRemoveClick;
         public uc_staff()
         {
             InitializeComponent();
@@ -36,14 +36,17 @@ namespace Gimji.GUI.Management.StaffManagement
 
         public void guna_btn_edit_Click(object sender, EventArgs e)
         {
-            GunaButtonEditClick?.Invoke(this, EventArgs.Empty);
+            BtnEditClick?.Invoke(this, e);
+            StaffID_Return(StaffID);
         }
 
         private void guna_btn_remove_Click(object sender, EventArgs e)
         {
-            GunaButtonDeleteClick?.Invoke(this, EventArgs.Empty);
+            BtnRemoveClick?.Invoke(this, e);
         }
-
+        public string StaffID_Return(string staffID) {
+            return staffID;
+        }
         #region Properties
 
         [Category("Custom Props")]

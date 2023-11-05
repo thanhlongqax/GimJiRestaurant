@@ -28,16 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_staff));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna_pal_staff = new Guna.UI2.WinForms.Guna2Panel();
-            guna_btn_remove = new Guna.UI2.WinForms.Guna2Button();
-            guna_btn_edit = new Guna.UI2.WinForms.Guna2Button();
+            btn_remove = new Guna.UI2.WinForms.Guna2Button();
+            btn_edit_Staff = new Guna.UI2.WinForms.Guna2Button();
             lb_position = new Label();
             lb_name = new Label();
             lb_id = new Label();
@@ -51,61 +51,61 @@
             guna_pal_staff.BorderColor = Color.FromArgb(224, 224, 224);
             guna_pal_staff.BorderRadius = 5;
             guna_pal_staff.BorderThickness = 1;
-            guna_pal_staff.Controls.Add(guna_btn_remove);
-            guna_pal_staff.Controls.Add(guna_btn_edit);
+            guna_pal_staff.Controls.Add(btn_remove);
+            guna_pal_staff.Controls.Add(btn_edit_Staff);
             guna_pal_staff.Controls.Add(lb_position);
             guna_pal_staff.Controls.Add(lb_name);
             guna_pal_staff.Controls.Add(lb_id);
             guna_pal_staff.Controls.Add(lb_stt);
-            guna_pal_staff.CustomizableEdges = customizableEdges5;
+            guna_pal_staff.CustomizableEdges = customizableEdges11;
             guna_pal_staff.Location = new Point(0, 0);
             guna_pal_staff.Name = "guna_pal_staff";
-            guna_pal_staff.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna_pal_staff.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna_pal_staff.Size = new Size(546, 37);
             guna_pal_staff.TabIndex = 2;
             guna_pal_staff.MouseEnter += guna_pal_staff_MouseEnter;
             guna_pal_staff.MouseLeave += guna_pal_staff_MouseLeave;
             // 
-            // guna_btn_remove
+            // btn_remove
             // 
-            guna_btn_remove.BorderRadius = 5;
-            guna_btn_remove.CustomizableEdges = customizableEdges1;
-            guna_btn_remove.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_remove.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_remove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_remove.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_remove.FillColor = Color.Transparent;
-            guna_btn_remove.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna_btn_remove.ForeColor = Color.White;
-            guna_btn_remove.Image = (Image)resources.GetObject("guna_btn_remove.Image");
-            guna_btn_remove.ImageSize = new Size(25, 25);
-            guna_btn_remove.Location = new Point(508, 6);
-            guna_btn_remove.Name = "guna_btn_remove";
-            guna_btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna_btn_remove.Size = new Size(27, 27);
-            guna_btn_remove.TabIndex = 5;
-            guna_btn_remove.Click += guna_btn_remove_Click;
+            btn_remove.BorderRadius = 5;
+            btn_remove.CustomizableEdges = customizableEdges7;
+            btn_remove.DisabledState.BorderColor = Color.DarkGray;
+            btn_remove.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_remove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_remove.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_remove.FillColor = Color.Transparent;
+            btn_remove.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_remove.ForeColor = Color.White;
+            btn_remove.Image = (Image)resources.GetObject("btn_remove.Image");
+            btn_remove.ImageSize = new Size(25, 25);
+            btn_remove.Location = new Point(508, 6);
+            btn_remove.Name = "btn_remove";
+            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_remove.Size = new Size(27, 27);
+            btn_remove.TabIndex = 5;
+            btn_remove.Click += guna_btn_remove_Click;
             // 
-            // guna_btn_edit
+            // btn_edit_Staff
             // 
-            guna_btn_edit.BorderRadius = 5;
-            guna_btn_edit.CustomizableEdges = customizableEdges3;
-            guna_btn_edit.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_edit.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_edit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_edit.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_edit.FillColor = Color.Transparent;
-            guna_btn_edit.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            guna_btn_edit.ForeColor = Color.White;
-            guna_btn_edit.HoverState.BorderColor = Color.White;
-            guna_btn_edit.Image = (Image)resources.GetObject("guna_btn_edit.Image");
-            guna_btn_edit.ImageSize = new Size(25, 25);
-            guna_btn_edit.Location = new Point(475, 6);
-            guna_btn_edit.Name = "guna_btn_edit";
-            guna_btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna_btn_edit.Size = new Size(27, 27);
-            guna_btn_edit.TabIndex = 4;
-            guna_btn_edit.Click += guna_btn_edit_Click;
+            btn_edit_Staff.BorderRadius = 5;
+            btn_edit_Staff.CustomizableEdges = customizableEdges9;
+            btn_edit_Staff.DisabledState.BorderColor = Color.DarkGray;
+            btn_edit_Staff.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_edit_Staff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_edit_Staff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_edit_Staff.FillColor = Color.Transparent;
+            btn_edit_Staff.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_edit_Staff.ForeColor = Color.White;
+            btn_edit_Staff.HoverState.BorderColor = Color.White;
+            btn_edit_Staff.Image = (Image)resources.GetObject("btn_edit_Staff.Image");
+            btn_edit_Staff.ImageSize = new Size(25, 25);
+            btn_edit_Staff.Location = new Point(475, 6);
+            btn_edit_Staff.Name = "btn_edit_Staff";
+            btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_edit_Staff.Size = new Size(27, 27);
+            btn_edit_Staff.TabIndex = 4;
+            btn_edit_Staff.Click += guna_btn_edit_Click;
             // 
             // lb_position
             // 
@@ -172,11 +172,11 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna_pal_staff;
-        private Guna.UI2.WinForms.Guna2Button guna_btn_edit;
+        private Guna.UI2.WinForms.Guna2Button btn_edit_Staff;
         private Label lb_position;
         private Label lb_name;
         private Label lb_id;
         private Label lb_stt;
-        private Guna.UI2.WinForms.Guna2Button guna_btn_remove;
+        private Guna.UI2.WinForms.Guna2Button btn_remove;
     }
 }
