@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,12 +31,12 @@ namespace Gimji.DAO
                     userName = row["ten_dang_nhap"].ToString(),
                     userPassword = row["mat_khau"].ToString(),
                     fullName = row["ten_nhan_vien"].ToString(),
-                    DateOfBirth = row.Field<DateTime>("ngay_sinh").ToString("yyyy-MM-dd"),
+                    DateOfBirth = row["ngay_sinh"].ToString(),
                     Gender = row["gioi_tinh"].ToString(),
                     contactAddress = row["dia_chi"].ToString(),
                     phoneNumber = row["so_dien_thoai"].ToString(),
                     Email = row["email"].ToString(),
-                    dateStart = row.Field<DateTime?>("ngay_bat_dau")?.ToString("yyyy-MM-dd"),
+                    dateStart = row["ngay_bat_dau"].ToString(),
                     Salary = row.Field<double?>("muc_luong").HasValue ? row.Field<double>("muc_luong").ToString() : null ,
                     position = row["viTri"].ToString()
                 };
@@ -65,12 +66,12 @@ namespace Gimji.DAO
                     userName = row["ten_dang_nhap"].ToString(),
                     userPassword = row["mat_khau"].ToString(),
                     fullName = row["ten_nhan_vien"].ToString(),
-                    DateOfBirth = row.Field<DateTime>("ngay_sinh").ToString("yyyy-MM-dd"),
+                    DateOfBirth = row["ngay_sinh"].ToString(),
                     Gender = row["gioi_tinh"].ToString(),
                     contactAddress = row["dia_chi"].ToString(),
                     phoneNumber = row["so_dien_thoai"].ToString(),
                     Email = row["email"].ToString(),
-                    dateStart = row.Field<DateTime?>("ngay_bat_dau")?.ToString("yyyy-MM-dd"),
+                    dateStart = row["ngay_bat_dau"].ToString(),
                     Salary = row.Field<double?>("muc_luong").HasValue ? row.Field<double>("muc_luong").ToString() : null,
                     position = row["viTri"].ToString()
                 };
@@ -82,8 +83,6 @@ namespace Gimji.DAO
         //Thêm 1 user _____________________________________________________________________________________________
         public void addStaff_DAO(Staff newStaff)
         {
-
-
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
             String sSQL = "select * from Nhan_vien where ten_dang_nhap = @userName";
@@ -118,8 +117,6 @@ namespace Gimji.DAO
 
         public void UpdateStaff_DAO(Staff newStaff)
         {
-
-
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
             String sSQL = "select * from Nhan_vien where ten_dang_nhap = @userName";
@@ -130,7 +127,7 @@ namespace Gimji.DAO
             if (dt.Rows.Count == 0)
             {
                 MessageBox.Show("add Staff :" + newStaff.fullName);
-                String anotherSQL = "exec @proc @fullName,@emailAddress,@contactAddress,@userName,@userPassword ,@DateOfBirth , @phoneNumber";
+                String anotherSQL = "exec @proc @fullName,@emailAddress,@contactAddress,@userName,@userPassword ,@DateOfBirth , @phoneNumber , @position , @gender";
                 SqlCommand anotherCmd = new SqlCommand(anotherSQL, conn);
                 anotherCmd.Parameters.AddWithValue("@fullName", newStaff.fullName);
                 anotherCmd.Parameters.AddWithValue("@emailAddress", newStaff.Email);
@@ -138,7 +135,10 @@ namespace Gimji.DAO
                 anotherCmd.Parameters.AddWithValue("@phoneNumber", newStaff.phoneNumber);
                 anotherCmd.Parameters.AddWithValue("@userName", newStaff.userName);
                 anotherCmd.Parameters.AddWithValue("@userPassword", newStaff.userPassword);
-                cmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
+                anotherCmd.Parameters.AddWithValue("@gender" , newStaff.Gender);
+                anotherCmd.Parameters.AddWithValue("@position", newStaff.position);
+                anotherCmd.Parameters.AddWithValue("@DateOfBirth", newStaff.DateOfBirth);
+                anotherCmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
                 anotherCmd.ExecuteNonQuery();
                 conn.Close();
                 MessageBox.Show("    Thêm Tài Khoản Nhân Viên Thành Công", "Thông báo", MessageBoxButtons.OK);
@@ -153,38 +153,14 @@ namespace Gimji.DAO
 
         //Xóa 1 user _______________________________________________________________________________________________
 
-        public void deleteStaff_DAO(Staff newStaff)
+        public void deleteStaff_DAO(String id)
         {
-
-
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
-            String sSQL = "select * from Nhan_vien where ten_dang_nhap = @userName";
+            string sSQL = "DELETE FROM Nhan_vien WHERE id_nhan_vien = @id";
             SqlCommand cmd = new SqlCommand(sSQL, conn);
-            cmd.Parameters.AddWithValue("@userName", newStaff.userName);
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            if (dt.Rows.Count == 0)
-            {
-                MessageBox.Show("Delete Staff :" + newStaff.fullName);
-                String anotherSQL = "exec @proc @fullName,@emailAddress,@contactAddress,@userName,@userPassword ,@DateOfBirth , @phoneNumber";
-                SqlCommand anotherCmd = new SqlCommand(anotherSQL, conn);
-                anotherCmd.Parameters.AddWithValue("@fullName", newStaff.fullName);
-                anotherCmd.Parameters.AddWithValue("@emailAddress", newStaff.Email);
-                anotherCmd.Parameters.AddWithValue("@contactAddress", newStaff.contactAddress);
-                anotherCmd.Parameters.AddWithValue("@phoneNumber", newStaff.phoneNumber);
-                anotherCmd.Parameters.AddWithValue("@userName", newStaff.userName);
-                anotherCmd.Parameters.AddWithValue("@userPassword", newStaff.userPassword);
-                cmd.Parameters.AddWithValue("@proc", "InsertStaffLoginData");
-                anotherCmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("    Thêm Tài Khoản Nhân Viên Thành Công", "Thông báo", MessageBoxButtons.OK);
-            }
-            else
-            {
-                conn.Close();
-                MessageBox.Show("Tài khoản đã được đăng ký trước đây", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.ExecuteNonQuery();
         }
         //________________________________________________________________________________________________________________
         public DataTable search_DAO(String key, String cn)

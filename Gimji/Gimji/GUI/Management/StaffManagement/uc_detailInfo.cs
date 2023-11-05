@@ -12,6 +12,9 @@ namespace Gimji.GUI.Management.StaffManagement
 {
     public partial class uc_detailInfo : UserControl
     {
+        public event EventHandler Btn_SaveClick;
+        public event EventHandler Btn_CancelClick;
+        public event EventHandler Btn_Add_FullNameClick;
         public uc_detailInfo()
         {
             InitializeComponent();
@@ -63,11 +66,10 @@ namespace Gimji.GUI.Management.StaffManagement
             get { return guna_txt_birthday; }
             set { guna_txt_birthday = value; }
         }
-
-        public Guna.UI2.WinForms.Guna2ComboBox GenderCboBox
+        public Guna.UI2.WinForms.Guna2TextBox Txt_Gender
         {
-            get { return guna_combo_gender; }
-            set { guna_combo_gender = value; }
+            get { return txt_Gender; }
+            set { txt_Gender = value; }
         }
 
         public Guna.UI2.WinForms.Guna2TextBox DateStartTxt
@@ -82,14 +84,29 @@ namespace Gimji.GUI.Management.StaffManagement
             set { guna_txt_salary = value; }
         }
 
-        public Guna.UI2.WinForms.Guna2ComboBox PositionCboBox
+        public Guna.UI2.WinForms.Guna2TextBox Txt_Position
         {
-            get { return guna_combo_position; }
-            set { guna_combo_position = value; }
+            get { return txt_Position; }
+            set { txt_Position = value; }
         }
+
 
         #endregion
 
 
+        private void guna_btn_save_Click(object sender, EventArgs e)
+        {
+            Btn_SaveClick?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna_btn_cancel_Click(object sender, EventArgs e)
+        {
+            Btn_CancelClick?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna_btn_edit_Click(object sender, EventArgs e)
+        {
+            Btn_Add_FullNameClick?.Invoke(this, EventArgs.Empty);
+        }
     }
 }

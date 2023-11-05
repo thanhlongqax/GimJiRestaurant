@@ -20,5 +20,13 @@ namespace Gimji.BLL
         {
             return newDao.getStaffById_DAO(Staffid);
         }
+        public void deletebyId(String Staffid)
+        {
+            newDao.deleteStaff_DAO(Staffid);
+        }
+        public void updateStaff(Staff staff)
+        {
+            newDao.UpdateStaff_DAO(staff);
+        }
     }
 }

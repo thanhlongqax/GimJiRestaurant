@@ -79,11 +79,12 @@
             guna_btn_remove.ForeColor = Color.White;
             guna_btn_remove.Image = (Image)resources.GetObject("guna_btn_remove.Image");
             guna_btn_remove.ImageSize = new Size(25, 25);
-            guna_btn_remove.Location = new Point(506, 6);
+            guna_btn_remove.Location = new Point(508, 6);
             guna_btn_remove.Name = "guna_btn_remove";
             guna_btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna_btn_remove.Size = new Size(27, 27);
             guna_btn_remove.TabIndex = 5;
+            guna_btn_remove.Click += guna_btn_remove_Click;
             // 
             // guna_btn_edit
             // 

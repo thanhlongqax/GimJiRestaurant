@@ -18,6 +18,7 @@ namespace Gimji.GUI.Management.StaffManagement
         CRUD_Staff_BLL CRUD_Staff_BLL = new CRUD_Staff_BLL();
         public uc_detailInfo uc_DetailInfo = new uc_detailInfo();
         public event EventHandler GunaButtonEditClick;
+        public event EventHandler GunaButtonDeleteClick;
         public uc_staff()
         {
             InitializeComponent();
@@ -36,6 +37,11 @@ namespace Gimji.GUI.Management.StaffManagement
         public void guna_btn_edit_Click(object sender, EventArgs e)
         {
             GunaButtonEditClick?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void guna_btn_remove_Click(object sender, EventArgs e)
+        {
+            GunaButtonDeleteClick?.Invoke(this, EventArgs.Empty);
         }
 
         #region Properties
