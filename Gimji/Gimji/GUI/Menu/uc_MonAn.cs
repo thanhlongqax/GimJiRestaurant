@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,6 +32,27 @@ namespace Gimji.GUI.Menu
             //        pictureBox_hinhAnh.Image = null; // Gán hình ảnh mặc định hoặc null
             //    }
         }
+
+        #region Properties
+
+        public Guna2CirclePictureBox PicBox
+        {
+            get { return guna_pic_image; }
+            set { guna_pic_image = value; }
+        }
+
+        public Label Title
+        {
+            get { return lb_name; }
+            set { lb_name = value; }
+        }
+        public Label Price
+        {
+            get { return lb_price; }
+            set { lb_price = value; }
+        }
+
+        #endregion
 
 
     }

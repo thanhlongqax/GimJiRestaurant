@@ -31,11 +31,15 @@ namespace Gimji.GUI.Home
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Home));
             label1 = new Label();
-            btn_firstFloor = new Button();
-            btn_secondFloor = new Button();
             pal_header = new Panel();
+            btn_secondF = new Guna.UI2.WinForms.Guna2Button();
+            btn_firstF = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             flow_pal_listtable = new FlowLayoutPanel();
@@ -62,50 +66,58 @@ namespace Gimji.GUI.Home
             label1.TabIndex = 0;
             label1.Text = "Choose Table";
             // 
-            // btn_firstFloor
-            // 
-            btn_firstFloor.BackColor = Color.Transparent;
-            btn_firstFloor.BackgroundImage = (Image)resources.GetObject("btn_firstFloor.BackgroundImage");
-            btn_firstFloor.BackgroundImageLayout = ImageLayout.Zoom;
-            btn_firstFloor.FlatAppearance.BorderSize = 0;
-            btn_firstFloor.FlatStyle = FlatStyle.Flat;
-            btn_firstFloor.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_firstFloor.ForeColor = Color.Black;
-            btn_firstFloor.Location = new Point(565, 14);
-            btn_firstFloor.Name = "btn_firstFloor";
-            btn_firstFloor.Size = new Size(129, 46);
-            btn_firstFloor.TabIndex = 1;
-            btn_firstFloor.Text = "First Floor";
-            btn_firstFloor.UseVisualStyleBackColor = false;
-            // 
-            // btn_secondFloor
-            // 
-            btn_secondFloor.BackColor = Color.Transparent;
-            btn_secondFloor.BackgroundImage = (Image)resources.GetObject("btn_secondFloor.BackgroundImage");
-            btn_secondFloor.BackgroundImageLayout = ImageLayout.Stretch;
-            btn_secondFloor.FlatAppearance.BorderSize = 0;
-            btn_secondFloor.FlatStyle = FlatStyle.Flat;
-            btn_secondFloor.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_secondFloor.ForeColor = SystemColors.ActiveCaptionText;
-            btn_secondFloor.Location = new Point(723, 14);
-            btn_secondFloor.Name = "btn_secondFloor";
-            btn_secondFloor.Size = new Size(129, 46);
-            btn_secondFloor.TabIndex = 2;
-            btn_secondFloor.Text = "Second Floor";
-            btn_secondFloor.UseVisualStyleBackColor = false;
-            // 
             // pal_header
             // 
             pal_header.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             pal_header.BackColor = SystemColors.Control;
+            pal_header.Controls.Add(btn_secondF);
+            pal_header.Controls.Add(btn_firstF);
             pal_header.Controls.Add(pictureBox1);
             pal_header.Controls.Add(label1);
-            pal_header.Controls.Add(btn_secondFloor);
-            pal_header.Controls.Add(btn_firstFloor);
             pal_header.Location = new Point(35, 16);
             pal_header.Name = "pal_header";
             pal_header.Size = new Size(899, 77);
             pal_header.TabIndex = 3;
+            // 
+            // btn_secondF
+            // 
+            btn_secondF.BorderRadius = 5;
+            btn_secondF.CustomizableEdges = customizableEdges5;
+            btn_secondF.DisabledState.BorderColor = Color.DarkGray;
+            btn_secondF.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_secondF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_secondF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_secondF.FillColor = Color.FromArgb(224, 224, 224);
+            btn_secondF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_secondF.ForeColor = Color.Black;
+            btn_secondF.HoverState.FillColor = Color.Gray;
+            btn_secondF.Location = new Point(744, 14);
+            btn_secondF.Name = "btn_secondF";
+            btn_secondF.PressedColor = Color.Transparent;
+            btn_secondF.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_secondF.Size = new Size(130, 46);
+            btn_secondF.TabIndex = 15;
+            btn_secondF.Text = "Second Floor";
+            // 
+            // btn_firstF
+            // 
+            btn_firstF.BorderRadius = 5;
+            btn_firstF.CustomizableEdges = customizableEdges7;
+            btn_firstF.DisabledState.BorderColor = Color.DarkGray;
+            btn_firstF.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_firstF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_firstF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_firstF.FillColor = Color.FromArgb(232, 197, 163);
+            btn_firstF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_firstF.ForeColor = Color.Black;
+            btn_firstF.HoverState.FillColor = Color.FromArgb(255, 192, 128);
+            btn_firstF.Location = new Point(608, 14);
+            btn_firstF.Name = "btn_firstF";
+            btn_firstF.PressedColor = Color.Transparent;
+            btn_firstF.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_firstF.Size = new Size(130, 46);
+            btn_firstF.TabIndex = 14;
+            btn_firstF.Text = "First Floor";
             // 
             // pictureBox1
             // 
@@ -183,9 +195,9 @@ namespace Gimji.GUI.Home
             // 
             flow_pal_table.AutoScroll = true;
             flow_pal_table.BackColor = Color.Transparent;
-            flow_pal_table.Location = new Point(39, 134);
+            flow_pal_table.Location = new Point(39, 111);
             flow_pal_table.Name = "flow_pal_table";
-            flow_pal_table.Size = new Size(880, 472);
+            flow_pal_table.Size = new Size(880, 495);
             flow_pal_table.TabIndex = 12;
             // 
             // uc_Home
@@ -215,8 +227,6 @@ namespace Gimji.GUI.Home
         #endregion
 
         private Label label1;
-        private Button btn_firstFloor;
-        private Button btn_secondFloor;
         private Panel pal_header;
         private Panel panel2;
         private Label label2;
@@ -227,5 +237,7 @@ namespace Gimji.GUI.Home
         private FlowLayoutPanel flow_pal_listtable;
         private FlowLayoutPanel flow_pal_table;
         private PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btn_secondF;
+        private Guna.UI2.WinForms.Guna2Button btn_firstF;
     }
 }

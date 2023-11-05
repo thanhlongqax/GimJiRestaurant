@@ -121,7 +121,7 @@
   <data name="pic_status.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAAOVJREFUOE+tk20OgjAMhvlDwobewZ9Gt2VH8AjeEG6CN+jkAnADjqAtH+qkRGp4
+        EAAACxABrSO9dQAAAOVJREFUOE+tk20OgjAMhvlDwobewZ9Gt2VH8AjeEG6CN+jkAnADjqAtH+qkRGp4
         k+cP/UjX8iacIDOXoM/FXdsGeQwYCNoWoO11TFsWZMdDUKZ6Fy+gbEO5Y1ksSE8ek7pZ0TId1Yzlg6g7
         Bb4S19BFk+GHj13ICMpWfRNaHpcggY5DjUouKIGuic8ywAWFNLQfLiBmu0ZBm5YLyHCwybJrWjadjgtK
         ePmvxp+KS1iFck3fhASZ/9MiDi3iY/PKTYtNUh+bdtIwmfvtu9zeZpNwgn3vvzLkNkzFQbuWLgw79NVM
@@ -156,22 +156,6 @@
         I8AIMAKMACPACDACjAAjwAgwAowAI8AIMAKMACPACDACjAAjwAgwAowAI8AIMAKMACPACDACjIC4Dvhd
         m2jIErfhuspEM0opOc3zfGr1XmTs+3FlmC+X2qKji5vBW4D/ET+0ciJin7jsW38dcTRYFDdmb88PHcX+
         J9BtV4MfI6Vf+H5Gs7yV4t8AAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAYoAAABUCAYAAACcPXD7AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DQAACw0B7QfALAAAAjtJREFUeF7t29Ft4kAUhlFKoRSXkA5CSXS06YB0QAmUwN6bMUlYm19o3xKfI41k
-        jOFxPnns2T3jer1ONY41TjUuNQD4mXoO/1Oj5/Rpnub/X/3Joca5BgC/U8/xh3naf179aF+j7x4A2IYO
-        xn7OQFYXvtawvASwPT33v8w5WNcXfFwKwJa9zlm4V1/0cpM7CQC6BctlqDrpoTUAN6c5D0Od6LebAOC7
-        r7eh6oO7CQD+db5FojfTAcCaqUPRu/MAYM2xQ9FbuQFgzalD4ZVYAB65dCgA4CGhACASCgAioQAgEgoA
-        IqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACASCgAioQAg
-        EgoAIqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACASCgAi
-        oQAgEgoAIqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACASCgAioQAgEgoAIqEAIBIKACKhACAS
-        CgAioQAg6lBcxiEALFw6FKdxDAALbx2K4zgGgIVjh2IaxwCwMO1aHZzHZwD4dP6IRKsPh3EOAD4d5kwM
-        dcJDbQBuvu4mburkvoZXZQHoFuznPNyrLyxBAfAyZ2FdX1DDnQXA9vTcf/9c4pG6sJehvAkFsB39nHp9
-        uSmpH/VSlGAA/F49xz93F5HUn/SmvN7B/VbDshTAz9Vz+HuNntPHZrpot/sLAsb7akYy4OIAAAAASUVO
-        RK5CYII=
 </value>
   </data>
 </root>

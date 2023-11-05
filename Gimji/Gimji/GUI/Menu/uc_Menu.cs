@@ -45,7 +45,11 @@ namespace Gimji.GUI.Menu
             ////, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
 
             //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
-            fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
+            for (int i = 0; i < 5; i++)
+            {
+                fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            }
+
 
         }
 

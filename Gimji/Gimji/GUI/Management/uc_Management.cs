@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Gimji.GUI.Management.StaffManagement;
+using Gimji.GUI.Management.CustomerManagement;
+using Gimji.GUI.Management.ProductManagement;
 
 namespace Gimji.GUI.Management
 {
@@ -20,54 +22,20 @@ namespace Gimji.GUI.Management
         }
 
 
-        private void pal_customer_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
 
-        private void pal_product_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void pal_shift_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pal_orer_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pal_sale_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pal_revenue_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pal_inventory_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pal_staff_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void pal_staff_MouseClick(object sender, MouseEventArgs e)
         {
+            pal_right.Controls.Clear();
             uc_staffManagement staffManagement = new uc_staffManagement();
             pal_right.Controls.Add(staffManagement);
         }
 
         private void uc_Management_Load(object sender, EventArgs e)
         {
+
             panelList.Add(pal_customer);
             panelList.Add(pal_product);
             panelList.Add(pal_shift);
@@ -101,10 +69,24 @@ namespace Gimji.GUI.Management
             if (sender is Panel)
             {
                 Panel panel = (Panel)sender;
-                panel.BackColor = Color.FromArgb(136,21,57); // Set it back to the original color
-                                                     // You can customize the revert effect as needed
+                panel.BackColor = Color.FromArgb(136, 21, 57); // Set it back to the original color
+                                                               // You can customize the revert effect as needed
             }
         }
 
+        private void pal_customer_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            uc_customerManagement uc_CustomerManagement = new uc_customerManagement();
+            pal_right.Controls.Add(uc_CustomerManagement);
+        }
+
+        private void pal_product_MouseClick(object sender, MouseEventArgs e)
+        {
+
+            pal_right.Controls.Clear();
+            uc_productManagement  productManagement = new uc_productManagement();
+            pal_right.Controls.Add(productManagement);
+        }
     }
 }

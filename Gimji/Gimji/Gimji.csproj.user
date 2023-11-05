@@ -25,6 +25,18 @@
     <Compile Update="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Management\CustomerManagement\uc_customer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\CustomerManagement\uc_customerManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\ProductManagement\uc_product.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\ProductManagement\uc_productManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\Management\StaffManagement\uc_detailInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>

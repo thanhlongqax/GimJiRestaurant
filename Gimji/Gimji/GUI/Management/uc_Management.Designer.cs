@@ -122,7 +122,6 @@
             pal_revenue.Name = "pal_revenue";
             pal_revenue.Size = new Size(275, 85);
             pal_revenue.TabIndex = 7;
-            pal_revenue.Paint += pal_revenue_Paint;
             // 
             // pictureBox5
             // 
@@ -169,7 +168,6 @@
             pal_sale.Name = "pal_sale";
             pal_sale.Size = new Size(275, 85);
             pal_sale.TabIndex = 6;
-            pal_sale.Paint += pal_sale_Paint;
             // 
             // pictureBox6
             // 
@@ -216,7 +214,6 @@
             pal_inventory.Name = "pal_inventory";
             pal_inventory.Size = new Size(275, 85);
             pal_inventory.TabIndex = 5;
-            pal_inventory.Paint += pal_inventory_Paint;
             // 
             // pictureBox7
             // 
@@ -263,7 +260,6 @@
             pal_orer.Name = "pal_orer";
             pal_orer.Size = new Size(275, 85);
             pal_orer.TabIndex = 4;
-            pal_orer.Paint += pal_orer_Paint;
             // 
             // pictureBox8
             // 
@@ -310,7 +306,7 @@
             pal_product.Name = "pal_product";
             pal_product.Size = new Size(275, 85);
             pal_product.TabIndex = 3;
-            pal_product.Paint += pal_product_Paint;
+            pal_product.MouseClick += pal_product_MouseClick;
             // 
             // pictureBox4
             // 
@@ -357,7 +353,7 @@
             pal_customer.Name = "pal_customer";
             pal_customer.Size = new Size(275, 85);
             pal_customer.TabIndex = 2;
-            pal_customer.Paint += pal_customer_Paint;
+            pal_customer.MouseClick += pal_customer_MouseClick;
             // 
             // pictureBox3
             // 
@@ -404,7 +400,6 @@
             pal_shift.Name = "pal_shift";
             pal_shift.Size = new Size(275, 85);
             pal_shift.TabIndex = 1;
-            pal_shift.Paint += pal_shift_Paint;
             // 
             // pictureBox2
             // 
@@ -451,7 +446,6 @@
             pal_staff.Name = "pal_staff";
             pal_staff.Size = new Size(275, 85);
             pal_staff.TabIndex = 0;
-            pal_staff.Paint += pal_staff_Paint;
             pal_staff.MouseClick += pal_staff_MouseClick;
             // 
             // pictureBox1

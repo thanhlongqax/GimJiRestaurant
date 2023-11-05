@@ -65,7 +65,7 @@ namespace Gimji
 
         private void guna_btn_Management_Click(object sender, EventArgs e)
         {
-            topPanel.BackColor = Color.FromArgb(127,21,21);
+            topPanel.BackColor = Color.FromArgb(127, 21, 21);
             uc_Management management = new uc_Management();
             panel_Menu.Controls.Clear();
             panel_Menu.Controls.Add(management);

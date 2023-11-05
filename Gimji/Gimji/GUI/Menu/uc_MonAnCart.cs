@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,5 +17,41 @@ namespace Gimji.GUI.Menu
         {
             InitializeComponent();
         }
+
+        private void uc_MonAnCart_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pic_image_Click(object sender, EventArgs e)
+        {
+        }
+
+        #region Properties
+
+        public Guna2PictureBox PicBox
+        {
+            get { return pic_image; }
+            set { pic_image = value; }
+        }
+
+        public Label Title
+        {
+            get { return lb_tenMonAn; }
+            set { lb_tenMonAn = value; }
+        }
+        public Label Price
+        {
+            get { return lb_price; }
+            set { lb_price = value; }
+        }
+
+        public Label Count
+        {
+            get { return lb_count; }
+            set { lb_count = value; }
+        }
+
+        #endregion
     }
 }
