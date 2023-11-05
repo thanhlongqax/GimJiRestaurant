@@ -156,7 +156,7 @@ namespace Gimji.DAO
             cmd.ExecuteNonQuery();
         }
         //________________________________________________________________________________________________________________
-        public DataTable search_DAO(String key, String cn)
+        public DataTable searchStaff_DAO(String key, String cn)
         {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();

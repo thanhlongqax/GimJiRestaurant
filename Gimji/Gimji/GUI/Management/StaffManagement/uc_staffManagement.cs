@@ -133,9 +133,29 @@ namespace Gimji.GUI.Management.StaffManagement
                 newStaff.dateStart = txt_dateStart.Text;
                 newStaff.Salary = txt_salary.Text;
                 newStaff.position = txt_Position.Text;
-                newBLL.updateStaff(newStaff);
+                bool customerExists = CheckCustomerExists(newStaff.Id);
+
+                if (customerExists)
+                {
+                    newBLL.updateStaff(newStaff);
+                }
+                else
+                {
+                    newBLL.AddStaff_BLL(newStaff);
+                }
+
+
                 LoadStaff();
             }
+        }
+        private bool CheckCustomerExists(string staffId)
+        {
+            CRUD_Staff_BLL newBLL = new CRUD_Staff_BLL();
+            if (newBLL.getStaffbyId(staffId) == null)
+            {
+                return false;
+            }
+            return true;
         }
         private bool ValidateInput()
         {
@@ -252,29 +272,46 @@ namespace Gimji.GUI.Management.StaffManagement
         {
             Staff newStaff = new Staff();
             CRUD_Staff_BLL newBLL = new CRUD_Staff_BLL();
-            newStaff = newBLL.getStaffbyId(txt_Input_Search.Text);
-            flow_pal_listStaff.Controls.Clear();
-            uc_Staff = new uc_staff();
-            uc_Staff.Stt = 0;
-            uc_Staff.StaffID = newStaff.Id;
-            uc_Staff.StaffName = newStaff.fullName;
-            uc_Staff.Position = newStaff.position;
-            uc_Staff.BtnEditClick += (s, eventArgs) =>
-            {
-                pal_Detail_Staff.Visible = true;
-                // Lưu trữ uc_Staff được chọn vào biến toàn cục
-                selectedStaff = (uc_staff)s;
-                HandleBtnEditClick((uc_staff)s, newStaff);
-            };
-            uc_Staff.BtnRemoveClick += (s, eventArgs) =>
-            {
-                pal_Detail_Staff.Visible = true;
-                // Lưu trữ uc_Staff được chọn vào biến toàn cục
-                selectedStaff = (uc_staff)s;
-                btn_delete_Click(s, eventArgs);
 
-            };
-            flow_pal_listStaff.Controls.Add(uc_Staff);
+            try
+            {
+                newStaff = newBLL.getStaffbyId(txt_Input_Search.Text);
+
+                if (newStaff != null && !string.IsNullOrEmpty(newStaff.Id))
+                {
+                    flow_pal_listStaff.Controls.Clear();
+                    uc_Staff = new uc_staff();
+                    uc_Staff.Stt = 0;
+                    uc_Staff.StaffID = newStaff.Id;
+                    uc_Staff.StaffName = newStaff.fullName;
+                    uc_Staff.Position = newStaff.position;
+                    uc_Staff.BtnEditClick += (s, eventArgs) =>
+                    {
+                        pal_Detail_Staff.Visible = true;
+                        // Lưu trữ uc_Staff được chọn vào biến toàn cục
+                        selectedStaff = (uc_staff)s;
+                        HandleBtnEditClick((uc_staff)s, newStaff);
+                    };
+                    uc_Staff.BtnRemoveClick += (s, eventArgs) =>
+                    {
+                        pal_Detail_Staff.Visible = true;
+                        // Lưu trữ uc_Staff được chọn vào biến toàn cục
+                        selectedStaff = (uc_staff)s;
+                        btn_delete_Click(s, eventArgs);
+                    };
+                    flow_pal_listStaff.Controls.Add(uc_Staff);
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy thông tin nhân viên với ID đã nhập.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý ngoại lệ nếu có
+                MessageBox.Show("Không Tìm Thấy Khách Hàng Cần Tìm: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
     }
 }

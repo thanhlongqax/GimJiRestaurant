@@ -40,7 +40,7 @@ namespace Gimji.DAO
                     string id_tai_khoan = reader.GetString(0);
                     String ten_dang_nhap = reader.GetString(1);
                     string matKhau = reader.GetString(2);
-                    if (tk.userName == ten_dang_nhap && tk.userPassword == matKhau)
+                    if (tk.userName == ten_dang_nhap && tk.Password == matKhau)
                     {
                         Check_tk = true;
                         idtaiKhoan_userName.Add(id_tai_khoan, ten_dang_nhap);

@@ -10,7 +10,7 @@ namespace Gimji.DTO
     {
         public int DishId { get; set; }
         public string DishName { get; set; }
-        public float DishPrice { get; set;}
+        public double DishPrice { get; set;}
         public string DishPicture { get; set;}
         public string Dish_Availible { get; set; }
         public int Catergory_Id { get; set; }

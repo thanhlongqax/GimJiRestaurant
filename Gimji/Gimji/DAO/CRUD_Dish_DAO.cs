@@ -12,43 +12,37 @@ namespace Gimji.DAO
     internal class CRUD_Dish_DAO : DatabaseAccess
     {
 
+        // Lấy Tất Cả Các Món Ăn ra________________________________________________________________________
         public List<Dish> GetAllDish()
         {
-            List<Dish> dishes = new List<Dish>();
+            List<Dish> listDish = new List<Dish>();
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
-
-            string sSQL = @"
-                SELECT ten_mon_an, don_gia, hinh_anh , tinh_trang , id_danh_muc,  FROM Mon_an
-            ";
+            string sSQL = "SELECT * FROM Mon_an;";
             SqlDataAdapter da = new SqlDataAdapter(sSQL, conn);
             DataTable dt = new DataTable();
             da.Fill(dt);
             conn.Close();
-            // Kiểm tra xem có dữ liệu trong DataTable không
             if (dt.Rows.Count > 0)
             {
                 foreach (DataRow row in dt.Rows)
                 {
                     Dish dish = new Dish
                     {
+                        DishId = Convert.ToInt32(row["id_mon_an"]),
                         DishName = row["ten_mon_an"].ToString(),
-                        DishPrice = Convert.ToSingle(row["don_gia"]),
+                        DishPrice = Convert.ToDouble(row["don_gia"]),
                         DishPicture = row["hinh_anh"].ToString(),
                         Dish_Availible = row["tinh_trang"].ToString(),
                         Catergory_Id = Convert.ToInt32(row["id_danh_muc"])
                     };
-                    dishes.Add(dish);
+                    listDish.Add(dish);
                 }
-                return dishes;
-            }
-            else
-            {
-                // Trả về null hoặc giá trị mặc định tùy theo trường hợp
-                return null;
             }
 
+            return listDish;
         }
+        // _______________________________________________________________________________________________________
         public void addDish_DAO(Dish newDish) {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();

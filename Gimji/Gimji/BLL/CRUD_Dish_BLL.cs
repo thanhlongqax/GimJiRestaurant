@@ -11,9 +11,9 @@ namespace Gimji.BLL
 {
     internal class CRUD_Dish_BLL
     {
-        CRUD_Dish_DAO CRUD_Dish_DAO = new CRUD_Dish_DAO();  
+        CRUD_Dish_DAO newDao = new CRUD_Dish_DAO();  
         public List<Dish>  getAllDish() {
-            return CRUD_Dish_DAO.GetAllDish();
+            return newDao.GetAllDish();
         }
     }
 }

@@ -82,6 +82,7 @@
             btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_remove.Size = new Size(27, 27);
             btn_remove.TabIndex = 5;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit
             // 
@@ -102,6 +103,7 @@
             btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_edit.Size = new Size(27, 27);
             btn_edit.TabIndex = 4;
+            btn_edit.Click += btn_edit_Click;
             // 
             // lb_point
             // 

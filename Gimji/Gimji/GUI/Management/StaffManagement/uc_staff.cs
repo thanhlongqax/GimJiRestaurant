@@ -37,15 +37,11 @@ namespace Gimji.GUI.Management.StaffManagement
         public void guna_btn_edit_Click(object sender, EventArgs e)
         {
             BtnEditClick?.Invoke(this, e);
-            StaffID_Return(StaffID);
         }
 
         private void guna_btn_remove_Click(object sender, EventArgs e)
         {
             BtnRemoveClick?.Invoke(this, e);
-        }
-        public string StaffID_Return(string staffID) {
-            return staffID;
         }
         #region Properties
 

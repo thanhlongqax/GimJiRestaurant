@@ -47,7 +47,7 @@ namespace Gimji.GUI.Login_SignUp
                 Customer customer = new Customer();
                 SignUp_BLL signUp_BLL = new SignUp_BLL();
                 customer.userName = textBox_username_register.Text;
-                customer.userPassword = textBox_createpass.Text;
+                customer.Password = textBox_createpass.Text;
                 signUp_BLL.signUp_BLL(customer);
                 OnRegistrationSuccess();
             }
