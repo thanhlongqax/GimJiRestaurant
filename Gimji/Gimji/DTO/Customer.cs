@@ -8,22 +8,17 @@ namespace Gimji.DTO
 {
 	internal class Customer
 	{
-		public int	Id { get; set; }
+		public string	Id { get; set; }
         public string userName { get; set; }
-        public string userPassword { get; set; }
+        public string Password { get; set; }
         public string fullName { get; set; }
-		public string DateOfBirth { get; set; }
+		public DateTime DateOfBirth { get; set; }
 		public string Gender { get; set; }
-
-		public string phoneNumsber { get; set; }
+		public string phoneNumber { get; set; }
 		public string contactAddress { get; set; }
 		public string Email { get; set; }
-		public string Point { get; set; }
+		public int Point { get; set; }
 
 		public string Type { get; set; }
-
-
-
-
 	}
 }

@@ -12,34 +12,48 @@ namespace Gimji.GUI.Management.CustomerManagement
 {
     public partial class uc_customer : UserControl
     {
+        public event EventHandler BtnEditClick;
+        public event EventHandler BtnRemoveClick;
         public uc_customer()
         {
             InitializeComponent();
         }
 
         #region Properties
+        public string Name
+        {
+            get { return lb_name.Text; }
+            set { lb_name.Text = value; }
+        }
 
-        public Label Title
+        public string ID
         {
-            get { return lb_name; }
-            set { lb_name = value; }
+            get { return lb_id.Text; }
+            set { lb_id.Text = value; }
         }
-        public Label ID
+
+        public int Stt
         {
-            get { return lb_id; }
-            set { lb_id = value; }
+            get { return Convert.ToInt32(lb_stt.Text); }
+            set { lb_stt.Text = value.ToString(); }
         }
-        public Label Stt
+
+        public int Point
         {
-            get { return lb_stt; }
-            set { lb_stt = value; }
-        }
-        public Label Point
-        {
-            get { return lb_point; }
-            set { lb_point = value; }
+            get { return Convert.ToInt32(lb_point.Text); }
+            set { lb_point.Text = value.ToString(); }
         }
 
         #endregion
+
+        public void btn_edit_Click(object sender, EventArgs e)
+        {
+            BtnEditClick?.Invoke(this, e);
+        }
+
+        public void btn_remove_Click(object sender, EventArgs e)
+        {
+            BtnRemoveClick?.Invoke(this, e);
+        }
     }
 }

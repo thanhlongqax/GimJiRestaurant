@@ -29,7 +29,7 @@ namespace Gimji.DAO
                     String anotherStringSQL = "exec InsertCusTomerLoginData @userName, @userPassword";
                     SqlCommand anotherCmd = new SqlCommand(anotherStringSQL, conn);
                     anotherCmd.Parameters.AddWithValue("@userName", newUser.userName);
-                    anotherCmd.Parameters.AddWithValue("@userPassword", newUser.userPassword);
+                    anotherCmd.Parameters.AddWithValue("@userPassword", newUser.Password);
                     anotherCmd.ExecuteNonQuery();
                     conn.Close();
                     MessageBox.Show("    Đăng Ký Thành Công\nCHào Mừng Bạn Đến Gimji\n Mời Bạn Đăng Nhập", "Thông báo", MessageBoxButtons.OK);

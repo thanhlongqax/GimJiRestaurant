@@ -38,51 +38,54 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_productManagement));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_productManagement));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_header = new Panel();
+            btn_All_Product = new Guna.UI2.WinForms.Guna2TileButton();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            guna_btn_salad = new Guna.UI2.WinForms.Guna2TileButton();
-            guna_btn_meat = new Guna.UI2.WinForms.Guna2TileButton();
-            guna_btn_rice = new Guna.UI2.WinForms.Guna2TileButton();
-            guna_btn_kimbab = new Guna.UI2.WinForms.Guna2TileButton();
-            guna_btn_tokbo = new Guna.UI2.WinForms.Guna2TileButton();
+            btn_Salad = new Guna.UI2.WinForms.Guna2TileButton();
+            btn_Meat = new Guna.UI2.WinForms.Guna2TileButton();
+            btn_Rice = new Guna.UI2.WinForms.Guna2TileButton();
+            btn_Kimbak = new Guna.UI2.WinForms.Guna2TileButton();
+            btn_Tokbokki = new Guna.UI2.WinForms.Guna2TileButton();
             flow_pal_listProduct = new FlowLayoutPanel();
             pal_newDish = new Guna.UI2.WinForms.Guna2Panel();
             btn_add = new Guna.UI2.WinForms.Guna2Button();
             pal_temp = new Panel();
             pictureBox2 = new PictureBox();
             pal_button = new Panel();
-            guna_btn_save = new Guna.UI2.WinForms.Guna2Button();
-            guna_btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            btn_Discard_Changes = new Guna.UI2.WinForms.Guna2Button();
             pal_inforDish = new Guna.UI2.WinForms.Guna2Panel();
-            txt_name = new Guna.UI2.WinForms.Guna2TextBox();
-            label7 = new Label();
-            txt_price = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
-            btn_confirm = new Guna.UI2.WinForms.Guna2Button();
-            btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             btn_upload = new Guna.UI2.WinForms.Guna2Button();
+            btn_confirm = new Guna.UI2.WinForms.Guna2Button();
+            txt_Price = new Guna.UI2.WinForms.Guna2TextBox();
+            btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
+            txt_Name = new Guna.UI2.WinForms.Guna2TextBox();
+            label7 = new Label();
             pal_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flow_pal_listProduct.SuspendLayout();
@@ -94,17 +97,40 @@
             // 
             // pal_header
             // 
+            pal_header.Controls.Add(btn_All_Product);
             pal_header.Controls.Add(label1);
             pal_header.Controls.Add(pictureBox1);
-            pal_header.Controls.Add(guna_btn_salad);
-            pal_header.Controls.Add(guna_btn_meat);
-            pal_header.Controls.Add(guna_btn_rice);
-            pal_header.Controls.Add(guna_btn_kimbab);
-            pal_header.Controls.Add(guna_btn_tokbo);
+            pal_header.Controls.Add(btn_Salad);
+            pal_header.Controls.Add(btn_Meat);
+            pal_header.Controls.Add(btn_Rice);
+            pal_header.Controls.Add(btn_Kimbak);
+            pal_header.Controls.Add(btn_Tokbokki);
             pal_header.Location = new Point(3, 0);
             pal_header.Name = "pal_header";
             pal_header.Size = new Size(1022, 108);
             pal_header.TabIndex = 9;
+            // 
+            // btn_All_Product
+            // 
+            btn_All_Product.BackColor = Color.Transparent;
+            btn_All_Product.CustomizableEdges = customizableEdges1;
+            btn_All_Product.DisabledState.BorderColor = Color.DarkGray;
+            btn_All_Product.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_All_Product.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_All_Product.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_All_Product.FillColor = Color.Transparent;
+            btn_All_Product.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_All_Product.ForeColor = Color.White;
+            btn_All_Product.HoverState.FillColor = Color.Transparent;
+            btn_All_Product.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_All_Product.Location = new Point(8, 65);
+            btn_All_Product.Name = "btn_All_Product";
+            btn_All_Product.PressedColor = Color.Transparent;
+            btn_All_Product.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_All_Product.Size = new Size(104, 29);
+            btn_All_Product.TabIndex = 7;
+            btn_All_Product.Text = "All";
+            btn_All_Product.Click += btn_All_Product_Click;
             // 
             // label1
             // 
@@ -126,110 +152,115 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // guna_btn_salad
+            // btn_Salad
             // 
-            guna_btn_salad.BackColor = Color.Transparent;
-            guna_btn_salad.CustomizableEdges = customizableEdges1;
-            guna_btn_salad.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_salad.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_salad.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_salad.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_salad.FillColor = Color.Transparent;
-            guna_btn_salad.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_salad.ForeColor = Color.White;
-            guna_btn_salad.HoverState.FillColor = Color.Transparent;
-            guna_btn_salad.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna_btn_salad.Location = new Point(603, 69);
-            guna_btn_salad.Name = "guna_btn_salad";
-            guna_btn_salad.PressedColor = Color.Transparent;
-            guna_btn_salad.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna_btn_salad.Size = new Size(100, 30);
-            guna_btn_salad.TabIndex = 4;
-            guna_btn_salad.Text = "SALAD";
+            btn_Salad.BackColor = Color.Transparent;
+            btn_Salad.CustomizableEdges = customizableEdges3;
+            btn_Salad.DisabledState.BorderColor = Color.DarkGray;
+            btn_Salad.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Salad.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Salad.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Salad.FillColor = Color.Transparent;
+            btn_Salad.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Salad.ForeColor = Color.White;
+            btn_Salad.HoverState.FillColor = Color.Transparent;
+            btn_Salad.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_Salad.Location = new Point(767, 68);
+            btn_Salad.Name = "btn_Salad";
+            btn_Salad.PressedColor = Color.Transparent;
+            btn_Salad.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_Salad.Size = new Size(101, 29);
+            btn_Salad.TabIndex = 4;
+            btn_Salad.Text = "SALAD";
+            btn_Salad.Click += btn_Salad_Click;
             // 
-            // guna_btn_meat
+            // btn_Meat
             // 
-            guna_btn_meat.BackColor = Color.Transparent;
-            guna_btn_meat.CustomizableEdges = customizableEdges3;
-            guna_btn_meat.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_meat.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_meat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_meat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_meat.FillColor = Color.Transparent;
-            guna_btn_meat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_meat.ForeColor = Color.White;
-            guna_btn_meat.HoverState.FillColor = Color.Transparent;
-            guna_btn_meat.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna_btn_meat.Location = new Point(454, 67);
-            guna_btn_meat.Name = "guna_btn_meat";
-            guna_btn_meat.PressedColor = Color.Transparent;
-            guna_btn_meat.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna_btn_meat.Size = new Size(125, 30);
-            guna_btn_meat.TabIndex = 3;
-            guna_btn_meat.Text = "Thịt nướng";
+            btn_Meat.BackColor = Color.Transparent;
+            btn_Meat.CustomizableEdges = customizableEdges5;
+            btn_Meat.DisabledState.BorderColor = Color.DarkGray;
+            btn_Meat.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Meat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Meat.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Meat.FillColor = Color.Transparent;
+            btn_Meat.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Meat.ForeColor = Color.White;
+            btn_Meat.HoverState.FillColor = Color.Transparent;
+            btn_Meat.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_Meat.Location = new Point(593, 68);
+            btn_Meat.Name = "btn_Meat";
+            btn_Meat.PressedColor = Color.Transparent;
+            btn_Meat.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_Meat.Size = new Size(125, 29);
+            btn_Meat.TabIndex = 3;
+            btn_Meat.Text = "Thịt nướng";
+            btn_Meat.Click += btn_Meat_Click;
             // 
-            // guna_btn_rice
+            // btn_Rice
             // 
-            guna_btn_rice.BackColor = Color.Transparent;
-            guna_btn_rice.CustomizableEdges = customizableEdges5;
-            guna_btn_rice.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_rice.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_rice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_rice.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_rice.FillColor = Color.Transparent;
-            guna_btn_rice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_rice.ForeColor = Color.White;
-            guna_btn_rice.HoverState.FillColor = Color.Transparent;
-            guna_btn_rice.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna_btn_rice.Location = new Point(311, 67);
-            guna_btn_rice.Name = "guna_btn_rice";
-            guna_btn_rice.PressedColor = Color.Transparent;
-            guna_btn_rice.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna_btn_rice.Size = new Size(100, 30);
-            guna_btn_rice.TabIndex = 2;
-            guna_btn_rice.Text = "Cơm Trộn";
+            btn_Rice.BackColor = Color.Transparent;
+            btn_Rice.CustomizableEdges = customizableEdges7;
+            btn_Rice.DisabledState.BorderColor = Color.DarkGray;
+            btn_Rice.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Rice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Rice.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Rice.FillColor = Color.Transparent;
+            btn_Rice.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Rice.ForeColor = Color.White;
+            btn_Rice.HoverState.FillColor = Color.Transparent;
+            btn_Rice.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_Rice.Location = new Point(445, 72);
+            btn_Rice.Name = "btn_Rice";
+            btn_Rice.PressedColor = Color.Transparent;
+            btn_Rice.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_Rice.Size = new Size(101, 29);
+            btn_Rice.TabIndex = 2;
+            btn_Rice.Text = "Cơm Trộn";
+            btn_Rice.Click += btn_Rice_Click;
             // 
-            // guna_btn_kimbab
+            // btn_Kimbak
             // 
-            guna_btn_kimbab.BackColor = Color.Transparent;
-            guna_btn_kimbab.CustomizableEdges = customizableEdges7;
-            guna_btn_kimbab.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_kimbab.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_kimbab.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_kimbab.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_kimbab.FillColor = Color.Transparent;
-            guna_btn_kimbab.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_kimbab.ForeColor = Color.White;
-            guna_btn_kimbab.HoverState.FillColor = Color.Transparent;
-            guna_btn_kimbab.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna_btn_kimbab.Location = new Point(169, 68);
-            guna_btn_kimbab.Name = "guna_btn_kimbab";
-            guna_btn_kimbab.PressedColor = Color.Transparent;
-            guna_btn_kimbab.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            guna_btn_kimbab.Size = new Size(100, 30);
-            guna_btn_kimbab.TabIndex = 1;
-            guna_btn_kimbab.Text = "KIMBAB";
+            btn_Kimbak.BackColor = Color.Transparent;
+            btn_Kimbak.CustomizableEdges = customizableEdges9;
+            btn_Kimbak.DisabledState.BorderColor = Color.DarkGray;
+            btn_Kimbak.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Kimbak.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Kimbak.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Kimbak.FillColor = Color.Transparent;
+            btn_Kimbak.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Kimbak.ForeColor = Color.White;
+            btn_Kimbak.HoverState.FillColor = Color.Transparent;
+            btn_Kimbak.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_Kimbak.Location = new Point(278, 68);
+            btn_Kimbak.Name = "btn_Kimbak";
+            btn_Kimbak.PressedColor = Color.Transparent;
+            btn_Kimbak.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_Kimbak.Size = new Size(101, 29);
+            btn_Kimbak.TabIndex = 1;
+            btn_Kimbak.Text = "KIMBAB";
+            btn_Kimbak.Click += btn_Kimbak_Click;
             // 
-            // guna_btn_tokbo
+            // btn_Tokbokki
             // 
-            guna_btn_tokbo.BackColor = Color.Transparent;
-            guna_btn_tokbo.CustomizableEdges = customizableEdges9;
-            guna_btn_tokbo.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_tokbo.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_tokbo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_tokbo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_tokbo.FillColor = Color.Transparent;
-            guna_btn_tokbo.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_tokbo.ForeColor = Color.White;
-            guna_btn_tokbo.HoverState.FillColor = Color.Transparent;
-            guna_btn_tokbo.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
-            guna_btn_tokbo.Location = new Point(27, 68);
-            guna_btn_tokbo.Name = "guna_btn_tokbo";
-            guna_btn_tokbo.PressedColor = Color.Transparent;
-            guna_btn_tokbo.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            guna_btn_tokbo.Size = new Size(104, 30);
-            guna_btn_tokbo.TabIndex = 0;
-            guna_btn_tokbo.Text = "TOKBOKKI";
+            btn_Tokbokki.BackColor = Color.Transparent;
+            btn_Tokbokki.CustomizableEdges = customizableEdges11;
+            btn_Tokbokki.DisabledState.BorderColor = Color.DarkGray;
+            btn_Tokbokki.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Tokbokki.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Tokbokki.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Tokbokki.FillColor = Color.Transparent;
+            btn_Tokbokki.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Tokbokki.ForeColor = Color.White;
+            btn_Tokbokki.HoverState.FillColor = Color.Transparent;
+            btn_Tokbokki.HoverState.ForeColor = Color.FromArgb(255, 192, 128);
+            btn_Tokbokki.Location = new Point(136, 68);
+            btn_Tokbokki.Name = "btn_Tokbokki";
+            btn_Tokbokki.PressedColor = Color.Transparent;
+            btn_Tokbokki.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btn_Tokbokki.Size = new Size(104, 29);
+            btn_Tokbokki.TabIndex = 0;
+            btn_Tokbokki.Text = "TOKBOKKI";
+            btn_Tokbokki.Click += btn_Tokbokki_Click;
             // 
             // flow_pal_listProduct
             // 
@@ -248,16 +279,16 @@
             pal_newDish.BorderStyle = System.Drawing.Drawing2D.DashStyle.DashDot;
             pal_newDish.BorderThickness = 1;
             pal_newDish.Controls.Add(btn_add);
-            pal_newDish.CustomizableEdges = customizableEdges13;
+            pal_newDish.CustomizableEdges = customizableEdges15;
             pal_newDish.Location = new Point(3, 3);
             pal_newDish.Name = "pal_newDish";
-            pal_newDish.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pal_newDish.ShadowDecoration.CustomizableEdges = customizableEdges16;
             pal_newDish.Size = new Size(205, 220);
             pal_newDish.TabIndex = 0;
             // 
             // btn_add
             // 
-            btn_add.CustomizableEdges = customizableEdges11;
+            btn_add.CustomizableEdges = customizableEdges13;
             btn_add.DisabledState.BorderColor = Color.DarkGray;
             btn_add.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_add.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -274,17 +305,18 @@
             btn_add.Location = new Point(49, 56);
             btn_add.Name = "btn_add";
             btn_add.PressedColor = Color.Transparent;
-            btn_add.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btn_add.Size = new Size(123, 134);
+            btn_add.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_add.Size = new Size(123, 133);
             btn_add.TabIndex = 0;
             btn_add.Text = "Add new dish";
             btn_add.TextOffset = new Point(-5, 0);
+            btn_add.Click += btn_add_Click;
             // 
             // pal_temp
             // 
             pal_temp.Location = new Point(214, 3);
             pal_temp.Name = "pal_temp";
-            pal_temp.Size = new Size(20, 220);
+            pal_temp.Size = new Size(21, 220);
             pal_temp.TabIndex = 1;
             // 
             // pictureBox2
@@ -298,55 +330,57 @@
             // 
             // pal_button
             // 
-            pal_button.Controls.Add(guna_btn_save);
-            pal_button.Controls.Add(guna_btn_cancel);
+            pal_button.Controls.Add(btn_Save);
+            pal_button.Controls.Add(btn_Discard_Changes);
             pal_button.Location = new Point(626, 651);
             pal_button.Name = "pal_button";
             pal_button.Size = new Size(385, 57);
             pal_button.TabIndex = 22;
             // 
-            // guna_btn_save
+            // btn_Save
             // 
-            guna_btn_save.BackColor = Color.Transparent;
-            guna_btn_save.BorderColor = Color.FromArgb(255, 128, 128);
-            guna_btn_save.BorderRadius = 5;
-            guna_btn_save.BorderThickness = 1;
-            guna_btn_save.CustomizableEdges = customizableEdges15;
-            guna_btn_save.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_save.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_save.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_save.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_save.FillColor = Color.FromArgb(255, 128, 128);
-            guna_btn_save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_save.ForeColor = Color.White;
-            guna_btn_save.HoverState.FillColor = Color.Maroon;
-            guna_btn_save.Location = new Point(204, 6);
-            guna_btn_save.Name = "guna_btn_save";
-            guna_btn_save.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            guna_btn_save.Size = new Size(170, 45);
-            guna_btn_save.TabIndex = 1;
-            guna_btn_save.Text = "Save Changes";
+            btn_Save.BackColor = Color.Transparent;
+            btn_Save.BorderColor = Color.FromArgb(255, 128, 128);
+            btn_Save.BorderRadius = 5;
+            btn_Save.BorderThickness = 1;
+            btn_Save.CustomizableEdges = customizableEdges17;
+            btn_Save.DisabledState.BorderColor = Color.DarkGray;
+            btn_Save.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Save.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Save.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Save.FillColor = Color.FromArgb(255, 128, 128);
+            btn_Save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Save.ForeColor = Color.White;
+            btn_Save.HoverState.FillColor = Color.Maroon;
+            btn_Save.Location = new Point(203, 5);
+            btn_Save.Name = "btn_Save";
+            btn_Save.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btn_Save.Size = new Size(170, 45);
+            btn_Save.TabIndex = 1;
+            btn_Save.Text = "Save Changes";
+            btn_Save.Click += btn_Save_Click;
             // 
-            // guna_btn_cancel
+            // btn_Discard_Changes
             // 
-            guna_btn_cancel.BorderColor = Color.FromArgb(255, 128, 128);
-            guna_btn_cancel.BorderRadius = 5;
-            guna_btn_cancel.BorderThickness = 1;
-            guna_btn_cancel.CustomizableEdges = customizableEdges17;
-            guna_btn_cancel.DisabledState.BorderColor = Color.DarkGray;
-            guna_btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
-            guna_btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            guna_btn_cancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            guna_btn_cancel.FillColor = Color.Transparent;
-            guna_btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            guna_btn_cancel.ForeColor = Color.FromArgb(255, 128, 0);
-            guna_btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
-            guna_btn_cancel.Location = new Point(6, 7);
-            guna_btn_cancel.Name = "guna_btn_cancel";
-            guna_btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            guna_btn_cancel.Size = new Size(170, 45);
-            guna_btn_cancel.TabIndex = 0;
-            guna_btn_cancel.Text = "Discard Changes";
+            btn_Discard_Changes.BorderColor = Color.FromArgb(255, 128, 128);
+            btn_Discard_Changes.BorderRadius = 5;
+            btn_Discard_Changes.BorderThickness = 1;
+            btn_Discard_Changes.CustomizableEdges = customizableEdges19;
+            btn_Discard_Changes.DisabledState.BorderColor = Color.DarkGray;
+            btn_Discard_Changes.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Discard_Changes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Discard_Changes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Discard_Changes.FillColor = Color.Transparent;
+            btn_Discard_Changes.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Discard_Changes.ForeColor = Color.FromArgb(255, 128, 0);
+            btn_Discard_Changes.HoverState.FillColor = Color.FromArgb(224, 224, 224);
+            btn_Discard_Changes.Location = new Point(6, 7);
+            btn_Discard_Changes.Name = "btn_Discard_Changes";
+            btn_Discard_Changes.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btn_Discard_Changes.Size = new Size(170, 45);
+            btn_Discard_Changes.TabIndex = 0;
+            btn_Discard_Changes.Text = "Discard Changes";
+            btn_Discard_Changes.Click += btn_Discard_Changes_Click;
             // 
             // pal_inforDish
             // 
@@ -356,79 +390,111 @@
             pal_inforDish.BorderThickness = 2;
             pal_inforDish.Controls.Add(btn_upload);
             pal_inforDish.Controls.Add(btn_confirm);
-            pal_inforDish.Controls.Add(txt_price);
+            pal_inforDish.Controls.Add(txt_Price);
             pal_inforDish.Controls.Add(btn_cancel);
             pal_inforDish.Controls.Add(label2);
-            pal_inforDish.Controls.Add(txt_name);
+            pal_inforDish.Controls.Add(txt_Name);
             pal_inforDish.Controls.Add(label7);
-            pal_inforDish.CustomizableEdges = customizableEdges29;
+            pal_inforDish.CustomizableEdges = customizableEdges31;
             pal_inforDish.FillColor = Color.Transparent;
             pal_inforDish.Location = new Point(38, 563);
             pal_inforDish.Name = "pal_inforDish";
-            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            pal_inforDish.Size = new Size(412, 155);
+            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            pal_inforDish.Size = new Size(411, 155);
             pal_inforDish.TabIndex = 23;
             // 
-            // txt_name
+            // btn_upload
             // 
-            txt_name.BorderColor = Color.White;
-            txt_name.BorderRadius = 5;
-            txt_name.CustomizableEdges = customizableEdges27;
-            txt_name.DefaultText = "elephant";
-            txt_name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_name.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_name.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_name.FillColor = Color.FromArgb(255, 180, 79);
-            txt_name.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_name.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_name.ForeColor = Color.Black;
-            txt_name.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_name.Location = new Point(22, 28);
-            txt_name.Name = "txt_name";
-            txt_name.PasswordChar = '\0';
-            txt_name.PlaceholderForeColor = Color.Black;
-            txt_name.PlaceholderText = "";
-            txt_name.SelectedText = "";
-            txt_name.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txt_name.Size = new Size(164, 47);
-            txt_name.TabIndex = 25;
+            btn_upload.BorderColor = Color.White;
+            btn_upload.BorderRadius = 5;
+            btn_upload.BorderThickness = 1;
+            btn_upload.CustomizableEdges = customizableEdges21;
+            btn_upload.DisabledState.BorderColor = Color.DarkGray;
+            btn_upload.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_upload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_upload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_upload.FillColor = Color.Transparent;
+            btn_upload.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_upload.ForeColor = Color.White;
+            btn_upload.Image = (Image)resources.GetObject("btn_upload.Image");
+            btn_upload.Location = new Point(26, 100);
+            btn_upload.Name = "btn_upload";
+            btn_upload.PressedColor = Color.Transparent;
+            btn_upload.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btn_upload.Size = new Size(106, 45);
+            btn_upload.TabIndex = 28;
+            btn_upload.Text = "Image";
+            btn_upload.Click += btn_upload_Click;
             // 
-            // label7
+            // btn_confirm
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(18, 5);
-            label7.Name = "label7";
-            label7.Size = new Size(90, 20);
-            label7.TabIndex = 24;
-            label7.Text = "Food Name";
+            btn_confirm.BackColor = Color.Transparent;
+            btn_confirm.BorderColor = Color.White;
+            btn_confirm.BorderRadius = 5;
+            btn_confirm.BorderThickness = 1;
+            btn_confirm.CustomizableEdges = customizableEdges23;
+            btn_confirm.DisabledState.BorderColor = Color.DarkGray;
+            btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_confirm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_confirm.FillColor = Color.Maroon;
+            btn_confirm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_confirm.ForeColor = Color.White;
+            btn_confirm.HoverState.FillColor = Color.Maroon;
+            btn_confirm.Location = new Point(267, 100);
+            btn_confirm.Name = "btn_confirm";
+            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btn_confirm.Size = new Size(111, 45);
+            btn_confirm.TabIndex = 1;
+            btn_confirm.Text = "Confirm";
+            btn_confirm.Click += btn_confirm_Click;
             // 
-            // txt_price
+            // txt_Price
             // 
-            txt_price.BorderColor = Color.White;
-            txt_price.BorderRadius = 5;
-            txt_price.CustomizableEdges = customizableEdges23;
-            txt_price.DefaultText = "100000000";
-            txt_price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.FillColor = Color.FromArgb(255, 180, 79);
-            txt_price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_price.ForeColor = Color.Black;
-            txt_price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Location = new Point(215, 28);
-            txt_price.Name = "txt_price";
-            txt_price.PasswordChar = '\0';
-            txt_price.PlaceholderForeColor = Color.Black;
-            txt_price.PlaceholderText = "";
-            txt_price.SelectedText = "";
-            txt_price.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txt_price.Size = new Size(164, 47);
-            txt_price.TabIndex = 27;
+            txt_Price.BorderColor = Color.White;
+            txt_Price.BorderRadius = 5;
+            txt_Price.CustomizableEdges = customizableEdges25;
+            txt_Price.DefaultText = "";
+            txt_Price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_Price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_Price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_Price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_Price.FillColor = Color.FromArgb(255, 180, 79);
+            txt_Price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Price.ForeColor = Color.Black;
+            txt_Price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Price.Location = new Point(215, 28);
+            txt_Price.Name = "txt_Price";
+            txt_Price.PasswordChar = '\0';
+            txt_Price.PlaceholderForeColor = Color.Black;
+            txt_Price.PlaceholderText = "";
+            txt_Price.SelectedText = "";
+            txt_Price.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txt_Price.Size = new Size(165, 47);
+            txt_Price.TabIndex = 27;
+            // 
+            // btn_cancel
+            // 
+            btn_cancel.BorderColor = Color.White;
+            btn_cancel.BorderRadius = 5;
+            btn_cancel.BorderThickness = 1;
+            btn_cancel.CustomizableEdges = customizableEdges27;
+            btn_cancel.DisabledState.BorderColor = Color.DarkGray;
+            btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_cancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_cancel.FillColor = Color.Transparent;
+            btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_cancel.ForeColor = Color.White;
+            btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
+            btn_cancel.Location = new Point(151, 100);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btn_cancel.Size = new Size(103, 45);
+            btn_cancel.TabIndex = 0;
+            btn_cancel.Text = "Cancel";
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // label2
             // 
@@ -441,71 +507,41 @@
             label2.TabIndex = 26;
             label2.Text = "Price";
             // 
-            // btn_confirm
+            // txt_Name
             // 
-            btn_confirm.BackColor = Color.Transparent;
-            btn_confirm.BorderColor = Color.White;
-            btn_confirm.BorderRadius = 5;
-            btn_confirm.BorderThickness = 1;
-            btn_confirm.CustomizableEdges = customizableEdges21;
-            btn_confirm.DisabledState.BorderColor = Color.DarkGray;
-            btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_confirm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_confirm.FillColor = Color.Maroon;
-            btn_confirm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_confirm.ForeColor = Color.White;
-            btn_confirm.HoverState.FillColor = Color.Maroon;
-            btn_confirm.Location = new Point(268, 100);
-            btn_confirm.Name = "btn_confirm";
-            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btn_confirm.Size = new Size(111, 45);
-            btn_confirm.TabIndex = 1;
-            btn_confirm.Text = "Confirm";
-            btn_confirm.Click += guna2Button1_Click;
+            txt_Name.BorderColor = Color.White;
+            txt_Name.BorderRadius = 5;
+            txt_Name.CustomizableEdges = customizableEdges29;
+            txt_Name.DefaultText = "";
+            txt_Name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_Name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_Name.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_Name.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_Name.FillColor = Color.FromArgb(255, 180, 79);
+            txt_Name.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Name.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Name.ForeColor = Color.Black;
+            txt_Name.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_Name.Location = new Point(22, 28);
+            txt_Name.Name = "txt_Name";
+            txt_Name.PasswordChar = '\0';
+            txt_Name.PlaceholderForeColor = Color.Black;
+            txt_Name.PlaceholderText = "";
+            txt_Name.SelectedText = "";
+            txt_Name.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txt_Name.Size = new Size(165, 47);
+            txt_Name.TabIndex = 25;
             // 
-            // btn_cancel
+            // label7
             // 
-            btn_cancel.BorderColor = Color.White;
-            btn_cancel.BorderRadius = 5;
-            btn_cancel.BorderThickness = 1;
-            btn_cancel.CustomizableEdges = customizableEdges25;
-            btn_cancel.DisabledState.BorderColor = Color.DarkGray;
-            btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_cancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_cancel.FillColor = Color.Transparent;
-            btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_cancel.ForeColor = Color.White;
-            btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
-            btn_cancel.Location = new Point(151, 100);
-            btn_cancel.Name = "btn_cancel";
-            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btn_cancel.Size = new Size(103, 45);
-            btn_cancel.TabIndex = 0;
-            btn_cancel.Text = "Cancel";
-            // 
-            // btn_upload
-            // 
-            btn_upload.BorderColor = Color.White;
-            btn_upload.BorderRadius = 5;
-            btn_upload.BorderThickness = 1;
-            btn_upload.CustomizableEdges = customizableEdges19;
-            btn_upload.DisabledState.BorderColor = Color.DarkGray;
-            btn_upload.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_upload.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_upload.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_upload.FillColor = Color.Transparent;
-            btn_upload.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_upload.ForeColor = Color.White;
-            btn_upload.Image = (Image)resources.GetObject("btn_upload.Image");
-            btn_upload.Location = new Point(26, 100);
-            btn_upload.Name = "btn_upload";
-            btn_upload.PressedColor = Color.Transparent;
-            btn_upload.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            btn_upload.Size = new Size(106, 45);
-            btn_upload.TabIndex = 28;
-            btn_upload.Text = "Image";
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label7.ForeColor = Color.White;
+            label7.Location = new Point(18, 5);
+            label7.Name = "label7";
+            label7.Size = new Size(90, 20);
+            label7.TabIndex = 24;
+            label7.Text = "Food Name";
             // 
             // uc_productManagement
             // 
@@ -537,26 +573,27 @@
         private Panel pal_header;
         private Label label1;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2TileButton guna_btn_salad;
-        private Guna.UI2.WinForms.Guna2TileButton guna_btn_meat;
-        private Guna.UI2.WinForms.Guna2TileButton guna_btn_rice;
-        private Guna.UI2.WinForms.Guna2TileButton guna_btn_kimbab;
-        private Guna.UI2.WinForms.Guna2TileButton guna_btn_tokbo;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Salad;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Meat;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Rice;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Kimbak;
+        private Guna.UI2.WinForms.Guna2TileButton btn_Tokbokki;
         private FlowLayoutPanel flow_pal_listProduct;
         private Guna.UI2.WinForms.Guna2Panel pal_newDish;
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private PictureBox pictureBox2;
         private Panel pal_temp;
         private Panel pal_button;
-        private Guna.UI2.WinForms.Guna2Button guna_btn_save;
-        private Guna.UI2.WinForms.Guna2Button guna_btn_cancel;
+        private Guna.UI2.WinForms.Guna2Button btn_Save;
+        private Guna.UI2.WinForms.Guna2Button btn_Discard_Changes;
         private Guna.UI2.WinForms.Guna2Panel pal_inforDish;
-        private Guna.UI2.WinForms.Guna2TextBox txt_name;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Name;
         private Label label7;
-        private Guna.UI2.WinForms.Guna2TextBox txt_price;
+        private Guna.UI2.WinForms.Guna2TextBox txt_Price;
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btn_confirm;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Button btn_upload;
+        private Guna.UI2.WinForms.Guna2TileButton btn_All_Product;
     }
 }

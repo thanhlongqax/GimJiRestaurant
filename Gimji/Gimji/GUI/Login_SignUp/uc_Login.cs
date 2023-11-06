@@ -24,7 +24,7 @@ namespace Gimji.GUI.Login_SignUp
         {
             Customer tk = new Customer();
             tk.userName = txt_username.Text;
-            tk.userPassword = txt_password.Text;
+            tk.Password = txt_password.Text;
             LoginBLL tkBLL = new LoginBLL();
 
             if (string.IsNullOrWhiteSpace(txt_username.Text))
