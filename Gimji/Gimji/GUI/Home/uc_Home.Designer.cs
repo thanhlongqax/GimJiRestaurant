@@ -38,8 +38,8 @@ namespace Gimji.GUI.Home
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Home));
             label1 = new Label();
             pal_header = new Panel();
-            btn_secondF = new Guna.UI2.WinForms.Guna2Button();
-            btn_firstF = new Guna.UI2.WinForms.Guna2Button();
+            btn_SecondF = new Guna.UI2.WinForms.Guna2Button();
+            btn_FirstF = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
             flow_pal_listtable = new FlowLayoutPanel();
@@ -70,8 +70,8 @@ namespace Gimji.GUI.Home
             // 
             pal_header.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             pal_header.BackColor = SystemColors.Control;
-            pal_header.Controls.Add(btn_secondF);
-            pal_header.Controls.Add(btn_firstF);
+            pal_header.Controls.Add(btn_SecondF);
+            pal_header.Controls.Add(btn_FirstF);
             pal_header.Controls.Add(pictureBox1);
             pal_header.Controls.Add(label1);
             pal_header.Location = new Point(35, 16);
@@ -79,45 +79,45 @@ namespace Gimji.GUI.Home
             pal_header.Size = new Size(899, 77);
             pal_header.TabIndex = 3;
             // 
-            // btn_secondF
+            // btn_SecondF
             // 
-            btn_secondF.BorderRadius = 5;
-            btn_secondF.CustomizableEdges = customizableEdges5;
-            btn_secondF.DisabledState.BorderColor = Color.DarkGray;
-            btn_secondF.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_secondF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_secondF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_secondF.FillColor = Color.FromArgb(224, 224, 224);
-            btn_secondF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_secondF.ForeColor = Color.Black;
-            btn_secondF.HoverState.FillColor = Color.Gray;
-            btn_secondF.Location = new Point(744, 14);
-            btn_secondF.Name = "btn_secondF";
-            btn_secondF.PressedColor = Color.Transparent;
-            btn_secondF.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn_secondF.Size = new Size(130, 46);
-            btn_secondF.TabIndex = 15;
-            btn_secondF.Text = "Second Floor";
+            btn_SecondF.BorderRadius = 5;
+            btn_SecondF.CustomizableEdges = customizableEdges5;
+            btn_SecondF.DisabledState.BorderColor = Color.DarkGray;
+            btn_SecondF.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_SecondF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_SecondF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_SecondF.FillColor = Color.FromArgb(224, 224, 224);
+            btn_SecondF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_SecondF.ForeColor = Color.Black;
+            btn_SecondF.HoverState.FillColor = Color.Gray;
+            btn_SecondF.Location = new Point(744, 14);
+            btn_SecondF.Name = "btn_SecondF";
+            btn_SecondF.PressedColor = Color.Transparent;
+            btn_SecondF.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btn_SecondF.Size = new Size(130, 46);
+            btn_SecondF.TabIndex = 15;
+            btn_SecondF.Text = "Second Floor";
             // 
-            // btn_firstF
+            // btn_FirstF
             // 
-            btn_firstF.BorderRadius = 5;
-            btn_firstF.CustomizableEdges = customizableEdges7;
-            btn_firstF.DisabledState.BorderColor = Color.DarkGray;
-            btn_firstF.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_firstF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_firstF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_firstF.FillColor = Color.FromArgb(232, 197, 163);
-            btn_firstF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_firstF.ForeColor = Color.Black;
-            btn_firstF.HoverState.FillColor = Color.FromArgb(255, 192, 128);
-            btn_firstF.Location = new Point(608, 14);
-            btn_firstF.Name = "btn_firstF";
-            btn_firstF.PressedColor = Color.Transparent;
-            btn_firstF.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btn_firstF.Size = new Size(130, 46);
-            btn_firstF.TabIndex = 14;
-            btn_firstF.Text = "First Floor";
+            btn_FirstF.BorderRadius = 5;
+            btn_FirstF.CustomizableEdges = customizableEdges7;
+            btn_FirstF.DisabledState.BorderColor = Color.DarkGray;
+            btn_FirstF.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_FirstF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_FirstF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_FirstF.FillColor = Color.FromArgb(232, 197, 163);
+            btn_FirstF.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            btn_FirstF.ForeColor = Color.Black;
+            btn_FirstF.HoverState.FillColor = Color.FromArgb(255, 192, 128);
+            btn_FirstF.Location = new Point(608, 14);
+            btn_FirstF.Name = "btn_FirstF";
+            btn_FirstF.PressedColor = Color.Transparent;
+            btn_FirstF.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btn_FirstF.Size = new Size(130, 46);
+            btn_FirstF.TabIndex = 14;
+            btn_FirstF.Text = "First Floor";
             // 
             // pictureBox1
             // 
@@ -237,7 +237,7 @@ namespace Gimji.GUI.Home
         private FlowLayoutPanel flow_pal_listtable;
         private FlowLayoutPanel flow_pal_table;
         private PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2Button btn_secondF;
-        private Guna.UI2.WinForms.Guna2Button btn_firstF;
+        private Guna.UI2.WinForms.Guna2Button btn_SecondF;
+        private Guna.UI2.WinForms.Guna2Button btn_FirstF;
     }
 }

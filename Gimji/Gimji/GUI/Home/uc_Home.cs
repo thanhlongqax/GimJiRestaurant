@@ -45,10 +45,10 @@ namespace Gimji.GUI.Home
         }
         public void populateStatusTable()
         {
-            uc_table[] Table = new uc_table[10];
+            uc_Table[] Table = new uc_Table[10];
             for (int i = 0; i < Table.Length; i++)
             {
-                Table[i] = new uc_table();
+                Table[i] = new uc_Table();
 
 
                 if (flow_pal_table.Controls.Count < 0)
