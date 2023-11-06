@@ -217,3 +217,11 @@ C:\Users\HI\source\repos\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\refint\Gi
 C:\Users\HI\source\repos\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.pdb
 C:\Users\HI\source\repos\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.genruntimeconfig.cache
 C:\Users\HI\source\repos\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\ref\Gimji.dll
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.CustomerManagement.uc_customerManagement.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.CustomerManagement.uc_customer.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ProductManagement.uc_productManagement.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ProductManagement.uc_product.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.RevenueManagement.revenueManagement.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_shiftManagement.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_shift.resources
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_staffShift.resources
