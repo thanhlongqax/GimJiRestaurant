@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Gimji.GUI.Home
 {
-    public partial class uc_table : UserControl
+    public partial class uc_Table : UserControl
     {
-        public uc_table()
+        public uc_Table()
         {
             InitializeComponent();
         }
