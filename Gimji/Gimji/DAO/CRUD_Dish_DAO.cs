@@ -13,7 +13,7 @@ namespace Gimji.DAO
     {
 
         // Lấy Tất Cả Các Món Ăn ra________________________________________________________________________
-        public List<Dish> GetAllDish()
+        public List<Dish> GetAllDish_DAO()
         {
             List<Dish> listDish = new List<Dish>();
             SqlConnection conn = new SqlConnection(strConn);
@@ -44,42 +44,116 @@ namespace Gimji.DAO
         }
 
         // _______________________________________________________________________________________________________
-        
+
+        // Lấy ra Món Ăn theo ID________________________________________________________________________
+        public Dish GetDishById_DAO(int dishId)
+        {
+            Dish dish = null;
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            string sSQL = "SELECT * FROM Mon_an WHERE id_mon_an = @DishId;";
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.AddWithValue("@DishId", dishId);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                DataRow row = dt.Rows[0];
+                dish = new Dish
+                {
+                    DishId = Convert.ToInt32(row["id_mon_an"]),
+                    DishName = row["ten_mon_an"].ToString(),
+                    DishPrice = Convert.ToDouble(row["don_gia"]),
+                    DishPicture = row["hinh_anh"].ToString(),
+                    Dish_Availible = row["tinh_trang"].ToString(),
+                    Catergory_Id = Convert.ToInt32(row["id_danh_muc"])
+
+                };
+                conn.Close();
+            }
+            else {
+                conn.Close();
+            }            
+            return dish;
+        }
+
+        // _______________________________________________________________________________________________________
+
+        // Lấy ra Món Ăn theo ID________________________________________________________________________
+        public List<Dish> GetDishesByCategoryId_DAO(int categoryId)
+        {
+            List<Dish> listDish = new List<Dish>();
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+            string sSQL = "SELECT * FROM Mon_an WHERE id_danh_muc = @CategoryId;";
+            SqlCommand cmd = new SqlCommand(sSQL, conn);
+            cmd.Parameters.AddWithValue("@CategoryId", categoryId);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+
+            foreach (DataRow row in dt.Rows)
+            {
+                Dish dish = new Dish
+                {
+                    DishId = Convert.ToInt32(row["id_mon_an"]),
+                    DishName = row["ten_mon_an"].ToString(),
+                    DishPrice = Convert.ToDouble(row["don_gia"]),
+                    DishPicture = row["hinh_anh"].ToString(),
+                    Dish_Availible = row["tinh_trang"].ToString(),
+                    Catergory_Id = Convert.ToInt32(row["id_danh_muc"])
+                };
+                listDish.Add(dish);
+            }
+
+            conn.Close();
+            return listDish;
+        }
+
+        // _______________________________________________________________________________________________________
         // Thêm 1 Món Ăn________________________________________________________________________
-        public void addDish_DAO(Dish newDish) {
+        public void addDish_DAO(Dish newDish)
+        {
             SqlConnection conn = new SqlConnection(strConn);
             conn.Open();
 
-            string sSQL = @"
-                SELECT ten_mon_an, don_gia, hinh_anh , tinh_trang , id_danh_muc,  FROM Mon_an
-            ";
-            SqlDataAdapter da = new SqlDataAdapter(sSQL, conn);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            conn.Close();
-            if (dt.Rows.Count == 0)
+            // Kiểm tra xem món ăn đã tồn tại dựa trên tên món ăn
+            string checkIfExistsSQL = "SELECT COUNT(*) FROM Mon_an WHERE ten_mon_an = @TenMonAn";
+            SqlCommand checkCmd = new SqlCommand(checkIfExistsSQL, conn);
+            checkCmd.Parameters.AddWithValue("@TenMonAn", newDish.DishName);
+
+            int existingDishCount = (int)checkCmd.ExecuteScalar();
+
+            if (existingDishCount == 0)
             {
                 string insertSql = @"
-                INSERT INTO Mon_an (ten_mon_an, don_gia, hinh_anh, tinh_trang, id_danh_muc)
-                VALUES (@TenMonAn, @DonGia, @HinhAnh, @TinhTrang, @IdDanhMuc)
+                    INSERT INTO Mon_an (ten_mon_an, don_gia, hinh_anh, tinh_trang, id_danh_muc)
+                    VALUES (@TenMonAn, @DonGia, @HinhAnh, @TinhTrang, @IdDanhMuc)
                 ";
                 SqlCommand cmd = new SqlCommand(insertSql, conn);
                 cmd.Parameters.AddWithValue("@TenMonAn", newDish.DishName);
                 cmd.Parameters.AddWithValue("@DonGia", newDish.DishPrice);
+                if (newDish.DishPicture == null) {
+                    newDish.DishPicture = "Resources/AnhMonAn/Default.jpg";
+                }
                 cmd.Parameters.AddWithValue("@HinhAnh", newDish.DishPicture);
                 cmd.Parameters.AddWithValue("@TinhTrang", newDish.Dish_Availible);
                 cmd.Parameters.AddWithValue("@IdDanhMuc", newDish.Catergory_Id);
                 cmd.ExecuteNonQuery();
 
-                MessageBox.Show("   Thêm Thực Đơn Thành Công", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Thêm Món Ăn Thành Công", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
-                MessageBox.Show("   Thêm Thực Đơn không Thành Công", "Thông báo", MessageBoxButtons.OK);
+                MessageBox.Show("Món Ăn đã tồn tại, không thể thêm", "Thông báo", MessageBoxButtons.OK);
             }
+
+            conn.Close();
         }
+
         // _______________________________________________________________________________________________________
-        
+
         // Chỉnh Sửa Các Món Ăn ra________________________________________________________________________
         public void updateDish_DAO(Dish updatedDish)
         {
@@ -107,6 +181,10 @@ namespace Gimji.DAO
                 updateCmd.Parameters.AddWithValue("@DishId", updatedDish.DishId);
                 updateCmd.Parameters.AddWithValue("@TenMonAn", updatedDish.DishName);
                 updateCmd.Parameters.AddWithValue("@DonGia", updatedDish.DishPrice);
+                if (updatedDish.DishPicture == null)
+                {
+                    updatedDish.DishPicture = "Resources/AnhMonAn/Default.jpg";
+                }
                 updateCmd.Parameters.AddWithValue("@HinhAnh", updatedDish.DishPicture);
                 updateCmd.Parameters.AddWithValue("@TinhTrang", updatedDish.Dish_Availible);
                 updateCmd.Parameters.AddWithValue("@IdDanhMuc", updatedDish.Catergory_Id);

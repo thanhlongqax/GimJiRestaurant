@@ -14,6 +14,7 @@ namespace Gimji.GUI.Management.ProductManagement
     public partial class uc_product : UserControl
     {
         private int idProduct;
+        private int idCategory;
         public event EventHandler BtnEditClick;
         public event EventHandler BtnRemoveClick;
         public uc_product()
@@ -40,6 +41,11 @@ namespace Gimji.GUI.Management.ProductManagement
         {
             get { return Convert.ToDouble(txt_priceDish.Text); }
             set { txt_priceDish.Text = value.ToString(); }
+        }
+        public int IdCategory
+        {
+            get { return idCategory; }
+            set { idCategory = value; }
         }
 
         #endregion

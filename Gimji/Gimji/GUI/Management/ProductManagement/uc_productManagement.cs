@@ -21,6 +21,7 @@ namespace Gimji.GUI.Management.ProductManagement
         String url_HinhAnh = null;
         int Id = 0;
         uc_product uc_Product = null;
+        int IdCategory = 0;
         private uc_product selectedProduct; // Biến toàn cục để lưu trữ uc_Staff được chọn
         public uc_productManagement()
         {
@@ -43,6 +44,8 @@ namespace Gimji.GUI.Management.ProductManagement
         private void btn_add_Click(object sender, EventArgs e)
         {
             pal_inforDish.Visible = true;
+            txt_Name.Text = String.Empty;
+            txt_Price.Text = String.Empty;
         }
         private void LoadData()
         {
@@ -51,7 +54,7 @@ namespace Gimji.GUI.Management.ProductManagement
             List<Dish> listDish = new List<Dish>();
             CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
             String DishID = null;
-            listDish = newBLL.getAllDish();
+            listDish = newBLL.getAllDish_BLL();
             foreach (var Dish in listDish)
             {
                 uc_product uc_Product = new uc_product();
@@ -63,14 +66,14 @@ namespace Gimji.GUI.Management.ProductManagement
                 {
                     // Xử lý lỗi khi không thể tải hình ảnh.
                     // Ví dụ: Hiển thị hình ảnh mặc định hoặc thông báo lỗi.
-                    uc_Product.PictureBox = Image.FromFile("Resources/AnhMonAn/Tokbokki/tokbokki_chả_cá_sốt_HQ-removebg-preview.png"); // Thay "default_image.jpg" bằng hình ảnh mặc định của bạn.
-                                                                                                                                           // Hoặc hiển thị thông báo lỗi
+                    uc_Product.PictureBox = Image.FromFile("Resources/AnhMonAn/Default.jpg");
+                    // Thay "default_image.jpg" bằng hình ảnh mặc định của bạn.                                                                                                  // Hoặc hiển thị thông báo lỗi
                     MessageBox.Show("Lỗi Đường Dẫn: " + ex.Message);
                 }
                 uc_Product.ID = Dish.DishId;
                 uc_Product.NameTxt = Dish.DishName;
                 uc_Product.PriceTxt = Dish.DishPrice;
-
+                uc_Product.IdCategory = Dish.Catergory_Id;
                 // Đăng ký sự kiện BtnEditClick cho mỗi uc_staff
                 uc_Product.BtnEditClick += (s, eventArgs) =>
                 {
@@ -91,13 +94,21 @@ namespace Gimji.GUI.Management.ProductManagement
         }
         private void flow_pal_listProduct_Clear()
         {
+            List<Control> controlsToRemove = new List<Control>();
+
             foreach (Control control in flow_pal_listProduct.Controls)
             {
                 if (control is uc_product)
                 {
-                    // Loại bỏ tất cả các uc_Product
-                    flow_pal_listProduct.Controls.Remove(control);
+                    // Thêm các uc_Product cần xóa vào danh sách tạm thời
+                    controlsToRemove.Add(control);
                 }
+            }
+
+            // Xóa tất cả các uc_Product từ danh sách tạm thời
+            foreach (Control controlToRemove in controlsToRemove)
+            {
+                flow_pal_listProduct.Controls.Remove(controlToRemove);
             }
         }
         private void HandleBtnEditClick(uc_product uc_Product, Dish dish)
@@ -139,34 +150,126 @@ namespace Gimji.GUI.Management.ProductManagement
             dish.DishId = Id;
             dish.DishName = txt_Name.Text;
             dish.DishPrice = Convert.ToDouble(txt_Price.Text);
+            if (url_HinhAnh != null)
+            {
+                url_HinhAnh = "Resources/AnhMonAn/Default.jpg";
+            }
             dish.DishPicture = url_HinhAnh;
-            dish.Catergory_Id = ?
+            dish.Catergory_Id = IdCategory;
+            dish.Dish_Availible = "Còn Hàng";
+            bool customerExists = CheckProductExists(Id);
+
+            if (customerExists)
+            {
+                newBLL.updateDish_BLL(dish);
+            }
+            else
+            {
+                newBLL.addDish_DAO(dish);
+            }
+            LoadData();
+
+
+        }
+        private bool CheckProductExists(int idProduct)
+        {
+            CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
+            if (newBLL.GetDishById_BLL(idProduct) == null)
+            {
+                return false;
+            }
+            return true;
+        }
+        private void LoadDataByCategoryId(int IdCategory)
+        {
+            pal_inforDish.Visible = false;
+            flow_pal_listProduct_Clear();
+            List<Dish> listDish = new List<Dish>();
+            CRUD_Dish_BLL newBLL = new CRUD_Dish_BLL();
+            String DishID = null;
+            listDish = newBLL.GetDishesByCategoryId_BLL(IdCategory);
+            foreach (var Dish in listDish)
+            {
+                uc_product uc_Product = new uc_product();
+                try
+                {
+                    uc_Product.PictureBox = Image.FromFile(Dish.DishPicture);
+                }
+                catch (Exception ex)
+                {
+                    // Xử lý lỗi khi không thể tải hình ảnh.
+                    // Ví dụ: Hiển thị hình ảnh mặc định hoặc thông báo lỗi.
+                    uc_Product.PictureBox = Image.FromFile("Resources/AnhMonAn/Default.jpg"); // Thay "default_image.jpg" bằng hình ảnh mặc định của bạn.
+                                                                                              // Hoặc hiển thị thông báo lỗi
+                    MessageBox.Show("Lỗi Đường Dẫn: " + ex.Message);
+                }
+                uc_Product.ID = Dish.DishId;
+                uc_Product.NameTxt = Dish.DishName;
+                uc_Product.PriceTxt = Dish.DishPrice;
+                uc_Product.IdCategory = Dish.Catergory_Id;
+                // Đăng ký sự kiện BtnEditClick cho mỗi uc_staff
+                uc_Product.BtnEditClick += (s, eventArgs) =>
+                {
+                    // Lưu trữ uc_product được chọn vào biến toàn cục
+                    selectedProduct = (uc_product)s;
+                    HandleBtnEditClick((uc_product)s, Dish);
+
+                };
+                uc_Product.BtnRemoveClick += (s, eventArgs) =>
+                {
+                    // Lưu trữ uc_product được chọn vào biến toàn cục
+                    selectedProduct = (uc_product)s;
+                    btn_delete_Click(s, eventArgs);
+
+                };
+                flow_pal_listProduct.Controls.Add(uc_Product);
+            }
         }
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
+            IdCategory = 1;
+            LoadDataByCategoryId(IdCategory);
 
-        }
-
-        private void btn_Kimbak_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Rice_Click(object sender, EventArgs e)
-        {
 
         }
 
         private void btn_Meat_Click(object sender, EventArgs e)
         {
-
+            IdCategory = 2;
+            LoadDataByCategoryId(IdCategory);
         }
 
         private void btn_Salad_Click(object sender, EventArgs e)
         {
-
+            IdCategory = 3;
+            LoadDataByCategoryId(IdCategory);
         }
 
+        private void btn_Kimbak_Click(object sender, EventArgs e)
+        {
+            IdCategory = 4;
+            LoadDataByCategoryId(IdCategory);
+        }
 
+        private void btn_Rice_Click(object sender, EventArgs e)
+        {
+            IdCategory = 5;
+            LoadDataByCategoryId(IdCategory);
+        }
+
+        private void btn_All_Product_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btn_Save_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
+
+        private void btn_Discard_Changes_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+        }
     }
 }
