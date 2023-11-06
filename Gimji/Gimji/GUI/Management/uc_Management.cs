@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Gimji.GUI.Management.StaffManagement;
 using Gimji.GUI.Management.CustomerManagement;
 using Gimji.GUI.Management.ProductManagement;
+using Gimji.GUI.Management.ShiftManagement;
 
 namespace Gimji.GUI.Management
 {
@@ -85,8 +86,15 @@ namespace Gimji.GUI.Management
         {
 
             pal_right.Controls.Clear();
-            uc_productManagement  productManagement = new uc_productManagement();
+            uc_productManagement productManagement = new uc_productManagement();
             pal_right.Controls.Add(productManagement);
+        }
+
+        private void pal_shift_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            uc_shiftManagement uc_ShiftManagement = new uc_shiftManagement();
+            pal_right.Controls.Add(uc_ShiftManagement);
         }
     }
 }

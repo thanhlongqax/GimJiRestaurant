@@ -37,6 +37,18 @@
     <Compile Update="GUI\Management\ProductManagement\uc_productManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\Management\RevenueManagement\revenueManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\ShiftManagement\uc_shift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\ShiftManagement\uc_shiftManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\ShiftManagement\uc_staffShift.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\Management\StaffManagement\uc_detailInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>

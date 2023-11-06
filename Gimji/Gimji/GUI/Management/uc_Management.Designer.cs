@@ -400,6 +400,7 @@
             pal_shift.Name = "pal_shift";
             pal_shift.Size = new Size(275, 85);
             pal_shift.TabIndex = 1;
+            pal_shift.MouseClick += pal_shift_MouseClick;
             // 
             // pictureBox2
             // 
