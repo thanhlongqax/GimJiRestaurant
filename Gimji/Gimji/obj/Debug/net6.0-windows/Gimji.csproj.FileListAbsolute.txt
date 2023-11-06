@@ -122,7 +122,6 @@ E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.Main_Form_LoginRegister.r
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Login_SignUp.uc_Login.resources
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Login_SignUp.uc_Register.resources
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.mainForm.resources
-E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_detailInfo.resources
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_staff.resources
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.StaffManagement.uc_staffManagement.resources
 E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.uc_Management.resources
