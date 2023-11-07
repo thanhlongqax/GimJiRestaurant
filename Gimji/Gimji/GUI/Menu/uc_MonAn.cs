@@ -37,19 +37,19 @@ namespace Gimji.GUI.Menu
 
         public Guna2CirclePictureBox PicBox
         {
-            get { return guna_pic_image; }
-            set { guna_pic_image = value; }
+            get { return pic_DishPicture; }
+            set { pic_DishPicture = value; }
         }
 
         public Label Title
         {
-            get { return lb_name; }
-            set { lb_name = value; }
+            get { return txt_DishName; }
+            set { txt_DishName = value; }
         }
         public Label Price
         {
-            get { return lb_price; }
-            set { lb_price = value; }
+            get { return txt_DishPrice; }
+            set { txt_DishPrice = value; }
         }
 
         #endregion

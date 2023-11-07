@@ -4,13 +4,7 @@
     <Compile Update="GUI\Home\uc_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Home\uc_inforTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="GUI\Home\uc_listTable.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Home\uc_status.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Home\uc_table.cs">
@@ -62,9 +56,6 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Menu\uc_MonAnCart.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Menu\uc_Order.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Menu\uc_MonAn.cs">

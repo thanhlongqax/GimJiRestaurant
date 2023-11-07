@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_minus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Minus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAWCAYAAADTlvzyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAJJJREFUSEtjAIH/px3q/59yeA/E/2mE3/8/6dAPs6wfiwLa4JMODQxABi19ho7f
@@ -126,7 +126,7 @@
         h0cTDdXxqIVUxyAL6VwBA6t9LBK0whNAzRqQLycAMa0bUQ0MDAwMAAfKK4wS7SGcAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btn_plus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Plus.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABwAAAAWCAYAAADTlvzyAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAMRJREFUSEtjAIH/px3q/59yeA/E/2mE3/8/6dAPs6wfiwLa4JMODQxABi19ho7f
@@ -135,7 +135,7 @@
         kM4VMLDaxyJBKzwBWFAAiwogA4hp3YhqYGBgYAAAVL8RdihsYZcAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_remove.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Remove.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAAAQ5JREFUOE/tlN0NgjAUhRmhCdSftE0YwRHcQEdwAx2BDXQDHcENeDFWfHEERnAE
@@ -146,7 +146,7 @@
         rkJggg==
 </value>
   </data>
-  <data name="pic_image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pic_DishPicture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAkwAAAGpCAYAAAB/BWlvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
         DAAACwwBP0AiyAAA/7JJREFUeF7s/QW0NUeW34nqnMzDl5mZmZmZmZnhXIZzmfnej1Hf94mxpAKpUFWq

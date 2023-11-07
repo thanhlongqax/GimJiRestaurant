@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel2 = new Panel();
             label14 = new Label();
             label12 = new Label();
@@ -251,7 +251,7 @@
             btn_Payment_Confirmpayment.BorderColor = Color.FromArgb(234, 124, 105);
             btn_Payment_Confirmpayment.BorderRadius = 10;
             btn_Payment_Confirmpayment.BorderThickness = 2;
-            btn_Payment_Confirmpayment.CustomizableEdges = customizableEdges18;
+            btn_Payment_Confirmpayment.CustomizableEdges = customizableEdges1;
             btn_Payment_Confirmpayment.DisabledState.BorderColor = Color.DarkGray;
             btn_Payment_Confirmpayment.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Payment_Confirmpayment.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -262,7 +262,7 @@
             btn_Payment_Confirmpayment.Location = new Point(202, 477);
             btn_Payment_Confirmpayment.Margin = new Padding(3, 4, 3, 4);
             btn_Payment_Confirmpayment.Name = "btn_Payment_Confirmpayment";
-            btn_Payment_Confirmpayment.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            btn_Payment_Confirmpayment.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_Payment_Confirmpayment.Size = new Size(183, 60);
             btn_Payment_Confirmpayment.TabIndex = 20;
             btn_Payment_Confirmpayment.Text = "Confirm Payment";
@@ -273,7 +273,7 @@
             btn_Payment_Cancel.BorderColor = Color.FromArgb(234, 124, 105);
             btn_Payment_Cancel.BorderRadius = 10;
             btn_Payment_Cancel.BorderThickness = 2;
-            btn_Payment_Cancel.CustomizableEdges = customizableEdges20;
+            btn_Payment_Cancel.CustomizableEdges = customizableEdges3;
             btn_Payment_Cancel.DisabledState.BorderColor = Color.DarkGray;
             btn_Payment_Cancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_Payment_Cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -284,7 +284,7 @@
             btn_Payment_Cancel.Location = new Point(13, 477);
             btn_Payment_Cancel.Margin = new Padding(3, 4, 3, 4);
             btn_Payment_Cancel.Name = "btn_Payment_Cancel";
-            btn_Payment_Cancel.ShadowDecoration.CustomizableEdges = customizableEdges21;
+            btn_Payment_Cancel.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_Payment_Cancel.Size = new Size(183, 60);
             btn_Payment_Cancel.TabIndex = 19;
             btn_Payment_Cancel.Text = "Cancel";
@@ -295,7 +295,7 @@
             txt_Birthday.BorderRadius = 10;
             txt_Birthday.BorderThickness = 2;
             txt_Birthday.Checked = true;
-            txt_Birthday.CustomizableEdges = customizableEdges22;
+            txt_Birthday.CustomizableEdges = customizableEdges5;
             txt_Birthday.FillColor = Color.FromArgb(119, 24, 24);
             txt_Birthday.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txt_Birthday.Format = DateTimePickerFormat.Long;
@@ -304,7 +304,7 @@
             txt_Birthday.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txt_Birthday.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txt_Birthday.Name = "txt_Birthday";
-            txt_Birthday.ShadowDecoration.CustomizableEdges = customizableEdges23;
+            txt_Birthday.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txt_Birthday.Size = new Size(245, 48);
             txt_Birthday.TabIndex = 18;
             txt_Birthday.Value = new DateTime(2023, 11, 3, 22, 25, 15, 558);
@@ -314,7 +314,7 @@
             txt_Gender.BackColor = Color.Transparent;
             txt_Gender.BorderRadius = 10;
             txt_Gender.BorderThickness = 2;
-            txt_Gender.CustomizableEdges = customizableEdges24;
+            txt_Gender.CustomizableEdges = customizableEdges7;
             txt_Gender.DrawMode = DrawMode.OwnerDrawFixed;
             txt_Gender.DropDownStyle = ComboBoxStyle.DropDownList;
             txt_Gender.FillColor = Color.FromArgb(119, 24, 24);
@@ -326,7 +326,7 @@
             txt_Gender.Location = new Point(13, 192);
             txt_Gender.Margin = new Padding(3, 4, 3, 4);
             txt_Gender.Name = "txt_Gender";
-            txt_Gender.ShadowDecoration.CustomizableEdges = customizableEdges25;
+            txt_Gender.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txt_Gender.Size = new Size(125, 36);
             txt_Gender.TabIndex = 17;
             // 
@@ -334,7 +334,7 @@
             // 
             txt_Phone_Number.BorderRadius = 10;
             txt_Phone_Number.BorderThickness = 2;
-            txt_Phone_Number.CustomizableEdges = customizableEdges26;
+            txt_Phone_Number.CustomizableEdges = customizableEdges9;
             txt_Phone_Number.DefaultText = "";
             txt_Phone_Number.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_Phone_Number.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -350,7 +350,7 @@
             txt_Phone_Number.PasswordChar = '\0';
             txt_Phone_Number.PlaceholderText = "";
             txt_Phone_Number.SelectedText = "";
-            txt_Phone_Number.ShadowDecoration.CustomizableEdges = customizableEdges27;
+            txt_Phone_Number.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txt_Phone_Number.Size = new Size(377, 48);
             txt_Phone_Number.TabIndex = 16;
             // 
@@ -358,7 +358,7 @@
             // 
             txt_Customer_Name.BorderRadius = 10;
             txt_Customer_Name.BorderThickness = 2;
-            txt_Customer_Name.CustomizableEdges = customizableEdges28;
+            txt_Customer_Name.CustomizableEdges = customizableEdges11;
             txt_Customer_Name.DefaultText = "";
             txt_Customer_Name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_Customer_Name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -374,7 +374,7 @@
             txt_Customer_Name.PasswordChar = '\0';
             txt_Customer_Name.PlaceholderText = "";
             txt_Customer_Name.SelectedText = "";
-            txt_Customer_Name.ShadowDecoration.CustomizableEdges = customizableEdges29;
+            txt_Customer_Name.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txt_Customer_Name.Size = new Size(377, 48);
             txt_Customer_Name.TabIndex = 15;
             // 
@@ -462,12 +462,12 @@
             btn_Credit_Card.Image = Properties.Resources.Frame_931;
             btn_Credit_Card.ImageOffset = new Point(0, 0);
             btn_Credit_Card.ImageRotate = 0F;
-            btn_Credit_Card.Location = new Point(312, 4);
+            btn_Credit_Card.Location = new Point(266, 4);
             btn_Credit_Card.Margin = new Padding(3, 4, 3, 4);
             btn_Credit_Card.Name = "btn_Credit_Card";
             btn_Credit_Card.PressedState.ImageSize = new Size(64, 64);
-            btn_Credit_Card.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            btn_Credit_Card.Size = new Size(83, 87);
+            btn_Credit_Card.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            btn_Credit_Card.Size = new Size(129, 87);
             btn_Credit_Card.TabIndex = 5;
             // 
             // btn_Cash
@@ -477,12 +477,12 @@
             btn_Cash.Image = Properties.Resources.Frame_94;
             btn_Cash.ImageOffset = new Point(0, 0);
             btn_Cash.ImageRotate = 0F;
-            btn_Cash.Location = new Point(145, 4);
+            btn_Cash.Location = new Point(129, 10);
             btn_Cash.Margin = new Padding(3, 4, 3, 4);
             btn_Cash.Name = "btn_Cash";
             btn_Cash.PressedState.ImageSize = new Size(64, 64);
-            btn_Cash.ShadowDecoration.CustomizableEdges = customizableEdges31;
-            btn_Cash.Size = new Size(83, 87);
+            btn_Cash.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_Cash.Size = new Size(137, 87);
             btn_Cash.TabIndex = 4;
             // 
             // btn_QRCode
@@ -492,12 +492,12 @@
             btn_QRCode.Image = Properties.Resources.Frame_93;
             btn_QRCode.ImageOffset = new Point(0, 0);
             btn_QRCode.ImageRotate = 0F;
-            btn_QRCode.Location = new Point(3, 4);
+            btn_QRCode.Location = new Point(-13, 10);
             btn_QRCode.Margin = new Padding(3, 4, 3, 4);
             btn_QRCode.Name = "btn_QRCode";
             btn_QRCode.PressedState.ImageSize = new Size(64, 64);
-            btn_QRCode.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            btn_QRCode.Size = new Size(83, 87);
+            btn_QRCode.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btn_QRCode.Size = new Size(135, 87);
             btn_QRCode.TabIndex = 3;
             // 
             // fl_panel_ThucDon_Payment
@@ -533,7 +533,7 @@
             // guna2DateTimePicker2
             // 
             guna2DateTimePicker2.Checked = true;
-            guna2DateTimePicker2.CustomizableEdges = customizableEdges33;
+            guna2DateTimePicker2.CustomizableEdges = customizableEdges16;
             guna2DateTimePicker2.FillColor = Color.FromArgb(234, 124, 105);
             guna2DateTimePicker2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             guna2DateTimePicker2.Format = DateTimePickerFormat.Time;
@@ -542,7 +542,7 @@
             guna2DateTimePicker2.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             guna2DateTimePicker2.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             guna2DateTimePicker2.Name = "guna2DateTimePicker2";
-            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            guna2DateTimePicker2.ShadowDecoration.CustomizableEdges = customizableEdges17;
             guna2DateTimePicker2.Size = new Size(142, 39);
             guna2DateTimePicker2.TabIndex = 13;
             guna2DateTimePicker2.Value = new DateTime(2023, 11, 3, 23, 49, 16, 121);

@@ -1,10 +1,12 @@
 ﻿using Guna.UI2.WinForms;
+using Microsoft.VisualBasic.Devices;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +15,7 @@ namespace Gimji.GUI.Menu
 {
     public partial class uc_MonAnCart : UserControl
     {
+        int quantity = 0;
         public uc_MonAnCart()
         {
             InitializeComponent();
@@ -27,29 +30,47 @@ namespace Gimji.GUI.Menu
         {
         }
 
-        #region Properties
-
-        public Guna2PictureBox PicBox
+        private void btn_Plus_Click(object sender, EventArgs e)
         {
-            get { return pic_image; }
-            set { pic_image = value; }
+            quantity++;
+            // Cập nhật hiển thị số lượng trên Label hoặc TextBox
+            txt_Quanity.Text = quantity.ToString();
+        }
+
+        private void btn_Minus_Click(object sender, EventArgs e)
+        {
+            if (quantity > 0)
+            {
+                quantity--;
+                // Cập nhật hiển thị số lượng trên Label hoặc TextBox
+                txt_Quanity.Text = quantity.ToString();
+            }
+        }
+
+
+    #region Properties
+
+    public Guna2PictureBox PicBox
+        {
+            get { return pic_DishPicture; }
+            set { pic_DishPicture = value; }
         }
 
         public Label Title
         {
-            get { return lb_tenMonAn; }
-            set { lb_tenMonAn = value; }
+            get { return txt_DishName; }
+            set { txt_DishName = value; }
         }
         public Label Price
         {
-            get { return lb_price; }
-            set { lb_price = value; }
+            get { return txt_DishPrice; }
+            set { txt_DishPrice = value; }
         }
 
         public Label Count
         {
-            get { return lb_count; }
-            set { lb_count = value; }
+            get { return txt_Quanity; }
+            set { txt_Quanity = value; }
         }
 
         #endregion
