@@ -191,7 +191,7 @@
             Controls.Add(pictureBox2);
             DoubleBuffered = true;
             Name = "uc_inforTable";
-            Size = new Size(870, 65);
+            Size = new Size(870, 254);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();

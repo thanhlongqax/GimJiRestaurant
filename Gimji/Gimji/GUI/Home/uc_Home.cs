@@ -15,12 +15,9 @@ namespace Gimji.GUI.Home
         public uc_Home()
         {
             InitializeComponent();
-            uc_inforTable inforTable = new uc_inforTable();
-            uc_status status = new uc_status();
+
             populateStatusTable();
-            pal_status.Controls.Add(status);
-            pal_inforTable.Controls.Add(inforTable);
-            pal_status.Controls.Add(status);
+
             populateTable();
 
 

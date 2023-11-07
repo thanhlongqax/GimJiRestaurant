@@ -51,7 +51,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_ORDER = new Label();
-            txt_id = new Label();
             panel_Cart_footer = new Panel();
             btn_dinein = new Guna.UI2.WinForms.Guna2Button();
             btn_goto = new Guna.UI2.WinForms.Guna2Button();
@@ -96,15 +95,7 @@
             lb_ORDER.Size = new Size(142, 31);
             lb_ORDER.TabIndex = 0;
             lb_ORDER.Text = "ORDER #";
-            // 
-            // txt_id
-            // 
-            txt_id.AutoSize = true;
-            txt_id.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_id.Location = new Point(139, 0);
-            txt_id.Name = "txt_id";
-            txt_id.Size = new Size(0, 29);
-            txt_id.TabIndex = 1;
+            lb_ORDER.Click += lb_ORDER_Click;
             // 
             // panel_Cart_footer
             // 
@@ -115,6 +106,7 @@
             panel_Cart_footer.Name = "panel_Cart_footer";
             panel_Cart_footer.Size = new Size(0, 0);
             panel_Cart_footer.TabIndex = 11;
+            panel_Cart_footer.Paint += panel_Cart_footer_Paint;
             // 
             // btn_dinein
             // 
@@ -137,6 +129,7 @@
             btn_dinein.Size = new Size(90, 35);
             btn_dinein.TabIndex = 12;
             btn_dinein.Text = "Dine in";
+            btn_dinein.Click += btn_dinein_Click;
             // 
             // btn_goto
             // 
@@ -159,6 +152,7 @@
             btn_goto.Size = new Size(80, 35);
             btn_goto.TabIndex = 13;
             btn_goto.Text = "Go to";
+            btn_goto.Click += btn_goto_Click;
             // 
             // btn_delivery
             // 
@@ -182,6 +176,7 @@
             btn_delivery.TabIndex = 14;
             btn_delivery.Text = "Delivery";
             btn_delivery.TextAlign = HorizontalAlignment.Left;
+            btn_delivery.Click += btn_delivery_Click;
             // 
             // lb_idOrder
             // 
@@ -192,6 +187,7 @@
             lb_idOrder.Size = new Size(94, 31);
             lb_idOrder.TabIndex = 15;
             lb_idOrder.Text = "12345";
+            lb_idOrder.Click += lb_idOrder_Click;
             // 
             // picbox_guess
             // 
@@ -206,6 +202,7 @@
             picbox_guess.SizeMode = PictureBoxSizeMode.StretchImage;
             picbox_guess.TabIndex = 16;
             picbox_guess.TabStop = false;
+            picbox_guess.Click += picbox_guess_Click;
             // 
             // lb_guess
             // 
@@ -216,6 +213,7 @@
             lb_guess.Size = new Size(65, 23);
             lb_guess.TabIndex = 17;
             lb_guess.Text = "GUESS:";
+            lb_guess.Click += lb_guess_Click;
             // 
             // lb_numGuess
             // 
@@ -227,6 +225,7 @@
             lb_numGuess.Size = new Size(23, 20);
             lb_numGuess.TabIndex = 18;
             lb_numGuess.Text = " 1";
+            lb_numGuess.Click += lb_numGuess_Click;
             // 
             // lb_numTable
             // 
@@ -238,6 +237,7 @@
             lb_numTable.Size = new Size(23, 20);
             lb_numTable.TabIndex = 21;
             lb_numTable.Text = " 1";
+            lb_numTable.Click += lb_numTable_Click;
             // 
             // lb_table
             // 
@@ -248,6 +248,7 @@
             lb_table.Size = new Size(56, 23);
             lb_table.TabIndex = 20;
             lb_table.Text = "TABLE";
+            lb_table.Click += lb_table_Click;
             // 
             // picbox_table
             // 
@@ -262,6 +263,7 @@
             picbox_table.SizeMode = PictureBoxSizeMode.StretchImage;
             picbox_table.TabIndex = 19;
             picbox_table.TabStop = false;
+            picbox_table.Click += picbox_table_Click;
             // 
             // flow_pal_list
             // 
@@ -271,6 +273,7 @@
             flow_pal_list.Name = "flow_pal_list";
             flow_pal_list.Size = new Size(409, 355);
             flow_pal_list.TabIndex = 22;
+            flow_pal_list.Paint += flow_pal_list_Paint;
             // 
             // pal_note
             // 
@@ -282,6 +285,7 @@
             pal_note.Name = "pal_note";
             pal_note.Size = new Size(416, 99);
             pal_note.TabIndex = 23;
+            pal_note.Paint += pal_note_Paint;
             // 
             // guna_btn_apply
             // 
@@ -302,6 +306,7 @@
             guna_btn_apply.Size = new Size(81, 35);
             guna_btn_apply.TabIndex = 24;
             guna_btn_apply.Text = "Apply";
+            guna_btn_apply.Click += guna_btn_apply_Click;
             // 
             // guna_txt_code
             // 
@@ -327,6 +332,7 @@
             guna_txt_code.ShadowDecoration.CustomizableEdges = customizableEdges12;
             guna_txt_code.Size = new Size(386, 40);
             guna_txt_code.TabIndex = 2;
+            guna_txt_code.TextChanged += guna_txt_code_TextChanged;
             // 
             // guna_btn_note
             // 
@@ -344,6 +350,7 @@
             guna_btn_note.ShadowDecoration.CustomizableEdges = customizableEdges13;
             guna_btn_note.Size = new Size(40, 40);
             guna_btn_note.TabIndex = 1;
+            guna_btn_note.Click += guna_btn_note_Click;
             // 
             // guna_txt_note
             // 
@@ -368,6 +375,7 @@
             guna_txt_note.ShadowDecoration.CustomizableEdges = customizableEdges15;
             guna_txt_note.Size = new Size(330, 40);
             guna_txt_note.TabIndex = 0;
+            guna_txt_note.TextChanged += guna_txt_note_TextChanged;
             // 
             // guna2Panel1
             // 
@@ -392,6 +400,7 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges21;
             guna2Panel1.Size = new Size(386, 209);
             guna2Panel1.TabIndex = 24;
+            guna2Panel1.Paint += guna2Panel1_Paint;
             // 
             // guna_btn_send
             // 
@@ -411,6 +420,7 @@
             guna_btn_send.Size = new Size(152, 45);
             guna_btn_send.TabIndex = 9;
             guna_btn_send.Text = "SEND ORDER";
+            guna_btn_send.Click += guna_btn_send_Click;
             // 
             // guna_btn_cancel
             // 
@@ -430,6 +440,7 @@
             guna_btn_cancel.Size = new Size(152, 45);
             guna_btn_cancel.TabIndex = 8;
             guna_btn_cancel.Text = "CANCEL ORDER";
+            guna_btn_cancel.Click += guna_btn_cancel_Click;
             // 
             // lb_totalPrice
             // 
@@ -441,6 +452,7 @@
             lb_totalPrice.Size = new Size(54, 28);
             lb_totalPrice.TabIndex = 7;
             lb_totalPrice.Text = "Price";
+            lb_totalPrice.Click += lb_totalPrice_Click;
             // 
             // label5
             // 
@@ -462,6 +474,7 @@
             pictureBox1.Size = new Size(350, 1);
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // lb_priceDiscount
             // 
@@ -473,6 +486,7 @@
             lb_priceDiscount.Size = new Size(41, 20);
             lb_priceDiscount.TabIndex = 4;
             lb_priceDiscount.Text = "Price";
+            lb_priceDiscount.Click += lb_priceDiscount_Click;
             // 
             // lb_percent
             // 
@@ -484,6 +498,7 @@
             lb_percent.Size = new Size(36, 20);
             lb_percent.TabIndex = 3;
             lb_percent.Text = "10%";
+            lb_percent.Click += lb_percent_Click;
             // 
             // label2
             // 
@@ -495,6 +510,7 @@
             label2.Size = new Size(87, 20);
             label2.TabIndex = 2;
             label2.Text = "DISCOUNT ";
+            label2.Click += label2_Click;
             // 
             // lb_subPrice
             // 
@@ -506,6 +522,7 @@
             lb_subPrice.Size = new Size(41, 20);
             lb_subPrice.TabIndex = 1;
             lb_subPrice.Text = "Price";
+            lb_subPrice.Click += lb_subPrice_Click;
             // 
             // label1
             // 
@@ -517,6 +534,7 @@
             label1.Size = new Size(77, 20);
             label1.TabIndex = 0;
             label1.Text = "SUBTOTAL";
+            label1.Click += label1_Click;
             // 
             // uc_Order
             // 
@@ -537,11 +555,10 @@
             Controls.Add(btn_goto);
             Controls.Add(btn_dinein);
             Controls.Add(panel_Cart_footer);
-            Controls.Add(txt_id);
             Controls.Add(lb_ORDER);
             Margin = new Padding(3, 4, 3, 4);
             Name = "uc_Order";
-            Size = new Size(430, 820);
+            Size = new Size(768, 820);
             Load += uc_Order_Load;
             ((System.ComponentModel.ISupportInitialize)picbox_guess).EndInit();
             ((System.ComponentModel.ISupportInitialize)picbox_table).EndInit();
@@ -556,7 +573,6 @@
         #endregion
 
         private Label lb_ORDER;
-        private Label txt_id;
         private Panel panel_Cart_footer;
         private Guna.UI2.WinForms.Guna2Button btn_dinein;
         private Guna.UI2.WinForms.Guna2Button btn_goto;

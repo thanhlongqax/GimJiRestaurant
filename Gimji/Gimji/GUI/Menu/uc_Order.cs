@@ -33,6 +33,119 @@ namespace Gimji.GUI.Menu
 
         }
 
+        private void lb_ORDER_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_Cart_footer_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void btn_dinein_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_goto_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void btn_delivery_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_idOrder_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void picbox_guess_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_guess_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_numGuess_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_numTable_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_table_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void picbox_table_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void flow_pal_list_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pal_note_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void guna_btn_apply_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna_txt_code_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void guna_btn_note_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna_txt_note_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void guna_btn_send_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void guna_btn_cancel_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_totalPrice_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_priceDiscount_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_percent_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void lb_subPrice_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
         #region Properties
 
         public Label IdOrder
