@@ -118,10 +118,10 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="guna_btn_buy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Buy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACwAAAAtCAYAAADV2ImkAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAA4dJREFUaEPFmL9v1DAUx+9P6Ai65JQFLinLLZUYA22unYCKkUOUrSxVpQoWqoLK
+        DQAACw0B7QfALAAAA4dJREFUaEPFmL9v1DAUx+9P6Ai65JQFLinLLZUYA22unYCKkUOUrSxVpQoWqoLK
         1C7tUlgq0YEFdeDHUMZWsFL1xgoJHRJIoC43ISSW4K8TB/fuJbGd3OVJnyF5dvz188uzk1qZ5ruOM+Na
         fuDWF8D05Yu3cI37cZNqDWIYTwLXOmx7dr/t2mEqzI92s1592XcvjG8CvjMxgUHbnnVCClME4rEK8WNH
         YxggN5L69IJL9VY8RDmGJeTLTg9YDp69FQ9XzJCnI4hqGr1C+T3tNu4RDx01ZqIrEivQEx1M1lvEQ8aN
@@ -139,10 +139,10 @@
         NxJp+aXkaVmGSciUK65W+wf+qxJnX1lMrAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="guna_pic_image.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="pic_DishPicture.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAkwAAAGpCAYAAAB/BWlvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAA/7JJREFUeF7s/QW0NUeW34nqnMzDl5mZmZmZmZnhXIZzmfnej1Hf94mxpAKpUFWq
+        DQAACw0B7QfALAAA/7JJREFUeF7s/QW0NUeW34nqnMzDl5mZmZmZmZnhXIZzmfnej1Hf94mxpAKpUFWq
         UrGkkkoqpu6q9tg9/d68Ma3xjPG5n/s//8h73V4et2dsj9/Y3X32WrEyT2aezMjIyNy/HbFjx1NWsYpV
         rGIVq1jFKlaxilWsYhWrWMUqVrGKVaxiFatYxSpWsYpVrGIVq1jFKlaxilWsYhWrWMUq/73J17+6eO31
         V8v+7NGjgr/7+TfGn/7TP3lPdbXLKlaxilWsYhWrWMUqn/3s5CuPnnfH/WcMuLijwd6ZHourDv/i/R9c
