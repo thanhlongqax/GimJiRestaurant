@@ -11,6 +11,9 @@ using Gimji.GUI.Management.StaffManagement;
 using Gimji.GUI.Management.CustomerManagement;
 using Gimji.GUI.Management.ProductManagement;
 using Gimji.GUI.Management.ShiftManagement;
+using Gimji.GUI.Management.OrderManagement;
+using Gimji.GUI.Management.RevenueManagement;
+using Gimji.GUI.Management.Inventory_Management;
 
 namespace Gimji.GUI.Management
 {
@@ -23,7 +26,16 @@ namespace Gimji.GUI.Management
         }
 
 
-
+        /// stop flickering white effect in screen form when loaded
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle |= 0x02000000;  // Turn on WS_EX_COMPOSITED
+                return cp;
+            }
+        }
 
 
 
@@ -95,6 +107,30 @@ namespace Gimji.GUI.Management
             pal_right.Controls.Clear();
             uc_shiftManagement uc_ShiftManagement = new uc_shiftManagement();
             pal_right.Controls.Add(uc_ShiftManagement);
+        }
+
+        private void pal_sale_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            pal_right.Controls.Add(new uc_SaleManagement());
+        }
+
+        private void pal_orer_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            pal_right.Controls.Add(new uc_OrderMangement());
+        }
+
+        private void pal_inventory_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            pal_right.Controls.Add(new uc_inventoryManagement());
+        }
+
+        private void pal_revenue_MouseClick(object sender, MouseEventArgs e)
+        {
+            pal_right.Controls.Clear();
+            pal_right.Controls.Add(new uc_revenueManagement());
         }
     }
 }

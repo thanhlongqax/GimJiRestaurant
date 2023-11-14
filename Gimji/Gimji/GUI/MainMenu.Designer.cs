@@ -66,7 +66,7 @@
             pal_logo = new Panel();
             btn_logo = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
-            guna_btn_exit = new Guna.UI2.WinForms.Guna2ImageRadioButton();
+            guna_btn_exit = new Guna.UI2.WinForms.Guna2ImageButton();
             guna_pal_Setting = new Guna.UI2.WinForms.Guna2Panel();
             label5 = new Label();
             guna_btn_Setting = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -106,7 +106,7 @@
             // 
             // topPanel
             // 
-            topPanel.BackColor = Color.FromArgb(209, 10, 45);
+            topPanel.BackColor = Color.FromArgb(127, 21, 21);
             topPanel.BorderStyle = BorderStyle.FixedSingle;
             topPanel.Controls.Add(pic_avatar);
             topPanel.Controls.Add(btn_add);
@@ -156,27 +156,29 @@
             // 
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(date_time);
-            panel4.Location = new Point(915, 36);
+            panel4.Location = new Point(839, 36);
             panel4.Name = "panel4";
-            panel4.Size = new Size(251, 31);
+            panel4.Size = new Size(327, 31);
             panel4.TabIndex = 9;
             // 
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = (Image)resources.GetObject("pictureBox2.BackgroundImage");
             pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox2.Location = new Point(11, 9);
+            pictureBox2.Location = new Point(11, 7);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(16, 19);
+            pictureBox2.Size = new Size(20, 20);
             pictureBox2.TabIndex = 10;
             pictureBox2.TabStop = false;
             // 
             // date_time
             // 
             date_time.AutoSize = true;
+            date_time.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            date_time.ForeColor = Color.White;
             date_time.Location = new Point(34, 7);
             date_time.Name = "date_time";
-            date_time.Size = new Size(42, 20);
+            date_time.Size = new Size(47, 23);
             date_time.TabIndex = 8;
             date_time.Text = "Time";
             // 
@@ -199,9 +201,9 @@
             searchTextBox.ForeColor = Color.Gray;
             searchTextBox.Location = new Point(30, 20);
             searchTextBox.Name = "searchTextBox";
+            searchTextBox.PlaceholderText = "Search product or any order...";
             searchTextBox.Size = new Size(267, 20);
             searchTextBox.TabIndex = 3;
-            searchTextBox.Text = "Search product or any order...";
             // 
             // pictureBox_search
             // 
@@ -263,19 +265,19 @@
             // 
             // guna_btn_exit
             // 
-            guna_btn_exit.BackgroundImageLayout = ImageLayout.Stretch;
-            guna_btn_exit.CheckedState.Image = (Image)resources.GetObject("resource.Image");
-            guna_btn_exit.HoverState.ImageSize = new Size(40, 36);
+            guna_btn_exit.CheckedState.ImageSize = new Size(64, 64);
+            guna_btn_exit.HoverState.ImageSize = new Size(40, 40);
             guna_btn_exit.Image = (Image)resources.GetObject("guna_btn_exit.Image");
             guna_btn_exit.ImageOffset = new Point(0, 0);
             guna_btn_exit.ImageRotate = 0F;
-            guna_btn_exit.ImageSize = new Size(25, 25);
-            guna_btn_exit.Location = new Point(27, 764);
+            guna_btn_exit.ImageSize = new Size(30, 30);
+            guna_btn_exit.Location = new Point(32, 699);
             guna_btn_exit.Name = "guna_btn_exit";
-            guna_btn_exit.PressedState.ImageOffset = new Point(40, 36);
+            guna_btn_exit.PressedState.ImageSize = new Size(40, 40);
             guna_btn_exit.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            guna_btn_exit.Size = new Size(45, 37);
-            guna_btn_exit.TabIndex = 7;
+            guna_btn_exit.Size = new Size(40, 40);
+            guna_btn_exit.TabIndex = 8;
+            guna_btn_exit.Click += guna_btn_exit_Click;
             // 
             // guna_pal_Setting
             // 
@@ -304,7 +306,7 @@
             // 
             guna_btn_Setting.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Setting.CheckedState.ImageSize = new Size(64, 64);
-            guna_btn_Setting.HoverState.Image = (Image)resources.GetObject("resource.Image1");
+            guna_btn_Setting.HoverState.Image = (Image)resources.GetObject("resource.Image");
             guna_btn_Setting.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Setting.Image = (Image)resources.GetObject("guna_btn_Setting.Image");
             guna_btn_Setting.ImageOffset = new Point(0, 0);
@@ -344,7 +346,7 @@
             // 
             guna_btn_Management.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Management.CheckedState.ImageSize = new Size(64, 64);
-            guna_btn_Management.HoverState.Image = (Image)resources.GetObject("resource.Image2");
+            guna_btn_Management.HoverState.Image = (Image)resources.GetObject("resource.Image1");
             guna_btn_Management.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Management.Image = (Image)resources.GetObject("guna_btn_Management.Image");
             guna_btn_Management.ImageOffset = new Point(0, 0);
@@ -385,7 +387,7 @@
             // 
             guna_btn_Order.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Order.CheckedState.ImageSize = new Size(64, 64);
-            guna_btn_Order.HoverState.Image = (Image)resources.GetObject("resource.Image3");
+            guna_btn_Order.HoverState.Image = (Image)resources.GetObject("resource.Image2");
             guna_btn_Order.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Order.Image = (Image)resources.GetObject("guna_btn_Order.Image");
             guna_btn_Order.ImageOffset = new Point(0, 0);
@@ -426,7 +428,7 @@
             // 
             guna_btn_Payment.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Payment.CheckedState.ImageSize = new Size(64, 64);
-            guna_btn_Payment.HoverState.Image = (Image)resources.GetObject("resource.Image4");
+            guna_btn_Payment.HoverState.Image = (Image)resources.GetObject("resource.Image3");
             guna_btn_Payment.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Payment.Image = (Image)resources.GetObject("guna_btn_Payment.Image");
             guna_btn_Payment.ImageOffset = new Point(0, 0);
@@ -467,7 +469,7 @@
             // 
             guna_btn_Menu.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Menu.CheckedState.ImageSize = new Size(64, 64);
-            guna_btn_Menu.HoverState.Image = (Image)resources.GetObject("resource.Image5");
+            guna_btn_Menu.HoverState.Image = (Image)resources.GetObject("resource.Image4");
             guna_btn_Menu.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Menu.Image = (Image)resources.GetObject("guna_btn_Menu.Image");
             guna_btn_Menu.ImageOffset = new Point(0, 0);
@@ -508,7 +510,7 @@
             // 
             guna_btn_Home.BackgroundImageLayout = ImageLayout.Stretch;
             guna_btn_Home.CheckedState.ImageSize = new Size(40, 36);
-            guna_btn_Home.HoverState.Image = (Image)resources.GetObject("resource.Image6");
+            guna_btn_Home.HoverState.Image = (Image)resources.GetObject("resource.Image5");
             guna_btn_Home.HoverState.ImageSize = new Size(40, 36);
             guna_btn_Home.Image = (Image)resources.GetObject("guna_btn_Home.Image");
             guna_btn_Home.ImageOffset = new Point(0, 0);
@@ -600,7 +602,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna_pal_Home;
         private Guna.UI2.WinForms.Guna2ImageButton guna_btn_Home;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2ImageRadioButton guna_btn_exit;
         private Guna.UI2.WinForms.Guna2Panel guna_pal_Setting;
         private Label label5;
         private Guna.UI2.WinForms.Guna2ImageButton guna_btn_Setting;
@@ -619,5 +620,6 @@
         private Guna.UI2.WinForms.Guna2Button btn_add;
         private Guna.UI2.WinForms.Guna2PictureBox pic_avatar;
         private Guna.UI2.WinForms.Guna2Button btn_logo;
+        private Guna.UI2.WinForms.Guna2ImageButton guna_btn_exit;
     }
 }
