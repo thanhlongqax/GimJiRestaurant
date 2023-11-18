@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {}
+    "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {}
   },
   "projects": {
-    "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {
+    "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+        "projectUniqueName": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
         "projectName": "Gimji",
-        "projectPath": "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
-        "packagesPath": "C:\\Users\\vandi\\.nuget\\packages\\",
-        "outputPath": "E:\\CNPM_N12\\Gimji\\Gimji\\obj\\",
+        "projectPath": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vandi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -40,6 +40,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "Guna.Charts.WinForms": {
+              "target": "Package",
+              "version": "[1.0.9, )"
+            },
             "Guna.UI2.WinForms": {
               "target": "Package",
               "version": "[2.0.4.5, )"
