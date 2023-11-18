@@ -15,28 +15,31 @@ namespace Gimji.GUI.PayMent
         public uc_Payment()
         {
             InitializeComponent();
-            uc_MonAn_Paymentcs uc_MonAn_Paymentcs = new uc_MonAn_Paymentcs();
-            fl_panel_ThucDon_Payment.Controls.Add(uc_MonAn_Paymentcs);
-        }
-
-        private void guna2ImageButton2_Click(object sender, EventArgs e)
-        {
+            for (int i = 0; i < 10; i++)
+            {
+                flow_pal_listOrder.Controls.Add(new uc_MonAn_Paymentcs());
+            }
 
         }
 
-        private void guna2HtmlLabel1_Click(object sender, EventArgs e)
-        {
 
+
+        private void btn_qrCode_Click(object sender, EventArgs e)
+        {
+            pal_payment.Controls.Clear();
+            pal_payment.Controls.Add(new uc_qrCode());
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void btn_cash_Click(object sender, EventArgs e)
         {
-
+            pal_payment.Controls.Clear();
+            
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void btn_creditCard_Click(object sender, EventArgs e)
         {
-
+            pal_payment.Controls.Clear();
+            pal_payment.Controls.Add(new uc_credirCard());
         }
     }
 }

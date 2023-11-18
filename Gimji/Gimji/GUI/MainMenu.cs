@@ -7,11 +7,15 @@ using Gimji.GUI.Home;
 using Gimji.GUI.Menu;
 using Gimji.GUI.PayMent;
 using Gimji.GUI.Management;
+using Gimji.GUI.Order;
+using Gimji.GUI.Kitchen;
+using Gimji.GUI.Login_Register;
 
 namespace Gimji
 {
     public partial class mainForm : Form
     {
+
         public mainForm()
         {
             InitializeComponent();
@@ -60,6 +64,10 @@ namespace Gimji
 
         private void guna_btn_Order_Click(object sender, EventArgs e)
         {
+            panel_Menu.Controls.Clear();
+            panel_Menu.Controls.Add(new Gimji.GUI.Order.uc_Order());
+
+            //panel_Menu.Controls.Add(new uc_Kitchen());
 
         }
 
@@ -69,6 +77,14 @@ namespace Gimji
             uc_Management management = new uc_Management();
             panel_Menu.Controls.Clear();
             panel_Menu.Controls.Add(management);
+        }
+
+        private void guna_btn_exit_Click(object sender, EventArgs e)
+        {
+            Main_Login_Register loginF = new Main_Login_Register();
+            this.Hide();
+            loginF.ShowDialog();
+            Application.Exit();
         }
     }
 }

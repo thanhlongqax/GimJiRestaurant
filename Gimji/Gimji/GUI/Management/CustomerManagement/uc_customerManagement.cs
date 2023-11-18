@@ -46,7 +46,7 @@ namespace Gimji.GUI.Management.CustomerManagement
                 new_uc_Customer.Name = customer.fullName;
                 new_uc_Customer.Point = customer.Point;
 
-                
+
 
 
                 // Đăng ký sự kiện BtnEditClick cho mỗi uc_staff

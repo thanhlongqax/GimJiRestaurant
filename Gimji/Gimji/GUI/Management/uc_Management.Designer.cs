@@ -122,6 +122,7 @@
             pal_revenue.Name = "pal_revenue";
             pal_revenue.Size = new Size(275, 85);
             pal_revenue.TabIndex = 7;
+            pal_revenue.MouseClick += pal_revenue_MouseClick;
             // 
             // pictureBox5
             // 
@@ -168,6 +169,7 @@
             pal_sale.Name = "pal_sale";
             pal_sale.Size = new Size(275, 85);
             pal_sale.TabIndex = 6;
+            pal_sale.MouseClick += pal_sale_MouseClick;
             // 
             // pictureBox6
             // 
@@ -214,6 +216,7 @@
             pal_inventory.Name = "pal_inventory";
             pal_inventory.Size = new Size(275, 85);
             pal_inventory.TabIndex = 5;
+            pal_inventory.MouseClick += pal_inventory_MouseClick;
             // 
             // pictureBox7
             // 
@@ -260,6 +263,7 @@
             pal_orer.Name = "pal_orer";
             pal_orer.Size = new Size(275, 85);
             pal_orer.TabIndex = 4;
+            pal_orer.MouseClick += pal_orer_MouseClick;
             // 
             // pictureBox8
             // 
