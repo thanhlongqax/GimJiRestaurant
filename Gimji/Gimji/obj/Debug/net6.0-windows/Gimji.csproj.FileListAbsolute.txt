@@ -38,7 +38,6 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\runtimes\win-x86\nati
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.csproj.AssemblyReference.cache
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_Home.resources
-E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_listTable.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_table.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.Main_Form_LoginRegister.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Login_SignUp.uc_Login.resources
@@ -228,3 +227,4 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_shift.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_shiftManagement.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Management.ShiftManagement.uc_staffShift.resources
+E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_Detail_Table.resources

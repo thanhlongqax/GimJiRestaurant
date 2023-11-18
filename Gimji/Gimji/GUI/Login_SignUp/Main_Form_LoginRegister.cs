@@ -42,7 +42,7 @@ namespace Gimji
         {
             panel_Login_Register.Controls.Clear();
             panel_Login_Register.Controls.Add(loginControl);
-
+            
             if (registeredSuccessfully)
             {
                 // Thực hiện các xử lý sau khi đăng ký thành công (nếu cần)

@@ -121,7 +121,7 @@
   <data name="resource.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKIAAACiCAYAAADC8hYbAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAEjFJREFUeF7tncuLJMcRh3WwQUaowc0yojXbO73TrZnBlq31Ci3sgo1WEoxAhz0Y
+        DAAACwwBP0AiyAAAEjFJREFUeF7tncuLJMcRh3WwQUaowc0yojXbO73TrZnBlq31Ci3sgo1WEoxAhz0Y
         fFjYgw8GHQw++CDQQTfd/Ec7vqiM2uqe6s56V1Z1/ODHPPqZkV9FPior64MUtNlsPgy/ulzDa71eb6+f
         PPl288X6frfZ3PN3eMjl6l+PHz/+3W63e7l+ub5fvVndr74Xv7m43/xxfS+PLcPTXK7+BISfPX36N+Bb
         /1UsMC7/tbzf7ATK16t7aaafhae6BtbZdJGKENIcX/xjef/R/z5Sr/5+oVlxe3X1zddff/2b8BLXAJIu
@@ -202,10 +202,10 @@
         AAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btn_table.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="btn_Table.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKIAAACiCAYAAADC8hYbAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAEaRJREFUeF7tnT2THcUVhvkJy0raL2mvhl25ygEYHNtlk0LZVcpwkUAim5AqYVKE
+        DAAACwwBP0AiyAAAEaRJREFUeF7tnT2THcUVhvkJy0raL2mvhl25ygEYHNtlk0LZVcpwkUAim5AqYVKE
         cS7xA7DIsQtS7GCV4UwkOIUqnG/hP3B9np5+taO7H3e+p3vueaqmdFd77+72mWdOf0x3zwspUBjxpeOM
         z9Gi+Oj4dnF6+9bh0v5d8nX8luMMz88tAx7dLp7e2j9Y7l6/sdzf2VnuXL++LEzIO7eK1+PbHGc4kNCy
         3/f7O7vLW/v7y7ffemv5jy++WL72yi+WB7t7y+NF8VV8qzMyG9NEqkpIdfzpw0dL8enDhyErUlXb27bi

@@ -62,7 +62,7 @@ namespace Gimji.DAO
         public  string LoginDAO_checkLoginData(Customer tk)
         {
             Dictionary<string, string> result = checkLoginData_Database(tk);
-            String userName = null;
+            String id = null;
             if (result.Count == 0)
             {
                 MessageBox.Show("Mật khẩu không chính xác hoặc tài khoản không chính xác", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -71,9 +71,9 @@ namespace Gimji.DAO
             // Xử lý các trường hợp khác ở đây.
             foreach (KeyValuePair<string, string> item in result)
             {
-                  userName = item.Value;
+                  id = item.Key;
             }
-            return userName;
+            return id;
         }
 
         /*public DataTable populateInformationUser_Login_DAL(string userID)

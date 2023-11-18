@@ -9,13 +9,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="GUI\Admin\**" />
     <Compile Remove="GUI\SignUp\**" />
+    <EmbeddedResource Remove="GUI\Admin\**" />
     <EmbeddedResource Remove="GUI\SignUp\**" />
+    <None Remove="GUI\Admin\**" />
     <None Remove="GUI\SignUp\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="GUI\Admin\" />
     <Folder Include="GUI\Setting\" />
     <Folder Include="GUI\Order\" />
     <Folder Include="GUI\Staff\" />

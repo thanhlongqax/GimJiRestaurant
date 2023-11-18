@@ -339,53 +339,45 @@ go
 CREATE TABLE Ban (
    id_ban INT PRIMARY KEY Identity,
    ten_ban NVARCHAR(20) ,
-   tang NVARCHAR(20),
+   tang int,
 );
 go
 INSERT INTO Ban (ten_ban, tang)
 VALUES
-    (N'Bàn 1', N'Tầng 1'),
-    (N'Bàn 2', N'Tầng 1'),
-    (N'Bàn 3', N'Tầng 1'),
-    (N'Bàn 4', N'Tầng 2'),
-    (N'Bàn 5', N'Tầng 2'),
-    (N'Bàn 6', N'Tầng 2'),
-    (N'Bàn 7', N'Tầng 2')
-go
-Create table Ban_KH(
-	id_khach_hang VARCHAR(8),
-	id_ban INT Identity,
-	primary key (id_khach_hang , id_ban),
-	ghi_chu VARCHAR(200),
-	CONSTRAINT fk_ban_nhanvien FOREIGN KEY (id_khach_hang) REFERENCES Khach_hang(id_khach_hang)
-);
+    (N'Bàn 1', 1),
+    (N'Bàn 2', 1),
+    (N'Bàn 3', 1),
+    (N'Bàn 4', 1),
+    (N'Bàn 5', 2),
+    (N'Bàn 6', 2),
+    (N'Bàn 7', 2)
 go
 Create table Ban_NV(
 	id_nhan_vien VARCHAR(8),
-	id_ban INT Identity,
-	primary key (id_nhan_vien , id_ban),
+	id_ban INT ,
+	ten_khach_hang nvarchar(200) , 
+	sdt_khach_hang nvarchar(200) ,
 	ghi_chu VARCHAR(200),
-	CONSTRAINT fk_ban_khachHang FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien)
+	ngay_dat_ban Date,
+	primary key (id_nhan_vien , id_ban),
+	CONSTRAINT fk_ban FOREIGN KEY (id_ban) REFERENCES Ban(id_ban),
+	CONSTRAINT fk_ban_NV FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien)
 );
 go
-create procedure InsertTable_KH
-	@id_ban INT,
-	@Note VARCHAR(200),
-	@id_khach_hang varchar(8)
-as
-begin
-	insert into Ban_KH(id_ban , ghi_chu  ,id_khach_hang ) values (@id_ban, @Note , @id_khach_hang)
-end
-go
-create procedure InsertTable_NV
-	@id_ban INT,
-	@Note VARCHAR(200),
-	@id_nhan_vien varchar(8)
-as
-begin
-	insert into Ban_KH(id_ban , ghi_chu  ,id_khach_hang ) values (@id_ban, @Note , @id_nhan_vien)
-end
-
+CREATE PROCEDURE InsertTable_NV (
+    @id_nhan_vien VARCHAR(8),
+    @id_ban INT,
+    @ten_khach_hang NVARCHAR(200),
+    @sdt_khach_hang NVARCHAR(200),
+    @ghi_chu VARCHAR(200),
+    @ngay_dat_ban DATE
+)
+AS
+BEGIN
+    -- Insert a new record into Ban_NV table
+    INSERT INTO Ban_NV (id_nhan_vien, id_ban, ten_khach_hang, sdt_khach_hang, ghi_chu, ngay_dat_ban)
+    VALUES (@id_nhan_vien, @id_ban, @ten_khach_hang, @sdt_khach_hang, @ghi_chu, @ngay_dat_ban);
+END;
 go
 -- Tạo bảng Hoa_don
 CREATE TABLE Hoa_don (

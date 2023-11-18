@@ -4,10 +4,10 @@
     <Compile Update="GUI\Home\uc_Home.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Home\uc_listTable.cs">
+    <Compile Update="GUI\Home\uc_Detail_Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Home\uc_table.cs">
+    <Compile Update="GUI\Home\uc_Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Login_SignUp\uc_Login.cs">

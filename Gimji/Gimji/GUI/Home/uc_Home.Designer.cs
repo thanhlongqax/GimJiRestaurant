@@ -36,19 +36,32 @@ namespace Gimji.GUI.Home
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_Home));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             pal_header = new Panel();
             btn_SecondF = new Guna.UI2.WinForms.Guna2Button();
             btn_FirstF = new Guna.UI2.WinForms.Guna2Button();
             pictureBox1 = new PictureBox();
             panel2 = new Panel();
-            flow_pal_listtable = new FlowLayoutPanel();
+            flow_pal_BookTable = new FlowLayoutPanel();
             label2 = new Label();
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             pal_inforTable = new Panel();
+            txt_TableId = new Label();
+            datetime_CheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            btn_Submit = new Button();
+            label13 = new Label();
+            txt_Num_Guest = new TextBox();
+            label14 = new Label();
+            label15 = new Label();
+            label16 = new Label();
+            txt_CustomerName = new TextBox();
+            pictureBox9 = new PictureBox();
+            pictureBox10 = new PictureBox();
+            pictureBox11 = new PictureBox();
             pal_status = new Panel();
-            flow_pal_table = new FlowLayoutPanel();
             panel5 = new Panel();
             label9 = new Label();
             label10 = new Label();
@@ -58,35 +71,27 @@ namespace Gimji.GUI.Home
             label8 = new Label();
             pictureBox4 = new PictureBox();
             panel3 = new Panel();
-            label5 = new Label();
+            txt_ClosedTable = new Label();
             label6 = new Label();
             pictureBox6 = new PictureBox();
             panel1 = new Panel();
-            label3 = new Label();
+            txt_AvailableTable = new Label();
             label4 = new Label();
             pictureBox7 = new PictureBox();
             panel6 = new Panel();
             label11 = new Label();
             label12 = new Label();
             pictureBox8 = new PictureBox();
-            button1 = new Button();
-            label13 = new Label();
-            textBox4 = new TextBox();
-            label14 = new Label();
-            textBox3 = new TextBox();
-            label15 = new Label();
-            textBox1 = new TextBox();
-            label16 = new Label();
-            textBox2 = new TextBox();
-            pictureBox9 = new PictureBox();
-            pictureBox10 = new PictureBox();
-            pictureBox11 = new PictureBox();
+            flow_pal_Table = new FlowLayoutPanel();
             pal_header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             pal_inforTable.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             pal_status.SuspendLayout();
             panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
@@ -98,9 +103,6 @@ namespace Gimji.GUI.Home
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -145,6 +147,7 @@ namespace Gimji.GUI.Home
             btn_SecondF.Size = new Size(130, 46);
             btn_SecondF.TabIndex = 15;
             btn_SecondF.Text = "Second Floor";
+            btn_SecondF.Click += btn_SecondF_Click;
             // 
             // btn_FirstF
             // 
@@ -165,6 +168,7 @@ namespace Gimji.GUI.Home
             btn_FirstF.Size = new Size(130, 46);
             btn_FirstF.TabIndex = 14;
             btn_FirstF.Text = "First Floor";
+            btn_FirstF.Click += btn_FirstF_Click;
             // 
             // pictureBox1
             // 
@@ -180,20 +184,20 @@ namespace Gimji.GUI.Home
             panel2.BackColor = Color.Transparent;
             panel2.BackgroundImage = (Image)resources.GetObject("panel2.BackgroundImage");
             panel2.BackgroundImageLayout = ImageLayout.Stretch;
-            panel2.Controls.Add(flow_pal_listtable);
+            panel2.Controls.Add(flow_pal_BookTable);
             panel2.Controls.Add(label2);
             panel2.Location = new Point(949, 6);
             panel2.Name = "panel2";
             panel2.Size = new Size(415, 800);
             panel2.TabIndex = 4;
             // 
-            // flow_pal_listtable
+            // flow_pal_BookTable
             // 
-            flow_pal_listtable.AutoScroll = true;
-            flow_pal_listtable.Location = new Point(9, 89);
-            flow_pal_listtable.Name = "flow_pal_listtable";
-            flow_pal_listtable.Size = new Size(394, 695);
-            flow_pal_listtable.TabIndex = 4;
+            flow_pal_BookTable.AutoScroll = true;
+            flow_pal_BookTable.Location = new Point(9, 89);
+            flow_pal_BookTable.Name = "flow_pal_BookTable";
+            flow_pal_BookTable.Size = new Size(394, 695);
+            flow_pal_BookTable.TabIndex = 4;
             // 
             // label2
             // 
@@ -228,22 +232,160 @@ namespace Gimji.GUI.Home
             // 
             pal_inforTable.BackgroundImage = (Image)resources.GetObject("pal_inforTable.BackgroundImage");
             pal_inforTable.BackgroundImageLayout = ImageLayout.Stretch;
-            pal_inforTable.Controls.Add(button1);
+            pal_inforTable.Controls.Add(txt_TableId);
+            pal_inforTable.Controls.Add(datetime_CheckIn);
+            pal_inforTable.Controls.Add(btn_Submit);
             pal_inforTable.Controls.Add(label13);
-            pal_inforTable.Controls.Add(textBox4);
+            pal_inforTable.Controls.Add(txt_Num_Guest);
             pal_inforTable.Controls.Add(label14);
-            pal_inforTable.Controls.Add(textBox3);
             pal_inforTable.Controls.Add(label15);
-            pal_inforTable.Controls.Add(textBox1);
             pal_inforTable.Controls.Add(label16);
-            pal_inforTable.Controls.Add(textBox2);
+            pal_inforTable.Controls.Add(txt_CustomerName);
             pal_inforTable.Controls.Add(pictureBox9);
             pal_inforTable.Controls.Add(pictureBox10);
             pal_inforTable.Controls.Add(pictureBox11);
             pal_inforTable.Location = new Point(39, 725);
             pal_inforTable.Name = "pal_inforTable";
-            pal_inforTable.Size = new Size(870, 65);
+            pal_inforTable.Size = new Size(880, 65);
             pal_inforTable.TabIndex = 9;
+            // 
+            // txt_TableId
+            // 
+            txt_TableId.AutoSize = true;
+            txt_TableId.BackColor = Color.Transparent;
+            txt_TableId.Location = new Point(604, 35);
+            txt_TableId.Name = "txt_TableId";
+            txt_TableId.Size = new Size(17, 20);
+            txt_TableId.TabIndex = 35;
+            txt_TableId.Text = "0";
+            // 
+            // datetime_CheckIn
+            // 
+            datetime_CheckIn.BackColor = Color.White;
+            datetime_CheckIn.BorderColor = Color.White;
+            datetime_CheckIn.Checked = true;
+            datetime_CheckIn.CustomFormat = "HH:mm:ss dd/MM/yyyy";
+            datetime_CheckIn.CustomizableEdges = customizableEdges5;
+            datetime_CheckIn.FillColor = Color.White;
+            datetime_CheckIn.FocusedColor = Color.White;
+            datetime_CheckIn.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            datetime_CheckIn.ForeColor = SystemColors.ActiveCaptionText;
+            datetime_CheckIn.Format = DateTimePickerFormat.Custom;
+            datetime_CheckIn.Location = new Point(281, 29);
+            datetime_CheckIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            datetime_CheckIn.MinDate = new DateTime(2023, 11, 8, 0, 0, 0, 0);
+            datetime_CheckIn.Name = "datetime_CheckIn";
+            datetime_CheckIn.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            datetime_CheckIn.ShowUpDown = true;
+            datetime_CheckIn.Size = new Size(225, 28);
+            datetime_CheckIn.TabIndex = 34;
+            datetime_CheckIn.Value = new DateTime(2023, 11, 24, 0, 0, 0, 0);
+            // 
+            // btn_Submit
+            // 
+            btn_Submit.BackgroundImage = (Image)resources.GetObject("btn_Submit.BackgroundImage");
+            btn_Submit.BackgroundImageLayout = ImageLayout.Stretch;
+            btn_Submit.FlatAppearance.BorderSize = 0;
+            btn_Submit.FlatStyle = FlatStyle.Flat;
+            btn_Submit.Location = new Point(827, 14);
+            btn_Submit.Name = "btn_Submit";
+            btn_Submit.Size = new Size(43, 43);
+            btn_Submit.TabIndex = 32;
+            btn_Submit.UseVisualStyleBackColor = true;
+            btn_Submit.Click += btn_Submit_Click;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.BackColor = Color.Transparent;
+            label13.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.Location = new Point(740, 9);
+            label13.Name = "label13";
+            label13.Size = new Size(54, 23);
+            label13.TabIndex = 31;
+            label13.Text = "Guest";
+            // 
+            // txt_Num_Guest
+            // 
+            txt_Num_Guest.BorderStyle = BorderStyle.None;
+            txt_Num_Guest.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_Num_Guest.ForeColor = SystemColors.ScrollBar;
+            txt_Num_Guest.Location = new Point(710, 36);
+            txt_Num_Guest.Name = "txt_Num_Guest";
+            txt_Num_Guest.PlaceholderText = "Add guest";
+            txt_Num_Guest.Size = new Size(111, 18);
+            txt_Num_Guest.TabIndex = 30;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.BackColor = Color.Transparent;
+            label14.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label14.Location = new Point(587, 13);
+            label14.Name = "label14";
+            label14.Size = new Size(49, 23);
+            label14.TabIndex = 29;
+            label14.Text = "Table";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.BackColor = Color.Transparent;
+            label15.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label15.Location = new Point(360, 8);
+            label15.Name = "label15";
+            label15.Size = new Size(76, 23);
+            label15.TabIndex = 27;
+            label15.Text = "Check in";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.BackColor = Color.Transparent;
+            label16.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            label16.Location = new Point(22, 9);
+            label16.Name = "label16";
+            label16.Size = new Size(56, 23);
+            label16.TabIndex = 25;
+            label16.Text = "Name";
+            // 
+            // txt_CustomerName
+            // 
+            txt_CustomerName.BorderStyle = BorderStyle.None;
+            txt_CustomerName.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_CustomerName.ForeColor = SystemColors.ScrollBar;
+            txt_CustomerName.Location = new Point(27, 37);
+            txt_CustomerName.Name = "txt_CustomerName";
+            txt_CustomerName.PlaceholderText = "What is your name ?";
+            txt_CustomerName.Size = new Size(173, 18);
+            txt_CustomerName.TabIndex = 24;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = SystemColors.AppWorkspace;
+            pictureBox9.Location = new Point(681, 15);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(1, 40);
+            pictureBox9.TabIndex = 23;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.BackColor = SystemColors.AppWorkspace;
+            pictureBox10.Location = new Point(240, 17);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(1, 40);
+            pictureBox10.TabIndex = 22;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.BackColor = SystemColors.AppWorkspace;
+            pictureBox11.Location = new Point(554, 17);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(1, 40);
+            pictureBox11.TabIndex = 21;
+            pictureBox11.TabStop = false;
             // 
             // pal_status
             // 
@@ -256,15 +398,6 @@ namespace Gimji.GUI.Home
             pal_status.Name = "pal_status";
             pal_status.Size = new Size(879, 59);
             pal_status.TabIndex = 10;
-            // 
-            // flow_pal_table
-            // 
-            flow_pal_table.AutoScroll = true;
-            flow_pal_table.BackColor = Color.Transparent;
-            flow_pal_table.Location = new Point(39, 111);
-            flow_pal_table.Name = "flow_pal_table";
-            flow_pal_table.Size = new Size(880, 495);
-            flow_pal_table.TabIndex = 12;
             // 
             // panel5
             // 
@@ -358,7 +491,7 @@ namespace Gimji.GUI.Home
             // 
             // panel3
             // 
-            panel3.Controls.Add(label5);
+            panel3.Controls.Add(txt_ClosedTable);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(pictureBox6);
             panel3.Location = new Point(373, 6);
@@ -366,18 +499,18 @@ namespace Gimji.GUI.Home
             panel3.Size = new Size(133, 46);
             panel3.TabIndex = 7;
             // 
-            // label5
+            // txt_ClosedTable
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.Transparent;
-            label5.FlatStyle = FlatStyle.Flat;
-            label5.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.Gray;
-            label5.Location = new Point(30, 23);
-            label5.Name = "label5";
-            label5.Size = new Size(57, 19);
-            label5.TabIndex = 2;
-            label5.Text = "2 tables";
+            txt_ClosedTable.AutoSize = true;
+            txt_ClosedTable.BackColor = Color.Transparent;
+            txt_ClosedTable.FlatStyle = FlatStyle.Flat;
+            txt_ClosedTable.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_ClosedTable.ForeColor = Color.Gray;
+            txt_ClosedTable.Location = new Point(30, 23);
+            txt_ClosedTable.Name = "txt_ClosedTable";
+            txt_ClosedTable.Size = new Size(57, 19);
+            txt_ClosedTable.TabIndex = 2;
+            txt_ClosedTable.Text = "2 tables";
             // 
             // label6
             // 
@@ -403,7 +536,7 @@ namespace Gimji.GUI.Home
             // 
             // panel1
             // 
-            panel1.Controls.Add(label3);
+            panel1.Controls.Add(txt_AvailableTable);
             panel1.Controls.Add(label4);
             panel1.Controls.Add(pictureBox7);
             panel1.Location = new Point(195, 6);
@@ -411,18 +544,18 @@ namespace Gimji.GUI.Home
             panel1.Size = new Size(133, 46);
             panel1.TabIndex = 8;
             // 
-            // label3
+            // txt_AvailableTable
             // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.Transparent;
-            label3.FlatStyle = FlatStyle.Flat;
-            label3.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.ForeColor = Color.Gray;
-            label3.Location = new Point(30, 23);
-            label3.Name = "label3";
-            label3.Size = new Size(57, 19);
-            label3.TabIndex = 2;
-            label3.Text = "2 tables";
+            txt_AvailableTable.AutoSize = true;
+            txt_AvailableTable.BackColor = Color.Transparent;
+            txt_AvailableTable.FlatStyle = FlatStyle.Flat;
+            txt_AvailableTable.Font = new Font("Segoe UI", 8F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_AvailableTable.ForeColor = Color.Gray;
+            txt_AvailableTable.Location = new Point(30, 23);
+            txt_AvailableTable.Name = "txt_AvailableTable";
+            txt_AvailableTable.Size = new Size(57, 19);
+            txt_AvailableTable.TabIndex = 2;
+            txt_AvailableTable.Text = "2 tables";
             // 
             // label4
             // 
@@ -491,132 +624,14 @@ namespace Gimji.GUI.Home
             pictureBox8.TabIndex = 0;
             pictureBox8.TabStop = false;
             // 
-            // button1
+            // flow_pal_Table
             // 
-            button1.BackgroundImage = (Image)resources.GetObject("button1.BackgroundImage");
-            button1.BackgroundImageLayout = ImageLayout.Stretch;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Location = new Point(805, 14);
-            button1.Name = "button1";
-            button1.Size = new Size(43, 43);
-            button1.TabIndex = 32;
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(664, 7);
-            label13.Name = "label13";
-            label13.Size = new Size(54, 23);
-            label13.TabIndex = 31;
-            label13.Text = "Guest";
-            // 
-            // textBox4
-            // 
-            textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.ForeColor = SystemColors.ScrollBar;
-            textBox4.Location = new Point(669, 35);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(111, 18);
-            textBox4.TabIndex = 30;
-            textBox4.Text = "Add guest";
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.BackColor = Color.Transparent;
-            label14.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.Location = new Point(482, 9);
-            label14.Name = "label14";
-            label14.Size = new Size(49, 23);
-            label14.TabIndex = 29;
-            label14.Text = "Table";
-            // 
-            // textBox3
-            // 
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.ForeColor = SystemColors.ScrollBar;
-            textBox3.Location = new Point(489, 37);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(135, 18);
-            textBox3.TabIndex = 28;
-            textBox3.Text = "T1";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.BackColor = Color.Transparent;
-            label15.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label15.Location = new Point(296, 9);
-            label15.Name = "label15";
-            label15.Size = new Size(76, 23);
-            label15.TabIndex = 27;
-            label15.Text = "Check in";
-            // 
-            // textBox1
-            // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.ForeColor = SystemColors.ScrollBar;
-            textBox1.Location = new Point(301, 38);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(124, 18);
-            textBox1.TabIndex = 26;
-            textBox1.Text = "Automatic";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.BackColor = Color.Transparent;
-            label16.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label16.Location = new Point(22, 9);
-            label16.Name = "label16";
-            label16.Size = new Size(56, 23);
-            label16.TabIndex = 25;
-            label16.Text = "Name";
-            // 
-            // textBox2
-            // 
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.ForeColor = SystemColors.ScrollBar;
-            textBox2.Location = new Point(27, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(173, 18);
-            textBox2.TabIndex = 24;
-            textBox2.Text = "What is your name ?";
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.BackColor = SystemColors.AppWorkspace;
-            pictureBox9.Location = new Point(629, 14);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(1, 40);
-            pictureBox9.TabIndex = 23;
-            pictureBox9.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.BackColor = SystemColors.AppWorkspace;
-            pictureBox10.Location = new Point(261, 13);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(1, 40);
-            pictureBox10.TabIndex = 22;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            pictureBox11.BackColor = SystemColors.AppWorkspace;
-            pictureBox11.Location = new Point(453, 14);
-            pictureBox11.Name = "pictureBox11";
-            pictureBox11.Size = new Size(1, 40);
-            pictureBox11.TabIndex = 21;
-            pictureBox11.TabStop = false;
+            flow_pal_Table.AutoScroll = true;
+            flow_pal_Table.BackColor = Color.Transparent;
+            flow_pal_Table.Location = new Point(39, 111);
+            flow_pal_Table.Name = "flow_pal_Table";
+            flow_pal_Table.Size = new Size(880, 495);
+            flow_pal_Table.TabIndex = 12;
             // 
             // uc_Home
             // 
@@ -624,7 +639,7 @@ namespace Gimji.GUI.Home
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Control;
             Controls.Add(pictureBox2);
-            Controls.Add(flow_pal_table);
+            Controls.Add(flow_pal_Table);
             Controls.Add(pal_status);
             Controls.Add(pal_inforTable);
             Controls.Add(pictureBox3);
@@ -632,6 +647,7 @@ namespace Gimji.GUI.Home
             Controls.Add(pal_header);
             Name = "uc_Home";
             Size = new Size(1369, 829);
+            Load += uc_Home_Load;
             pal_header.ResumeLayout(false);
             pal_header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -641,6 +657,9 @@ namespace Gimji.GUI.Home
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             pal_inforTable.ResumeLayout(false);
             pal_inforTable.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             pal_status.ResumeLayout(false);
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
@@ -657,9 +676,6 @@ namespace Gimji.GUI.Home
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
         }
 
@@ -673,8 +689,8 @@ namespace Gimji.GUI.Home
         private PictureBox pictureBox3;
         private Panel pal_inforTable;
         private Panel pal_status;
-        private FlowLayoutPanel flow_pal_listtable;
-        private FlowLayoutPanel flow_pal_table;
+        private FlowLayoutPanel flow_pal_BookTable;
+        private FlowLayoutPanel flow_pal_Table;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btn_SecondF;
         private Guna.UI2.WinForms.Guna2Button btn_FirstF;
@@ -687,28 +703,28 @@ namespace Gimji.GUI.Home
         private Label label8;
         private PictureBox pictureBox4;
         private Panel panel3;
-        private Label label5;
+        private Label txt_ClosedTable;
         private Label label6;
         private PictureBox pictureBox6;
         private Panel panel1;
-        private Label label3;
+        private Label txt_AvailableTable;
         private Label label4;
         private PictureBox pictureBox7;
         private Panel panel6;
         private Label label11;
         private Label label12;
         private PictureBox pictureBox8;
-        private Button button1;
+        private Button btn_Submit;
         private Label label13;
-        private TextBox textBox4;
+        private TextBox txt_Num_Guest;
         private Label label14;
-        private TextBox textBox3;
         private Label label15;
-        private TextBox textBox1;
         private Label label16;
-        private TextBox textBox2;
+        private TextBox txt_CustomerName;
         private PictureBox pictureBox9;
         private PictureBox pictureBox10;
         private PictureBox pictureBox11;
+        private Guna.UI2.WinForms.Guna2DateTimePicker datetime_CheckIn;
+        private Label txt_TableId;
     }
 }

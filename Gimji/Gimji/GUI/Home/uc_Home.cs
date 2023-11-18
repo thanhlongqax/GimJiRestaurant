@@ -1,9 +1,13 @@
-﻿using System;
+﻿using Gimji.BLL;
+using Gimji.DTO;
+using Gimji.GUI.Management.CustomerManagement;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,50 +16,110 @@ namespace Gimji.GUI.Home
 {
     public partial class uc_Home : UserControl
     {
+        private uc_Table selectedTable; // Biến toàn cục để lưu trữ uc_Staff được chọn
         public uc_Home()
         {
             InitializeComponent();
 
-            populateStatusTable();
-
-            populateTable();
-
-
-
         }
-        public void populateTable()
+        private void uc_Home_Load(object sender, EventArgs e)
         {
-            uc_listTable[] listTables = new uc_listTable[10];
-            for (int i = 0; i < listTables.Length; i++)
+            LoadData();
+        }
+        private void LoadData()
+        {
+            CRUD_BookTable_BLL newBLL = new CRUD_BookTable_BLL();
+            foreach (Table newTable in newBLL.getAllTable_BLL())
             {
-                listTables[i] = new uc_listTable();
-                listTables[i].Name = "Lucas";
-                listTables[i].Guest = "5";
+                uc_Table uc_Table = new uc_Table();
+                uc_Table.ID = newTable.TableId;
 
-                if (flow_pal_listtable.Controls.Count < 0)
+                // Đăng ký sự kiện BtnBookTableClick cho mỗi uc_Home
+                uc_Table.BtnBookTableClick += (s, eventArgs) =>
                 {
-                    flow_pal_listtable.Controls.Clear();
-                }
-                else
-                    flow_pal_listtable.Controls.Add(listTables[i]);
+                    // Lưu trữ uc_Table được chọn vào biến toàn cục
+                    selectedTable = (uc_Table)s;
+                    HandleBtnBookTableClick((uc_Table)s, newTable);
+                };
+
+                flow_pal_Table.Controls.Add(uc_Table);
             }
         }
-        public void populateStatusTable()
+        private void HandleBtnBookTableClick(uc_Table uc_Table, Table table)
         {
-            uc_Table[] Table = new uc_Table[10];
-            for (int i = 0; i < Table.Length; i++)
+            txt_TableId.Text = uc_Table.ID.ToString();
+        }
+        private void btn_FirstF_Click(object sender, EventArgs e)
+        {
+            int floor = 1;
+            LoadDataByFloor(floor);
+        }
+
+        private void btn_SecondF_Click(object sender, EventArgs e)
+        {
+            int floor = 2;
+            LoadDataByFloor(floor);
+        }
+        private void LoadDataByFloor(int floor)
+        {
+            flow_pal_Table.Controls.Clear();
+            CRUD_BookTable_BLL newBLL = new CRUD_BookTable_BLL();
+            foreach (Table table in newBLL.GetTableByFloor_BLL(floor))
             {
-                Table[i] = new uc_Table();
+                uc_Table uc_Table = new uc_Table();
+                uc_Table.ID = table.TableId;
 
-
-                if (flow_pal_table.Controls.Count < 0)
-                {
-                    flow_pal_table.Controls.Clear();
-                }
-                else
-                    flow_pal_table.Controls.Add(Table[i]);
+                flow_pal_Table.Controls.Add(uc_Table);
             }
         }
 
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            int number;
+            if (string.IsNullOrWhiteSpace(txt_CustomerName.Text))
+            {
+                MessageBox.Show("Mời Bạn Nhập Tên Khách Hàng.");
+            }
+            else if (datetime_CheckIn.Value == DateTimePicker.MinimumDateTime)
+            {
+                MessageBox.Show("Chọn Ngày Khách Hàng Đặt Bàn.");
+            }
+            else if (string.Equals(txt_TableId, "0"))
+            {
+                MessageBox.Show("Mời Khách Hàng Chọn Bàn.");
+            }
+            else if (string.IsNullOrEmpty(txt_Num_Guest.Text))
+            {
+                MessageBox.Show("Mời Khách Hàng Nhập Số Guest dự kiến.");
+            }
+
+            else if (string.IsNullOrEmpty(txt_Num_Guest.Text) && ! (int.TryParse(txt_Num_Guest.Text, out int numGuest)))
+            {
+                MessageBox.Show("Mời Khách Hàng Nhập Số Guest dự kiến.");
+            }
+            LoadData_Detail_Table();
+            txt_CustomerName.Text = string.Empty;
+            txt_Num_Guest.Text = string.Empty;
+            txt_TableId.Text = string.Empty;
+            datetime_CheckIn.Value = DateTime.Now;
+        }
+        private void LoadData_Detail_Table()
+        {
+            uc_Detail_Table detail = new uc_Detail_Table();
+            Table_NV newTale = new Table_NV();
+            CRUD_BookTable_BLL newBLL= new CRUD_BookTable_BLL();
+            detail.Name = txt_CustomerName.Text;
+            detail.Time = datetime_CheckIn.Value.ToString("HH:mm:ss dd-MM-yyyy");
+            detail.Num_Guest = txt_Num_Guest.Text;
+
+            newTale.CustomerName = txt_CustomerName.Text;
+            newTale.Date_Table_Set = datetime_CheckIn.Value;
+            newTale.Note = txt_Num_Guest.Text;
+            newTale.TableId = Convert.ToInt32(txt_TableId.Text);
+            newBLL.AddCookTable_BLL(newTale);
+
+            
+            flow_pal_BookTable.Controls.Add(detail);
+        }
     }
 }

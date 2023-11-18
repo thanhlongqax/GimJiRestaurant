@@ -35,37 +35,16 @@ namespace Gimji.GUI.Login_SignUp
             {
                 MessageBox.Show("Vui lòng nhập mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-            tkBLL.checkLoginData_Login_BLL(tk);
-
-            /*
+            string id = tkBLL.checkLoginData_Login_BLL(tk);
+            if(id != null)
             {
-                if (ehe.getIdByUsername(tk.userName).ToString().Contains('A'))
-                {
-                    MainAdmin newMain = new MainAdmin(ehe.getIdByUsername(tk.userName).ToString());
-                    this.Parent.Parent.Hide();
-                    newMain.ShowDialog();
-                }
-                else if (ehe.getIdByUsername(tk.userName).ToString().Contains('U'))
-                {
-                    MainUser newMain = new MainUser(ehe.getIdByUsername(tk.userName).ToString());
-                    this.Parent.Parent.Hide();
-                    newMain.ShowDialog();
-                }
-                else if (ehe.getIdByUsername(tk.userName).ToString().Contains('S'))
-                {
-                    MainStaff newMain = new MainStaff(ehe.getIdByUsername(tk.userName).ToString());
-                    this.Parent.Parent.Hide();
-                    newMain.ShowDialog();
-                }
-                else if (ehe.getIdByUsername(tk.userName).ToString().Contains('M'))
-                {
-                    MainManager newMain = new MainManager(ehe.getIdByUsername(tk.userName).ToString());
-                    this.Parent.Parent.Hide();
-                    newMain.ShowDialog();
-                }
-                return;
-            }*/
+                Stored_Login_Infor.StorageUser(id);
+                this.ParentForm.Hide();
+                mainForm mainForm = new mainForm();
+                mainForm.ShowDialog();
+                this.ParentForm.Show();
+            }
+
         }
     }
 }

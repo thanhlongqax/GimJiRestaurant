@@ -17,7 +17,7 @@ namespace Gimji.DAO
 {
     internal class DatabaseAccess
     {
-        public String strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
+        public static String  strConn = ConfigurationManager.ConnectionStrings["MyConn"].ConnectionString;
 
         //Code lay id tu ten truyen vao 
         public String getIdByUsername_DAO(String name)
