@@ -53,17 +53,21 @@ namespace Gimji.GUI.Menu
 
         }
 
-        private void btn_KimBak_Click(object sender, EventArgs e)
+        private void btn_Kimbak_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_Com_Tron_Click(object sender, EventArgs e)
+        private void btn_Rice_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void btn_Thit_Nuong_Click(object sender, EventArgs e)
+        private void btn_Meat_Click(object sender, EventArgs e)
         {
 
         }

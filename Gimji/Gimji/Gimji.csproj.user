@@ -10,6 +10,24 @@
     <Compile Update="GUI\Home\uc_Table.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\Kitchen\uc_Kitchen.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Kitchen\uc_listFood.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Kitchen\uc_orderConfirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Login_Register\Main_Login_Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="GUI\Login_Register\uc_Login.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Login_Register\uc_Register.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\Login_SignUp\uc_Login.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -25,13 +43,31 @@
     <Compile Update="GUI\Management\CustomerManagement\uc_customerManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="GUI\Management\Inventory Management\uc_inventory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\Inventory Management\uc_inventoryManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\OrderManagement\uc_listOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\OrderManagement\uc_OrderMangement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\Management\ProductManagement\uc_product.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Management\ProductManagement\uc_productManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Management\RevenueManagement\revenueManagement.cs">
+    <Compile Update="GUI\Management\RevenueManagement\uc_revenueManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\SaleManagement\uc_sale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Management\SaleManagement\uc_SaleManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\Management\ShiftManagement\uc_shift.cs">
@@ -64,10 +100,22 @@
     <Compile Update="GUI\Login_SignUp\Main_Form_LoginRegister.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="GUI\Order\uc_Order.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\Order\uc_orderList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\PayMent\uc_credirCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="GUI\PayMent\uc_MonAn_Paymentcs.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Update="GUI\PayMent\uc_Payment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="GUI\PayMent\uc_qrCode.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
