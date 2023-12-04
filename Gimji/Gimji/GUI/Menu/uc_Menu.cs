@@ -34,24 +34,6 @@ namespace Gimji.GUI.Menu
 
         }
 
-        private void guna_btn_tokbo_Click(object sender, EventArgs e)
-        {
-
-            // uc_MonAn a = new uc_MonAn();
-            //a.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
-            ////, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
-            //fl_Panel_Thuc_Don.Controls.Clear();
-            //Tokbokki.setMonAn("Tokbokki Pho Mai", "50000VND", @"Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png");
-            ////, @"Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai"
-
-            //fl_Panel_Thuc_Don.Controls.Add(Tokbokki);
-            for (int i = 0; i < 5; i++)
-            {
-                fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
-            }
-
-
-        }
 
         private void btn_Kimbak_Click(object sender, EventArgs e)
         {
@@ -59,7 +41,10 @@ namespace Gimji.GUI.Menu
         }
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
-
+            for (int i = 0; i < 5; i++)
+            {
+                fl_Panel_Thuc_Don.Controls.Add(new uc_MonAn());
+            }
         }
 
         private void btn_Rice_Click(object sender, EventArgs e)

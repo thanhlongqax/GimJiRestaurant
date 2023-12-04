@@ -39,9 +39,9 @@
             btn_remove = new Guna.UI2.WinForms.Guna2Button();
             btn_edit = new Guna.UI2.WinForms.Guna2Button();
             lb_status = new Label();
-            lb_name = new Label();
             lb_id = new Label();
             lb_stt = new Label();
+            lb_name = new Label();
             pal_sale.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,9 +54,9 @@
             pal_sale.Controls.Add(btn_remove);
             pal_sale.Controls.Add(btn_edit);
             pal_sale.Controls.Add(lb_status);
-            pal_sale.Controls.Add(lb_name);
             pal_sale.Controls.Add(lb_id);
             pal_sale.Controls.Add(lb_stt);
+            pal_sale.Controls.Add(lb_name);
             pal_sale.CustomizableEdges = customizableEdges5;
             pal_sale.Location = new Point(0, 0);
             pal_sale.Name = "pal_sale";
@@ -84,6 +84,7 @@
             btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_remove.Size = new Size(27, 27);
             btn_remove.TabIndex = 5;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit
             // 
@@ -104,6 +105,7 @@
             btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_edit.Size = new Size(27, 27);
             btn_edit.TabIndex = 4;
+            btn_edit.Click += btn_edit_Click;
             // 
             // lb_status
             // 
@@ -116,19 +118,6 @@
             lb_status.Size = new Size(67, 28);
             lb_status.TabIndex = 3;
             lb_status.Text = "Active";
-            // 
-            // lb_name
-            // 
-            lb_name.AutoSize = true;
-            lb_name.BackColor = Color.Transparent;
-            lb_name.FlatStyle = FlatStyle.Flat;
-            lb_name.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_name.ForeColor = SystemColors.ButtonHighlight;
-            lb_name.Location = new Point(218, 4);
-            lb_name.Name = "lb_name";
-            lb_name.Size = new Size(101, 28);
-            lb_name.TabIndex = 2;
-            lb_name.Text = "Christmas";
             // 
             // lb_id
             // 
@@ -153,6 +142,19 @@
             lb_stt.Size = new Size(20, 28);
             lb_stt.TabIndex = 0;
             lb_stt.Text = "1";
+            // 
+            // lb_name
+            // 
+            lb_name.AutoSize = true;
+            lb_name.BackColor = Color.Transparent;
+            lb_name.FlatStyle = FlatStyle.Flat;
+            lb_name.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_name.ForeColor = SystemColors.ButtonHighlight;
+            lb_name.Location = new Point(218, 4);
+            lb_name.Name = "lb_name";
+            lb_name.Size = new Size(101, 28);
+            lb_name.TabIndex = 2;
+            lb_name.Text = "Christmas";
             // 
             // uc_sale
             // 
