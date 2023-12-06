@@ -383,7 +383,8 @@ go
 CREATE TABLE Hoa_don (
    id_hoa_don INT PRIMARY KEY,
    ngay_lap DATETIME not null,
-   tong_tien FLOAT not null,
+   so_luong int not null,
+
    id_nhan_vien varchar(8) ,
    id_khach_hang varchar(8)
 );
