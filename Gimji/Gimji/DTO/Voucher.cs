@@ -8,11 +8,12 @@ namespace Gimji.DTO
 {
     internal class Voucher
     {
-        public int voucherId { get; set; }
+        public string voucherId { get; set; }
         public string voucherName { get; set; }
+        public string voucherStatus { get; set; }
         public string voucherDescription { get; set;}
         public string voucherCondition { get; set;}
-        public string voucherDateTimeIn { get; set;}
-        public string voucherDateTimeOut { get; set;}
+        public DateTime voucherDateTimeIn { get; set;}
+        public DateTime voucherDateTimeOut { get; set;}
     }
 }

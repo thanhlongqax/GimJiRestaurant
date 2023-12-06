@@ -39,7 +39,7 @@
             pal_formLogin = new Guna.UI2.WinForms.Guna2Panel();
             btn_signIn = new Guna.UI2.WinForms.Guna2Button();
             check = new Guna.UI2.WinForms.Guna2CheckBox();
-            label3 = new Label();
+            lb_forgot = new Label();
             label2 = new Label();
             txt_password = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
@@ -51,7 +51,7 @@
             // 
             pal_formLogin.Controls.Add(btn_signIn);
             pal_formLogin.Controls.Add(check);
-            pal_formLogin.Controls.Add(label3);
+            pal_formLogin.Controls.Add(lb_forgot);
             pal_formLogin.Controls.Add(label2);
             pal_formLogin.Controls.Add(txt_password);
             pal_formLogin.Controls.Add(label1);
@@ -80,6 +80,7 @@
             btn_signIn.Size = new Size(158, 50);
             btn_signIn.TabIndex = 6;
             btn_signIn.Text = "SIGN IN";
+            btn_signIn.Click += btn_signIn_Click;
             // 
             // check
             // 
@@ -100,15 +101,18 @@
             check.UncheckedState.BorderThickness = 0;
             check.UncheckedState.FillColor = Color.White;
             // 
-            // label3
+            // lb_forgot
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = Color.FromArgb(233, 214, 147);
-            label3.Location = new Point(301, 225);
-            label3.Name = "label3";
-            label3.Size = new Size(127, 20);
-            label3.TabIndex = 4;
-            label3.Text = "Forgot password?";
+            lb_forgot.AutoSize = true;
+            lb_forgot.ForeColor = Color.FromArgb(233, 214, 147);
+            lb_forgot.Location = new Point(301, 225);
+            lb_forgot.Name = "lb_forgot";
+            lb_forgot.Size = new Size(127, 20);
+            lb_forgot.TabIndex = 0;
+            lb_forgot.Text = "Forgot password?";
+            lb_forgot.Click += lb_forgot_Click;
+            lb_forgot.MouseClick += lb_forgot_MouseClick;
+            lb_forgot.MouseDoubleClick += lb_forgot_MouseDoubleClick;
             // 
             // label2
             // 
@@ -136,13 +140,14 @@
             txt_password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_password.Location = new Point(21, 160);
             txt_password.Name = "txt_password";
-            txt_password.PasswordChar = '\0';
+            txt_password.PasswordChar = '●';
             txt_password.PlaceholderForeColor = Color.Gray;
             txt_password.PlaceholderText = "Enter your password";
             txt_password.SelectedText = "";
             txt_password.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txt_password.Size = new Size(407, 49);
             txt_password.TabIndex = 2;
+            txt_password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
@@ -196,7 +201,7 @@
         private Guna.UI2.WinForms.Guna2Panel pal_formLogin;
         private Guna.UI2.WinForms.Guna2Button btn_signIn;
         private Guna.UI2.WinForms.Guna2CheckBox check;
-        private Label label3;
+        private Label lb_forgot;
         private Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txt_password;
         private Label label1;

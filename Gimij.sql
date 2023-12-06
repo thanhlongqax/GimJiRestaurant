@@ -474,10 +474,76 @@ ALTER TABLE Chi_tiet_giao_hang ADD CONSTRAINT FK_Chi_tiet_giao_hang_Danh_muc_mon
 
 go
 CREATE TABLE Uu_Dai(
-   id_UuDai INT PRIMARY KEY,
+   id_UuDai varchar(100) PRIMARY KEY,
    ten_UuDai NVARCHAR(200),
+   statu NVARCHAR(20),
    mo_ta NVARCHAR(200),
    dieu_kien NVARCHAR(200),
    timeBatDau DATE default current_timestamp,
    timeKetThuc DATE default current_timestamp
+<<<<<<< HEAD
 )
+=======
+);
+go
+
+CREATE PROCEDURE InsertVoucher
+    @nameVoucher varchar(500),
+	@status varchar(20),
+    @description nvarchar(500),
+	@conditions nvarchar(500),
+	@dateStart Date,
+	@dateEnd Date
+as
+begin
+    declare @newIdVoucher char(7)
+	declare @maxIdVoucher varchar(500)
+	set @newIdVoucher = 'VC00001'
+	select @maxIdVoucher = cast(max(cast(substring(id_UuDai, 3, 7) as int)) + 1 as varchar) from Uu_Dai where substring(id_UuDai, 1, 2) = 'VC'
+	if (cast(@maxIdVoucher as int) > cast(substring(@newIdVoucher, 3,7) as int))
+	begin
+		while (len(@maxIdVoucher) < 5)
+		begin
+			set @maxIdVoucher = '0' + @maxIdVoucher
+		end
+		set @newIdVoucher = 'VC' + @maxIdVoucher 
+	end
+	    insert into Uu_Dai(id_UuDai,ten_UuDai,statu,mo_ta,dieu_kien,timeBatDau,timeKetThuc) values 
+			(@newIdVoucher,@nameVoucher,@status,@description,@conditions,@dateStart,@dateEnd);
+end
+
+go
+
+CREATE PROCEDURE UpdateVoucherById
+	@idVoucher varchar(500),
+    @nameVoucher varchar(500),
+	@status varchar(20),
+    @description nvarchar(500),
+	@conditions nvarchar(500),
+	@dateStart Date,
+	@dateEnd Date
+as
+begin 
+	update Uu_Dai
+	Set 
+		id_UuDai = @idVoucher,
+		ten_UuDai = @nameVoucher,
+		statu = @status,
+		mo_ta = @description,
+		dieu_kien = @conditions,
+		timeBatDau = @dateStart,
+		timeKetThuc = @dateEnd
+	Where 
+		id_UuDai = @idVoucher;
+end
+drop procedure UpdateVoucherById
+go
+
+EXEC InsertVoucher 
+    @nameVoucher = 'Discount50',
+	@status ='Active',
+    @description = '50% off on selected items',
+    @conditions = 'Valid for purchases above $100',
+    @dateStart = '2023-12-01',
+    @dateEnd = '2024-01-01';
+>>>>>>> c9e83286b5c8f61c22ab4bae3b502a08c71e8791

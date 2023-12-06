@@ -1,5 +1,6 @@
 ﻿using Gimji.DAO;
 using Gimji.DTO;
+using Gimji.GUI.Login_Register;
 using Microsoft.Data.SqlClient;
 
 namespace Gimji
@@ -13,7 +14,7 @@ namespace Gimji
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Main_Form_LoginRegister());
+            Application.Run(new Main_Login_Register());
         }
     }
 }

@@ -39,14 +39,22 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             pal_form = new Guna.UI2.WinForms.Guna2Panel();
             label_welcome = new Label();
             pal_button = new Guna.UI2.WinForms.Guna2Panel();
             btn_Register = new Guna.UI2.WinForms.Guna2Button();
             btn_Login = new Guna.UI2.WinForms.Guna2Button();
+            pal_header = new Guna.UI2.WinForms.Guna2Panel();
+            pal_forgot = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             pal_button.SuspendLayout();
+            pal_header.SuspendLayout();
+            pal_forgot.SuspendLayout();
             SuspendLayout();
             // 
             // guna2PictureBox1
@@ -66,7 +74,7 @@
             // pal_form
             // 
             pal_form.CustomizableEdges = customizableEdges3;
-            pal_form.Location = new Point(625, 229);
+            pal_form.Location = new Point(22, 182);
             pal_form.Name = "pal_form";
             pal_form.ShadowDecoration.CustomizableEdges = customizableEdges4;
             pal_form.Size = new Size(444, 434);
@@ -77,10 +85,10 @@
             label_welcome.AutoSize = true;
             label_welcome.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point);
             label_welcome.ForeColor = Color.FromArgb(233, 214, 147);
-            label_welcome.Location = new Point(720, 101);
+            label_welcome.Location = new Point(82, 19);
             label_welcome.Name = "label_welcome";
             label_welcome.Size = new Size(262, 38);
-            label_welcome.TabIndex = 2;
+            label_welcome.TabIndex = 1;
             label_welcome.Text = "Hi, Welcome Back!";
             // 
             // pal_button
@@ -91,7 +99,7 @@
             pal_button.Controls.Add(btn_Login);
             pal_button.CustomizableEdges = customizableEdges9;
             pal_button.FillColor = Color.FromArgb(248, 237, 221);
-            pal_button.Location = new Point(680, 142);
+            pal_button.Location = new Point(42, 60);
             pal_button.Name = "pal_button";
             pal_button.ShadowDecoration.CustomizableEdges = customizableEdges10;
             pal_button.Size = new Size(343, 61);
@@ -135,23 +143,46 @@
             btn_Login.Text = "Login";
             btn_Login.Click += btn_Login_Click;
             // 
+            // pal_header
+            // 
+            pal_header.BackColor = Color.Transparent;
+            pal_header.Controls.Add(pal_button);
+            pal_header.Controls.Add(label_welcome);
+            pal_header.CustomizableEdges = customizableEdges11;
+            pal_header.Location = new Point(30, 21);
+            pal_header.Name = "pal_header";
+            pal_header.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pal_header.Size = new Size(421, 141);
+            pal_header.TabIndex = 1;
+            // 
+            // pal_forgot
+            // 
+            pal_forgot.Controls.Add(pal_header);
+            pal_forgot.Controls.Add(pal_form);
+            pal_forgot.CustomizableEdges = customizableEdges13;
+            pal_forgot.Location = new Point(604, 25);
+            pal_forgot.Name = "pal_forgot";
+            pal_forgot.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            pal_forgot.Size = new Size(475, 710);
+            pal_forgot.TabIndex = 2;
+            // 
             // Main_Login_Register
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(130, 0, 0);
             ClientSize = new Size(1082, 753);
-            Controls.Add(pal_button);
-            Controls.Add(label_welcome);
-            Controls.Add(pal_form);
+            Controls.Add(pal_forgot);
             Controls.Add(guna2PictureBox1);
             Name = "Main_Login_Register";
             Text = "Main_Login_Register";
             Load += Main_Login_Register_Load;
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             pal_button.ResumeLayout(false);
+            pal_header.ResumeLayout(false);
+            pal_header.PerformLayout();
+            pal_forgot.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -162,5 +193,7 @@
         private Guna.UI2.WinForms.Guna2Panel pal_button;
         private Guna.UI2.WinForms.Guna2Button btn_Register;
         private Guna.UI2.WinForms.Guna2Button btn_Login;
+        private Guna.UI2.WinForms.Guna2Panel pal_header;
+        private Guna.UI2.WinForms.Guna2Panel pal_forgot;
     }
 }

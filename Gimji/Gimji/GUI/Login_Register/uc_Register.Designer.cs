@@ -93,13 +93,14 @@
             txt_confirmPass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_confirmPass.Location = new Point(21, 261);
             txt_confirmPass.Name = "txt_confirmPass";
-            txt_confirmPass.PasswordChar = '\0';
+            txt_confirmPass.PasswordChar = '●';
             txt_confirmPass.PlaceholderForeColor = Color.Gray;
             txt_confirmPass.PlaceholderText = "Enter your password";
             txt_confirmPass.SelectedText = "";
             txt_confirmPass.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txt_confirmPass.Size = new Size(407, 49);
             txt_confirmPass.TabIndex = 7;
+            txt_confirmPass.UseSystemPasswordChar = true;
             // 
             // btn_signIn
             // 
@@ -118,6 +119,7 @@
             btn_signIn.Size = new Size(158, 50);
             btn_signIn.TabIndex = 6;
             btn_signIn.Text = "REGISTER";
+            btn_signIn.Click += btn_signIn_Click;
             // 
             // check
             // 
@@ -137,6 +139,7 @@
             check.UncheckedState.BorderRadius = 0;
             check.UncheckedState.BorderThickness = 0;
             check.UncheckedState.FillColor = Color.White;
+            check.Visible = false;
             // 
             // label2
             // 
@@ -164,13 +167,14 @@
             txt_password.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_password.Location = new Point(21, 160);
             txt_password.Name = "txt_password";
-            txt_password.PasswordChar = '\0';
+            txt_password.PasswordChar = '●';
             txt_password.PlaceholderForeColor = Color.Gray;
             txt_password.PlaceholderText = "Enter your password";
             txt_password.SelectedText = "";
             txt_password.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txt_password.Size = new Size(407, 49);
             txt_password.TabIndex = 2;
+            txt_password.UseSystemPasswordChar = true;
             // 
             // label1
             // 
