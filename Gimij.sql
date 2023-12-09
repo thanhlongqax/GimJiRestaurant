@@ -1,4 +1,5 @@
-﻿drop database if exists Gimji
+﻿use master;
+drop database if exists Gimji
 go
 
 create database Gimji;
@@ -231,7 +232,7 @@ EXEC InsertStaffLoginData
     @contactAddress = N'789 Đường C, Quận 3, TP.HCM',
     @phoneNumber = '0912345678',
     @DateOfBirth = '1995-03-10',
-    @userName = 'hoangminhcuong',
+    @userName = 'thanhlong',
     @userPassword = 'mypassword123',
     @position = N'Nhân Viên',
 	@gender = N'Nam';
@@ -353,19 +354,16 @@ VALUES
     (N'Bàn 7', 2)
 go
 Create table Ban_NV(
-	id_nhan_vien VARCHAR(8),
 	id_ban INT ,
 	ten_khach_hang nvarchar(200) , 
 	sdt_khach_hang nvarchar(200) ,
 	ghi_chu VARCHAR(200),
 	ngay_dat_ban Date,
-	primary key (id_nhan_vien , id_ban),
+	primary key (id_ban),
 	CONSTRAINT fk_ban FOREIGN KEY (id_ban) REFERENCES Ban(id_ban),
-	CONSTRAINT fk_ban_NV FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien)
 );
 go
 CREATE PROCEDURE InsertTable_NV (
-    @id_nhan_vien VARCHAR(8),
     @id_ban INT,
     @ten_khach_hang NVARCHAR(200),
     @sdt_khach_hang NVARCHAR(200),
@@ -375,8 +373,8 @@ CREATE PROCEDURE InsertTable_NV (
 AS
 BEGIN
     -- Insert a new record into Ban_NV table
-    INSERT INTO Ban_NV (id_nhan_vien, id_ban, ten_khach_hang, sdt_khach_hang, ghi_chu, ngay_dat_ban)
-    VALUES (@id_nhan_vien, @id_ban, @ten_khach_hang, @sdt_khach_hang, @ghi_chu, @ngay_dat_ban);
+    INSERT INTO Ban_NV (id_ban, ten_khach_hang, sdt_khach_hang, ghi_chu, ngay_dat_ban)
+    VALUES (@id_ban, @ten_khach_hang, @sdt_khach_hang, @ghi_chu, @ngay_dat_ban);
 END;
 go
 -- Tạo bảng Hoa_don
@@ -481,9 +479,6 @@ CREATE TABLE Uu_Dai(
    dieu_kien NVARCHAR(200),
    timeBatDau DATE default current_timestamp,
    timeKetThuc DATE default current_timestamp
-<<<<<<< HEAD
-)
-=======
 );
 go
 
@@ -546,4 +541,49 @@ EXEC InsertVoucher
     @conditions = 'Valid for purchases above $100',
     @dateStart = '2023-12-01',
     @dateEnd = '2024-01-01';
->>>>>>> c9e83286b5c8f61c22ab4bae3b502a08c71e8791
+
+CREATE TABLE CartItem (
+	IdTaiKhoan varchar(8),
+    Id INT PRIMARY KEY identity,
+    Name NVARCHAR(255),
+    Price float,
+	hinh_anh NVARCHAR(200),
+    Quantity INT
+);
+go
+CREATE PROCEDURE GetCartItemsByIdTaiKhoan
+    @IdTaiKhoan varchar(8)
+AS
+BEGIN
+    SELECT 
+        c.Id,
+        c.Name,
+        c.Price,
+		c.hinh_anh,
+        c.Quantity
+    FROM 
+        CartItem c
+    WHERE 
+        c.IdTaiKhoan = @IdTaiKhoan;
+END;
+go
+CREATE PROCEDURE InsertCartItem
+    @IdTaiKhoan varchar(8),
+    @Name NVARCHAR(255),
+    @Price FLOAT,
+    @hinh_anh NVARCHAR(200),
+    @Quantity INT
+AS
+BEGIN
+    INSERT INTO CartItem (IdTaiKhoan, Name, Price, hinh_anh, Quantity)
+    VALUES (@IdTaiKhoan, @Name, @Price, @hinh_anh, @Quantity);
+END;
+go
+CREATE PROCEDURE DeleteCartItemById
+    @Id INT
+AS
+BEGIN
+    DELETE FROM CartItem
+    WHERE Id = @Id;
+END;
+

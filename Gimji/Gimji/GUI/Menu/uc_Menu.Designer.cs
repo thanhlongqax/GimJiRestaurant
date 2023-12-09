@@ -184,6 +184,7 @@
             btn_Send.Size = new Size(152, 45);
             btn_Send.TabIndex = 9;
             btn_Send.Text = "SEND ORDER";
+            btn_Send.Click += btn_Send_Click;
             // 
             // btn_Cancel
             // 

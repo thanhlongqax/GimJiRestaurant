@@ -70,6 +70,7 @@ namespace Gimji.GUI.Management.ProductManagement
                     // Thay "default_image.jpg" bằng hình ảnh mặc định của bạn.                                                                                                  // Hoặc hiển thị thông báo lỗi
                     MessageBox.Show("Lỗi Đường Dẫn: " + ex.Message);
                 }
+                
                 uc_Product.ID = Dish.DishId;
                 uc_Product.NameTxt = Dish.DishName;
                 uc_Product.PriceTxt = Dish.DishPrice;
@@ -150,7 +151,7 @@ namespace Gimji.GUI.Management.ProductManagement
             dish.DishId = Id;
             dish.DishName = txt_Name.Text;
             dish.DishPrice = Convert.ToDouble(txt_Price.Text);
-            if (url_HinhAnh != null)
+            if (url_HinhAnh == null)
             {
                 url_HinhAnh = "Resources/AnhMonAn/Default.jpg";
             }

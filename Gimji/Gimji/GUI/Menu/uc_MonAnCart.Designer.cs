@@ -134,6 +134,7 @@
             btn_Remove.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btn_Remove.Size = new Size(25, 25);
             btn_Remove.TabIndex = 13;
+            btn_Remove.Click += btn_Remove_Click;
             // 
             // pic_DishPicture
             // 

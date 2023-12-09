@@ -16,6 +16,9 @@ namespace Gimji.GUI.Menu
     public partial class uc_MonAnCart : UserControl
     {
         int quantity = 0;
+        private int idProduct;
+        private int idCategory;
+        public event EventHandler BtnDeleteClick;
         public uc_MonAnCart()
         {
             InitializeComponent();
@@ -26,14 +29,9 @@ namespace Gimji.GUI.Menu
 
         }
 
-        private void pic_image_Click(object sender, EventArgs e)
-        {
-        }
-
         private void btn_Plus_Click(object sender, EventArgs e)
         {
             quantity++;
-            // Cập nhật hiển thị số lượng trên Label hoặc TextBox
             txt_Quanity.Text = quantity.ToString();
         }
 
@@ -47,32 +45,46 @@ namespace Gimji.GUI.Menu
             }
         }
 
-
-    #region Properties
-
-    public Guna2PictureBox PicBox
+        private void btn_Remove_Click(object sender, EventArgs e)
         {
-            get { return pic_DishPicture; }
-            set { pic_DishPicture = value; }
+            BtnDeleteClick?.Invoke(this, e);
         }
 
-        public Label Title
+
+        #region Properties
+
+        public Image PictureBox
         {
-            get { return txt_DishName; }
-            set { txt_DishName = value; }
-        }
-        public Label Price
-        {
-            get { return txt_DishPrice; }
-            set { txt_DishPrice = value; }
+            get { return pic_DishPicture.Image; }
+            set { pic_DishPicture.Image = value; }
         }
 
-        public Label Count
+        public String Name
         {
-            get { return txt_Quanity; }
-            set { txt_Quanity = value; }
+            get { return txt_DishName.Text; }
+            set { txt_DishName.Text = value; }
+        }
+        public double Price
+        {
+            get { return Convert.ToDouble(txt_DishPrice.Text); }
+            set { txt_DishPrice.Text = value.ToString(); }
         }
 
+        public int Count
+        {
+            get { return Convert.ToInt32(txt_Quanity.Text); }
+            set { txt_Quanity.Text = value.ToString(); }
+        }
+        public int ID
+        {
+            get { return idProduct; }
+            set { idProduct = value; }
+        }
+        public int IdCategory
+        {
+            get { return idCategory; }
+            set { idCategory = value; }
+        }
         #endregion
     }
 }

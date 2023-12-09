@@ -13,47 +13,47 @@ namespace Gimji.GUI.Menu
 {
     public partial class uc_MonAn : UserControl
     {
+        private int idProduct;
+        private int idCategory;
+        public event EventHandler BtnBuyClick;
         public uc_MonAn()
         {
             InitializeComponent();
         }
-        public void setMonAn(String tenMonAn, String giaTien, String hinhAnh)
-        {
-            //    txt_TenMonAn.Text = tenMonAn;
-            //    txt_GiaTien.Text = giaTien;
-            //    if (System.IO.File.Exists(hinhAnh))
-            //    {
-            //        pictureBox_hinhAnh.BackgroundImage = Image.FromFile(hinhAnh);
-            //    }
-            //    else
-            //    {
-            //        // Xử lý trường hợp tệp hình ảnh không tồn tại
-            //        // Ví dụ: Hiển thị một hình ảnh mặc định hoặc thông báo lỗi.
-            //        pictureBox_hinhAnh.Image = null; // Gán hình ảnh mặc định hoặc null
-            //    }
-        }
 
         #region Properties
-
-        public Guna2CirclePictureBox PicBox
+        public int ID
         {
-            get { return pic_DishPicture; }
-            set { pic_DishPicture = value; }
+            get { return idProduct; }
+            set { idProduct = value; }
+        }
+        public Image PictureBox
+        {
+            get { return pic_DishPicture.Image; }
+            set { pic_DishPicture.Image = value; }
         }
 
-        public Label Title
+        public String Name
         {
-            get { return txt_DishName; }
-            set { txt_DishName = value; }
+            get { return txt_DishName.Text; }
+            set { txt_DishName.Text = value; }
         }
-        public Label Price
+        public double Price
         {
-            get { return txt_DishPrice; }
-            set { txt_DishPrice = value; }
+            get { return Convert.ToDouble(txt_DishPrice.Text); }
+            set { txt_DishPrice.Text = value.ToString(); }
         }
-
+        public int IdCategory
+        {
+            get { return idCategory; }
+            set { idCategory = value; }
+        }
         #endregion
 
 
+        private void btn_Buy_Click(object sender, EventArgs e)
+        {
+            BtnBuyClick?.Invoke(this, e);
+        }
     }
 }
