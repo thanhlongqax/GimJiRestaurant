@@ -377,23 +377,6 @@ BEGIN
     VALUES (@id_ban, @ten_khach_hang, @sdt_khach_hang, @ghi_chu, @ngay_dat_ban);
 END;
 go
--- Tạo bảng Hoa_don
-CREATE TABLE Hoa_don (
-   id_hoa_don INT PRIMARY KEY,
-   ngay_lap DATETIME not null,
-   so_luong int not null,
-
-   id_nhan_vien varchar(8) ,
-   id_khach_hang varchar(8)
-);
-go
--- Add a foreign key to nhan_vien_id in the sHoa_don table
-ALTER TABLE Hoa_don ADD CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien);
-go
--- Add a foreign key to khach_hang_id in the Hoa_don table
-ALTER TABLE Hoa_don ADD CONSTRAINT FK_Hoa_don_Khach_hang FOREIGN KEY (id_khach_hang) REFERENCES Khach_hang(id_khach_hang);
-go
-
 -- Tạo bảng Phuong_thuc_thanh_toan
 CREATE TABLE Phuong_thuc_thanh_toan (
    id_phuong_thuc INT PRIMARY KEY,
@@ -405,24 +388,71 @@ Insert into Phuong_thuc_thanh_toan(id_phuong_thuc , ten_phuong_thuc )values
 	(2,N'Credit Card'),
 	(3,N'QR Code')
 go
+-- Tạo bảng Hoa_don
+CREATE TABLE Hoa_don (
+   id_hoa_don INT PRIMARY KEY identity,
+   ngay_lap DATETIME not null,
+   so_luong int not null,
+   id_nhan_vien varchar(8) CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien) ,
+   trang_thai varchar(200)
+);
+go
+
 -- Tạo bảng Chi_tiet_hoa_don
 CREATE TABLE Chi_tiet_hoa_don (
    id_chi_tiet INT PRIMARY KEY identity,
-   id_hoa_don INT,
-   id_mon_an INT,
+   id_hoa_don INT CONSTRAINT FK_Chi_tiet_hoa_don_Hoa_don FOREIGN KEY (id_hoa_don) REFERENCES Hoa_don(id_hoa_don);,
+   id_mon_an INT CONSTRAINT FK_Chi_tiet_hoa_don_Danh_muc_mon_an FOREIGN KEY (id_mon_an) REFERENCES Mon_an(id_mon_an),
    so_luong INT NOT NULL,
    don_gia FLOAT NOT NULL,
-   id_phuong_thuc INT
+   id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc)
 );
 go
--- Add a foreign key to hoa_don_id in the Chi_tiet_hoa_don table
-ALTER TABLE Chi_tiet_hoa_don ADD CONSTRAINT FK_Chi_tiet_hoa_don_Hoa_don FOREIGN KEY (id_hoa_don) REFERENCES Hoa_don(id_hoa_don);
-go
--- Add a foreign key to mon_an_id in the Chi_tiet_hoa_don table
-ALTER TABLE Chi_tiet_hoa_don ADD CONSTRAINT FK_Chi_tiet_hoa_don_Danh_muc_mon_an FOREIGN KEY (id_mon_an) REFERENCES Mon_an(id_mon_an);
-go
--- Add a foreign key to phuong_thuc_id in the Chi_tiet_hoa_don table
-ALTER TABLE Chi_tiet_hoa_don ADD CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc);
+-- Cập nhật stored procedure getAllHoaDon
+ALTER PROCEDURE getAllHoaDon
+AS
+BEGIN
+    SELECT id_hoa_don, ngay_lap, so_luong, id_nhan_vien, trang_thai
+    FROM Hoa_don;
+END;
+
+-- Cập nhật stored procedure insertHoaDon
+ALTER PROCEDURE insertHoaDon
+   @ngay_lap DATETIME,
+   @so_luong INT,
+   @id_nhan_vien VARCHAR(8),
+   @trang_thai VARCHAR(200)
+AS
+BEGIN
+   INSERT INTO Hoa_don (ngay_lap, so_luong, id_nhan_vien, trang_thai)
+   VALUES (@ngay_lap, @so_luong, @id_nhan_vien, @trang_thai);
+END;
+
+-- Cập nhật stored procedure updateHoaDon
+ALTER PROCEDURE updateHoaDon
+   @id_hoa_don INT,
+   @ngay_lap DATETIME,
+   @so_luong INT,
+   @id_nhan_vien VARCHAR(8),
+   @trang_thai VARCHAR(200)
+AS
+BEGIN
+   UPDATE Hoa_don
+   SET ngay_lap = @ngay_lap,
+       so_luong = @so_luong,
+       id_nhan_vien = @id_nhan_vien,
+       trang_thai = @trang_thai
+   WHERE id_hoa_don = @id_hoa_don;
+END;
+
+-- Cập nhật stored procedure deleteHoaDon
+ALTER PROCEDURE deleteHoaDon
+   @id_hoa_don INT
+AS
+BEGIN
+   DELETE FROM Hoa_don
+   WHERE id_hoa_don = @id_hoa_don;
+END;
 go
 -- Tạo bảng Ca_lam
 CREATE TABLE Ca_lam (

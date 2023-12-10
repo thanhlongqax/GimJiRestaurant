@@ -54,6 +54,7 @@
             sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
             lb_Payment = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            lbl_idOrder = new Label();
             flow_pal_listOrder = new FlowLayoutPanel();
             panel1 = new Panel();
             label10 = new Label();
@@ -67,7 +68,6 @@
             label6 = new Label();
             lb_idTable = new Label();
             label3 = new Label();
-            lb_idOrder = new Label();
             label1 = new Label();
             guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             pal_payment = new Guna.UI2.WinForms.Guna2Panel();
@@ -124,6 +124,7 @@
             // 
             guna2Panel1.BackColor = Color.Transparent;
             guna2Panel1.BorderRadius = 10;
+            guna2Panel1.Controls.Add(lbl_idOrder);
             guna2Panel1.Controls.Add(flow_pal_listOrder);
             guna2Panel1.Controls.Add(panel1);
             guna2Panel1.Controls.Add(pictureBox2);
@@ -132,7 +133,6 @@
             guna2Panel1.Controls.Add(label6);
             guna2Panel1.Controls.Add(lb_idTable);
             guna2Panel1.Controls.Add(label3);
-            guna2Panel1.Controls.Add(lb_idOrder);
             guna2Panel1.Controls.Add(label1);
             guna2Panel1.CustomizableEdges = customizableEdges1;
             guna2Panel1.FillColor = Color.FromArgb(127, 21, 21);
@@ -141,6 +141,17 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Panel1.Size = new Size(926, 687);
             guna2Panel1.TabIndex = 6;
+            // 
+            // lbl_idOrder
+            // 
+            lbl_idOrder.AutoSize = true;
+            lbl_idOrder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_idOrder.ForeColor = Color.White;
+            lbl_idOrder.Location = new Point(120, 23);
+            lbl_idOrder.Name = "lbl_idOrder";
+            lbl_idOrder.Size = new Size(82, 28);
+            lbl_idOrder.TabIndex = 10;
+            lbl_idOrder.Text = "label15";
             // 
             // flow_pal_listOrder
             // 
@@ -279,17 +290,6 @@
             label3.Size = new Size(76, 25);
             label3.TabIndex = 2;
             label3.Text = "TABLE : ";
-            // 
-            // lb_idOrder
-            // 
-            lb_idOrder.AutoSize = true;
-            lb_idOrder.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_idOrder.ForeColor = Color.White;
-            lb_idOrder.Location = new Point(122, 20);
-            lb_idOrder.Name = "lb_idOrder";
-            lb_idOrder.Size = new Size(120, 28);
-            lb_idOrder.TabIndex = 1;
-            lb_idOrder.Text = "#12345678";
             // 
             // label1
             // 
@@ -708,6 +708,7 @@
             Controls.Add(lb_Payment);
             Name = "uc_Payment";
             Size = new Size(1368, 827);
+            Load += uc_Payment_Load;
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
             panel1.ResumeLayout(false);
@@ -737,7 +738,6 @@
         private Label label6;
         private Label lb_idTable;
         private Label label3;
-        private Label lb_idOrder;
         private Label label1;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
@@ -772,5 +772,6 @@
         private Guna.UI2.WinForms.Guna2TextBox guna_txt_code;
         private Guna.UI2.WinForms.Guna2Panel pal_payment;
         private Guna.UI2.WinForms.Guna2CheckBox btn_print;
+        private Label lbl_idOrder;
     }
 }

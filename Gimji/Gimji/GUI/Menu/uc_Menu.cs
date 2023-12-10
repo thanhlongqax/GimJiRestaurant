@@ -1,5 +1,5 @@
-﻿using Gimji.BLL;
-using Gimji.DTO;
+﻿using Gimji.DTO;
+using Gimji.BLL;
 using Gimji.GUI.Management.ProductManagement;
 using System;
 using System.Collections.Generic;
@@ -18,6 +18,7 @@ namespace Gimji.GUI.Menu
         int IdCategory = 0;
         private uc_MonAn selectedMonAn; // Biến toàn cục để lưu trữ uc_MonAn được chọn
         private uc_MonAnCart selectedMonAnCart;
+        private List<CartItem> listCartItems;
 
         public uc_Menu()
         {
@@ -27,6 +28,7 @@ namespace Gimji.GUI.Menu
         private void uc_Menu_Load(object sender, EventArgs e)
         {
             loadData();
+            loadDataMonAnCart();
         }
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
@@ -102,7 +104,6 @@ namespace Gimji.GUI.Menu
             cartItem.IdMonAn = uc_MonAn.ID;
             cartItem.Name = uc_MonAn.Name;
             cartItem.Price = uc_MonAn.Price;
-            cartItem.Quantity = 1;
             cartItem.DishPicture = newDish.DishPicture;
             cartItem.Catergory_Id = uc_MonAn.IdCategory;
             newBLL.InsertCartItem(cartItem);
@@ -114,7 +115,7 @@ namespace Gimji.GUI.Menu
             flow_pal_listMonAnCart_Clear();
             CRUD_CartItem_BLL newBLL = new CRUD_CartItem_BLL();
             String idTaiKhoan = Stored_Login_Infor.GetCurrentUser();
-            List<CartItem> listCartItems = newBLL.getAllCartItemById_BLL(idTaiKhoan);
+            listCartItems = newBLL.getAllCartItemById_BLL(idTaiKhoan);
             foreach (var cartItem in listCartItems)
             {
                 uc_MonAnCart uc_MonAnCart = new uc_MonAnCart();
@@ -239,6 +240,7 @@ namespace Gimji.GUI.Menu
                     // Lưu trữ uc_product được chọn vào biến toàn cục
                     selectedMonAn = (uc_MonAn)s;
                     HandleBtnBuyClick((uc_MonAn)s, Dish);
+                    loadDataMonAnCart();
 
                 };
                 fl_Panel_Thuc_Don.Controls.Add(uc_MonAn);
@@ -248,7 +250,26 @@ namespace Gimji.GUI.Menu
         private void btn_Send_Click(object sender, EventArgs e)
         {
             CRUD_CartItem_BLL newBLL = new CRUD_CartItem_BLL();
-            List
+            CartItemManager.SaveCartItems(listCartItems);
+
+            List<CartItem> cartItems = CartItemManager.GetCartItems();
+
+            StringBuilder message = new StringBuilder();
+
+            foreach (CartItem item in cartItems)
+            {
+                message.AppendLine($"Id: {item.Id}, Name: {item.Name}, Price: {item.Price}, Quantity: {item.Quantity}");
+                // Add more properties as needed
+            }
+
+            MessageBox.Show(message.ToString(), "Cart Items Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            foreach (var cartItem in listCartItems)
+            {
+                newBLL.deleteCartItemById(cartItem.Id);
+
+            }
+            loadDataMonAnCart();
         }
     }
 }

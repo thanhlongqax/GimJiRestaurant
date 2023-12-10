@@ -83,6 +83,7 @@
             btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges1;
             btn_remove.Size = new Size(25, 25);
             btn_remove.TabIndex = 14;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_minus
             // 
@@ -98,6 +99,7 @@
             btn_minus.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_minus.Size = new Size(35, 25);
             btn_minus.TabIndex = 12;
+            btn_minus.Click += btn_minus_Click;
             // 
             // btn_plus
             // 
@@ -113,6 +115,7 @@
             btn_plus.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btn_plus.Size = new Size(35, 25);
             btn_plus.TabIndex = 13;
+            btn_plus.Click += btn_plus_Click;
             // 
             // pictureBox6
             // 
