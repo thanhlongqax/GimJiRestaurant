@@ -28,7 +28,6 @@ namespace Gimji.GUI.Menu
         private void uc_Menu_Load(object sender, EventArgs e)
         {
             loadData();
-            loadDataMonAnCart();
         }
         private void btn_Tokbokki_Click(object sender, EventArgs e)
         {
@@ -120,9 +119,13 @@ namespace Gimji.GUI.Menu
             {
                 uc_MonAnCart uc_MonAnCart = new uc_MonAnCart();
                 uc_MonAnCart.ID = cartItem.Id;
+                uc_MonAnCart.idMonAns = cartItem.IdMonAn;
                 uc_MonAnCart.IdCategory = cartItem.Catergory_Id;
                 uc_MonAnCart.Name = cartItem.Name;
                 uc_MonAnCart.Price = cartItem.Price;
+                uc_MonAnCart.Count = 1;
+                cartItem.Quantity = uc_MonAnCart.Count;
+
                 try
                 {
                     uc_MonAnCart.PictureBox = Image.FromFile(cartItem.DishPicture);
@@ -140,6 +143,19 @@ namespace Gimji.GUI.Menu
                     selectedMonAnCart = (uc_MonAnCart)s;
                     btn_delete_Click(s, eventArgs);
                     loadDataMonAnCart();
+                };
+                uc_MonAnCart.BtnMinusClick += (s, eventArgs) =>
+                {
+ 
+                    uc_MonAnCart.Count--;
+                    cartItem.Quantity = uc_MonAnCart.Count;
+
+                };
+                uc_MonAnCart.BtnPlusClick += (s, eventArgs) =>
+                {
+
+                    uc_MonAnCart.Count++;
+                    cartItem.Quantity = uc_MonAnCart.Count;
                 };
                 flow_pal_List.Controls.Add(uc_MonAnCart);
             }
@@ -250,6 +266,7 @@ namespace Gimji.GUI.Menu
         private void btn_Send_Click(object sender, EventArgs e)
         {
             CRUD_CartItem_BLL newBLL = new CRUD_CartItem_BLL();
+           
             CartItemManager.SaveCartItems(listCartItems);
 
             List<CartItem> cartItems = CartItemManager.GetCartItems();
@@ -258,7 +275,7 @@ namespace Gimji.GUI.Menu
 
             foreach (CartItem item in cartItems)
             {
-                message.AppendLine($"Id: {item.Id}, Name: {item.Name}, Price: {item.Price}, Quantity: {item.Quantity}");
+                message.AppendLine($"IdMonAn: {item.IdMonAn}, Name: {item.Name}, Price: {item.Price}, Quantity: {item.Quantity}");
                 // Add more properties as needed
             }
 

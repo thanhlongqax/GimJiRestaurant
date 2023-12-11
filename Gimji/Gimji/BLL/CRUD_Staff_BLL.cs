@@ -31,5 +31,9 @@ namespace Gimji.BLL
         {
             newDao.UpdateStaff_DAO(staff);
         }
+        public List<string> getAllStaffIds()
+        {
+            return newDao.getAllStaffIds();
+        }
     }
 }

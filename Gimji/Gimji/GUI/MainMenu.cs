@@ -10,6 +10,7 @@ using Gimji.GUI.Management;
 using Gimji.GUI.Order;
 using Gimji.GUI.Kitchen;
 using Gimji.GUI.Login_Register;
+using Gimji.BLL;
 
 namespace Gimji
 {
@@ -20,6 +21,17 @@ namespace Gimji
         {
             InitializeComponent();
             date_time.Text = DateTime.Now.ToLongDateString();
+            guna_btn_Management.Enabled = true;
+            guna_btn_Management.Visible = true;
+            CRUD_Staff_BLL newBLL = new CRUD_Staff_BLL();
+            List<String> idNhanVien = newBLL.getAllStaffIds();
+            string currentUser = Stored_Login_Infor.GetCurrentUser();
+            if (currentUser != null && idNhanVien.Contains(currentUser))
+            {
+                guna_btn_Management.Enabled = false;
+                guna_btn_Management.Visible = false;
+                lbl_Management.Visible = false;
+            }
         }
 
         private void mainForm_Load(object sender, EventArgs e)

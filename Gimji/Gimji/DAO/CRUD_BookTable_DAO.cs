@@ -44,6 +44,39 @@ namespace Gimji.DAO
 
             return listTable;
         }
+        public List<Table_NV> getAllBan_NV_DAO()
+        {
+            List<Table_NV> listBan_NV = new List<Table_NV>();
+
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+
+                string sSQL = "SELECT * FROM Ban_NV";
+                SqlCommand command = new SqlCommand(sSQL, conn);
+
+                using (SqlDataAdapter da = new SqlDataAdapter(command))
+                {
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        Table_NV ban_NV = new Table_NV
+                        {
+                            IdBan = Convert.ToInt32(row["id_ban"]),
+                            TenKhachHang = row["ten_khach_hang"].ToString(),
+                            SdtKhachHang = row["sdt_khach_hang"].ToString(),
+                            GhiChu = row["ghi_chu"].ToString(),
+                            NgayDatBan = Convert.ToDateTime(row["ngay_dat_ban"])
+                        };
+                        listBan_NV.Add(ban_NV);
+                    }
+                }
+            }
+
+            return listBan_NV;
+        }
+
         //_______________________________________________________________________________________________________________
         // lay ban theo Floor _____________________________________________________________________________________________
         public List<Table> GetTableByFloor_DAO(int floor)
@@ -81,7 +114,7 @@ namespace Gimji.DAO
 
         //_______________________________________________________________________________________________________________
         // lay ra ban da dat _____________________________________________________________________________________________
-        public List<Table_NV> getBooKTableAll() {
+        /*public List<Table_NV> getBooKTableAll() {
             List<Table_NV> CookTable = new List<Table_NV>();
             using (SqlConnection conn = new SqlConnection(strConn))
             {
@@ -110,7 +143,7 @@ namespace Gimji.DAO
                 }
             }
             return CookTable;
-        }
+        }*/
         //_______________________________________________________________________________________________________________
         // Thêm Bàn MỚi _____________________________________________________________________________________________
         public void AddCookTable_DAO(Table_NV table_NV)
@@ -124,10 +157,11 @@ namespace Gimji.DAO
                 using (SqlCommand command = new SqlCommand(insertTableProcedure, conn))
                 {
                     command.CommandType = CommandType.StoredProcedure;
-                    command.Parameters.AddWithValue("@id_ban", table_NV.TableId);
-                    command.Parameters.AddWithValue("@ngay_dat_ban",table_NV.Date_Table_Set );
-                    command.Parameters.AddWithValue("@ghi_chu", table_NV.Note);
-                    command.Parameters.AddWithValue("@id_nhan_vien", Stored_Login_Infor.GetCurrentUser());
+                    command.Parameters.AddWithValue("@id_ban", table_NV.IdBan);
+                    command.Parameters.AddWithValue("@ngay_dat_ban",table_NV.NgayDatBan );
+                    command.Parameters.AddWithValue("@ghi_chu", table_NV.GhiChu);
+                    command.Parameters.AddWithValue("@sdt_khach_hang", "0817757012");
+                    command.Parameters.AddWithValue("@ten_khach_hang", table_NV.TenKhachHang);
                     command.ExecuteNonQuery();
                 }
             }

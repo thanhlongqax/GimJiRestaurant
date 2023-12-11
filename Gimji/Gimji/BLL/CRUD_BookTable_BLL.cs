@@ -28,5 +28,9 @@ namespace Gimji.BLL
         public void DeleteTable_BLL(int tableId) { 
             newDAo.DeleteTable_DAO(tableId);    
         }
+        public List<Table_NV> getAllBan_NV_DAO()
+        {
+            return newDAo.getAllBan_NV_DAO();
+        }
     }
 }

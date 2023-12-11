@@ -44,6 +44,16 @@ namespace Gimji.GUI.Home
 
                 flow_pal_Table.Controls.Add(uc_Table);
             }
+            List<Table_NV> tables_NV = newBLL.getAllBan_NV_DAO();
+            foreach(Table_NV table_NV in tables_NV)
+            {
+                uc_Detail_Table uc_Detail_Table = new uc_Detail_Table();
+                Table_NV newTale = new Table_NV();
+                uc_Detail_Table.Name = table_NV.TenKhachHang;
+                uc_Detail_Table.Time =table_NV.NgayDatBan.ToString("HH:mm:ss dd-MM-yyyy");
+                uc_Detail_Table.Num_Guest = table_NV.GhiChu;
+                flow_pal_Table.Controls.Add(uc_Detail_Table);
+            }
         }
         private void HandleBtnBookTableClick(uc_Table uc_Table, Table table)
         {
@@ -112,10 +122,11 @@ namespace Gimji.GUI.Home
             detail.Time = datetime_CheckIn.Value.ToString("HH:mm:ss dd-MM-yyyy");
             detail.Num_Guest = txt_Num_Guest.Text;
 
-            newTale.CustomerName = txt_CustomerName.Text;
-            newTale.Date_Table_Set = datetime_CheckIn.Value;
-            newTale.Note = txt_Num_Guest.Text;
-            newTale.TableId = Convert.ToInt32(txt_TableId.Text);
+            newTale.TenKhachHang = txt_CustomerName.Text;
+            newTale.NgayDatBan = datetime_CheckIn.Value;
+            newTale.GhiChu = txt_Num_Guest.Text;
+            newTale.IdBan = Convert.ToInt32(txt_TableId.Text);
+
             newBLL.AddCookTable_BLL(newTale);
 
             

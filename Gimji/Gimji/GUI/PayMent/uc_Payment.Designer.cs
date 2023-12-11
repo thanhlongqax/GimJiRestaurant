@@ -75,7 +75,7 @@
             btn_print = new Guna.UI2.WinForms.Guna2CheckBox();
             guna_btn_apply = new Guna.UI2.WinForms.Guna2Button();
             guna_txt_code = new Guna.UI2.WinForms.Guna2TextBox();
-            label13 = new Label();
+            lb_Tax = new Label();
             label14 = new Label();
             btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             btn_save = new Guna.UI2.WinForms.Guna2Button();
@@ -339,7 +339,7 @@
             pal_total.Controls.Add(btn_print);
             pal_total.Controls.Add(guna_btn_apply);
             pal_total.Controls.Add(guna_txt_code);
-            pal_total.Controls.Add(label13);
+            pal_total.Controls.Add(lb_Tax);
             pal_total.Controls.Add(label14);
             pal_total.Controls.Add(btn_cancel);
             pal_total.Controls.Add(btn_save);
@@ -424,17 +424,17 @@
             guna_txt_code.Size = new Size(366, 40);
             guna_txt_code.TabIndex = 25;
             // 
-            // label13
+            // lb_Tax
             // 
-            label13.AutoSize = true;
-            label13.BackColor = Color.Transparent;
-            label13.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.ForeColor = Color.White;
-            label13.Location = new Point(333, 88);
-            label13.Name = "label13";
-            label13.Size = new Size(47, 23);
-            label13.TabIndex = 21;
-            label13.Text = "Price";
+            lb_Tax.AutoSize = true;
+            lb_Tax.BackColor = Color.Transparent;
+            lb_Tax.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_Tax.ForeColor = Color.White;
+            lb_Tax.Location = new Point(333, 88);
+            lb_Tax.Name = "lb_Tax";
+            lb_Tax.Size = new Size(47, 23);
+            lb_Tax.TabIndex = 21;
+            lb_Tax.Text = "Price";
             // 
             // label14
             // 
@@ -490,6 +490,7 @@
             btn_save.Size = new Size(170, 45);
             btn_save.TabIndex = 19;
             btn_save.Text = "Confirm Payment";
+            btn_save.Click += btn_save_Click;
             // 
             // lb_totalPrice
             // 
@@ -764,7 +765,7 @@
         private Label label11;
         private Label lb_subPrice;
         private Label label12;
-        private Label label13;
+        private Label lb_Tax;
         private Label label14;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;
         private Guna.UI2.WinForms.Guna2Button btn_save;

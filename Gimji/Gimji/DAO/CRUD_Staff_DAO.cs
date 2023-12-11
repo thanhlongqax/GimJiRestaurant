@@ -45,6 +45,30 @@ namespace Gimji.DAO
 
             return staffList;
         }
+        public List<string> getAllStaffIds()
+        {
+            List<string> staffIds = new List<string>();
+
+            using (SqlConnection conn = new SqlConnection(strConn))
+            {
+                conn.Open();
+                string sSQL = "SELECT id_nhan_vien FROM Nhan_vien";
+                SqlCommand cmd = new SqlCommand(sSQL, conn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                conn.Close();
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    string staffId = row["id_nhan_vien"].ToString();
+                    staffIds.Add(staffId);
+                }
+            }
+
+            return staffIds;
+        }
+
         // _____________________________________________________________________________________________
         // lay tat ca nhan vien _____________________________________________________________________________________________
         public Staff getStaffById_DAO(String StaffId)

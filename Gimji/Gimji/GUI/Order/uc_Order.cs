@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Vml;
+using Gimji.DTO;
+using Gimji.GUI.PayMent;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +15,11 @@ namespace Gimji.GUI.Order
 {
     public partial class uc_Order : UserControl
     {
+        int id;
+        string Name;
+        double total;
+        DateTime startDate = DateTime.Now;
+
         public uc_Order()
         {
             InitializeComponent();
@@ -19,10 +27,54 @@ namespace Gimji.GUI.Order
 
         private void uc_Order_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            loadData();
+        }
+        private void loadData()
+        {
+            flow_pal_Order_Clear();
+            List<CartItem> cartItems = CartItemManager.GetCartItems();
+            foreach (CartItem cartItem in cartItems)
             {
-                pal_listReport.Controls.Add(new uc_orderList());
+                id = cartItem.Id;
+                Name = cartItem.Name;
+                total += cartItem.Price;
+
+            };
+            uc_orderList uc_OrderList = new uc_orderList();
+            uc_OrderList.Name = Name;
+            uc_OrderList.IdProduct = id;
+            uc_OrderList.IdStaff = Stored_Login_Infor.GetCurrentUser();
+            uc_OrderList.Price = total;
+            uc_OrderList.startDate = startDate.ToString();
+            uc_OrderList.BtEditClick += (s, eventArgs) =>
+            {
+                
+            };
+            pal_listOrder.Controls.Add(uc_OrderList);
+        }
+        private void flow_pal_Order_Clear()
+        {
+            if (pal_listOrder != null)
+            {
+                List<Control> controlsToRemove = new List<Control>();
+
+                foreach (Control control in pal_listOrder.Controls)
+                {
+                    if (control is uc_orderList)
+                    {
+                        // Thêm các uc_Product cần xóa vào danh sách tạm thời
+                        controlsToRemove.Add(control);
+                    }
+                }
+                // Xóa tất cả các uc_Product từ danh sách tạm thời
+                foreach (Control controlToRemove in controlsToRemove)
+                {
+                    pal_listOrder.Controls.Remove(controlToRemove);
+
+                }
             }
+
         }
     }
+
 }

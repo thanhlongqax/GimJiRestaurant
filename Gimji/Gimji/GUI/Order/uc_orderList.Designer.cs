@@ -36,7 +36,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_order = new Guna.UI2.WinForms.Guna2Panel();
-            label14 = new Label();
+            lb_Status = new Label();
             lb_total = new Label();
             lb_date = new Label();
             lb_customer = new Label();
@@ -48,7 +48,7 @@
             // 
             // pal_order
             // 
-            pal_order.Controls.Add(label14);
+            pal_order.Controls.Add(lb_Status);
             pal_order.Controls.Add(lb_total);
             pal_order.Controls.Add(lb_date);
             pal_order.Controls.Add(lb_customer);
@@ -62,17 +62,17 @@
             pal_order.Size = new Size(890, 56);
             pal_order.TabIndex = 1;
             // 
-            // label14
+            // lb_Status
             // 
-            label14.AutoSize = true;
-            label14.FlatStyle = FlatStyle.Flat;
-            label14.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label14.ForeColor = Color.FromArgb(80, 209, 170);
-            label14.Location = new Point(615, 13);
-            label14.Name = "label14";
-            label14.Size = new Size(94, 23);
-            label14.TabIndex = 15;
-            label14.Text = "Completed";
+            lb_Status.AutoSize = true;
+            lb_Status.FlatStyle = FlatStyle.Flat;
+            lb_Status.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            lb_Status.ForeColor = Color.FromArgb(80, 209, 170);
+            lb_Status.Location = new Point(615, 13);
+            lb_Status.Name = "lb_Status";
+            lb_Status.Size = new Size(94, 23);
+            lb_Status.TabIndex = 15;
+            lb_Status.Text = "Completed";
             // 
             // lb_total
             // 
@@ -128,6 +128,7 @@
             btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_remove.Size = new Size(27, 27);
             btn_remove.TabIndex = 11;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit_Staff
             // 
@@ -148,6 +149,7 @@
             btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_edit_Staff.Size = new Size(27, 27);
             btn_edit_Staff.TabIndex = 10;
+            btn_edit_Staff.Click += btn_edit_Staff_Click;
             // 
             // lb_id
             // 
@@ -177,7 +179,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel pal_order;
-        private Label label14;
+        private Label lb_Status;
         private Label lb_total;
         private Label lb_date;
         private Label lb_customer;

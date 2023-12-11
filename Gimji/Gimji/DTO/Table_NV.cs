@@ -8,10 +8,10 @@ namespace Gimji.DTO
 {
     internal class Table_NV
     {
-        public int TableId { get; set; }
-        public string CustomerName { get; set; }
-        public string StaffId { get; set; }
-        public string Note { get; set; }
-        public DateTime Date_Table_Set { get; set; }
+        public int IdBan { get; set; }
+        public string TenKhachHang { get; set; }
+        public string SdtKhachHang { get; set; }
+        public string GhiChu { get; set; }
+        public DateTime NgayDatBan { get; set; }
     }
 }

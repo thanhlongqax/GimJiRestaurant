@@ -12,10 +12,13 @@ namespace Gimji.GUI.PayMent
 {
     public partial class uc_MonAn_Paymentcs : UserControl
     {
-        int quantity = 0;
+        int quantity;
         private int idProduct;
+        private int idMonAn;
         private int idCategory;
         public event EventHandler BtnDeleteClick;
+        public event EventHandler BtnMinusClick;
+        public event EventHandler BtnPlusClick;
         public uc_MonAn_Paymentcs()
         {
             InitializeComponent();
@@ -28,17 +31,19 @@ namespace Gimji.GUI.PayMent
 
         private void btn_plus_Click(object sender, EventArgs e)
         {
-            quantity++;
-            lb_quantity.Text = quantity.ToString();
+            
+            BtnPlusClick?.Invoke(this, e);
         }
 
         private void btn_minus_Click(object sender, EventArgs e)
         {
+            
+            // Cập nhật hiển thị số lượng trên Label hoặc TextBox
+
             if (quantity > 0)
             {
-                quantity--;
-                // Cập nhật hiển thị số lượng trên Label hoặc TextBox
-                lb_quantity.Text = quantity.ToString();
+                BtnMinusClick?.Invoke(this, e);
+
             }
         }
 
@@ -63,13 +68,20 @@ namespace Gimji.GUI.PayMent
 
         public int Count
         {
-            get { return Convert.ToInt32(lb_quantity.Text); }
-            set { lb_quantity.Text = value.ToString(); }
+            get { return quantity; }
+            set { quantity = value;
+                lb_quantity.Text = quantity.ToString();
+            }
         }
         public int ID
         {
             get { return idProduct; }
             set { idProduct = value; }
+        }
+        public int idMonAns
+        {
+            get { return idMonAn; }
+            set { idMonAn = value; }
         }
         public int IdCategory
         {

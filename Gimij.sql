@@ -227,12 +227,12 @@ EXEC InsertStaffLoginData
 go
 -- Insert the third Vietnamese employee
 EXEC InsertStaffLoginData
-    @fullName = N'Hoàng Minh Cường',
+    @fullName = N'Võ Hoàng Quân',
     @emailAddress = 'hoangminhcuong@example.com',
     @contactAddress = N'789 Đường C, Quận 3, TP.HCM',
     @phoneNumber = '0912345678',
     @DateOfBirth = '1995-03-10',
-    @userName = 'thanhlong',
+    @userName = 'quandeptrai',
     @userPassword = 'mypassword123',
     @position = N'Nhân Viên',
 	@gender = N'Nam';
@@ -275,6 +275,16 @@ begin
 end
 
 go 
+-- Execute the stored procedure to insert an admin
+EXEC InsertAdminLoginData
+    @userName = 'admin',
+    @userPassword = 'admin_password',
+    @fullName = 'Võ Hoàng Quân',
+    @phoneNumber = '123456789',
+    @emailAddress = 'admin@example.com',
+    @DateOfBirth = '2000-01-01';  -- Adjust the date format
+
+go
 CREATE TABLE Danh_muc_mon_an (
    id_danhMuc INT PRIMARY KEY ,
    loai_mon NVARCHAR(30) not null
@@ -299,41 +309,45 @@ Insert into Danh_muc_mon_an(id_danhMuc,loai_mon) values
 
 go
 CREATE TABLE Mon_an(
-   id_mon_an INT PRIMARY KEY identity, 
+   id_mon_an INT PRIMARY KEY , 
    ten_mon_an NVARCHAR(200),
    don_gia FLOAT,
    hinh_anh NVARCHAR(200),
    tinh_trang NVARCHAR(200),
-   id_danh_muc INT 
+   id_danh_muc INT constraint fk_id_danh_muc Foreign key (id_danh_muc) references Danh_muc_mon_an(id_danhMuc)
 )
-Alter table Mon_an add constraint fk_id_danh_muc Foreign key (id_danh_muc) references Danh_muc_mon_an(id_danhMuc)
+
 go
-create procedure InsertDish
-    @Name varchar(500),
-    @donGia nvarchar(500),
-	@picture nvarchar(10),
-	@Type varchar(500),
-	@id_danhMuc int
-as
-begin
-	insert into Mon_an(ten_mon_an,don_gia ,hinh_anh ,tinh_trang ,id_danh_muc) values (@Name , @donGia ,@picture , @Type, @id_danhMuc)
-end
+CREATE PROCEDURE InsertDish
+    @Name NVARCHAR(200),
+    @donGia FLOAT,
+    @picture NVARCHAR(200),
+    @Type NVARCHAR(200),
+    @id_danhMuc INT
+AS
+BEGIN
+    INSERT INTO Mon_an( ten_mon_an, don_gia, hinh_anh, tinh_trang, id_danh_muc)
+    VALUES ( @Name, @donGia, @picture, @Type, @id_danhMuc);
+END;
+
 
 go
 
-INSERT INTO Mon_an(ten_mon_an , don_gia , hinh_anh ,tinh_trang, id_danh_muc) VALUES
-	(N'Tobokki Chả Cá Sốt',50.000 , N'Resources/AnhMonAn/Tokbokki/tokbokki_chả_cá_sốt_HQ-removebg-preview.png' , N'Còn Hàng',1),
-	(N'Tobokki Gà Sốt HQ',100.000 , N'Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png' , N'Còn Hàng',1),
-	(N'Tokbokki Sốt Phô Mai',150.000 , N'Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai.png' , N'Còn Hàng',1),
-	(N'Ba Chỉ Heo Nướng',150.000 , N'Resources/AnhMonAn/ThitNuong/BaChiHeoNuong.png' , N'Còn Hàng',2),
-	(N'Ba Chỉ Heo Nướng Mật Ong',150.000 , N'Resources/AnhMonAn/ThitNuong/BachiHeoNuongMatOng.png' , N'Còn Hàng',2),
-	(N'Salad Gà Gốt Mayonnaise',200.000 , N'Resources/AnhMonAn/Salad/salad_gà_sốt_mayonnaise-removebg-preview.png' , N'Còn Hàng',3),
-	(N'Salad Gimji',175.000 , N'Resources/AnhMonAn/Salad/salad_gimji-removebg-preview.png' , N'Còn Hàng',3),
-	(N'KimBak Truyền Thống',230.000 , N'Resources/AnhMonAn/KimBak/kimbab_truyền_thống-removebg-preview.png' , N'Còn Hàng',4),
-	(N'KimBak Chiên Xù',230.000 , N'Resources/AnhMonAn/KimBak/KimbakChienXu.png' , N'Còn Hàng',4),
-	(N'KimBak Thịt Heo Chiên',250.000 , N'Resources/AnhMonAn/KimBak/KimBakThitHeoChien.png' , N'Còn Hàng',4),
-	(N'KimBak Trướng Cuộn',270.000 , N'Resources/AnhMonAn/KimBak/Trứng_cuộn-removebg-preview.png' , N'Còn Hàng',4),
-	(N'Cơm Trộn Hàn Quốc',200.000 , N'Resources/AnhMonAn/Com/ComtronHanQuoc.png' , N'Còn Hàng',5)
+INSERT INTO Mon_an(id_mon_an, ten_mon_an, don_gia, hinh_anh, tinh_trang, id_danh_muc)
+VALUES
+    (1, N'Tobokki Chả Cá Sốt', 50.000, N'Resources/AnhMonAn/Tokbokki/tokbokki_chả_cá_sốt_HQ-removebg-preview.png', N'Còn Hàng', 1),
+    (2, N'Tobokki Gà Sốt HQ', 100.000, N'Resources/AnhMonAn/Tokbokki/tokbokki_gà_sốt_HQ-removebg-preview.png', N'Còn Hàng', 1),
+    (3, N'Tokbokki Sốt Phô Mai', 150.000, N'Resources/AnhMonAn/Tokbokki/Tokbokki_sotPhoMai.png', N'Còn Hàng', 1),
+    (4, N'Ba Chỉ Heo Nướng', 150.000, N'Resources/AnhMonAn/ThitNuong/BaChiHeoNuong.png', N'Còn Hàng', 2),
+    (5, N'Ba Chỉ Heo Nướng Mật Ong', 150.000, N'Resources/AnhMonAn/ThitNuong/BachiHeoNuongMatOng.png', N'Còn Hàng', 2),
+    (6, N'Salad Gà Gốt Mayonnaise', 200.000, N'Resources/AnhMonAn/Salad/salad_gà_sốt_mayonnaise-removebg-preview.png', N'Còn Hàng', 3),
+    (7, N'Salad Gimji', 175.000, N'Resources/AnhMonAn/Salad/salad_gimji-removebg-preview.png', N'Còn Hàng', 3),
+    (8, N'KimBak Truyền Thống', 230.000, N'Resources/AnhMonAn/KimBak/kimbab_truyền_thống-removebg-preview.png', N'Còn Hàng', 4),
+    (9, N'KimBak Chiên Xù', 230.000, N'Resources/AnhMonAn/KimBak/KimbakChienXu.png', N'Còn Hàng', 4),
+    (10, N'KimBak Thịt Heo Chiên', 250.000, N'Resources/AnhMonAn/KimBak/KimBakThitHeoChien.png', N'Còn Hàng', 4),
+    (11, N'KimBak Trướng Cuộn', 270.000, N'Resources/AnhMonAn/KimBak/Trứng_cuộn-removebg-preview.png', N'Còn Hàng', 4),
+    (12, N'Cơm Trộn Hàn Quốc', 200.000, N'Resources/AnhMonAn/Com/ComtronHanQuoc.png', N'Còn Hàng', 5);
+
 
 go
 
@@ -388,87 +402,123 @@ Insert into Phuong_thuc_thanh_toan(id_phuong_thuc , ten_phuong_thuc )values
 	(2,N'Credit Card'),
 	(3,N'QR Code')
 go
--- Tạo bảng Hoa_don
-CREATE TABLE Hoa_don (
-   id_hoa_don INT PRIMARY KEY identity,
-   ngay_lap DATETIME not null,
-   so_luong int not null,
-   id_nhan_vien varchar(8) CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien) ,
-   trang_thai varchar(200)
-);
-go
+
 
 -- Tạo bảng Chi_tiet_hoa_don
 CREATE TABLE Chi_tiet_hoa_don (
    id_chi_tiet INT PRIMARY KEY identity,
-   id_hoa_don INT CONSTRAINT FK_Chi_tiet_hoa_don_Hoa_don FOREIGN KEY (id_hoa_don) REFERENCES Hoa_don(id_hoa_don);,
    id_mon_an INT CONSTRAINT FK_Chi_tiet_hoa_don_Danh_muc_mon_an FOREIGN KEY (id_mon_an) REFERENCES Mon_an(id_mon_an),
    so_luong INT NOT NULL,
    don_gia FLOAT NOT NULL,
-   id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc)
+   id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc),
+   id_nhan_vien varchar(8) CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien) ,
+   trang_thai varchar(200),
+   ngay_lap DATETIME not null
 );
 go
--- Cập nhật stored procedure getAllHoaDon
-ALTER PROCEDURE getAllHoaDon
+CREATE PROCEDURE insertChiTietHoaDon
+    @id_mon_an INT,
+    @so_luong INT,
+    @don_gia FLOAT,
+    @id_phuong_thuc INT,
+    @id_nhan_vien VARCHAR(8),  -- Bổ sung nếu cần
+    @trang_thai VARCHAR(200),  -- Bổ sung nếu cần
+    @ngay_lap DATETIME  -- Bổ sung nếu cần
 AS
 BEGIN
-    SELECT id_hoa_don, ngay_lap, so_luong, id_nhan_vien, trang_thai
-    FROM Hoa_don;
+    INSERT INTO Chi_tiet_hoa_don (
+        id_mon_an,
+        so_luong,
+        don_gia,
+        id_phuong_thuc,
+        id_nhan_vien,  -- Bổ sung nếu cần
+        trang_thai,  -- Bổ sung nếu cần
+        ngay_lap  -- Bổ sung nếu cần
+    )
+    VALUES (
+        @id_mon_an,
+        @so_luong,
+        @don_gia,
+        @id_phuong_thuc,
+        @id_nhan_vien,  -- Bổ sung nếu cần
+        @trang_thai,  -- Bổ sung nếu cần
+        @ngay_lap  -- Bổ sung nếu cần
+    );
 END;
 
--- Cập nhật stored procedure insertHoaDon
-ALTER PROCEDURE insertHoaDon
-   @ngay_lap DATETIME,
-   @so_luong INT,
-   @id_nhan_vien VARCHAR(8),
-   @trang_thai VARCHAR(200)
-AS
-BEGIN
-   INSERT INTO Hoa_don (ngay_lap, so_luong, id_nhan_vien, trang_thai)
-   VALUES (@ngay_lap, @so_luong, @id_nhan_vien, @trang_thai);
-END;
-
--- Cập nhật stored procedure updateHoaDon
-ALTER PROCEDURE updateHoaDon
-   @id_hoa_don INT,
-   @ngay_lap DATETIME,
-   @so_luong INT,
-   @id_nhan_vien VARCHAR(8),
-   @trang_thai VARCHAR(200)
-AS
-BEGIN
-   UPDATE Hoa_don
-   SET ngay_lap = @ngay_lap,
-       so_luong = @so_luong,
-       id_nhan_vien = @id_nhan_vien,
-       trang_thai = @trang_thai
-   WHERE id_hoa_don = @id_hoa_don;
-END;
-
--- Cập nhật stored procedure deleteHoaDon
-ALTER PROCEDURE deleteHoaDon
-   @id_hoa_don INT
-AS
-BEGIN
-   DELETE FROM Hoa_don
-   WHERE id_hoa_don = @id_hoa_don;
-END;
 go
 -- Tạo bảng Ca_lam
 CREATE TABLE Ca_lam (
-   id_ca INT PRIMARY KEY,
-   ten_ca VARCHAR(45),
-   gio_bat_dau DATETIME NOT NULL,
-   gio_ket_thuc DATETIME NOT NULL,
-   ngay_bat_dau DATE NOT NULL,
-   ngay_ket_thuc DATE NOT NULL,
-   nhan_vien_id varchar(8)
+   id_ca VARCHAR(45) PRIMARY KEY ,
+   note VARCHAR(500),
+   ca_lam VARCHAR(45),
+   ngay_lam DATE NOT NULL,
+   nhan_vien_id varchar(8) CONSTRAINT FK_Ca_lam_Nhan_vien FOREIGN KEY (nhan_vien_id) REFERENCES Nhan_vien(id_nhan_vien)
 );
+
 go
--- Add a foreign key to nhan_vien_id in the Ca_lam table
-ALTER TABLE Ca_lam ADD CONSTRAINT FK_Ca_lam_Nhan_vien FOREIGN KEY (nhan_vien_id) REFERENCES Nhan_vien(id_nhan_vien);
+CREATE OR ALTER TRIGGER CheckStaffLimit
+ON Ca_lam
+AFTER INSERT
+AS
+BEGIN
+    IF EXISTS (
+        SELECT ca_lam, ngay_lam, COUNT(*) AS staff_count
+        FROM Ca_lam
+        GROUP BY ca_lam, ngay_lam
+        HAVING COUNT(*) >3
+    )
+    BEGIN
+        RAISERROR (50002, 16, 1)
+        ROLLBACK 
+    END
+	IF EXISTS (
+        SELECT ca_lam, ngay_lam, COUNT(nhan_vien_id) AS staff_count
+        FROM Ca_lam
+        GROUP BY ca_lam, ngay_lam, nhan_vien_id
+        HAVING COUNT(nhan_vien_id) > 1
+    )
+	BEGIN
+        RAISERROR (50001, 16, 1)
+        ROLLBACK TRANSACTION
+    END
+END
+
+EXEC sp_addmessage 50001, 16, 'Duplicate staff members for a shift and date are not allowed.'
+EXEC sp_addmessage 50002, 16, 'The number of staff members for a shift cannot exceed 3 per day.'
 
 
+--drop trigger LimitStaffPerShiftPerDay
+go
+CREATE PROCEDURE Insert_Ca_lam (
+	@p_note VARCHAR(500),
+    @p_ca_lam VARCHAR(45),
+    @p_ngay_lam DATE,
+    @p_nhan_vien_id VARCHAR(8)
+)
+AS
+BEGIN
+    DECLARE @NextID INT;
+    DECLARE @NewID VARCHAR(45);
+
+    -- Find the next ID
+    SELECT @NextID = ISNULL(MAX(RIGHT(id_ca, LEN(id_ca) - 2)), 0) + 1
+    FROM Ca_lam;
+
+    -- Generate the new ID in the format "Ca0001"
+    SET @NewID = 'CA' + RIGHT('0000' + CAST(@NextID AS VARCHAR(4)), 4);
+
+    -- Insert the record into Ca_lam
+    INSERT INTO Ca_lam (id_ca,note, ca_lam, ngay_lam, nhan_vien_id)
+    VALUES (@NewID,@p_note,@p_ca_lam, @p_ngay_lam, @p_nhan_vien_id);
+END;
+
+go
+--EXEC Insert_Ca_lam  'Nothing','Shift 1','2023-12-05', 'SID00005';
+--EXEC Insert_Ca_lam  'Please' ,'Shift 2','2023-12-05', 'SID00002';
+--EXEC Insert_Ca_lam 'Note 1', 'Shift 1', '2023-12-05', 'SID00001';
+--EXEC Insert_Ca_lam 'Nothing', 'Shift 1', '2023-12-05', 'SID00005';
+--EXEC Insert_Ca_lam 'Please', 'Shift 2', '2023-12-06', 'SID00002';
 
 -- Tạo bảng Giao_hang
 CREATE TABLE Giao_hang (
@@ -617,3 +667,150 @@ BEGIN
     WHERE Id = @Id;
 END;
 
+go
+
+
+CREATE TABLE Doanh_Thu(
+	ID INT PRIMARY KEY IDENTITY(1,1),
+    total_Customers INT,
+    revenue money,
+    dishes_Ordered INT,
+    dayTime Date not null
+);
+
+INSERT INTO Doanh_Thu(total_Customers, revenue, dishes_Ordered, dayTime)
+VALUES
+    (10, 150050, 5, '2023-12-01'),
+    (15, 200075, 8, '2023-02-05'),
+    (8, 100225, 3, '2023-03-10'),
+    (12, 180300, 6, '2023-04-15'),
+    (20, 300580, 10, '2023-05-20'),
+    (18, 250160, 7, '2023-06-25'),
+    (22, 350025, 9, '2023-07-30'),
+    (11, 160630, 4, '2023-08-05'),
+    (14, 190750, 6, '2023-09-10'),
+    (17, 230875, 8, '2023-10-15'),
+    (9, 12090, 4, '2023-11-20'),
+    (13, 170190, 7, '2023-12-25'),
+    (10, 160250, 6, '2022-01-01'),
+    (16, 220375, 9, '2022-02-05'),
+    (7, 90425, 2, '2023-03-10'),
+    (11, 150000, 5, '2022-04-15'),
+    (18, 280080, 11, '2021-05-20'),
+    (15, 260060, 8, '2022-06-25'),
+    (19, 310525, 10, '2023-07-30'),
+    (14, 180430, 6, '2023-08-05'),
+    (11, 150250, 7, '2022-09-10'),
+    (20, 240275, 9, '2022-10-15'),
+    (12, 130840, 5, '2022-11-20'),
+    (18, 200790, 8, '2022-12-25'),
+    (11, 140850, 6, '2021-01-01'),
+    (17, 260075, 9, '2021-02-05'),
+    (6, 70925, 3, '2021-03-10'),
+    (13, 170100, 7, '2021-04-15'),
+    (16, 280280, 10, '2021-05-20'),
+    (14, 240460, 8, '2022-06-25'),
+    (18, 310525, 11, '2022-07-30');
+
+--drop procedure GetRevenueDataByPeriod
+go
+CREATE OR ALTER PROCEDURE GetRevenueDataByPeriod
+@Period NVARCHAR(50)  -- Input parameter to specify the month or quarter ('Month', 'Quarter')
+AS
+BEGIN
+    IF @Period ='Month'
+    BEGIN
+        -- Select data for a specific month
+        SELECT 
+			YEAR(dayTime) as [Year],
+            SUM(CASE WHEN MONTH(dayTime) = 1 THEN revenue ELSE 0 END) AS January,
+            SUM(CASE WHEN MONTH(dayTime) = 2 THEN revenue ELSE 0 END) AS February,
+            SUM(CASE WHEN MONTH(dayTime) = 3 THEN revenue ELSE 0 END) AS March,
+            SUM(CASE WHEN MONTH(dayTime) = 4 THEN revenue ELSE 0 END) AS April,
+            SUM(CASE WHEN MONTH(dayTime) = 5 THEN revenue ELSE 0 END) AS May,
+            SUM(CASE WHEN MONTH(dayTime) = 6 THEN revenue ELSE 0 END) AS June,
+            SUM(CASE WHEN MONTH(dayTime) = 7 THEN revenue ELSE 0 END) AS July,
+            SUM(CASE WHEN MONTH(dayTime) = 8 THEN revenue ELSE 0 END) AS August,
+            SUM(CASE WHEN MONTH(dayTime) = 9 THEN revenue ELSE 0 END) AS September,
+            SUM(CASE WHEN MONTH(dayTime) = 10 THEN revenue ELSE 0 END) AS October,
+            SUM(CASE WHEN MONTH(dayTime) = 11 THEN revenue ELSE 0 END) AS November,
+            SUM(CASE WHEN MONTH(dayTime) = 12 THEN revenue ELSE 0 END) AS December
+        FROM Doanh_Thu
+		GROUP BY YEAR(dayTime)
+		ORDER BY [Year];
+    END
+    ELSE IF @Period = 'Quarter'
+    BEGIN
+        -- Select data for a specific quarter
+        SELECT 
+			YEAR(dayTime) AS [Year],
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 1 THEN revenue ELSE 0 END) AS Q1,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 2 THEN revenue ELSE 0 END) AS Q2,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 3 THEN revenue ELSE 0 END) AS Q3,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 4 THEN revenue ELSE 0 END) AS Q4
+        FROM Doanh_Thu
+		GROUP BY YEAR(dayTime)
+		ORDER BY [Year];
+    END
+    ELSE
+    BEGIN
+        -- Invalid input for @Period
+        PRINT 'Invalid period specified.'
+    END
+END
+
+exec GetRevenueDataByPeriod @Period='Quarter'
+
+
+Select sum(total_Customers) as TotalCustomer, sum(revenue) as Revenue ,sum(dishes_Ordered) as Dish
+FROM Doanh_Thu
+WHERE 
+    MONTH(dayTime) = MONTH(GETDATE()) AND YEAR(dayTime) = YEAR(GETDATE())
+
+go
+CREATE OR ALTER PROCEDURE GetRevenueCurrent
+    @Period NVARCHAR(50)  -- Input parameter to specify the month or quarter ('Month', 'Quarter')
+AS
+BEGIN
+    IF @Period = 'Month'
+    BEGIN
+        -- Select data for the current month
+        SELECT 
+            YEAR(dayTime) as [Year],
+            SUM(CASE WHEN MONTH(dayTime) = 01 THEN revenue ELSE 0 END) AS January,
+            SUM(CASE WHEN MONTH(dayTime) = 02 THEN revenue ELSE 0 END) AS February,
+            SUM(CASE WHEN MONTH(dayTime) = 03 THEN revenue ELSE 0 END) AS March,
+            SUM(CASE WHEN MONTH(dayTime) = 04 THEN revenue ELSE 0 END) AS April,
+            SUM(CASE WHEN MONTH(dayTime) = 05 THEN revenue ELSE 0 END) AS May,
+            SUM(CASE WHEN MONTH(dayTime) = 06 THEN revenue ELSE 0 END) AS June,
+            SUM(CASE WHEN MONTH(dayTime) = 07 THEN revenue ELSE 0 END) AS July,
+            SUM(CASE WHEN MONTH(dayTime) = 08 THEN revenue ELSE 0 END) AS August,
+            SUM(CASE WHEN MONTH(dayTime) = 09 THEN revenue ELSE 0 END) AS September,
+            SUM(CASE WHEN MONTH(dayTime) = 10 THEN revenue ELSE 0 END) AS October,
+            SUM(CASE WHEN MONTH(dayTime) = 11 THEN revenue ELSE 0 END) AS November,
+            SUM(CASE WHEN MONTH(dayTime) = 12 THEN revenue ELSE 0 END) AS December
+        FROM Doanh_Thu
+        WHERE MONTH(dayTime) = MONTH(GETDATE()) AND YEAR(dayTime) = YEAR(GETDATE())
+		GROUP BY  YEAR(dayTime);
+    END
+    ELSE IF @Period = 'Quarter'
+    BEGIN
+        -- Select data for the current year's quarters
+        SELECT 
+            YEAR(dayTime) AS [Year],
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 1 THEN revenue ELSE 0 END) AS Q1,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 2 THEN revenue ELSE 0 END) AS Q2,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 3 THEN revenue ELSE 0 END) AS Q3,
+            SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 4 THEN revenue ELSE 0 END) AS Q4
+        FROM Doanh_Thu
+        WHERE YEAR(dayTime) = YEAR(GETDATE())
+		GROUP BY  YEAR(dayTime);
+    END
+    ELSE
+    BEGIN
+        -- Invalid input for @Period
+        PRINT 'Invalid period specified.';
+    END
+END
+
+Exec GetRevenueCurrent @Period = 'Month'

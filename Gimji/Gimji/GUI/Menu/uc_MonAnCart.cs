@@ -15,10 +15,13 @@ namespace Gimji.GUI.Menu
 {
     public partial class uc_MonAnCart : UserControl
     {
-        int quantity = 0;
+        int quantity;
         private int idProduct;
+        private int idMonAn;
         private int idCategory;
         public event EventHandler BtnDeleteClick;
+        public event EventHandler BtnMinusClick;
+        public event EventHandler BtnPlusClick;
         public uc_MonAnCart()
         {
             InitializeComponent();
@@ -31,18 +34,23 @@ namespace Gimji.GUI.Menu
 
         private void btn_Plus_Click(object sender, EventArgs e)
         {
-            quantity++;
-            txt_Quanity.Text = quantity.ToString();
+            BtnPlusClick?.Invoke(this, e);
+            /*quantity++;
+            ;*/
+            
         }
 
         private void btn_Minus_Click(object sender, EventArgs e)
         {
+            
             if (quantity > 0)
             {
-                quantity--;
+                BtnMinusClick?.Invoke(this, e);
+                //quantity--;
                 // Cập nhật hiển thị số lượng trên Label hoặc TextBox
-                txt_Quanity.Text = quantity.ToString();
+
             }
+            
         }
 
         private void btn_Remove_Click(object sender, EventArgs e)
@@ -72,13 +80,21 @@ namespace Gimji.GUI.Menu
 
         public int Count
         {
-            get { return Convert.ToInt32(txt_Quanity.Text); }
-            set { txt_Quanity.Text = value.ToString(); }
+            get { return quantity; }
+            set { 
+                quantity = value; 
+                txt_Quanity.Text = quantity.ToString();
+            }
         }
         public int ID
         {
             get { return idProduct; }
             set { idProduct = value; }
+        }
+        public int idMonAns
+        {
+            get { return idMonAn; }
+            set { idMonAn = value; }
         }
         public int IdCategory
         {
