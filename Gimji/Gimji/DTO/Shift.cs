@@ -8,11 +8,13 @@ namespace Gimji.DTO
 {
 	internal class Shift
 	{
-		public int shiftID { get; set; }
-		public string shiftName { get; set; }
-		public DateTime dateTimeIn { get; set; }
-		public DateTime dateTimeOut { get; set; }
+		public string shiftID { get; set; }
+        public string note { get; set; }
+        public string shiftName { get; set; }
+		public DateTime dateTime { get; set; }
+        public string staffID { get; set; }
+		public string staffName { get; set;}
 
-	}
+    }
 	
 }

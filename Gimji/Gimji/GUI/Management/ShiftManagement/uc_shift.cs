@@ -25,10 +25,10 @@ namespace Gimji.GUI.Management.ShiftManagement
 
         private void uc_shift_Load(object sender, EventArgs e)
         {
-            for(int i = 0; i < 3; i++)
-            {
-                flow_pal_shilf.Controls.Add(new uc_staffShift());
-            }
+            //for(int i = 0; i < 3; i++)
+            //{
+            //    flow_pal_shilf.Controls.Add(new uc_staffShift());
+            //}
         }
     }
 }
