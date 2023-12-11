@@ -14,7 +14,7 @@ namespace Gimji
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new Main_Login_Register());
+            Application.Run(new mainForm());
         }
     }
 }

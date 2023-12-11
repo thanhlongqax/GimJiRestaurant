@@ -60,8 +60,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -74,6 +74,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_button = new Guna.UI2.WinForms.Guna2Panel();
             btn_back = new Guna.UI2.WinForms.Guna2Button();
             btn_today = new Guna.UI2.WinForms.Guna2Button();
@@ -108,8 +116,31 @@
             label1 = new Label();
             pal_sunday = new Guna.UI2.WinForms.Guna2Panel();
             flow_pal_shift = new FlowLayoutPanel();
+            Shilf1_1 = new FlowLayoutPanel();
+            Shilf1_2 = new FlowLayoutPanel();
+            Shilf1_3 = new FlowLayoutPanel();
+            Shilf1_4 = new FlowLayoutPanel();
+            Shilf1_5 = new FlowLayoutPanel();
+            Shilf1_6 = new FlowLayoutPanel();
+            Shilf1_7 = new FlowLayoutPanel();
+            Shilf2_1 = new FlowLayoutPanel();
+            Shilf2_2 = new FlowLayoutPanel();
+            Shilf2_3 = new FlowLayoutPanel();
+            Shilf2_4 = new FlowLayoutPanel();
+            Shilf2_5 = new FlowLayoutPanel();
+            Shilf2_6 = new FlowLayoutPanel();
+            Shilf2_7 = new FlowLayoutPanel();
+            Shilf3_1 = new FlowLayoutPanel();
+            Shilf3_2 = new FlowLayoutPanel();
+            Shilf3_3 = new FlowLayoutPanel();
+            Shilf3_4 = new FlowLayoutPanel();
+            Shilf3_5 = new FlowLayoutPanel();
+            Shilf3_6 = new FlowLayoutPanel();
+            Shilf3_7 = new FlowLayoutPanel();
             pal_inforDish = new Guna.UI2.WinForms.Guna2Panel();
-            txt_shift = new Guna.UI2.WinForms.Guna2TextBox();
+            btn_update = new Guna.UI2.WinForms.Guna2Button();
+            btn_delete = new Guna.UI2.WinForms.Guna2Button();
+            combo_shift = new Guna.UI2.WinForms.Guna2ComboBox();
             btn_confirm = new Guna.UI2.WinForms.Guna2Button();
             txt_note = new Guna.UI2.WinForms.Guna2TextBox();
             txt_time = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -120,6 +151,9 @@
             label12 = new Label();
             label14 = new Label();
             lb_time = new Label();
+            panel1 = new Panel();
+            btn_Save = new Guna.UI2.WinForms.Guna2Button();
+            btn_Discard_Changes = new Guna.UI2.WinForms.Guna2Button();
             pal_button.SuspendLayout();
             pal_border.SuspendLayout();
             guna2Panel10.SuspendLayout();
@@ -132,7 +166,9 @@
             guna2Panel5.SuspendLayout();
             guna2Panel2.SuspendLayout();
             guna2Panel1.SuspendLayout();
+            flow_pal_shift.SuspendLayout();
             pal_inforDish.SuspendLayout();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // pal_button
@@ -162,7 +198,7 @@
             btn_back.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_back.FillColor = Color.Transparent;
             btn_back.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_back.ForeColor = Color.FromArgb(255, 180, 79);
+            btn_back.ForeColor = Color.White;
             btn_back.HoverState.FillColor = Color.FromArgb(224, 224, 224);
             btn_back.Location = new Point(120, 0);
             btn_back.Margin = new Padding(0);
@@ -176,7 +212,9 @@
             // btn_today
             // 
             btn_today.BackColor = Color.Transparent;
+            btn_today.BorderColor = Color.White;
             btn_today.BorderRadius = 10;
+            btn_today.CustomBorderThickness = new Padding(0, 0, 1, 0);
             btn_today.CustomizableEdges = customizableEdges3;
             btn_today.DisabledState.BorderColor = Color.DarkGray;
             btn_today.DisabledState.CustomBorderColor = Color.DarkGray;
@@ -184,7 +222,7 @@
             btn_today.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_today.FillColor = Color.Transparent;
             btn_today.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_today.ForeColor = Color.FromArgb(255, 180, 79);
+            btn_today.ForeColor = Color.White;
             btn_today.HoverState.FillColor = Color.FromArgb(224, 224, 224);
             btn_today.Location = new Point(0, 0);
             btn_today.Margin = new Padding(0);
@@ -206,7 +244,7 @@
             btn_next.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btn_next.FillColor = Color.Transparent;
             btn_next.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_next.ForeColor = Color.FromArgb(255, 180, 79);
+            btn_next.ForeColor = Color.White;
             btn_next.HoverState.FillColor = Color.FromArgb(224, 224, 224);
             btn_next.Location = new Point(240, 0);
             btn_next.Margin = new Padding(0);
@@ -263,8 +301,8 @@
             label10.AutoSize = true;
             label10.BackColor = Color.Transparent;
             label10.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.ForeColor = Color.FromArgb(255, 180, 79);
-            label10.Location = new Point(11, 32);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(15, 31);
             label10.Name = "label10";
             label10.Size = new Size(93, 46);
             label10.TabIndex = 3;
@@ -289,8 +327,8 @@
             label9.AutoSize = true;
             label9.BackColor = Color.Transparent;
             label9.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.ForeColor = Color.FromArgb(255, 180, 79);
-            label9.Location = new Point(11, 32);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(16, 31);
             label9.Name = "label9";
             label9.Size = new Size(93, 46);
             label9.TabIndex = 2;
@@ -315,8 +353,8 @@
             label8.AutoSize = true;
             label8.BackColor = Color.Transparent;
             label8.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label8.ForeColor = Color.FromArgb(255, 180, 79);
-            label8.Location = new Point(16, 44);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(16, 34);
             label8.Name = "label8";
             label8.Size = new Size(93, 46);
             label8.TabIndex = 1;
@@ -344,7 +382,7 @@
             lb_saturday.AutoSize = true;
             lb_saturday.BackColor = Color.Transparent;
             lb_saturday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_saturday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_saturday.ForeColor = Color.White;
             lb_saturday.Location = new Point(39, 67);
             lb_saturday.Name = "lb_saturday";
             lb_saturday.Size = new Size(43, 20);
@@ -356,7 +394,7 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.ForeColor = Color.FromArgb(255, 180, 79);
+            label7.ForeColor = Color.White;
             label7.Location = new Point(22, 44);
             label7.Name = "label7";
             label7.Size = new Size(82, 23);
@@ -383,7 +421,7 @@
             lb_friday.AutoSize = true;
             lb_friday.BackColor = Color.Transparent;
             lb_friday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_friday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_friday.ForeColor = Color.White;
             lb_friday.Location = new Point(32, 67);
             lb_friday.Name = "lb_friday";
             lb_friday.Size = new Size(43, 20);
@@ -395,7 +433,7 @@
             label6.AutoSize = true;
             label6.BackColor = Color.Transparent;
             label6.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.ForeColor = Color.FromArgb(255, 180, 79);
+            label6.ForeColor = Color.White;
             label6.Location = new Point(27, 44);
             label6.Name = "label6";
             label6.Size = new Size(60, 23);
@@ -422,7 +460,7 @@
             lb_thursday.AutoSize = true;
             lb_thursday.BackColor = Color.Transparent;
             lb_thursday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_thursday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_thursday.ForeColor = Color.White;
             lb_thursday.Location = new Point(44, 67);
             lb_thursday.Name = "lb_thursday";
             lb_thursday.Size = new Size(43, 20);
@@ -434,7 +472,7 @@
             label5.AutoSize = true;
             label5.BackColor = Color.Transparent;
             label5.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.ForeColor = Color.FromArgb(255, 180, 79);
+            label5.ForeColor = Color.White;
             label5.Location = new Point(20, 44);
             label5.Name = "label5";
             label5.Size = new Size(83, 23);
@@ -461,7 +499,7 @@
             lb_wednesday.AutoSize = true;
             lb_wednesday.BackColor = Color.Transparent;
             lb_wednesday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_wednesday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_wednesday.ForeColor = Color.White;
             lb_wednesday.Location = new Point(39, 67);
             lb_wednesday.Name = "lb_wednesday";
             lb_wednesday.Size = new Size(43, 20);
@@ -473,7 +511,7 @@
             label4.AutoSize = true;
             label4.BackColor = Color.Transparent;
             label4.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.ForeColor = Color.FromArgb(255, 180, 79);
+            label4.ForeColor = Color.White;
             label4.Location = new Point(6, 44);
             label4.Name = "label4";
             label4.Size = new Size(102, 23);
@@ -500,7 +538,7 @@
             lb_tuesday.AutoSize = true;
             lb_tuesday.BackColor = Color.Transparent;
             lb_tuesday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_tuesday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_tuesday.ForeColor = Color.White;
             lb_tuesday.Location = new Point(37, 67);
             lb_tuesday.Name = "lb_tuesday";
             lb_tuesday.Size = new Size(43, 20);
@@ -512,7 +550,7 @@
             label3.AutoSize = true;
             label3.BackColor = Color.Transparent;
             label3.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.ForeColor = Color.FromArgb(255, 180, 79);
+            label3.ForeColor = Color.White;
             label3.Location = new Point(24, 44);
             label3.Name = "label3";
             label3.Size = new Size(74, 23);
@@ -539,7 +577,7 @@
             lb_monday.AutoSize = true;
             lb_monday.BackColor = Color.Transparent;
             lb_monday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_monday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_monday.ForeColor = Color.White;
             lb_monday.Location = new Point(34, 67);
             lb_monday.Name = "lb_monday";
             lb_monday.Size = new Size(43, 20);
@@ -551,7 +589,7 @@
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.FromArgb(255, 180, 79);
+            label2.ForeColor = Color.White;
             label2.Location = new Point(24, 44);
             label2.Name = "label2";
             label2.Size = new Size(75, 23);
@@ -578,7 +616,7 @@
             lb_sunday.AutoSize = true;
             lb_sunday.BackColor = Color.Transparent;
             lb_sunday.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_sunday.ForeColor = Color.FromArgb(255, 180, 79);
+            lb_sunday.ForeColor = Color.White;
             lb_sunday.Location = new Point(34, 67);
             lb_sunday.Name = "lb_sunday";
             lb_sunday.Size = new Size(43, 20);
@@ -590,7 +628,7 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.ForeColor = Color.FromArgb(255, 180, 79);
+            label1.ForeColor = Color.White;
             label1.Location = new Point(25, 44);
             label1.Name = "label1";
             label1.Size = new Size(69, 23);
@@ -615,11 +653,221 @@
             // flow_pal_shift
             // 
             flow_pal_shift.BackColor = Color.Transparent;
+            flow_pal_shift.Controls.Add(Shilf1_1);
+            flow_pal_shift.Controls.Add(Shilf1_2);
+            flow_pal_shift.Controls.Add(Shilf1_3);
+            flow_pal_shift.Controls.Add(Shilf1_4);
+            flow_pal_shift.Controls.Add(Shilf1_5);
+            flow_pal_shift.Controls.Add(Shilf1_6);
+            flow_pal_shift.Controls.Add(Shilf1_7);
+            flow_pal_shift.Controls.Add(Shilf2_1);
+            flow_pal_shift.Controls.Add(Shilf2_2);
+            flow_pal_shift.Controls.Add(Shilf2_3);
+            flow_pal_shift.Controls.Add(Shilf2_4);
+            flow_pal_shift.Controls.Add(Shilf2_5);
+            flow_pal_shift.Controls.Add(Shilf2_6);
+            flow_pal_shift.Controls.Add(Shilf2_7);
+            flow_pal_shift.Controls.Add(Shilf3_1);
+            flow_pal_shift.Controls.Add(Shilf3_2);
+            flow_pal_shift.Controls.Add(Shilf3_3);
+            flow_pal_shift.Controls.Add(Shilf3_4);
+            flow_pal_shift.Controls.Add(Shilf3_5);
+            flow_pal_shift.Controls.Add(Shilf3_6);
+            flow_pal_shift.Controls.Add(Shilf3_7);
             flow_pal_shift.Location = new Point(115, 110);
             flow_pal_shift.Margin = new Padding(0);
             flow_pal_shift.Name = "flow_pal_shift";
             flow_pal_shift.Size = new Size(805, 330);
             flow_pal_shift.TabIndex = 0;
+            // 
+            // Shilf1_1
+            // 
+            Shilf1_1.BackColor = Color.Transparent;
+            Shilf1_1.Location = new Point(0, 0);
+            Shilf1_1.Margin = new Padding(0);
+            Shilf1_1.Name = "Shilf1_1";
+            Shilf1_1.Size = new Size(115, 111);
+            Shilf1_1.TabIndex = 11;
+            // 
+            // Shilf1_2
+            // 
+            Shilf1_2.BackColor = Color.Transparent;
+            Shilf1_2.Location = new Point(115, 0);
+            Shilf1_2.Margin = new Padding(0);
+            Shilf1_2.Name = "Shilf1_2";
+            Shilf1_2.Size = new Size(115, 111);
+            Shilf1_2.TabIndex = 12;
+            // 
+            // Shilf1_3
+            // 
+            Shilf1_3.BackColor = Color.Transparent;
+            Shilf1_3.Location = new Point(230, 0);
+            Shilf1_3.Margin = new Padding(0);
+            Shilf1_3.Name = "Shilf1_3";
+            Shilf1_3.Size = new Size(115, 111);
+            Shilf1_3.TabIndex = 13;
+            // 
+            // Shilf1_4
+            // 
+            Shilf1_4.BackColor = Color.Transparent;
+            Shilf1_4.Location = new Point(345, 0);
+            Shilf1_4.Margin = new Padding(0);
+            Shilf1_4.Name = "Shilf1_4";
+            Shilf1_4.Size = new Size(115, 111);
+            Shilf1_4.TabIndex = 14;
+            // 
+            // Shilf1_5
+            // 
+            Shilf1_5.BackColor = Color.Transparent;
+            Shilf1_5.Location = new Point(460, 0);
+            Shilf1_5.Margin = new Padding(0);
+            Shilf1_5.Name = "Shilf1_5";
+            Shilf1_5.Size = new Size(115, 111);
+            Shilf1_5.TabIndex = 15;
+            // 
+            // Shilf1_6
+            // 
+            Shilf1_6.BackColor = Color.Transparent;
+            Shilf1_6.Location = new Point(575, 0);
+            Shilf1_6.Margin = new Padding(0);
+            Shilf1_6.Name = "Shilf1_6";
+            Shilf1_6.Size = new Size(115, 111);
+            Shilf1_6.TabIndex = 16;
+            // 
+            // Shilf1_7
+            // 
+            Shilf1_7.BackColor = Color.Transparent;
+            Shilf1_7.Location = new Point(690, 0);
+            Shilf1_7.Margin = new Padding(0);
+            Shilf1_7.Name = "Shilf1_7";
+            Shilf1_7.Size = new Size(115, 111);
+            Shilf1_7.TabIndex = 17;
+            // 
+            // Shilf2_1
+            // 
+            Shilf2_1.BackColor = Color.Transparent;
+            Shilf2_1.Location = new Point(0, 111);
+            Shilf2_1.Margin = new Padding(0);
+            Shilf2_1.Name = "Shilf2_1";
+            Shilf2_1.Size = new Size(115, 111);
+            Shilf2_1.TabIndex = 18;
+            // 
+            // Shilf2_2
+            // 
+            Shilf2_2.BackColor = Color.Transparent;
+            Shilf2_2.Location = new Point(115, 111);
+            Shilf2_2.Margin = new Padding(0);
+            Shilf2_2.Name = "Shilf2_2";
+            Shilf2_2.Size = new Size(115, 111);
+            Shilf2_2.TabIndex = 19;
+            // 
+            // Shilf2_3
+            // 
+            Shilf2_3.BackColor = Color.Transparent;
+            Shilf2_3.Location = new Point(230, 111);
+            Shilf2_3.Margin = new Padding(0);
+            Shilf2_3.Name = "Shilf2_3";
+            Shilf2_3.Size = new Size(115, 111);
+            Shilf2_3.TabIndex = 20;
+            // 
+            // Shilf2_4
+            // 
+            Shilf2_4.BackColor = Color.Transparent;
+            Shilf2_4.Location = new Point(345, 111);
+            Shilf2_4.Margin = new Padding(0);
+            Shilf2_4.Name = "Shilf2_4";
+            Shilf2_4.Size = new Size(115, 111);
+            Shilf2_4.TabIndex = 21;
+            // 
+            // Shilf2_5
+            // 
+            Shilf2_5.BackColor = Color.Transparent;
+            Shilf2_5.Location = new Point(460, 111);
+            Shilf2_5.Margin = new Padding(0);
+            Shilf2_5.Name = "Shilf2_5";
+            Shilf2_5.Size = new Size(115, 111);
+            Shilf2_5.TabIndex = 22;
+            // 
+            // Shilf2_6
+            // 
+            Shilf2_6.BackColor = Color.Transparent;
+            Shilf2_6.Location = new Point(575, 111);
+            Shilf2_6.Margin = new Padding(0);
+            Shilf2_6.Name = "Shilf2_6";
+            Shilf2_6.Size = new Size(115, 111);
+            Shilf2_6.TabIndex = 23;
+            // 
+            // Shilf2_7
+            // 
+            Shilf2_7.BackColor = Color.Transparent;
+            Shilf2_7.Location = new Point(690, 111);
+            Shilf2_7.Margin = new Padding(0);
+            Shilf2_7.Name = "Shilf2_7";
+            Shilf2_7.Size = new Size(115, 111);
+            Shilf2_7.TabIndex = 24;
+            // 
+            // Shilf3_1
+            // 
+            Shilf3_1.BackColor = Color.Transparent;
+            Shilf3_1.Location = new Point(0, 222);
+            Shilf3_1.Margin = new Padding(0);
+            Shilf3_1.Name = "Shilf3_1";
+            Shilf3_1.Size = new Size(115, 111);
+            Shilf3_1.TabIndex = 25;
+            // 
+            // Shilf3_2
+            // 
+            Shilf3_2.BackColor = Color.Transparent;
+            Shilf3_2.Location = new Point(115, 222);
+            Shilf3_2.Margin = new Padding(0);
+            Shilf3_2.Name = "Shilf3_2";
+            Shilf3_2.Size = new Size(115, 111);
+            Shilf3_2.TabIndex = 26;
+            // 
+            // Shilf3_3
+            // 
+            Shilf3_3.BackColor = Color.Transparent;
+            Shilf3_3.Location = new Point(230, 222);
+            Shilf3_3.Margin = new Padding(0);
+            Shilf3_3.Name = "Shilf3_3";
+            Shilf3_3.Size = new Size(115, 111);
+            Shilf3_3.TabIndex = 27;
+            // 
+            // Shilf3_4
+            // 
+            Shilf3_4.BackColor = Color.Transparent;
+            Shilf3_4.Location = new Point(345, 222);
+            Shilf3_4.Margin = new Padding(0);
+            Shilf3_4.Name = "Shilf3_4";
+            Shilf3_4.Size = new Size(115, 111);
+            Shilf3_4.TabIndex = 28;
+            // 
+            // Shilf3_5
+            // 
+            Shilf3_5.BackColor = Color.Transparent;
+            Shilf3_5.Location = new Point(460, 222);
+            Shilf3_5.Margin = new Padding(0);
+            Shilf3_5.Name = "Shilf3_5";
+            Shilf3_5.Size = new Size(115, 111);
+            Shilf3_5.TabIndex = 29;
+            // 
+            // Shilf3_6
+            // 
+            Shilf3_6.BackColor = Color.Transparent;
+            Shilf3_6.Location = new Point(575, 222);
+            Shilf3_6.Margin = new Padding(0);
+            Shilf3_6.Name = "Shilf3_6";
+            Shilf3_6.Size = new Size(115, 111);
+            Shilf3_6.TabIndex = 30;
+            // 
+            // Shilf3_7
+            // 
+            Shilf3_7.BackColor = Color.Transparent;
+            Shilf3_7.Location = new Point(690, 222);
+            Shilf3_7.Margin = new Padding(0);
+            Shilf3_7.Name = "Shilf3_7";
+            Shilf3_7.Size = new Size(115, 111);
+            Shilf3_7.TabIndex = 31;
             // 
             // pal_inforDish
             // 
@@ -627,7 +875,9 @@
             pal_inforDish.BorderColor = Color.White;
             pal_inforDish.BorderRadius = 20;
             pal_inforDish.BorderThickness = 2;
-            pal_inforDish.Controls.Add(txt_shift);
+            pal_inforDish.Controls.Add(btn_update);
+            pal_inforDish.Controls.Add(btn_delete);
+            pal_inforDish.Controls.Add(combo_shift);
             pal_inforDish.Controls.Add(btn_confirm);
             pal_inforDish.Controls.Add(txt_note);
             pal_inforDish.Controls.Add(txt_time);
@@ -637,38 +887,78 @@
             pal_inforDish.Controls.Add(txt_name);
             pal_inforDish.Controls.Add(label12);
             pal_inforDish.Controls.Add(label14);
-            pal_inforDish.CustomizableEdges = customizableEdges45;
+            pal_inforDish.CustomizableEdges = customizableEdges49;
             pal_inforDish.FillColor = Color.Transparent;
             pal_inforDish.Location = new Point(29, 555);
             pal_inforDish.Name = "pal_inforDish";
-            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges50;
             pal_inforDish.Size = new Size(474, 166);
             pal_inforDish.TabIndex = 24;
             // 
-            // txt_shift
+            // btn_update
             // 
-            txt_shift.BorderColor = Color.White;
-            txt_shift.BorderRadius = 5;
-            txt_shift.CustomizableEdges = customizableEdges33;
-            txt_shift.DefaultText = "elephant";
-            txt_shift.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_shift.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_shift.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_shift.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_shift.FillColor = Color.FromArgb(255, 180, 79);
-            txt_shift.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_shift.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_shift.ForeColor = Color.Black;
-            txt_shift.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_shift.Location = new Point(165, 107);
-            txt_shift.Name = "txt_shift";
-            txt_shift.PasswordChar = '\0';
-            txt_shift.PlaceholderForeColor = Color.Black;
-            txt_shift.PlaceholderText = "";
-            txt_shift.SelectedText = "";
-            txt_shift.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            txt_shift.Size = new Size(79, 45);
-            txt_shift.TabIndex = 32;
+            btn_update.BackColor = Color.Transparent;
+            btn_update.BorderColor = Color.White;
+            btn_update.BorderRadius = 5;
+            btn_update.BorderThickness = 1;
+            btn_update.CustomizableEdges = customizableEdges33;
+            btn_update.DisabledState.BorderColor = Color.DarkGray;
+            btn_update.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_update.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_update.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_update.FillColor = Color.Maroon;
+            btn_update.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_update.ForeColor = Color.White;
+            btn_update.HoverState.FillColor = Color.Maroon;
+            btn_update.Location = new Point(365, 106);
+            btn_update.Name = "btn_update";
+            btn_update.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btn_update.Size = new Size(85, 45);
+            btn_update.TabIndex = 33;
+            btn_update.Text = "Update";
+            btn_update.Click += btn_update_Click;
+            // 
+            // btn_delete
+            // 
+            btn_delete.BorderColor = Color.White;
+            btn_delete.BorderRadius = 5;
+            btn_delete.BorderThickness = 1;
+            btn_delete.CustomizableEdges = customizableEdges35;
+            btn_delete.DisabledState.BorderColor = Color.DarkGray;
+            btn_delete.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_delete.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_delete.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_delete.FillColor = Color.Transparent;
+            btn_delete.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_delete.ForeColor = Color.White;
+            btn_delete.HoverState.FillColor = Color.FromArgb(224, 224, 224);
+            btn_delete.Location = new Point(278, 106);
+            btn_delete.Name = "btn_delete";
+            btn_delete.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btn_delete.Size = new Size(82, 45);
+            btn_delete.TabIndex = 32;
+            btn_delete.Text = "Delete";
+            btn_delete.Click += btn_delete_Click;
+            // 
+            // combo_shift
+            // 
+            combo_shift.BackColor = Color.Transparent;
+            combo_shift.BorderRadius = 5;
+            combo_shift.CustomizableEdges = customizableEdges37;
+            combo_shift.DrawMode = DrawMode.OwnerDrawFixed;
+            combo_shift.DropDownStyle = ComboBoxStyle.DropDownList;
+            combo_shift.FillColor = Color.FromArgb(255, 180, 79);
+            combo_shift.FocusedColor = Color.FromArgb(94, 148, 255);
+            combo_shift.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            combo_shift.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            combo_shift.ForeColor = Color.FromArgb(68, 88, 112);
+            combo_shift.ItemHeight = 38;
+            combo_shift.Location = new Point(161, 107);
+            combo_shift.Name = "combo_shift";
+            combo_shift.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            combo_shift.Size = new Size(110, 44);
+            combo_shift.TabIndex = 26;
+            combo_shift.KeyDown += combo_shift_KeyDown;
             // 
             // btn_confirm
             // 
@@ -676,7 +966,7 @@
             btn_confirm.BorderColor = Color.White;
             btn_confirm.BorderRadius = 5;
             btn_confirm.BorderThickness = 1;
-            btn_confirm.CustomizableEdges = customizableEdges35;
+            btn_confirm.CustomizableEdges = customizableEdges39;
             btn_confirm.DisabledState.BorderColor = Color.DarkGray;
             btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -687,16 +977,17 @@
             btn_confirm.HoverState.FillColor = Color.Maroon;
             btn_confirm.Location = new Point(365, 107);
             btn_confirm.Name = "btn_confirm";
-            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btn_confirm.Size = new Size(85, 45);
             btn_confirm.TabIndex = 1;
             btn_confirm.Text = "Confirm";
+            btn_confirm.Click += btn_confirm_Click;
             // 
             // txt_note
             // 
             txt_note.BorderColor = Color.White;
             txt_note.BorderRadius = 5;
-            txt_note.CustomizableEdges = customizableEdges37;
+            txt_note.CustomizableEdges = customizableEdges41;
             txt_note.DefaultText = "100000000";
             txt_note.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_note.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -713,7 +1004,7 @@
             txt_note.PlaceholderForeColor = Color.Black;
             txt_note.PlaceholderText = "";
             txt_note.SelectedText = "";
-            txt_note.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            txt_note.ShadowDecoration.CustomizableEdges = customizableEdges42;
             txt_note.Size = new Size(208, 47);
             txt_note.TabIndex = 27;
             // 
@@ -723,7 +1014,7 @@
             txt_time.BorderRadius = 5;
             txt_time.BorderThickness = 1;
             txt_time.Checked = true;
-            txt_time.CustomizableEdges = customizableEdges39;
+            txt_time.CustomizableEdges = customizableEdges43;
             txt_time.FillColor = Color.FromArgb(255, 180, 79);
             txt_time.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txt_time.Format = DateTimePickerFormat.Long;
@@ -731,7 +1022,7 @@
             txt_time.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             txt_time.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             txt_time.Name = "txt_time";
-            txt_time.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txt_time.ShadowDecoration.CustomizableEdges = customizableEdges44;
             txt_time.Size = new Size(137, 45);
             txt_time.TabIndex = 31;
             txt_time.Value = new DateTime(2023, 11, 5, 2, 7, 47, 820);
@@ -746,14 +1037,13 @@
             label13.Size = new Size(40, 20);
             label13.TabIndex = 30;
             label13.Text = "Shift";
-            label13.Click += label13_Click;
             // 
             // btn_cancel
             // 
             btn_cancel.BorderColor = Color.White;
             btn_cancel.BorderRadius = 5;
             btn_cancel.BorderThickness = 1;
-            btn_cancel.CustomizableEdges = customizableEdges41;
+            btn_cancel.CustomizableEdges = customizableEdges45;
             btn_cancel.DisabledState.BorderColor = Color.DarkGray;
             btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -764,10 +1054,11 @@
             btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
             btn_cancel.Location = new Point(277, 107);
             btn_cancel.Name = "btn_cancel";
-            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges46;
             btn_cancel.Size = new Size(82, 45);
             btn_cancel.TabIndex = 0;
             btn_cancel.Text = "Cancel";
+            btn_cancel.Click += btn_cancel_Click;
             // 
             // label11
             // 
@@ -784,7 +1075,7 @@
             // 
             txt_name.BorderColor = Color.White;
             txt_name.BorderRadius = 5;
-            txt_name.CustomizableEdges = customizableEdges43;
+            txt_name.CustomizableEdges = customizableEdges47;
             txt_name.DefaultText = "elephant";
             txt_name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -801,7 +1092,7 @@
             txt_name.PlaceholderForeColor = Color.Black;
             txt_name.PlaceholderText = "";
             txt_name.SelectedText = "";
-            txt_name.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            txt_name.ShadowDecoration.CustomizableEdges = customizableEdges48;
             txt_name.Size = new Size(200, 47);
             txt_name.TabIndex = 25;
             // 
@@ -831,18 +1122,73 @@
             // 
             lb_time.AutoSize = true;
             lb_time.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_time.ForeColor = Color.FromArgb(255, 180, 79);
-            lb_time.Location = new Point(466, 57);
+            lb_time.ForeColor = Color.White;
+            lb_time.Location = new Point(475, 49);
             lb_time.Name = "lb_time";
             lb_time.Size = new Size(270, 28);
             lb_time.TabIndex = 25;
             lb_time.Text = "10 July 2022 -16 July 2022";
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(btn_Save);
+            panel1.Controls.Add(btn_Discard_Changes);
+            panel1.Location = new Point(579, 650);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(385, 57);
+            panel1.TabIndex = 26;
+            // 
+            // btn_Save
+            // 
+            btn_Save.BackColor = Color.Transparent;
+            btn_Save.BorderColor = Color.FromArgb(255, 128, 128);
+            btn_Save.BorderRadius = 5;
+            btn_Save.BorderThickness = 1;
+            btn_Save.CustomizableEdges = customizableEdges51;
+            btn_Save.DisabledState.BorderColor = Color.DarkGray;
+            btn_Save.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Save.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Save.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Save.FillColor = Color.FromArgb(255, 128, 128);
+            btn_Save.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Save.ForeColor = Color.White;
+            btn_Save.HoverState.FillColor = Color.Maroon;
+            btn_Save.Location = new Point(203, 5);
+            btn_Save.Name = "btn_Save";
+            btn_Save.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            btn_Save.Size = new Size(170, 45);
+            btn_Save.TabIndex = 1;
+            btn_Save.Text = "Save Changes";
+            btn_Save.Click += btn_Save_Click;
+            // 
+            // btn_Discard_Changes
+            // 
+            btn_Discard_Changes.BorderColor = Color.FromArgb(255, 128, 128);
+            btn_Discard_Changes.BorderRadius = 5;
+            btn_Discard_Changes.BorderThickness = 1;
+            btn_Discard_Changes.CustomizableEdges = customizableEdges53;
+            btn_Discard_Changes.DisabledState.BorderColor = Color.DarkGray;
+            btn_Discard_Changes.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_Discard_Changes.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_Discard_Changes.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_Discard_Changes.FillColor = Color.Transparent;
+            btn_Discard_Changes.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_Discard_Changes.ForeColor = Color.FromArgb(255, 128, 0);
+            btn_Discard_Changes.HoverState.FillColor = Color.FromArgb(224, 224, 224);
+            btn_Discard_Changes.Location = new Point(6, 7);
+            btn_Discard_Changes.Name = "btn_Discard_Changes";
+            btn_Discard_Changes.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            btn_Discard_Changes.Size = new Size(170, 45);
+            btn_Discard_Changes.TabIndex = 0;
+            btn_Discard_Changes.Text = "Discard Changes";
+            btn_Discard_Changes.Click += btn_Discard_Changes_Click;
             // 
             // uc_shiftManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(136, 21, 57);
+            Controls.Add(panel1);
             Controls.Add(lb_time);
             Controls.Add(pal_inforDish);
             Controls.Add(pal_border);
@@ -872,8 +1218,10 @@
             guna2Panel2.PerformLayout();
             guna2Panel1.ResumeLayout(false);
             guna2Panel1.PerformLayout();
+            flow_pal_shift.ResumeLayout(false);
             pal_inforDish.ResumeLayout(false);
             pal_inforDish.PerformLayout();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -915,7 +1263,6 @@
         private Label label11;
         private Guna.UI2.WinForms.Guna2TextBox txt_name;
         private Label label12;
-        private Guna.UI2.WinForms.Guna2TextBox txt_shift;
         private Guna.UI2.WinForms.Guna2DateTimePicker txt_time;
         private Label label13;
         private Label label14;
@@ -927,5 +1274,32 @@
         private Label lb_tuesday;
         private Label lb_monday;
         private Label lb_sunday;
+        private Guna.UI2.WinForms.Guna2ComboBox combo_shift;
+        private FlowLayoutPanel Shilf1_1;
+        private FlowLayoutPanel Shilf1_2;
+        private FlowLayoutPanel Shilf1_3;
+        private FlowLayoutPanel Shilf1_4;
+        private FlowLayoutPanel Shilf1_5;
+        private FlowLayoutPanel Shilf1_6;
+        private FlowLayoutPanel Shilf1_7;
+        private FlowLayoutPanel Shilf2_1;
+        private FlowLayoutPanel Shilf2_2;
+        private FlowLayoutPanel Shilf2_3;
+        private FlowLayoutPanel Shilf2_4;
+        private FlowLayoutPanel Shilf2_5;
+        private FlowLayoutPanel Shilf2_6;
+        private FlowLayoutPanel Shilf2_7;
+        private FlowLayoutPanel Shilf3_1;
+        private FlowLayoutPanel Shilf3_2;
+        private FlowLayoutPanel Shilf3_3;
+        private FlowLayoutPanel Shilf3_4;
+        private FlowLayoutPanel Shilf3_5;
+        private FlowLayoutPanel Shilf3_6;
+        private FlowLayoutPanel Shilf3_7;
+        private Guna.UI2.WinForms.Guna2Button btn_update;
+        private Guna.UI2.WinForms.Guna2Button btn_delete;
+        private Panel panel1;
+        private Guna.UI2.WinForms.Guna2Button btn_Save;
+        private Guna.UI2.WinForms.Guna2Button btn_Discard_Changes;
     }
 }
