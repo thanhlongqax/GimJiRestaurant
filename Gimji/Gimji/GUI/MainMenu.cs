@@ -82,6 +82,7 @@ namespace Gimji
         private void guna_btn_exit_Click(object sender, EventArgs e)
         {
             Main_Login_Register loginF = new Main_Login_Register();
+            Stored_Login_Infor.Logout();
             this.Hide();
             loginF.ShowDialog();
             Application.Exit();

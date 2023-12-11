@@ -268,3 +268,4 @@ E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
 E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Irony.dll
 E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
 E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\XLParser.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Newtonsoft.Json.dll

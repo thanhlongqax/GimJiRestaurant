@@ -25,6 +25,8 @@ namespace Gimji.DTO
         public static void Logout() {
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
             config.AppSettings.Settings["id"].Value = null;
+            // Xóa giá trị của "cartItems"
+            config.AppSettings.Settings.Remove("cartItems");
             config.Save(ConfigurationSaveMode.Modified);
             ConfigurationManager.RefreshSection("appSettings");
         }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7RLKHJV2SbIpgmTJTX3t7tyj4HRODEUEp85MML0UIH3Q8wbZh7lGwBuTaq+/OsHGXDqfrxr7aEUcrtfHwYvgOw==",
+  "dgSpecHash": "a2gx9z+3urGv9IjF7lR6owW8IQETNN/6/it0Wr2jSDvO8LlF5sqwJ3BwLB9jHhH4TW3fr4FXRpyDdoPfQ+p7HQ==",
   "success": true,
   "projectFilePath": "E:\\CNPM_N12\\Gimji\\Gimji\\Gimji.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\vandi\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\vandi\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\vandi\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\vandi\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\vandi\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\vandi\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
     "C:\\Users\\vandi\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.2\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.2.nupkg.sha512",
