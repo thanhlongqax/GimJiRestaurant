@@ -56,7 +56,7 @@ namespace Gimji.GUI.Login_Register
                         MailMessage mail = new MailMessage();
                         mail.From = new MailAddress(senderEmail);
                         //mail.To.Add(txt_gmail.Text); // Email address of the recipient
-                        mail.To.Add("thanhlongqax@gmail.com");
+                        mail.To.Add(txt_gmail.Text);
                         mail.Subject = "Account Information"; // Email subject
                         mail.Body = HtmlBody(username,password); // Email body
                         mail.IsBodyHtml = true;

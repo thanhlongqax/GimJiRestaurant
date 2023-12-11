@@ -268,3 +268,12 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Irony.dll
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
 E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\XLParser.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\ClosedXML.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\DocumentFormat.OpenXml.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\ExcelNumberFormat.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Irony.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\SixLabors.Fonts.dll
+E:\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\XLParser.dll
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Interop.Microsoft.Office.Interop.Excel.dll
+E:\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.csproj.ResolveComReference.cache

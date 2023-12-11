@@ -261,7 +261,8 @@ namespace Gimji.GUI.Home
             // 
             // datetime_CheckIn
             // 
-            datetime_CheckIn.BackColor = Color.White;
+            datetime_CheckIn.BackColor = Color.Transparent;
+            datetime_CheckIn.BackgroundImageLayout = ImageLayout.None;
             datetime_CheckIn.BorderColor = Color.White;
             datetime_CheckIn.Checked = true;
             datetime_CheckIn.CustomFormat = "HH:mm:ss dd/MM/yyyy";
@@ -271,7 +272,7 @@ namespace Gimji.GUI.Home
             datetime_CheckIn.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             datetime_CheckIn.ForeColor = SystemColors.ActiveCaptionText;
             datetime_CheckIn.Format = DateTimePickerFormat.Custom;
-            datetime_CheckIn.Location = new Point(281, 29);
+            datetime_CheckIn.Location = new Point(292, 29);
             datetime_CheckIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             datetime_CheckIn.MinDate = new DateTime(2023, 11, 8, 0, 0, 0, 0);
             datetime_CheckIn.Name = "datetime_CheckIn";
@@ -279,6 +280,7 @@ namespace Gimji.GUI.Home
             datetime_CheckIn.ShowUpDown = true;
             datetime_CheckIn.Size = new Size(225, 28);
             datetime_CheckIn.TabIndex = 34;
+            datetime_CheckIn.UseTransparentBackground = true;
             datetime_CheckIn.Value = new DateTime(2023, 11, 24, 0, 0, 0, 0);
             // 
             // btn_Submit
@@ -310,10 +312,10 @@ namespace Gimji.GUI.Home
             txt_Num_Guest.BorderStyle = BorderStyle.None;
             txt_Num_Guest.Font = new Font("Segoe UI", 7.8F, FontStyle.Regular, GraphicsUnit.Point);
             txt_Num_Guest.ForeColor = SystemColors.ScrollBar;
-            txt_Num_Guest.Location = new Point(710, 36);
+            txt_Num_Guest.Location = new Point(734, 36);
             txt_Num_Guest.Name = "txt_Num_Guest";
             txt_Num_Guest.PlaceholderText = "Add guest";
-            txt_Num_Guest.Size = new Size(111, 18);
+            txt_Num_Guest.Size = new Size(70, 18);
             txt_Num_Guest.TabIndex = 30;
             // 
             // label14

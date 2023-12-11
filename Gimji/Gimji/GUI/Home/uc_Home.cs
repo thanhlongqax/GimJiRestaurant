@@ -45,12 +45,12 @@ namespace Gimji.GUI.Home
                 flow_pal_Table.Controls.Add(uc_Table);
             }
             List<Table_NV> tables_NV = newBLL.getAllBan_NV_DAO();
-            foreach(Table_NV table_NV in tables_NV)
+            foreach (Table_NV table_NV in tables_NV)
             {
                 uc_Detail_Table uc_Detail_Table = new uc_Detail_Table();
                 Table_NV newTale = new Table_NV();
                 uc_Detail_Table.Name = table_NV.TenKhachHang;
-                uc_Detail_Table.Time =table_NV.NgayDatBan.ToString("HH:mm:ss dd-MM-yyyy");
+                uc_Detail_Table.Time = table_NV.NgayDatBan.ToString("HH:mm:ss dd-MM-yyyy");
                 uc_Detail_Table.Num_Guest = table_NV.GhiChu;
                 flow_pal_Table.Controls.Add(uc_Detail_Table);
             }
@@ -103,7 +103,7 @@ namespace Gimji.GUI.Home
                 MessageBox.Show("Mời Khách Hàng Nhập Số Guest dự kiến.");
             }
 
-            else if (string.IsNullOrEmpty(txt_Num_Guest.Text) && ! (int.TryParse(txt_Num_Guest.Text, out int numGuest)))
+            else if (string.IsNullOrEmpty(txt_Num_Guest.Text) && !(int.TryParse(txt_Num_Guest.Text, out int numGuest)))
             {
                 MessageBox.Show("Mời Khách Hàng Nhập Số Guest dự kiến.");
             }
@@ -117,7 +117,7 @@ namespace Gimji.GUI.Home
         {
             uc_Detail_Table detail = new uc_Detail_Table();
             Table_NV newTale = new Table_NV();
-            CRUD_BookTable_BLL newBLL= new CRUD_BookTable_BLL();
+            CRUD_BookTable_BLL newBLL = new CRUD_BookTable_BLL();
             detail.Name = txt_CustomerName.Text;
             detail.Time = datetime_CheckIn.Value.ToString("HH:mm:ss dd-MM-yyyy");
             detail.Num_Guest = txt_Num_Guest.Text;
@@ -129,7 +129,7 @@ namespace Gimji.GUI.Home
 
             newBLL.AddCookTable_BLL(newTale);
 
-            
+
             flow_pal_BookTable.Controls.Add(detail);
         }
     }
