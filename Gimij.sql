@@ -119,7 +119,7 @@ go
 
 -- Tạo bảng Nhan_vien
 CREATE TABLE Nhan_vien (
-   id_nhan_vien varchar(8) primary key,
+	id_nhan_vien varchar(8) primary key,
    ten_dang_nhap VARCHAR(200) not null,
    mat_khau VARCHAR(20) not null,
    ten_nhan_vien NVARCHAR(500) not null ,
@@ -388,7 +388,6 @@ Insert into Phuong_thuc_thanh_toan(id_phuong_thuc , ten_phuong_thuc )values
 	(2,N'Credit Card'),
 	(3,N'QR Code')
 go
--- Tạo bảng Hoa_don
 
 
 -- Tạo bảng Chi_tiet_hoa_don
@@ -397,9 +396,41 @@ CREATE TABLE Chi_tiet_hoa_don (
    id_mon_an INT CONSTRAINT FK_Chi_tiet_hoa_don_Danh_muc_mon_an FOREIGN KEY (id_mon_an) REFERENCES Mon_an(id_mon_an),
    so_luong INT NOT NULL,
    don_gia FLOAT NOT NULL,
-   id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc)
+   id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc),
+   id_nhan_vien varchar(8) CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien) ,
+   trang_thai varchar(200),
+   ngay_lap DATETIME not null
 );
 go
+CREATE PROCEDURE insertChiTietHoaDon
+    @id_mon_an INT,
+    @so_luong INT,
+    @don_gia FLOAT,
+    @id_phuong_thuc INT,
+    @id_nhan_vien VARCHAR(8),  -- Bổ sung nếu cần
+    @trang_thai VARCHAR(200),  -- Bổ sung nếu cần
+    @ngay_lap DATETIME  -- Bổ sung nếu cần
+AS
+BEGIN
+    INSERT INTO Chi_tiet_hoa_don (
+        id_mon_an,
+        so_luong,
+        don_gia,
+        id_phuong_thuc,
+        id_nhan_vien,  -- Bổ sung nếu cần
+        trang_thai,  -- Bổ sung nếu cần
+        ngay_lap  -- Bổ sung nếu cần
+    )
+    VALUES (
+        @id_mon_an,
+        @so_luong,
+        @don_gia,
+        @id_phuong_thuc,
+        @id_nhan_vien,  -- Bổ sung nếu cần
+        @trang_thai,  -- Bổ sung nếu cần
+        @ngay_lap  -- Bổ sung nếu cần
+    );
+END;
 
 go
 -- Tạo bảng Ca_lam
@@ -408,13 +439,9 @@ CREATE TABLE Ca_lam (
    note VARCHAR(500),
    ca_lam VARCHAR(45),
    ngay_lam DATE NOT NULL,
-   nhan_vien_id varchar(8)
+   nhan_vien_id varchar(8) CONSTRAINT FK_Ca_lam_Nhan_vien FOREIGN KEY (nhan_vien_id) REFERENCES Nhan_vien(id_nhan_vien)
 );
 
-go
--- Add a foreign key to nhan_vien_id in the Ca_lam table
-ALTER TABLE Ca_lam ADD CONSTRAINT FK_Ca_lam_Nhan_vien FOREIGN KEY (nhan_vien_id) REFERENCES Nhan_vien(id_nhan_vien);
---------------------
 go
 CREATE OR ALTER TRIGGER CheckStaffLimit
 ON Ca_lam
@@ -473,15 +500,12 @@ BEGIN
 END;
 
 go
-EXEC Insert_Ca_lam  'Nothing','Shift 1','2023-12-05', 'SID00002';
-EXEC Insert_Ca_lam  'Please' ,'Shift 2','2023-12-05', 'SID00002';
-EXEC Insert_Ca_lam 'Note 1', 'Shift 1', '2023-12-05', 'SID00001';
-EXEC Insert_Ca_lam 'Nothing', 'Shift 1', '2023-12-05', 'SID00003';
-EXEC Insert_Ca_lam 'Please', 'Shift 2', '2023-12-06', 'SID00002';
-go
---select ngay_lam,ca_lam, Count(*) as countStaff
---from Ca_lam
---GROUP BY ngay_lam, ca_lam;
+--EXEC Insert_Ca_lam  'Nothing','Shift 1','2023-12-05', 'SID00005';
+--EXEC Insert_Ca_lam  'Please' ,'Shift 2','2023-12-05', 'SID00002';
+--EXEC Insert_Ca_lam 'Note 1', 'Shift 1', '2023-12-05', 'SID00001';
+--EXEC Insert_Ca_lam 'Nothing', 'Shift 1', '2023-12-05', 'SID00005';
+--EXEC Insert_Ca_lam 'Please', 'Shift 2', '2023-12-06', 'SID00002';
+
 -- Tạo bảng Giao_hang
 CREATE TABLE Giao_hang (
    id_giao_hang INT PRIMARY KEY,
@@ -489,10 +513,12 @@ CREATE TABLE Giao_hang (
    trang_thai INT,
    dia_chi_giao NVARCHAR(200) not null,
    ghi_chu NVARCHAR(500),
-   tong_tien FLOAT not null
+   tong_tien FLOAT not null,
+   khach_hang_id varchar(8)
 );
 go
-
+-- Add a foreign key to khach_hang_id in the Giao_hang table
+ALTER TABLE Giao_hang ADD CONSTRAINT FK_Giao_hang_Khach_hang FOREIGN KEY (khach_hang_id) REFERENCES Khach_hang(id_khach_hang);
 
 
 -- Tạo bảng Chi_tiet_giao_hang
@@ -503,6 +529,13 @@ CREATE TABLE Chi_tiet_giao_hang (
    so_luong INT not null,
    don_vi_van_chuyen NVARCHAR(100)
 );
+go
+-- Add a foreign key to giao_hang_id in the Chi_tiet_giao_hang table
+ALTER TABLE Chi_tiet_giao_hang ADD CONSTRAINT FK_Chi_tiet_giao_hang_Giao_hang FOREIGN KEY (giao_hang_id) REFERENCES Giao_hang(id_giao_hang);
+
+-- Add a foreign key to mon_an_id in the Chi_tiet_giao_hang table
+ALTER TABLE Chi_tiet_giao_hang ADD CONSTRAINT FK_Chi_tiet_giao_hang_Danh_muc_mon_an FOREIGN KEY (mon_an_id) REFERENCES Mon_an(id_mon_an);
+
 go
 CREATE TABLE Uu_Dai(
    id_UuDai varchar(100) PRIMARY KEY,
@@ -574,6 +607,53 @@ EXEC InsertVoucher
     @conditions = 'Valid for purchases above $100',
     @dateStart = '2023-12-01',
     @dateEnd = '2024-01-01';
+
+CREATE TABLE CartItem (
+	IdTaiKhoan varchar(8),
+    Id INT PRIMARY KEY identity,
+    Name NVARCHAR(255),
+    Price float,
+	hinh_anh NVARCHAR(200),
+    Quantity INT
+);
+go
+CREATE PROCEDURE GetCartItemsByIdTaiKhoan
+    @IdTaiKhoan varchar(8)
+AS
+BEGIN
+    SELECT 
+        c.Id,
+        c.Name,
+        c.Price,
+		c.hinh_anh,
+        c.Quantity
+    FROM 
+        CartItem c
+    WHERE 
+        c.IdTaiKhoan = @IdTaiKhoan;
+END;
+go
+CREATE PROCEDURE InsertCartItem
+    @IdTaiKhoan varchar(8),
+    @Name NVARCHAR(255),
+    @Price FLOAT,
+    @hinh_anh NVARCHAR(200),
+    @Quantity INT
+AS
+BEGIN
+    INSERT INTO CartItem (IdTaiKhoan, Name, Price, hinh_anh, Quantity)
+    VALUES (@IdTaiKhoan, @Name, @Price, @hinh_anh, @Quantity);
+END;
+go
+CREATE PROCEDURE DeleteCartItemById
+    @Id INT
+AS
+BEGIN
+    DELETE FROM CartItem
+    WHERE Id = @Id;
+END;
+
+go
 
 
 CREATE TABLE Doanh_Thu(
@@ -720,50 +800,3 @@ BEGIN
 END
 
 Exec GetRevenueCurrent @Period = 'Month'
-
-CREATE TABLE CartItem (
-	IdTaiKhoan varchar(8),
-    Id INT PRIMARY KEY identity,
-    Name NVARCHAR(255),
-    Price float,
-	hinh_anh NVARCHAR(200),
-    Quantity INT
-);
-go
-CREATE PROCEDURE GetCartItemsByIdTaiKhoan
-    @IdTaiKhoan varchar(8)
-AS
-BEGIN
-    SELECT 
-        c.Id,
-        c.Name,
-        c.Price,
-		c.hinh_anh,
-        c.Quantity
-    FROM 
-        CartItem c
-    WHERE 
-        c.IdTaiKhoan = @IdTaiKhoan;
-END;
-go
-CREATE PROCEDURE InsertCartItem
-    @IdTaiKhoan varchar(8),
-    @Name NVARCHAR(255),
-    @Price FLOAT,
-    @hinh_anh NVARCHAR(200),
-    @Quantity INT
-AS
-BEGIN
-    INSERT INTO CartItem (IdTaiKhoan, Name, Price, hinh_anh, Quantity)
-    VALUES (@IdTaiKhoan, @Name, @Price, @hinh_anh, @Quantity);
-END;
-go
-CREATE PROCEDURE DeleteCartItemById
-    @Id INT
-AS
-BEGIN
-    DELETE FROM CartItem
-    WHERE Id = @Id;
-END;
-
-
