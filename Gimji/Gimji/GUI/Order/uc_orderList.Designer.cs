@@ -28,37 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_orderList));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_orderList));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_order = new Guna.UI2.WinForms.Guna2Panel();
             lb_Status = new Label();
             lb_total = new Label();
             lb_date = new Label();
-            lb_customer = new Label();
             btn_remove = new Guna.UI2.WinForms.Guna2Button();
             btn_edit_Staff = new Guna.UI2.WinForms.Guna2Button();
             lb_id = new Label();
+            lb_customer = new Guna.UI2.WinForms.Guna2TextBox();
             pal_order.SuspendLayout();
             SuspendLayout();
             // 
             // pal_order
             // 
+            pal_order.Controls.Add(lb_customer);
             pal_order.Controls.Add(lb_Status);
             pal_order.Controls.Add(lb_total);
             pal_order.Controls.Add(lb_date);
-            pal_order.Controls.Add(lb_customer);
             pal_order.Controls.Add(btn_remove);
             pal_order.Controls.Add(btn_edit_Staff);
             pal_order.Controls.Add(lb_id);
-            pal_order.CustomizableEdges = customizableEdges5;
+            pal_order.CustomizableEdges = customizableEdges7;
             pal_order.Location = new Point(0, 0);
             pal_order.Name = "pal_order";
-            pal_order.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            pal_order.ShadowDecoration.CustomizableEdges = customizableEdges8;
             pal_order.Size = new Size(890, 56);
             pal_order.TabIndex = 1;
             // 
@@ -99,22 +101,10 @@
             lb_date.TabIndex = 13;
             lb_date.Text = "11-2-2023";
             // 
-            // lb_customer
-            // 
-            lb_customer.AutoSize = true;
-            lb_customer.FlatStyle = FlatStyle.Flat;
-            lb_customer.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lb_customer.ForeColor = SystemColors.ButtonHighlight;
-            lb_customer.Location = new Point(134, 13);
-            lb_customer.Name = "lb_customer";
-            lb_customer.Size = new Size(95, 23);
-            lb_customer.TabIndex = 12;
-            lb_customer.Text = "Elephant67";
-            // 
             // btn_remove
             // 
             btn_remove.BorderRadius = 5;
-            btn_remove.CustomizableEdges = customizableEdges1;
+            btn_remove.CustomizableEdges = customizableEdges3;
             btn_remove.DisabledState.BorderColor = Color.DarkGray;
             btn_remove.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_remove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -126,7 +116,7 @@
             btn_remove.ImageSize = new Size(25, 25);
             btn_remove.Location = new Point(804, 9);
             btn_remove.Name = "btn_remove";
-            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_remove.Size = new Size(27, 27);
             btn_remove.TabIndex = 11;
             btn_remove.Click += btn_remove_Click;
@@ -134,7 +124,7 @@
             // btn_edit_Staff
             // 
             btn_edit_Staff.BorderRadius = 5;
-            btn_edit_Staff.CustomizableEdges = customizableEdges3;
+            btn_edit_Staff.CustomizableEdges = customizableEdges5;
             btn_edit_Staff.DisabledState.BorderColor = Color.DarkGray;
             btn_edit_Staff.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_edit_Staff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -147,7 +137,7 @@
             btn_edit_Staff.ImageSize = new Size(25, 25);
             btn_edit_Staff.Location = new Point(771, 9);
             btn_edit_Staff.Name = "btn_edit_Staff";
-            btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_edit_Staff.Size = new Size(27, 27);
             btn_edit_Staff.TabIndex = 10;
             btn_edit_Staff.Click += btn_edit_Staff_Click;
@@ -163,6 +153,27 @@
             lb_id.Size = new Size(55, 23);
             lb_id.TabIndex = 6;
             lb_id.Text = "#1234";
+            // 
+            // lb_customer
+            // 
+            lb_customer.CustomizableEdges = customizableEdges1;
+            lb_customer.DefaultText = "";
+            lb_customer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            lb_customer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            lb_customer.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            lb_customer.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            lb_customer.FillColor = Color.Transparent;
+            lb_customer.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            lb_customer.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_customer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            lb_customer.Location = new Point(102, 9);
+            lb_customer.Name = "lb_customer";
+            lb_customer.PasswordChar = '\0';
+            lb_customer.PlaceholderText = "";
+            lb_customer.SelectedText = "";
+            lb_customer.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            lb_customer.Size = new Size(132, 35);
+            lb_customer.TabIndex = 16;
             // 
             // uc_orderList
             // 
@@ -183,9 +194,9 @@
         private Label lb_Status;
         private Label lb_total;
         private Label lb_date;
-        private Label lb_customer;
         private Guna.UI2.WinForms.Guna2Button btn_remove;
         private Guna.UI2.WinForms.Guna2Button btn_edit_Staff;
         private Label lb_id;
+        private Guna.UI2.WinForms.Guna2TextBox lb_customer;
     }
 }

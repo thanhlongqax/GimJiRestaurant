@@ -10,7 +10,7 @@
         "dependencies": {
           "ClosedXML": "0.102.1",
           "Guna.Charts.WinForms": "1.0.9",
-          "Guna.UI2.WinForms": "2.0.4.5",
+          "Guna.UI2.WinForms": "2.0.4.4",
           "Microsoft.Data.SqlClient": "5.1.2",
           "Newtonsoft.Json": "13.0.3"
         },
@@ -99,14 +99,14 @@
           }
         }
       },
-      "Guna.UI2.WinForms/2.0.4.5": {
+      "Guna.UI2.WinForms/2.0.4.4": {
         "dependencies": {
           "System.Management": "6.0.0"
         },
         "runtime": {
           "lib/net6.0-windows7.0/Guna.UI2.dll": {
-            "assemblyVersion": "2.0.4.5",
-            "fileVersion": "2.0.4.5"
+            "assemblyVersion": "2.0.4.4",
+            "fileVersion": "2.0.4.4"
           }
         }
       },
@@ -1131,12 +1131,12 @@
       "path": "guna.charts.winforms/1.0.9",
       "hashPath": "guna.charts.winforms.1.0.9.nupkg.sha512"
     },
-    "Guna.UI2.WinForms/2.0.4.5": {
+    "Guna.UI2.WinForms/2.0.4.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-lR50db4NzBC0QLAr27q9nrpYsIfWKjOgGnROrPi8AxbwLFE3nTup6ZOpVE/vbrr86eLV//8ys9sIW7j0ix2h+Q==",
-      "path": "guna.ui2.winforms/2.0.4.5",
-      "hashPath": "guna.ui2.winforms.2.0.4.5.nupkg.sha512"
+      "sha512": "sha512-PAteiG4zIquxHEhRJR4q69d0+U97U4XZuiwCFueXkh8hsw7IpkgPL41A/iyIx6bRFWiyEZ8tBzWqRrq7blrfnA==",
+      "path": "guna.ui2.winforms/2.0.4.4",
+      "hashPath": "guna.ui2.winforms.2.0.4.4.nupkg.sha512"
     },
     "Irony.NetCore/1.0.11": {
       "type": "package",

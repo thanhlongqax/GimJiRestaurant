@@ -116,7 +116,7 @@
           "Microsoft.WindowsDesktop.App.WindowsForms"
         ]
       },
-      "Guna.UI2.WinForms/2.0.4.5": {
+      "Guna.UI2.WinForms/2.0.4.4": {
         "type": "package",
         "dependencies": {
           "System.Management": "6.0.0"
@@ -2207,16 +2207,16 @@
         "lib/netcoreapp3.1/Guna.Charts.WinForms.xml"
       ]
     },
-    "Guna.UI2.WinForms/2.0.4.5": {
-      "sha512": "lR50db4NzBC0QLAr27q9nrpYsIfWKjOgGnROrPi8AxbwLFE3nTup6ZOpVE/vbrr86eLV//8ys9sIW7j0ix2h+Q==",
+    "Guna.UI2.WinForms/2.0.4.4": {
+      "sha512": "PAteiG4zIquxHEhRJR4q69d0+U97U4XZuiwCFueXkh8hsw7IpkgPL41A/iyIx6bRFWiyEZ8tBzWqRrq7blrfnA==",
       "type": "package",
-      "path": "guna.ui2.winforms/2.0.4.5",
+      "path": "guna.ui2.winforms/2.0.4.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "README.md",
-        "guna.ui2.winforms.2.0.4.5.nupkg.sha512",
+        "guna.ui2.winforms.2.0.4.4.nupkg.sha512",
         "guna.ui2.winforms.nuspec",
         "icon.png",
         "lib/net40/Guna.UI2.dll",
@@ -6600,7 +6600,7 @@
     "net6.0-windows7.0": [
       "ClosedXML >= 0.102.1",
       "Guna.Charts.WinForms >= 1.0.9",
-      "Guna.UI2.WinForms >= 2.0.4.5",
+      "Guna.UI2.WinForms >= 2.0.4.4",
       "Microsoft.Data.SqlClient >= 5.1.2",
       "Newtonsoft.Json >= 13.0.3"
     ]
@@ -6654,7 +6654,7 @@
           },
           "Guna.UI2.WinForms": {
             "target": "Package",
-            "version": "[2.0.4.5, )"
+            "version": "[2.0.4.4, )"
           },
           "Microsoft.Data.SqlClient": {
             "target": "Package",
@@ -6687,13 +6687,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file E:\\Classroom\\CNPM_N12\\Gimji\\Gimji\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

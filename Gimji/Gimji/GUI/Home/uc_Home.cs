@@ -50,9 +50,9 @@ namespace Gimji.GUI.Home
                 uc_Detail_Table uc_Detail_Table = new uc_Detail_Table();
                 Table_NV newTale = new Table_NV();
                 uc_Detail_Table.Name = table_NV.TenKhachHang;
-                uc_Detail_Table.Time = table_NV.NgayDatBan.ToString("HH:mm:ss dd-MM-yyyy");
+                uc_Detail_Table.Time = table_NV.NgayDatBan.ToString("HH:mm dd-MM-yyyy");
                 uc_Detail_Table.Num_Guest = table_NV.GhiChu;
-                flow_pal_Table.Controls.Add(uc_Detail_Table);
+                flow_pal_BookTable.Controls.Add(uc_Detail_Table);
             }
         }
         private void HandleBtnBookTableClick(uc_Table uc_Table, Table table)

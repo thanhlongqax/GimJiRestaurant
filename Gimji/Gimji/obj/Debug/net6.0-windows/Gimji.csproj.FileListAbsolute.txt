@@ -39,9 +39,6 @@ E:\Classroom\CNPM_N12\Gimji\Gimji\bin\Debug\net6.0-windows\runtimes\win\lib\net6
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.csproj.AssemblyReference.cache
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_Home.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Home.uc_table.resources
-E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.Main_Form_LoginRegister.resources
-E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Login_SignUp.uc_Login.resources
-E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Login_SignUp.uc_Register.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.mainForm.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Menu.uc_Menu.resources
 E:\Classroom\CNPM_N12\Gimji\Gimji\obj\Debug\net6.0-windows\Gimji.GUI.Menu.uc_MonAn.resources
