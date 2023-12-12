@@ -297,7 +297,7 @@
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 7F, FontStyle.Regular, GraphicsUnit.Point);
             label5.ForeColor = SystemColors.ActiveBorder;
-            label5.Location = new Point(14, 51);
+            label5.Location = new Point(14, 52);
             label5.Name = "label5";
             label5.Size = new Size(57, 15);
             label5.TabIndex = 1;
@@ -313,7 +313,7 @@
             guna_btn_Setting.ImageOffset = new Point(0, 0);
             guna_btn_Setting.ImageRotate = 0F;
             guna_btn_Setting.ImageSize = new Size(35, 27);
-            guna_btn_Setting.Location = new Point(23, 9);
+            guna_btn_Setting.Location = new Point(22, 11);
             guna_btn_Setting.Name = "guna_btn_Setting";
             guna_btn_Setting.PressedState.ImageSize = new Size(40, 36);
             guna_btn_Setting.ShadowDecoration.CustomizableEdges = customizableEdges8;

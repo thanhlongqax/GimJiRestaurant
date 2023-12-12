@@ -118,7 +118,7 @@ namespace Gimji.GUI.Menu
             foreach (var cartItem in listCartItems)
             {
                 uc_MonAnCart uc_MonAnCart = new uc_MonAnCart();
-                //uc_MonAnCart.ID = cartItem.Id;
+                uc_MonAnCart.ID = cartItem.Id;
                 uc_MonAnCart.idMonAns = cartItem.IdMonAn;
                 uc_MonAnCart.IdCategory = cartItem.Catergory_Id;
                 uc_MonAnCart.Name = cartItem.Name;

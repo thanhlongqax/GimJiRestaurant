@@ -48,7 +48,10 @@ namespace Gimji.GUI.Management
 
         private void uc_Management_Load(object sender, EventArgs e)
         {
-
+            ///default UI
+            pal_right.Controls.Clear();
+            pal_right.Controls.Add(new uc_revenueManagement());
+            ////
             panelList.Add(pal_customer);
             panelList.Add(pal_product);
             panelList.Add(pal_shift);

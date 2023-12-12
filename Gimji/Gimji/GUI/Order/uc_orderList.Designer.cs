@@ -57,44 +57,45 @@
             pal_order.Controls.Add(lb_id);
             pal_order.CustomizableEdges = customizableEdges5;
             pal_order.Location = new Point(0, 0);
-            pal_order.Margin = new Padding(3, 2, 3, 2);
             pal_order.Name = "pal_order";
             pal_order.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pal_order.Size = new Size(779, 42);
+            pal_order.Size = new Size(890, 56);
             pal_order.TabIndex = 1;
             // 
             // lbl_customerName
             // 
-            lbl_customerName.BackColor = Color.Transparent;
+            lbl_customerName.BackColor = Color.FromArgb(119, 24, 24);
+            lbl_customerName.BackgroundImageLayout = ImageLayout.None;
             lbl_customerName.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_customerName.ForeColor = Color.White;
-            lbl_customerName.Location = new Point(99, 10);
+            lbl_customerName.Location = new Point(135, 13);
+            lbl_customerName.Margin = new Padding(3, 4, 3, 4);
             lbl_customerName.Name = "lbl_customerName";
-            lbl_customerName.Size = new Size(110, 21);
+            lbl_customerName.Size = new Size(143, 24);
             lbl_customerName.TabIndex = 17;
             lbl_customerName.Text = "guna2HtmlLabel1";
             // 
             // txt_customer_input
             // 
             txt_customer_input.BackColor = Color.White;
+            txt_customer_input.BackgroundImageLayout = ImageLayout.None;
             txt_customer_input.CustomizableEdges = customizableEdges1;
             txt_customer_input.DefaultText = "";
             txt_customer_input.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txt_customer_input.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             txt_customer_input.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
             txt_customer_input.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_customer_input.FillColor = Color.Transparent;
+            txt_customer_input.FillColor = Color.FromArgb(119, 24, 24);
             txt_customer_input.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txt_customer_input.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txt_customer_input.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_customer_input.Location = new Point(89, 7);
-            txt_customer_input.Margin = new Padding(3, 2, 3, 2);
+            txt_customer_input.Location = new Point(135, 9);
             txt_customer_input.Name = "txt_customer_input";
             txt_customer_input.PasswordChar = '\0';
             txt_customer_input.PlaceholderText = "";
             txt_customer_input.SelectedText = "";
             txt_customer_input.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txt_customer_input.Size = new Size(116, 26);
+            txt_customer_input.Size = new Size(133, 35);
             txt_customer_input.TabIndex = 16;
             // 
             // lb_Status
@@ -103,9 +104,9 @@
             lb_Status.FlatStyle = FlatStyle.Flat;
             lb_Status.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_Status.ForeColor = Color.FromArgb(80, 209, 170);
-            lb_Status.Location = new Point(538, 10);
+            lb_Status.Location = new Point(615, 13);
             lb_Status.Name = "lb_Status";
-            lb_Status.Size = new Size(77, 19);
+            lb_Status.Size = new Size(94, 23);
             lb_Status.TabIndex = 15;
             lb_Status.Text = "Completed";
             // 
@@ -115,9 +116,9 @@
             lb_total.FlatStyle = FlatStyle.Flat;
             lb_total.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_total.ForeColor = SystemColors.ButtonHighlight;
-            lb_total.Location = new Point(414, 10);
+            lb_total.Location = new Point(473, 13);
             lb_total.Name = "lb_total";
-            lb_total.Size = new Size(58, 19);
+            lb_total.Size = new Size(66, 23);
             lb_total.TabIndex = 14;
             lb_total.Text = "125.000";
             lb_total.TextAlign = ContentAlignment.MiddleCenter;
@@ -128,9 +129,9 @@
             lb_date.FlatStyle = FlatStyle.Flat;
             lb_date.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_date.ForeColor = SystemColors.ButtonHighlight;
-            lb_date.Location = new Point(250, 10);
+            lb_date.Location = new Point(286, 13);
             lb_date.Name = "lb_date";
-            lb_date.Size = new Size(73, 19);
+            lb_date.Size = new Size(83, 23);
             lb_date.TabIndex = 13;
             lb_date.Text = "11-2-2023";
             // 
@@ -148,11 +149,10 @@
             btn_edit_Staff.HoverState.BorderColor = Color.White;
             btn_edit_Staff.Image = (Image)resources.GetObject("btn_edit_Staff.Image");
             btn_edit_Staff.ImageSize = new Size(25, 25);
-            btn_edit_Staff.Location = new Point(675, 7);
-            btn_edit_Staff.Margin = new Padding(3, 2, 3, 2);
+            btn_edit_Staff.Location = new Point(771, 9);
             btn_edit_Staff.Name = "btn_edit_Staff";
             btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_edit_Staff.Size = new Size(24, 20);
+            btn_edit_Staff.Size = new Size(27, 27);
             btn_edit_Staff.TabIndex = 10;
             btn_edit_Staff.Click += btn_edit_Staff_Click;
             // 
@@ -162,21 +162,20 @@
             lb_id.FlatStyle = FlatStyle.Flat;
             lb_id.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_id.ForeColor = SystemColors.ButtonHighlight;
-            lb_id.Location = new Point(8, 10);
+            lb_id.Location = new Point(9, 13);
             lb_id.Name = "lb_id";
-            lb_id.Size = new Size(47, 19);
+            lb_id.Size = new Size(55, 23);
             lb_id.TabIndex = 6;
             lb_id.Text = "#1234";
             // 
             // uc_orderList
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(pal_order);
-            Margin = new Padding(3, 2, 3, 2);
             Name = "uc_orderList";
-            Size = new Size(757, 42);
+            Size = new Size(865, 56);
             pal_order.ResumeLayout(false);
             pal_order.PerformLayout();
             ResumeLayout(false);
