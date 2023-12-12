@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_inventory));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_sale = new Guna.UI2.WinForms.Guna2Panel();
             pic_image = new Guna.UI2.WinForms.Guna2PictureBox();
             lb_status = new Label();
@@ -66,21 +66,21 @@
             pal_sale.Controls.Add(lb_available);
             pal_sale.Controls.Add(lb_name);
             pal_sale.Controls.Add(lb_type);
-            pal_sale.CustomizableEdges = customizableEdges15;
+            pal_sale.CustomizableEdges = customizableEdges7;
             pal_sale.Location = new Point(0, 0);
             pal_sale.Name = "pal_sale";
-            pal_sale.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            pal_sale.ShadowDecoration.CustomizableEdges = customizableEdges8;
             pal_sale.Size = new Size(929, 48);
             pal_sale.TabIndex = 5;
             // 
             // pic_image
             // 
-            pic_image.CustomizableEdges = customizableEdges9;
+            pic_image.CustomizableEdges = customizableEdges1;
             pic_image.Image = (Image)resources.GetObject("pic_image.Image");
             pic_image.ImageRotate = 0F;
             pic_image.Location = new Point(14, 7);
             pic_image.Name = "pic_image";
-            pic_image.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            pic_image.ShadowDecoration.CustomizableEdges = customizableEdges2;
             pic_image.Size = new Size(31, 30);
             pic_image.SizeMode = PictureBoxSizeMode.StretchImage;
             pic_image.TabIndex = 8;
@@ -113,7 +113,7 @@
             // btn_remove
             // 
             btn_remove.BorderRadius = 5;
-            btn_remove.CustomizableEdges = customizableEdges11;
+            btn_remove.CustomizableEdges = customizableEdges3;
             btn_remove.DisabledState.BorderColor = Color.DarkGray;
             btn_remove.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_remove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -125,14 +125,15 @@
             btn_remove.ImageSize = new Size(25, 25);
             btn_remove.Location = new Point(875, 10);
             btn_remove.Name = "btn_remove";
-            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btn_remove.Size = new Size(27, 27);
             btn_remove.TabIndex = 5;
+            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit
             // 
             btn_edit.BorderRadius = 5;
-            btn_edit.CustomizableEdges = customizableEdges13;
+            btn_edit.CustomizableEdges = customizableEdges5;
             btn_edit.DisabledState.BorderColor = Color.DarkGray;
             btn_edit.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_edit.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -145,9 +146,10 @@
             btn_edit.ImageSize = new Size(25, 25);
             btn_edit.Location = new Point(845, 10);
             btn_edit.Name = "btn_edit";
-            btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btn_edit.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btn_edit.Size = new Size(27, 27);
             btn_edit.TabIndex = 4;
+            btn_edit.Click += btn_edit_Click;
             // 
             // lb_sold
             // 

@@ -33,6 +33,11 @@ namespace Gimji.GUI.Management.Inventory_Management
             }
 
         }
+        private void loadData()
+        {
+            pal_listInventory.Controls.Clear();
+
+        }
 
         private void InitializeChart()
         {
@@ -43,7 +48,7 @@ namespace Gimji.GUI.Management.Inventory_Management
 
             string[] type = { "Kimbak", "Tokbokki", "ABC", "D", "E", "G", "F" };
             long[] value = { 0, 0, 0 };
-            GenerateLine(type,value);
+            GenerateLine(type, value);
             inventory_chart.Datasets.Add(bar_chart);
         }
         private void GenerateLine(string[] type, long[] value)
@@ -60,6 +65,11 @@ namespace Gimji.GUI.Management.Inventory_Management
                 });
 
             }
+
+        }
+
+        private void btn_cancel_Click(object sender, EventArgs e)
+        {
 
         }
     }

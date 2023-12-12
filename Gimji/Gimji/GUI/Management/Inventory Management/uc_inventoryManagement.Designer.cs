@@ -51,6 +51,18 @@
             Guna.Charts.WinForms.ChartFont chartFont7 = new Guna.Charts.WinForms.ChartFont();
             Guna.Charts.WinForms.Tick tick3 = new Guna.Charts.WinForms.Tick();
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Name = new Label();
             txt_Input_Search = new Guna.UI2.WinForms.Guna2TextBox();
             combo_sort = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -69,9 +81,19 @@
             inventory_chart = new Guna.Charts.WinForms.GunaChart();
             stack_chart = new Guna.Charts.WinForms.GunaStackedBarDataset();
             bar_chart = new Guna.Charts.WinForms.GunaBarDataset();
+            pal_inforDish = new Guna.UI2.WinForms.Guna2Panel();
+            btn_confirm = new Guna.UI2.WinForms.Guna2Button();
+            txt_quantity = new Guna.UI2.WinForms.Guna2TextBox();
+            btn_cancel = new Guna.UI2.WinForms.Guna2Button();
+            label3 = new Label();
+            txt_name = new Guna.UI2.WinForms.Guna2TextBox();
+            label4 = new Label();
+            txt_price = new Guna.UI2.WinForms.Guna2TextBox();
+            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             pal_reportOrder.SuspendLayout();
+            pal_inforDish.SuspendLayout();
             SuspendLayout();
             // 
             // lb_Name
@@ -250,10 +272,10 @@
             pal_reportOrder.Controls.Add(panel1);
             pal_reportOrder.CustomizableEdges = customizableEdges5;
             pal_reportOrder.FillColor = Color.FromArgb(136, 21, 57);
-            pal_reportOrder.Location = new Point(35, 220);
+            pal_reportOrder.Location = new Point(35, 223);
             pal_reportOrder.Name = "pal_reportOrder";
             pal_reportOrder.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            pal_reportOrder.Size = new Size(978, 488);
+            pal_reportOrder.Size = new Size(978, 485);
             pal_reportOrder.TabIndex = 14;
             // 
             // btn_create
@@ -269,7 +291,7 @@
             btn_create.HoverState.Image = (Image)resources.GetObject("resource.Image");
             btn_create.Image = (Image)resources.GetObject("btn_create.Image");
             btn_create.ImageSize = new Size(50, 50);
-            btn_create.Location = new Point(960, 164);
+            btn_create.Location = new Point(962, 156);
             btn_create.Name = "btn_create";
             btn_create.PressedColor = Color.Transparent;
             btn_create.ShadowDecoration.CustomizableEdges = customizableEdges7;
@@ -332,11 +354,186 @@
             bar_chart.Label = "Available";
             bar_chart.LegendBoxFillColor = Color.FromArgb(0, 192, 0);
             // 
+            // pal_inforDish
+            // 
+            pal_inforDish.BackColor = Color.Transparent;
+            pal_inforDish.BorderColor = Color.White;
+            pal_inforDish.BorderRadius = 20;
+            pal_inforDish.BorderThickness = 2;
+            pal_inforDish.Controls.Add(txt_price);
+            pal_inforDish.Controls.Add(label2);
+            pal_inforDish.Controls.Add(btn_confirm);
+            pal_inforDish.Controls.Add(txt_quantity);
+            pal_inforDish.Controls.Add(btn_cancel);
+            pal_inforDish.Controls.Add(label3);
+            pal_inforDish.Controls.Add(txt_name);
+            pal_inforDish.Controls.Add(label4);
+            pal_inforDish.CustomizableEdges = customizableEdges18;
+            pal_inforDish.FillColor = Color.Transparent;
+            pal_inforDish.Location = new Point(626, 69);
+            pal_inforDish.Name = "pal_inforDish";
+            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            pal_inforDish.Size = new Size(330, 137);
+            pal_inforDish.TabIndex = 27;
+            // 
+            // btn_confirm
+            // 
+            btn_confirm.BackColor = Color.Transparent;
+            btn_confirm.BorderColor = Color.White;
+            btn_confirm.BorderRadius = 5;
+            btn_confirm.BorderThickness = 1;
+            btn_confirm.CustomizableEdges = customizableEdges10;
+            btn_confirm.DisabledState.BorderColor = Color.DarkGray;
+            btn_confirm.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_confirm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_confirm.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_confirm.FillColor = Color.Maroon;
+            btn_confirm.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_confirm.ForeColor = Color.White;
+            btn_confirm.HoverState.FillColor = Color.Maroon;
+            btn_confirm.Location = new Point(220, 91);
+            btn_confirm.Name = "btn_confirm";
+            btn_confirm.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btn_confirm.Size = new Size(86, 39);
+            btn_confirm.TabIndex = 1;
+            btn_confirm.Text = "Confirm";
+            // 
+            // txt_quantity
+            // 
+            txt_quantity.BorderColor = Color.White;
+            txt_quantity.BorderRadius = 5;
+            txt_quantity.CustomizableEdges = customizableEdges12;
+            txt_quantity.DefaultText = "100000000";
+            txt_quantity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_quantity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_quantity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_quantity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_quantity.FillColor = Color.FromArgb(255, 180, 79);
+            txt_quantity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_quantity.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_quantity.ForeColor = Color.Black;
+            txt_quantity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_quantity.Location = new Point(186, 29);
+            txt_quantity.Name = "txt_quantity";
+            txt_quantity.PasswordChar = '\0';
+            txt_quantity.PlaceholderForeColor = Color.Black;
+            txt_quantity.PlaceholderText = "";
+            txt_quantity.SelectedText = "";
+            txt_quantity.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            txt_quantity.Size = new Size(120, 39);
+            txt_quantity.TabIndex = 27;
+            // 
+            // btn_cancel
+            // 
+            btn_cancel.BorderColor = Color.White;
+            btn_cancel.BorderRadius = 5;
+            btn_cancel.BorderThickness = 1;
+            btn_cancel.CustomizableEdges = customizableEdges14;
+            btn_cancel.DisabledState.BorderColor = Color.DarkGray;
+            btn_cancel.DisabledState.CustomBorderColor = Color.DarkGray;
+            btn_cancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btn_cancel.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btn_cancel.FillColor = Color.Transparent;
+            btn_cancel.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_cancel.ForeColor = Color.White;
+            btn_cancel.HoverState.FillColor = Color.FromArgb(224, 224, 224);
+            btn_cancel.Location = new Point(132, 91);
+            btn_cancel.Name = "btn_cancel";
+            btn_cancel.ShadowDecoration.CustomizableEdges = customizableEdges15;
+            btn_cancel.Size = new Size(82, 39);
+            btn_cancel.TabIndex = 0;
+            btn_cancel.Text = "Cancel";
+            btn_cancel.Click += btn_cancel_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(187, 10);
+            label3.Name = "label3";
+            label3.Size = new Size(62, 17);
+            label3.TabIndex = 26;
+            label3.Text = "Quantity";
+            // 
+            // txt_name
+            // 
+            txt_name.BorderColor = Color.White;
+            txt_name.BorderRadius = 5;
+            txt_name.CustomizableEdges = customizableEdges16;
+            txt_name.DefaultText = "elephant";
+            txt_name.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_name.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_name.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_name.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_name.FillColor = Color.FromArgb(255, 180, 79);
+            txt_name.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_name.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_name.ForeColor = Color.Black;
+            txt_name.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_name.Location = new Point(27, 29);
+            txt_name.Name = "txt_name";
+            txt_name.PasswordChar = '\0';
+            txt_name.PlaceholderForeColor = Color.Black;
+            txt_name.PlaceholderText = "";
+            txt_name.SelectedText = "";
+            txt_name.ShadowDecoration.CustomizableEdges = customizableEdges17;
+            txt_name.Size = new Size(132, 39);
+            txt_name.TabIndex = 25;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(28, 10);
+            label4.Name = "label4";
+            label4.Size = new Size(43, 17);
+            label4.TabIndex = 24;
+            label4.Text = "Food ";
+            // 
+            // txt_price
+            // 
+            txt_price.BorderColor = Color.White;
+            txt_price.BorderRadius = 5;
+            txt_price.CustomizableEdges = customizableEdges8;
+            txt_price.DefaultText = "100000000";
+            txt_price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_price.FillColor = Color.FromArgb(255, 180, 79);
+            txt_price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_price.ForeColor = Color.Black;
+            txt_price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_price.Location = new Point(28, 91);
+            txt_price.Name = "txt_price";
+            txt_price.PasswordChar = '\0';
+            txt_price.PlaceholderForeColor = Color.Black;
+            txt_price.PlaceholderText = "";
+            txt_price.SelectedText = "";
+            txt_price.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            txt_price.Size = new Size(96, 39);
+            txt_price.TabIndex = 29;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(27, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 17);
+            label2.TabIndex = 28;
+            label2.Text = "Price";
+            // 
             // uc_inventoryManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(136, 21, 57);
+            Controls.Add(pal_inforDish);
             Controls.Add(inventory_chart);
             Controls.Add(combo_sort);
             Controls.Add(btn_create);
@@ -350,6 +547,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             pal_reportOrder.ResumeLayout(false);
+            pal_inforDish.ResumeLayout(false);
+            pal_inforDish.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -373,5 +572,14 @@
         private Guna.Charts.WinForms.GunaChart inventory_chart;
         private Guna.Charts.WinForms.GunaStackedBarDataset stack_chart;
         private Guna.Charts.WinForms.GunaBarDataset bar_chart;
+        private Guna.UI2.WinForms.Guna2Panel pal_inforDish;
+        private Guna.UI2.WinForms.Guna2Button btn_confirm;
+        private Guna.UI2.WinForms.Guna2TextBox txt_quantity;
+        private Guna.UI2.WinForms.Guna2Button btn_cancel;
+        private Label label3;
+        private Guna.UI2.WinForms.Guna2TextBox txt_name;
+        private Label label4;
+        private Guna.UI2.WinForms.Guna2TextBox txt_price;
+        private Label label2;
     }
 }
