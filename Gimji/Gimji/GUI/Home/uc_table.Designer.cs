@@ -54,8 +54,9 @@
             btn_Table.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btn_Table.Size = new Size(180, 180);
             btn_Table.TabIndex = 0;
+            btn_Table.Text = "2";
             btn_Table.TextAlign = HorizontalAlignment.Left;
-            btn_Table.TextOffset = new Point(65, 0);
+            btn_Table.TextOffset = new Point(68, 0);
             btn_Table.Click += btn_Table_Click;
             // 
             // uc_Table

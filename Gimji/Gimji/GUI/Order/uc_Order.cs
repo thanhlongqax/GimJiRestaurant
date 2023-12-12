@@ -45,7 +45,7 @@ namespace Gimji.GUI.Order
             uc_OrderList.IdProduct = id;
             uc_OrderList.IdStaff = Stored_Login_Infor.GetCurrentUser();
             uc_OrderList.Price = total;
-            uc_OrderList.startDate = startDate.ToString();
+            uc_OrderList.startDate = startDate.ToString("HH:mm dd/MM");
             uc_OrderList.BtEditClick += (s, eventArgs) =>
             {
                 

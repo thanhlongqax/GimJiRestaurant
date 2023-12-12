@@ -80,11 +80,12 @@
             lb_total.FlatStyle = FlatStyle.Flat;
             lb_total.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_total.ForeColor = SystemColors.ButtonHighlight;
-            lb_total.Location = new Point(466, 13);
+            lb_total.Location = new Point(473, 13);
             lb_total.Name = "lb_total";
             lb_total.Size = new Size(66, 23);
             lb_total.TabIndex = 14;
             lb_total.Text = "125.000";
+            lb_total.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lb_date
             // 

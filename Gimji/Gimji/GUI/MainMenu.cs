@@ -32,6 +32,9 @@ namespace Gimji
                 guna_btn_Management.Visible = false;
                 lbl_Management.Visible = false;
             }
+            uc_Home home = new uc_Home();
+            panel_Menu.Controls.Clear();
+            panel_Menu.Controls.Add(home);
         }
 
         private void mainForm_Load(object sender, EventArgs e)
@@ -98,6 +101,13 @@ namespace Gimji
             this.Hide();
             loginF.ShowDialog();
             Application.Exit();
+        }
+
+        private void btn_logo_Click(object sender, EventArgs e)
+        {
+            uc_Home home = new uc_Home();
+            panel_Menu.Controls.Clear();
+            panel_Menu.Controls.Add(home);
         }
     }
 }
