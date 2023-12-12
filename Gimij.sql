@@ -776,7 +776,7 @@ BEGIN
     BEGIN
         -- Select data for the current month
         SELECT 
-            YEAR(dayTime) as [Year],
+            
             SUM(CASE WHEN MONTH(dayTime) = 01 THEN revenue ELSE 0 END) AS January,
             SUM(CASE WHEN MONTH(dayTime) = 02 THEN revenue ELSE 0 END) AS February,
             SUM(CASE WHEN MONTH(dayTime) = 03 THEN revenue ELSE 0 END) AS March,
@@ -790,14 +790,14 @@ BEGIN
             SUM(CASE WHEN MONTH(dayTime) = 11 THEN revenue ELSE 0 END) AS November,
             SUM(CASE WHEN MONTH(dayTime) = 12 THEN revenue ELSE 0 END) AS December
         FROM Doanh_Thu
-        WHERE MONTH(dayTime) = MONTH(GETDATE()) AND YEAR(dayTime) = YEAR(GETDATE())
+        WHERE  YEAR(dayTime) = YEAR(GETDATE())
 		GROUP BY  YEAR(dayTime);
     END
     ELSE IF @Period = 'Quarter'
     BEGIN
         -- Select data for the current year's quarters
         SELECT 
-            YEAR(dayTime) AS [Year],
+            
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 1 THEN revenue ELSE 0 END) AS Q1,
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 2 THEN revenue ELSE 0 END) AS Q2,
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 3 THEN revenue ELSE 0 END) AS Q3,
