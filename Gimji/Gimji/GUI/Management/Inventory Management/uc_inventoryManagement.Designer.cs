@@ -53,6 +53,8 @@
             Guna.Charts.WinForms.ChartFont chartFont8 = new Guna.Charts.WinForms.ChartFont();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -61,8 +63,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lb_Name = new Label();
             txt_Input_Search = new Guna.UI2.WinForms.Guna2TextBox();
             combo_sort = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -81,19 +81,19 @@
             inventory_chart = new Guna.Charts.WinForms.GunaChart();
             stack_chart = new Guna.Charts.WinForms.GunaStackedBarDataset();
             bar_chart = new Guna.Charts.WinForms.GunaBarDataset();
-            pal_inforDish = new Guna.UI2.WinForms.Guna2Panel();
+            pal_inforInventory = new Guna.UI2.WinForms.Guna2Panel();
+            txt_price = new Guna.UI2.WinForms.Guna2TextBox();
+            label2 = new Label();
             btn_confirm = new Guna.UI2.WinForms.Guna2Button();
             txt_quantity = new Guna.UI2.WinForms.Guna2TextBox();
             btn_cancel = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
             txt_name = new Guna.UI2.WinForms.Guna2TextBox();
             label4 = new Label();
-            txt_price = new Guna.UI2.WinForms.Guna2TextBox();
-            label2 = new Label();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             pal_reportOrder.SuspendLayout();
-            pal_inforDish.SuspendLayout();
+            pal_inforInventory.SuspendLayout();
             SuspendLayout();
             // 
             // lb_Name
@@ -153,6 +153,7 @@
             combo_sort.ShadowDecoration.CustomizableEdges = customizableEdges4;
             combo_sort.Size = new Size(111, 42);
             combo_sort.TabIndex = 16;
+            combo_sort.Visible = false;
             // 
             // panel1
             // 
@@ -354,27 +355,63 @@
             bar_chart.Label = "Available";
             bar_chart.LegendBoxFillColor = Color.FromArgb(0, 192, 0);
             // 
-            // pal_inforDish
+            // pal_inforInventory
             // 
-            pal_inforDish.BackColor = Color.Transparent;
-            pal_inforDish.BorderColor = Color.White;
-            pal_inforDish.BorderRadius = 20;
-            pal_inforDish.BorderThickness = 2;
-            pal_inforDish.Controls.Add(txt_price);
-            pal_inforDish.Controls.Add(label2);
-            pal_inforDish.Controls.Add(btn_confirm);
-            pal_inforDish.Controls.Add(txt_quantity);
-            pal_inforDish.Controls.Add(btn_cancel);
-            pal_inforDish.Controls.Add(label3);
-            pal_inforDish.Controls.Add(txt_name);
-            pal_inforDish.Controls.Add(label4);
-            pal_inforDish.CustomizableEdges = customizableEdges18;
-            pal_inforDish.FillColor = Color.Transparent;
-            pal_inforDish.Location = new Point(626, 69);
-            pal_inforDish.Name = "pal_inforDish";
-            pal_inforDish.ShadowDecoration.CustomizableEdges = customizableEdges19;
-            pal_inforDish.Size = new Size(330, 137);
-            pal_inforDish.TabIndex = 27;
+            pal_inforInventory.BackColor = Color.Transparent;
+            pal_inforInventory.BorderColor = Color.White;
+            pal_inforInventory.BorderRadius = 20;
+            pal_inforInventory.BorderThickness = 2;
+            pal_inforInventory.Controls.Add(txt_price);
+            pal_inforInventory.Controls.Add(label2);
+            pal_inforInventory.Controls.Add(btn_confirm);
+            pal_inforInventory.Controls.Add(txt_quantity);
+            pal_inforInventory.Controls.Add(btn_cancel);
+            pal_inforInventory.Controls.Add(label3);
+            pal_inforInventory.Controls.Add(txt_name);
+            pal_inforInventory.Controls.Add(label4);
+            pal_inforInventory.CustomizableEdges = customizableEdges18;
+            pal_inforInventory.FillColor = Color.Transparent;
+            pal_inforInventory.Location = new Point(626, 69);
+            pal_inforInventory.Name = "pal_inforInventory";
+            pal_inforInventory.ShadowDecoration.CustomizableEdges = customizableEdges19;
+            pal_inforInventory.Size = new Size(330, 137);
+            pal_inforInventory.TabIndex = 27;
+            // 
+            // txt_price
+            // 
+            txt_price.BorderColor = Color.White;
+            txt_price.BorderRadius = 5;
+            txt_price.CustomizableEdges = customizableEdges8;
+            txt_price.DefaultText = "100000000";
+            txt_price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txt_price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txt_price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txt_price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txt_price.FillColor = Color.FromArgb(255, 180, 79);
+            txt_price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txt_price.ForeColor = Color.Black;
+            txt_price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txt_price.Location = new Point(28, 91);
+            txt_price.Name = "txt_price";
+            txt_price.PasswordChar = '\0';
+            txt_price.PlaceholderForeColor = Color.Black;
+            txt_price.PlaceholderText = "";
+            txt_price.SelectedText = "";
+            txt_price.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            txt_price.Size = new Size(96, 39);
+            txt_price.TabIndex = 29;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.White;
+            label2.Location = new Point(27, 70);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 17);
+            label2.TabIndex = 28;
+            label2.Text = "Price";
             // 
             // btn_confirm
             // 
@@ -492,48 +529,12 @@
             label4.TabIndex = 24;
             label4.Text = "Food ";
             // 
-            // txt_price
-            // 
-            txt_price.BorderColor = Color.White;
-            txt_price.BorderRadius = 5;
-            txt_price.CustomizableEdges = customizableEdges8;
-            txt_price.DefaultText = "100000000";
-            txt_price.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txt_price.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txt_price.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txt_price.FillColor = Color.FromArgb(255, 180, 79);
-            txt_price.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            txt_price.ForeColor = Color.Black;
-            txt_price.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txt_price.Location = new Point(28, 91);
-            txt_price.Name = "txt_price";
-            txt_price.PasswordChar = '\0';
-            txt_price.PlaceholderForeColor = Color.Black;
-            txt_price.PlaceholderText = "";
-            txt_price.SelectedText = "";
-            txt_price.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            txt_price.Size = new Size(96, 39);
-            txt_price.TabIndex = 29;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 7.8F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(27, 70);
-            label2.Name = "label2";
-            label2.Size = new Size(38, 17);
-            label2.TabIndex = 28;
-            label2.Text = "Price";
-            // 
             // uc_inventoryManagement
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(136, 21, 57);
-            Controls.Add(pal_inforDish);
+            Controls.Add(pal_inforInventory);
             Controls.Add(inventory_chart);
             Controls.Add(combo_sort);
             Controls.Add(btn_create);
@@ -547,8 +548,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             pal_reportOrder.ResumeLayout(false);
-            pal_inforDish.ResumeLayout(false);
-            pal_inforDish.PerformLayout();
+            pal_inforInventory.ResumeLayout(false);
+            pal_inforInventory.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -572,7 +573,7 @@
         private Guna.Charts.WinForms.GunaChart inventory_chart;
         private Guna.Charts.WinForms.GunaStackedBarDataset stack_chart;
         private Guna.Charts.WinForms.GunaBarDataset bar_chart;
-        private Guna.UI2.WinForms.Guna2Panel pal_inforDish;
+        private Guna.UI2.WinForms.Guna2Panel pal_inforInventory;
         private Guna.UI2.WinForms.Guna2Button btn_confirm;
         private Guna.UI2.WinForms.Guna2TextBox txt_quantity;
         private Guna.UI2.WinForms.Guna2Button btn_cancel;

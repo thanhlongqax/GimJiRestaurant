@@ -20,9 +20,9 @@ namespace Gimji.GUI.Management.Inventory_Management
             InitializeComponent();
         }
         #region Properties
-        public int Type
+        public String Type
         {
-            get { return Convert.ToInt32(lb_type.Text); }
+            get { return lb_type.Text; }
             set { lb_type.Text = value.ToString(); }
         }
 
@@ -30,6 +30,11 @@ namespace Gimji.GUI.Management.Inventory_Management
         {
             get { return lb_available.Text; }
             set { lb_available.Text = value; }
+        }
+        public Image PictureBox
+        {
+            get { return pic_image.Image; }
+            set { pic_image.Image = value; }
         }
         public string Sold
         {
@@ -46,6 +51,11 @@ namespace Gimji.GUI.Management.Inventory_Management
         {
             get { return lb_status.Text; }
             set { lb_status.Text = value; }
+        }
+        public String Price
+        {
+            get { return lb_price.Text; }
+            set { lb_price.Text = value; }
         }
 
 
