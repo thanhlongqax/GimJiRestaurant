@@ -1,4 +1,5 @@
 ﻿using DocumentFormat.OpenXml.Presentation;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,12 +16,20 @@ namespace Gimji.GUI.Order
     {
         public event EventHandler BtnDeleteClick;
         public event EventHandler BtEditClick;
+        public Guna2TextBox txt_customerNameDaNhap;
+        public Guna2HtmlLabel lbl_NameDaNhap;
         int quantity;
         private int idProduct;
         private int idCategory;
         public uc_orderList()
         {
             InitializeComponent();
+            lbl_NameDaNhap = lbl_customerName;
+            txt_customerNameDaNhap = txt_customer_input;
+            lbl_customerName = lbl_NameDaNhap;
+            lbl_customerName.Visible = false;
+            txt_customer_input = txt_customerNameDaNhap;
+
         }
 
         private void btn_edit_Staff_Click(object sender, EventArgs e)
@@ -50,17 +59,22 @@ namespace Gimji.GUI.Order
         }
         public String nameCustomers
         {
-            get { return lbl_customerName.Text;
+            get
+            {
+                return lbl_customerName.Text;
 
             }
-            set {
-                lb_customer_input.Text = nameCustomer ;
+            set
+            {
+                txt_customer_input.Text = nameCustomer;
             }
         }
         public String nameCustomer
         {
-            get { return lb_customer_input.Text; }
-            set { lb_customer_input.Text = value;
+            get { return txt_customer_input.Text; }
+            set
+            {
+                txt_customer_input.Text = value;
             }
         }
         public String startDate

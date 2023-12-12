@@ -217,6 +217,14 @@ namespace Gimji.GUI.PayMent
                     worksheet.Cell(row, 9).Value = order.ngayLap;
                 }
 
+                // Auto-fit columns for better readability
+                worksheet.Columns().AdjustToContents();
+
+                // Format header row
+                var headerRow = worksheet.Row(1);
+                headerRow.Style.Font.Bold = true;
+                headerRow.Style.Fill.BackgroundColor = XLColor.LightGray;
+
                 // Lưu tệp Excel
                 workbook.SaveAs(filePath);
             }

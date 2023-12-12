@@ -50,7 +50,9 @@ namespace Gimji.GUI.Order
             uc_OrderList.BtEditClick += (s, eventArgs) =>
             {
                 nameCustomer = uc_OrderList.nameCustomer;
-                
+                uc_OrderList.lbl_NameDaNhap.Text = nameCustomer;
+                uc_OrderList.txt_customerNameDaNhap.Visible = false;
+                uc_OrderList.lbl_NameDaNhap.Visible =true;
 
             };
             pal_listOrder.Controls.Add(uc_OrderList);

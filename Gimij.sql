@@ -228,7 +228,7 @@ go
 -- Insert the third Vietnamese employee
 EXEC InsertStaffLoginData
     @fullName = N'Võ Hoàng Quân',
-    @emailAddress = 'hoangminhcuong@example.com',
+    @emailAddress = 'thanhlongqax@gmail.com',
     @contactAddress = N'789 Đường C, Quận 3, TP.HCM',
     @phoneNumber = '0912345678',
     @DateOfBirth = '1995-03-10',
@@ -411,8 +411,9 @@ CREATE TABLE Chi_tiet_hoa_don (
    so_luong INT NOT NULL,
    don_gia FLOAT NOT NULL,
    id_phuong_thuc INT CONSTRAINT FK_Chi_tiet_hoa_don_Phuong_thuc_thanh_toan FOREIGN KEY (id_phuong_thuc) REFERENCES Phuong_thuc_thanh_toan(id_phuong_thuc),
-   id_nhan_vien varchar(8) CONSTRAINT FK_Hoa_don_Nhan_vien FOREIGN KEY (id_nhan_vien) REFERENCES Nhan_vien(id_nhan_vien) ,
+   id_nhan_vien varchar(8) ,
    trang_thai varchar(200),
+   ten_khach_hang varchar(200),
    ngay_lap DATETIME not null
 );
 go
@@ -421,9 +422,10 @@ CREATE PROCEDURE insertChiTietHoaDon
     @so_luong INT,
     @don_gia FLOAT,
     @id_phuong_thuc INT,
-    @id_nhan_vien VARCHAR(8),  -- Bổ sung nếu cần
-    @trang_thai VARCHAR(200),  -- Bổ sung nếu cần
-    @ngay_lap DATETIME  -- Bổ sung nếu cần
+    @id_nhan_vien VARCHAR(8),  
+    @trang_thai VARCHAR(200),
+	@ten_khach_hang varchar(200),
+    @ngay_lap DATETIME 
 AS
 BEGIN
     INSERT INTO Chi_tiet_hoa_don (
@@ -431,6 +433,7 @@ BEGIN
         so_luong,
         don_gia,
         id_phuong_thuc,
+		ten_khach_hang,
         id_nhan_vien,  -- Bổ sung nếu cần
         trang_thai,  -- Bổ sung nếu cần
         ngay_lap  -- Bổ sung nếu cần
@@ -440,6 +443,7 @@ BEGIN
         @so_luong,
         @don_gia,
         @id_phuong_thuc,
+		@id_nhan_vien,
         @id_nhan_vien,  -- Bổ sung nếu cần
         @trang_thai,  -- Bổ sung nếu cần
         @ngay_lap  -- Bổ sung nếu cần
@@ -625,6 +629,7 @@ EXEC InsertVoucher
 CREATE TABLE CartItem (
 	IdTaiKhoan varchar(8),
     Id INT PRIMARY KEY identity,
+	id_mon_an INT constraint fk_monAN foreign key (id_mon_an) references Mon_an(id_mon_an),
     Name NVARCHAR(255),
     Price float,
 	hinh_anh NVARCHAR(200),
@@ -637,6 +642,7 @@ AS
 BEGIN
     SELECT 
         c.Id,
+		c.id_mon_an,
         c.Name,
         c.Price,
 		c.hinh_anh,
@@ -649,14 +655,15 @@ END;
 go
 CREATE PROCEDURE InsertCartItem
     @IdTaiKhoan varchar(8),
+	@IdMonAn int,
     @Name NVARCHAR(255),
     @Price FLOAT,
     @hinh_anh NVARCHAR(200),
     @Quantity INT
 AS
 BEGIN
-    INSERT INTO CartItem (IdTaiKhoan, Name, Price, hinh_anh, Quantity)
-    VALUES (@IdTaiKhoan, @Name, @Price, @hinh_anh, @Quantity);
+    INSERT INTO CartItem (IdTaiKhoan,id_mon_an, Name, Price, hinh_anh, Quantity)
+    VALUES (@IdTaiKhoan,@IdMonAn, @Name, @Price, @hinh_anh, @Quantity);
 END;
 go
 CREATE PROCEDURE DeleteCartItemById
@@ -776,7 +783,7 @@ BEGIN
     BEGIN
         -- Select data for the current month
         SELECT 
-            
+            YEAR(dayTime) as [Year],
             SUM(CASE WHEN MONTH(dayTime) = 01 THEN revenue ELSE 0 END) AS January,
             SUM(CASE WHEN MONTH(dayTime) = 02 THEN revenue ELSE 0 END) AS February,
             SUM(CASE WHEN MONTH(dayTime) = 03 THEN revenue ELSE 0 END) AS March,
@@ -790,14 +797,14 @@ BEGIN
             SUM(CASE WHEN MONTH(dayTime) = 11 THEN revenue ELSE 0 END) AS November,
             SUM(CASE WHEN MONTH(dayTime) = 12 THEN revenue ELSE 0 END) AS December
         FROM Doanh_Thu
-        WHERE  YEAR(dayTime) = YEAR(GETDATE())
+        WHERE MONTH(dayTime) = MONTH(GETDATE()) AND YEAR(dayTime) = YEAR(GETDATE())
 		GROUP BY  YEAR(dayTime);
     END
     ELSE IF @Period = 'Quarter'
     BEGIN
         -- Select data for the current year's quarters
         SELECT 
-            
+            YEAR(dayTime) AS [Year],
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 1 THEN revenue ELSE 0 END) AS Q1,
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 2 THEN revenue ELSE 0 END) AS Q2,
             SUM(CASE WHEN DATEPART(QUARTER, dayTime) = 3 THEN revenue ELSE 0 END) AS Q3,
