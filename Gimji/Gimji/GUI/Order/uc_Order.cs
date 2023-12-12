@@ -50,8 +50,7 @@ namespace Gimji.GUI.Order
             uc_OrderList.BtEditClick += (s, eventArgs) =>
             {
                 nameCustomer = uc_OrderList.nameCustomer;
-                uc_OrderList.isFlag_CustomerName = true;
-                uc_OrderList.isFlag_CustomerInput = false;
+                
 
             };
             pal_listOrder.Controls.Add(uc_OrderList);

@@ -13,8 +13,6 @@ namespace Gimji.GUI.Order
 {
     public partial class uc_orderList : UserControl
     {
-        public Boolean isFlag_CustomerName = false;
-        public Boolean isFlag_CustomerInput = true;
         public event EventHandler BtnDeleteClick;
         public event EventHandler BtEditClick;
         int quantity;
@@ -23,8 +21,6 @@ namespace Gimji.GUI.Order
         public uc_orderList()
         {
             InitializeComponent();
-            lbl_customerName.Visible = isFlag_CustomerName;
-            lb_customer_input.Visible = isFlag_CustomerInput;
         }
 
         private void btn_edit_Staff_Click(object sender, EventArgs e)
