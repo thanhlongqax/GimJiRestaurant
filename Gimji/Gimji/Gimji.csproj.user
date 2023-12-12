@@ -31,12 +31,6 @@
     <Compile Update="GUI\Login_Register\uc_Register.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="GUI\Login_SignUp\uc_Login.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Login_SignUp\uc_Register.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
     <Compile Update="GUI\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,9 +93,6 @@
     </Compile>
     <Compile Update="GUI\Menu\uc_MonAn.cs">
       <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Update="GUI\Login_SignUp\Main_Form_LoginRegister.cs">
-      <SubType>Form</SubType>
     </Compile>
     <Compile Update="GUI\Order\uc_Order.cs">
       <SubType>UserControl</SubType>
