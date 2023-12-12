@@ -24,8 +24,44 @@ namespace Gimji.DTO
 
         public static void SaveCartItems(List<CartItem> cartItems)
         {
-            string cartItemsJson = JsonConvert.SerializeObject(cartItems);
+            try
+            {
+                // Serialize the cartItems to JSON
+                string cartItemsJson = JsonConvert.SerializeObject(cartItems);
 
+                // Open the configuration file
+                Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+
+                // Access the AppSettings section
+                AppSettingsSection appSettings = config.AppSettings;
+
+                // Check if the key exists
+                KeyValueConfigurationElement cartItemsKey = appSettings.Settings["cartItems"];
+
+                if (cartItemsKey != null)
+                {
+                    // If the key exists, update its value
+                    cartItemsKey.Value = cartItemsJson;
+                }
+                else
+                {
+                    // If the key does not exist, add it
+                    appSettings.Settings.Add("cartItems", cartItemsJson);
+                }
+
+                // Save the changes
+                config.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection("appSettings");
+            }
+            catch (Exception ex)
+            {
+                // Handle exceptions
+                Console.WriteLine($"Error saving cart items: {ex.Message}");
+            }
+        }
+
+        public static void ClearCartItems()
+        {
             // Sử dụng một cấu hình mới để tránh sự nhầm lẫn với cấu hình chung của ứng dụng
             Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 
@@ -35,8 +71,8 @@ namespace Gimji.DTO
                 // Check if the key exists before accessing Settings
                 if (config.AppSettings.Settings["cartItems"] != null)
                 {
-                    // Set the value
-                    config.AppSettings.Settings["cartItems"].Value = cartItemsJson;
+                    // Remove the key to clear the data
+                    config.AppSettings.Settings.Remove("cartItems");
 
                     // Save the changes
                     config.Save(ConfigurationSaveMode.Modified);
@@ -54,6 +90,7 @@ namespace Gimji.DTO
                 Console.WriteLine("AppSettings is null.");
             }
         }
+
 
     }
 }

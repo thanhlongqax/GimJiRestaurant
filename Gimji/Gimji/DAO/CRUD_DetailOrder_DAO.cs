@@ -24,9 +24,14 @@ namespace Gimji.DAO
                     command.Parameters.AddWithValue("@id_mon_an", detail_Order.MonAnId);
                     command.Parameters.AddWithValue("@so_luong", detail_Order.SoLuong);
                     command.Parameters.AddWithValue("@don_gia", detail_Order.DonGia);
+                    if(detail_Order.PhuongThucThanhToanId != 1 && detail_Order.PhuongThucThanhToanId != 2 && detail_Order.PhuongThucThanhToanId != 3)
+                    {
+                        detail_Order.PhuongThucThanhToanId = 1;
+                    }
                     command.Parameters.AddWithValue("@id_phuong_thuc", detail_Order.PhuongThucThanhToanId);
-                    command.Parameters.AddWithValue("@id_nhan_vien", detail_Order.NhanVienId);
+                    command.Parameters.AddWithValue("@id_nhan_vien", Stored_Login_Infor.GetCurrentUser());
                     command.Parameters.AddWithValue("@trang_thai", detail_Order.trangThai);
+                    command.Parameters.AddWithValue("@ten_khach_hang", detail_Order.customerName);
                     command.Parameters.AddWithValue("@ngay_lap", detail_Order.ngayLap);
 
                     command.ExecuteNonQuery();

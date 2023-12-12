@@ -34,6 +34,7 @@ namespace Gimji.DAO
                             CartItem cartItem = new CartItem
                             {
                                 Id = Convert.ToInt32(row["Id"]),
+                                IdMonAn = Convert.ToInt32(row["id_mon_an"]),
                                 Name = row["Name"].ToString(),
                                 Price = Convert.ToDouble(row["Price"]),
                                 Quantity = Convert.ToInt32(row["Quantity"]),
@@ -58,6 +59,7 @@ namespace Gimji.DAO
                     command.CommandType = CommandType.StoredProcedure;
 
                     command.Parameters.AddWithValue("@IdTaiKhoan", Stored_Login_Infor.GetCurrentUser());
+                    command.Parameters.AddWithValue("@IdMonAn", cartItem.IdMonAn);
                     command.Parameters.AddWithValue("@Name", cartItem.Name);
                     command.Parameters.AddWithValue("@Price", cartItem.Price);
                     command.Parameters.AddWithValue("@hinh_anh", cartItem.DishPicture); // Assuming DishPicture is the property name for hinh_anh

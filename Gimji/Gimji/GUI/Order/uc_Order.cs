@@ -16,13 +16,14 @@ namespace Gimji.GUI.Order
     public partial class uc_Order : UserControl
     {
         int id;
-        string Name;
+        public static string nameCustomer;
         double total;
         DateTime startDate = DateTime.Now;
 
         public uc_Order()
         {
             InitializeComponent();
+
         }
 
         private void uc_Order_Load(object sender, EventArgs e)
@@ -48,7 +49,10 @@ namespace Gimji.GUI.Order
             uc_OrderList.startDate = startDate.ToString("HH:mm dd/MM");
             uc_OrderList.BtEditClick += (s, eventArgs) =>
             {
-                
+                nameCustomer = uc_OrderList.nameCustomer;
+                uc_OrderList.isFlag_CustomerName = true;
+                uc_OrderList.isFlag_CustomerInput = false;
+
             };
             pal_listOrder.Controls.Add(uc_OrderList);
         }

@@ -15,6 +15,7 @@ namespace Gimji.DTO
         public double DonGia { get; set; }
         public int PhuongThucThanhToanId { get; set; }
         public string NhanVienId {  get; set; }
+        public string customerName { get; set; }
         public string trangThai { get; set; }
         public DateTime ngayLap { get; set; }
 

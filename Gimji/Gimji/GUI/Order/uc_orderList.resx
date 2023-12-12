@@ -118,16 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btn_remove.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAQZJREFUSEvtlr0OgjAURvtoPEJ3FieegkQ3Zp6CpyA4srOzM1UMaPyt/QolSq6A
-        oRIHb3LijVy+Q9qQwkwJzp0d54lCKORMEpW3aqObKjlfE4OzQa4WwEgN2AIrxFSDJSIHLJFAQl2wiVhC
-        In9Lcowiecmyjr3nkXMUgxIEn+JYntNU9utWFPoaGBMOSg5hqEVjzJIAPOlQlROWbbIEv/eq0j325Jrn
-        urcqQY99QNXtMqL+khcWlSDYbDz+M++OVcm7Kl2XvO+ZUQlC6iDQL2afyvfJe/qMSmwAiY0zfRBIvnoy
-        quN3a75SyAEbdF8tqtlQA3NBrhaYglGxpYY/RCBH4TTJjD0AMVN5WsQPDVMAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btn_edit_Staff.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL

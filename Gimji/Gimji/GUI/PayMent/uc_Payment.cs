@@ -12,12 +12,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 using ClosedXML.Excel;
+using Gimji.GUI.Order;
 
 namespace Gimji.GUI.PayMent
 {
     public partial class uc_Payment : UserControl
     {
         int IdCategory = 0;
+        String nameCustomer = uc_Order.nameCustomer;
         private uc_MonAn_Paymentcs selectedMonAn; // Biến toàn cục để lưu trữ uc_MonAn được chọn
         private List<CartItem> listCartItems;
         double total;
@@ -160,6 +162,8 @@ namespace Gimji.GUI.PayMent
             {
                 newBLL_DetailOrder.Insert_DetailOrder(item);
             }
+            flow_pal_listOrder_Clear();
+            CartItemManager.ClearCartItems();
             
         }
         private List<Detail_Order> ConvertCartItemsToDetailOrders(List<CartItem> cartItems)
@@ -167,6 +171,7 @@ namespace Gimji.GUI.PayMent
             return cartItems.Select(cartItem => new Detail_Order
             {
                 MonAnId = cartItem.IdMonAn,
+                customerName = nameCustomer,
                 SoLuong = cartItem.Quantity,
                 DonGia = (float)cartItem.Price,
                 Catergory_Id = cartItem.Catergory_Id,
@@ -187,12 +192,13 @@ namespace Gimji.GUI.PayMent
                 // Tiêu đề cột
                 worksheet.Cell(1, 1).Value = "ID";
                 worksheet.Cell(1, 2).Value = "Món Ăn ID";
-                worksheet.Cell(1, 3).Value = "Số Lượng";
-                worksheet.Cell(1, 4).Value = "Đơn Giá";
-                worksheet.Cell(1, 5).Value = "Phương Thức Thanh Toán ID";
-                worksheet.Cell(1, 6).Value = "Nhân Viên ID";
-                worksheet.Cell(1, 7).Value = "Trạng Thái";
-                worksheet.Cell(1, 8).Value = "Ngày Lập";
+                worksheet.Cell(1, 3).Value = "Tên Khách Hàng";
+                worksheet.Cell(1, 4).Value = "Số Lượng";
+                worksheet.Cell(1, 5).Value = "Đơn Giá";
+                worksheet.Cell(1, 6).Value = "Phương Thức Thanh Toán ID";
+                worksheet.Cell(1, 7).Value = "Nhân Viên ID";
+                worksheet.Cell(1, 8).Value = "Trạng Thái";
+                worksheet.Cell(1, 9).Value = "Ngày Lập";
 
                 // Dữ liệu
                 for (int i = 0; i < orders.Count; i++)
@@ -202,18 +208,20 @@ namespace Gimji.GUI.PayMent
 
                     worksheet.Cell(row, 1).Value = order.Id;
                     worksheet.Cell(row, 2).Value = order.MonAnId;
-                    worksheet.Cell(row, 3).Value = order.SoLuong;
-                    worksheet.Cell(row, 4).Value = order.DonGia;
-                    worksheet.Cell(row, 5).Value = order.PhuongThucThanhToanId;
-                    worksheet.Cell(row, 6).Value = order.NhanVienId;
-                    worksheet.Cell(row, 7).Value = order.trangThai;
-                    worksheet.Cell(row, 8).Value = order.ngayLap;
+                    worksheet.Cell(row, 3).Value = order.customerName;
+                    worksheet.Cell(row, 4).Value = order.SoLuong;
+                    worksheet.Cell(row, 5).Value = order.DonGia;
+                    worksheet.Cell(row, 6).Value = order.PhuongThucThanhToanId;
+                    worksheet.Cell(row, 7).Value = order.NhanVienId;
+                    worksheet.Cell(row, 8).Value = order.trangThai;
+                    worksheet.Cell(row, 9).Value = order.ngayLap;
                 }
 
                 // Lưu tệp Excel
                 workbook.SaveAs(filePath);
             }
         }
+
 
     }
 }

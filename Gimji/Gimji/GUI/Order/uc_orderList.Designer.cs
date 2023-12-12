@@ -28,41 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(uc_orderList));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pal_order = new Guna.UI2.WinForms.Guna2Panel();
+            lbl_customerName = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lb_customer_input = new Guna.UI2.WinForms.Guna2TextBox();
             lb_Status = new Label();
             lb_total = new Label();
             lb_date = new Label();
-            btn_remove = new Guna.UI2.WinForms.Guna2Button();
             btn_edit_Staff = new Guna.UI2.WinForms.Guna2Button();
             lb_id = new Label();
-            lb_customer = new Guna.UI2.WinForms.Guna2TextBox();
             pal_order.SuspendLayout();
             SuspendLayout();
             // 
             // pal_order
             // 
-            pal_order.Controls.Add(lb_customer);
+            pal_order.Controls.Add(lbl_customerName);
+            pal_order.Controls.Add(lb_customer_input);
             pal_order.Controls.Add(lb_Status);
             pal_order.Controls.Add(lb_total);
             pal_order.Controls.Add(lb_date);
-            pal_order.Controls.Add(btn_remove);
             pal_order.Controls.Add(btn_edit_Staff);
             pal_order.Controls.Add(lb_id);
-            pal_order.CustomizableEdges = customizableEdges7;
+            pal_order.CustomizableEdges = customizableEdges11;
             pal_order.Location = new Point(0, 0);
+            pal_order.Margin = new Padding(3, 2, 3, 2);
             pal_order.Name = "pal_order";
-            pal_order.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pal_order.Size = new Size(890, 56);
+            pal_order.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            pal_order.Size = new Size(779, 42);
             pal_order.TabIndex = 1;
+            // 
+            // lbl_customerName
+            // 
+            lbl_customerName.BackColor = Color.Transparent;
+            lbl_customerName.Location = new Point(89, 25);
+            lbl_customerName.Name = "lbl_customerName";
+            lbl_customerName.Size = new Size(97, 17);
+            lbl_customerName.TabIndex = 17;
+            lbl_customerName.Text = "guna2HtmlLabel1";
+            // 
+            // lb_customer_input
+            // 
+            lb_customer_input.CustomizableEdges = customizableEdges7;
+            lb_customer_input.DefaultText = "";
+            lb_customer_input.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            lb_customer_input.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            lb_customer_input.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            lb_customer_input.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            lb_customer_input.FillColor = Color.Transparent;
+            lb_customer_input.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            lb_customer_input.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lb_customer_input.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            lb_customer_input.Location = new Point(89, 7);
+            lb_customer_input.Margin = new Padding(3, 2, 3, 2);
+            lb_customer_input.Name = "lb_customer_input";
+            lb_customer_input.PasswordChar = '\0';
+            lb_customer_input.PlaceholderText = "";
+            lb_customer_input.SelectedText = "";
+            lb_customer_input.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            lb_customer_input.Size = new Size(116, 26);
+            lb_customer_input.TabIndex = 16;
             // 
             // lb_Status
             // 
@@ -70,9 +100,9 @@
             lb_Status.FlatStyle = FlatStyle.Flat;
             lb_Status.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_Status.ForeColor = Color.FromArgb(80, 209, 170);
-            lb_Status.Location = new Point(615, 13);
+            lb_Status.Location = new Point(538, 10);
             lb_Status.Name = "lb_Status";
-            lb_Status.Size = new Size(94, 23);
+            lb_Status.Size = new Size(77, 19);
             lb_Status.TabIndex = 15;
             lb_Status.Text = "Completed";
             // 
@@ -82,9 +112,9 @@
             lb_total.FlatStyle = FlatStyle.Flat;
             lb_total.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_total.ForeColor = SystemColors.ButtonHighlight;
-            lb_total.Location = new Point(473, 13);
+            lb_total.Location = new Point(414, 10);
             lb_total.Name = "lb_total";
-            lb_total.Size = new Size(66, 23);
+            lb_total.Size = new Size(58, 19);
             lb_total.TabIndex = 14;
             lb_total.Text = "125.000";
             lb_total.TextAlign = ContentAlignment.MiddleCenter;
@@ -95,36 +125,16 @@
             lb_date.FlatStyle = FlatStyle.Flat;
             lb_date.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_date.ForeColor = SystemColors.ButtonHighlight;
-            lb_date.Location = new Point(286, 13);
+            lb_date.Location = new Point(250, 10);
             lb_date.Name = "lb_date";
-            lb_date.Size = new Size(83, 23);
+            lb_date.Size = new Size(73, 19);
             lb_date.TabIndex = 13;
             lb_date.Text = "11-2-2023";
-            // 
-            // btn_remove
-            // 
-            btn_remove.BorderRadius = 5;
-            btn_remove.CustomizableEdges = customizableEdges3;
-            btn_remove.DisabledState.BorderColor = Color.DarkGray;
-            btn_remove.DisabledState.CustomBorderColor = Color.DarkGray;
-            btn_remove.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btn_remove.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btn_remove.FillColor = Color.Transparent;
-            btn_remove.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_remove.ForeColor = Color.White;
-            btn_remove.Image = (Image)resources.GetObject("btn_remove.Image");
-            btn_remove.ImageSize = new Size(25, 25);
-            btn_remove.Location = new Point(804, 9);
-            btn_remove.Name = "btn_remove";
-            btn_remove.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btn_remove.Size = new Size(27, 27);
-            btn_remove.TabIndex = 11;
-            btn_remove.Click += btn_remove_Click;
             // 
             // btn_edit_Staff
             // 
             btn_edit_Staff.BorderRadius = 5;
-            btn_edit_Staff.CustomizableEdges = customizableEdges5;
+            btn_edit_Staff.CustomizableEdges = customizableEdges9;
             btn_edit_Staff.DisabledState.BorderColor = Color.DarkGray;
             btn_edit_Staff.DisabledState.CustomBorderColor = Color.DarkGray;
             btn_edit_Staff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -135,10 +145,11 @@
             btn_edit_Staff.HoverState.BorderColor = Color.White;
             btn_edit_Staff.Image = (Image)resources.GetObject("btn_edit_Staff.Image");
             btn_edit_Staff.ImageSize = new Size(25, 25);
-            btn_edit_Staff.Location = new Point(771, 9);
+            btn_edit_Staff.Location = new Point(675, 7);
+            btn_edit_Staff.Margin = new Padding(3, 2, 3, 2);
             btn_edit_Staff.Name = "btn_edit_Staff";
-            btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btn_edit_Staff.Size = new Size(27, 27);
+            btn_edit_Staff.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btn_edit_Staff.Size = new Size(24, 20);
             btn_edit_Staff.TabIndex = 10;
             btn_edit_Staff.Click += btn_edit_Staff_Click;
             // 
@@ -148,41 +159,21 @@
             lb_id.FlatStyle = FlatStyle.Flat;
             lb_id.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             lb_id.ForeColor = SystemColors.ButtonHighlight;
-            lb_id.Location = new Point(9, 13);
+            lb_id.Location = new Point(8, 10);
             lb_id.Name = "lb_id";
-            lb_id.Size = new Size(55, 23);
+            lb_id.Size = new Size(47, 19);
             lb_id.TabIndex = 6;
             lb_id.Text = "#1234";
             // 
-            // lb_customer
-            // 
-            lb_customer.CustomizableEdges = customizableEdges1;
-            lb_customer.DefaultText = "";
-            lb_customer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            lb_customer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            lb_customer.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            lb_customer.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            lb_customer.FillColor = Color.Transparent;
-            lb_customer.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            lb_customer.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lb_customer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            lb_customer.Location = new Point(102, 9);
-            lb_customer.Name = "lb_customer";
-            lb_customer.PasswordChar = '\0';
-            lb_customer.PlaceholderText = "";
-            lb_customer.SelectedText = "";
-            lb_customer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            lb_customer.Size = new Size(132, 35);
-            lb_customer.TabIndex = 16;
-            // 
             // uc_orderList
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
             Controls.Add(pal_order);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "uc_orderList";
-            Size = new Size(865, 56);
+            Size = new Size(757, 42);
             pal_order.ResumeLayout(false);
             pal_order.PerformLayout();
             ResumeLayout(false);
@@ -194,9 +185,9 @@
         private Label lb_Status;
         private Label lb_total;
         private Label lb_date;
-        private Guna.UI2.WinForms.Guna2Button btn_remove;
         private Guna.UI2.WinForms.Guna2Button btn_edit_Staff;
         private Label lb_id;
-        private Guna.UI2.WinForms.Guna2TextBox lb_customer;
+        private Guna.UI2.WinForms.Guna2TextBox lb_customer_input;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbl_customerName;
     }
 }
