@@ -9,3 +9,18 @@
 
 Gimji/.vs/Gimji/FileContentIndex/read.lock
 /Gimji/Gimji/Program.cs
+# Build results
+bin/
+obj/
+out/
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.csproj.user
+*.sln.docstates
+
+# Rider
+.idea/
+*.iml
