@@ -26,7 +26,7 @@ Quản lý nhà hàng là một quy trình quan trọng giúp chủ nhà hàng t
 ✔ Quản lý món ăn, bàn, voucher.
 
 ## 🛠️ Công nghệ sử dụng
-- **Ngôn ngữ lập trình**: C# (.NET Framework, WinForms)
+- **Ngôn ngữ lập trình**: C# (WinForms)
 - **Cơ sở dữ liệu**: MySQL
 - **Gửi Email**: SMTP (MailKit)
 
