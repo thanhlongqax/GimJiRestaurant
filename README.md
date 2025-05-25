@@ -34,7 +34,7 @@ Quản lý nhà hàng là một quy trình quan trọng giúp chủ nhà hàng t
 📌 *Đang cập nhật hình ảnh...*
 
 ## 🎥 Xem video hướng dẫn chi tiết
-📌 *[Link video hướng dẫn (nếu có)]*
+📌
 
 ## 🚀 Cách chạy ứng dụng
 ### 1️⃣ Cài đặt các công cụ cần thiết
